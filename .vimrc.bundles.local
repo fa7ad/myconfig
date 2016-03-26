@@ -1,0 +1,4 @@
+Bundle 'wavded/vim-stylus'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'roryokane/detectindent'
+Bundle 'vim-scripts/closetag.vim'
