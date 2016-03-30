@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+make_log(){
+    for i in $@; do
+        if [[ "$i" =~ ^(-) ]]; then else
+            echo $i >> /tmp/mpvlog.log
+        fi
+    done
+}
+
+make_log $@
+/usr/bin/mpv $*

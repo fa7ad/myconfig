@@ -74,7 +74,7 @@ export KEYTIMEOUT=1
 
 # GitHub Hub CLI Configuration
 export GITHUB_USER="fa7ad"
-export GITHUB_PASSWORD=$(decode -d <<< ${MYGITPASS})
+export GITHUB_PASSWORD=$(base64 -d <<< ${MYGITPASS})
 
 
 # Edit zshrc from anywhere
@@ -95,6 +95,8 @@ alias pip3="sudo pip3"
 
 # Open files easily
 alias opn="xdg-open"
+# Alias MPV to MPV with History support
+alias mpv="mpvh"
 # MPV minus the Video
 alias mpa="mpv --no-vid"
 
