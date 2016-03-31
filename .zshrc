@@ -117,7 +117,9 @@ ask_tmux(){
   if [[ $ans =~ ^(yes|y) ]];then
     exec tmux
   else
-    clear
+    if [[ -z $SSH_CONNECTION ]];then
+      clear
+    fi
   fi
 }
 
@@ -196,7 +198,7 @@ togglehomegit(){
 
 
 # Just to ensure that we do not ask about tmux session inside tmux sessions
-if [ "$TMUX" = "" ]; then
+if [[ -z $TMUX ]]; then
   ask_tmux
 fi
 
