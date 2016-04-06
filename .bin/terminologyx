@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-gtk-launch terminology "$@"
+exec terminology "$@"
