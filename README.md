@@ -16,6 +16,7 @@ These are the dotfiles/configurations for most of my CLI apps
 * [vim spf13 distribution](http://vim.spf13.com)
 * [oh-my-zsh](http://ohmyz.sh)
 * GitHub's [hub](https://hub.github.com/) CLI
+* terminology
 
 ## LICENSE
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE

@@ -77,6 +77,12 @@ export GITHUB_USER="fa7ad"
 export GITHUB_PASSWORD=$(base64 -d <<< ${MYGITPASS})
 
 
+# swap out apt-get for aptitude
+alias ag="sudo aptitude"
+# just in case I try dist-upgrade
+alias -g dist-upgrade="full-upgrade"
+
+
 # Edit zshrc from anywhere
 alias zshrc="$EDITOR ~/.zshrc"
 # SSH with X forwarded
@@ -106,22 +112,12 @@ alias reloadpath='PATH=$PATH'
 alias reloadzsh="source $HOME/.zshrc"
 
 
+# Visual Studio code
+alias code="gtk-launch code"
+
+
 # Ignore some autocomplete
 zstyle ':completion:*' ignored-patterns 'apturl-gtk'
-
-
-# Asks if the user wants a tmux session
-ask_tmux(){
-  read -r "ans?Want tmux? [y/N]"
-  ans=${ans:l}
-  if [[ $ans =~ ^(yes|y) ]];then
-    exec tmux
-  else
-    if [[ -z $SSH_CONNECTION ]];then
-      clear
-    fi
-  fi
-}
 
 
 # Watch a video with subtitles
@@ -195,12 +191,6 @@ togglehomegit(){
     return 1
   fi
 }
-
-
-# Just to ensure that we do not ask about tmux session inside tmux sessions
-if [[ -z $TMUX ]]; then
-  ask_tmux
-fi
 
 
 # Start OH-MY-ZSH
