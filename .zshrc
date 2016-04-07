@@ -52,6 +52,10 @@ export PATH="/sbin:/bin:/usr/games:/usr/local/games:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 
+# Load OHMYZSH
+source $ZSH/oh-my-zsh.sh
+
+
 # Language environment
 export LANG=en_US.UTF-8
 
@@ -79,6 +83,8 @@ export GITHUB_PASSWORD=$(base64 -d <<< ${MYGITPASS})
 
 # swap out apt-get for aptitude
 alias ag="sudo aptitude"
+# fix autoremove
+alias agru="sudo apt-get autoremove --purge"
 # just in case I try dist-upgrade
 alias -g dist-upgrade="full-upgrade"
 
@@ -191,7 +197,3 @@ togglehomegit(){
     return 1
   fi
 }
-
-
-# Start OH-MY-ZSH
-source $ZSH/oh-my-zsh.sh
