@@ -134,13 +134,6 @@ watchsub(){
 }
 
 
-# open MPV's last open file
-mpv_last(){
-  mpvlast=$(tail -n1 /tmp/mpvlog.log)
-  mpv $mpvlast
-}
-
-
 # Upgrade mps-youtube to the git master
 upgrade_mpsyt(){
   pip install --upgrade \

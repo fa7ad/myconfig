@@ -1,11 +1,72 @@
-#!/usr/bin/env zsh
-make_log(){
-    for i in $@; do
-        if [[ "$i" =~ ^(-) ]]; then else
-            echo $i >> /tmp/mpvlog.log
-        fi
-    done
-}
+#!/usr/bin/env python3
+"""
+MPV wrapper with somewhat stable history support
+"""
 
-make_log $@
-/usr/bin/mpv $*
+from sys import argv as cli_args
+from subprocess import call as launch
+from os import path
+
+
+LOG_FILE = '/tmp/mpv_history.log'
+
+
+def main(args):
+    """
+    Execute mpv with the passed params
+        and record it to history
+
+    Args:
+        args: all the arguments, likely passed from cli
+
+    Returns:
+        0: if all okay
+        !0: if mpv crashed
+    """
+    mpv_args = ["/usr/bin/mpv"]
+
+    for arg in args:
+        if arg[0] != '-' and path.isfile(arg):
+            realfile = path.realpath(arg)
+            log_text(realfile)
+            mpv_args.append(realfile)
+        elif arg == '--last':
+            filename = get_last(1)
+            mpv_args.append(filename)
+        elif arg[:3] == '--n':
+            filename = get_last(int(arg[3]))
+            mpv_args.append(filename)
+        else:
+            mpv_args.append(arg)
+    return launch(mpv_args)
+
+
+def log_text(text):
+    """
+    Appends the passed text to the log file
+
+    Args:
+        text: Text to be added to log
+    """
+    with open(LOG_FILE, 'a') as log:
+        log.write(text + '\n')
+
+
+def get_last(nth):
+    """
+    Gets the nth last line from the LOG_FILE
+
+    Returns:
+        string: if all goes well
+    """
+    with open(LOG_FILE, 'r') as file_cont:
+        log = file_cont.readlines()
+        log.reverse()
+        if len(log) < nth:
+            return ""
+        else:
+            return log[nth-1].strip('\n')
+
+
+if __name__ == "__main__":
+    main(cli_args[1:])
