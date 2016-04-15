@@ -7,7 +7,7 @@ These are the dotfiles/configurations for most of my CLI apps
 ## The Required Software
 * rxvt-unicode-256color
 * [cava](https://github.com/karlstav/cava) from git master
-* [mpDrid2](https://github.com/eonpatapon/mpDris2) from git master
+* [mpDris2](https://github.com/eonpatapon/mpDris2) from git master
 * vapoursynth-\* (http://ppa.launchpad.net/djcj/vapoursynth/ubuntu/)
 * mpv 0.16 from [djcj/vapoursynth](http://ppa.launchpad.net/djcj/vapoursynth/ubuntu/)
 * mpd 0.19.10 from wily sources
