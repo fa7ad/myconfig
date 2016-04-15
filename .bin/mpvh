@@ -33,8 +33,8 @@ def main(args):
         elif arg == '--last':
             filename = get_last(1)
             mpv_args.append(filename)
-        elif arg[:3] == '--n':
-            filename = get_last(int(arg[3]))
+        elif arg[:4] == '--h-':
+            filename = get_last(int(arg[4]))
             mpv_args.append(filename)
         else:
             mpv_args.append(arg)
