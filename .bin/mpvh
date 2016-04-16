@@ -5,19 +5,20 @@ MPV wrapper with somewhat stable history support
 
 from sys import argv as cli_args
 from subprocess import call as launch
-from os import path
+import os
+import re
 
 
-LOG_FILE = '/tmp/mpv_history.log'
+LOG_FILE = os.getenv('MPV_HIST', '/tmp/mpv_history.log')
 
 
-def main(args):
+def main(arguments):
     """
     Execute mpv with the passed params
         and record it to history
 
     Args:
-        args: all the arguments, likely passed from cli
+        arguments: all the arguments, likely passed from cli
 
     Returns:
         0: if all okay
@@ -25,19 +26,24 @@ def main(args):
     """
     mpv_args = ["/usr/bin/mpv"]
 
-    for arg in args:
-        if arg[0] != '-' and path.isfile(arg):
-            realfile = path.realpath(arg)
+    for arg in arguments:
+        argument = arg
+
+        if arg[0] != '-' and os.path.isfile(arg):
+            realfile = os.path.realpath(arg)
             log_text(realfile)
-            mpv_args.append(realfile)
+            argument = realfile
         elif arg == '--last':
-            filename = get_last(1)
-            mpv_args.append(filename)
-        elif arg[:4] == '--h-':
-            filename = get_last(int(arg[4]))
-            mpv_args.append(filename)
-        else:
-            mpv_args.append(arg)
+            argument = get_last(1)
+        elif arg[:2] == '-H':
+            argument = get_last(int(arg[2:]))
+        elif arg[:7] == '--hist=':
+            argument = get_last(int(arg[7:]))
+        elif re.match(r'http|//', arg):
+            log_text(arg)
+
+        mpv_args.append(argument)
+
     return launch(mpv_args)
 
 
@@ -56,14 +62,21 @@ def get_last(nth):
     """
     Gets the nth last line from the LOG_FILE
 
+    Args:
+        nth: the reversed-index of the expected line. (i.e. nth-last line)
+
     Returns:
-        string: if all goes well
+        the nth-last line from the log file.
+        If "nth" is out of range, returns the last line from the log.
     """
+
     with open(LOG_FILE, 'r') as file_cont:
         log = file_cont.readlines()
         log.reverse()
-        if len(log) < nth:
-            return ""
+        if nth > len(log) > 0:
+            print('Warning: The specified index does not exist in history.',
+                  'Opening the last played file instead.')
+            return log[0].strip('\n')
         else:
             return log[nth-1].strip('\n')
 

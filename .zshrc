@@ -118,10 +118,6 @@ alias reloadpath='PATH=$PATH'
 alias reloadzsh="source $HOME/.zshrc"
 
 
-# Visual Studio code
-alias code="gtk-launch code"
-
-
 # Ignore some autocomplete
 zstyle ':completion:*' ignored-patterns 'apturl-gtk'
 
