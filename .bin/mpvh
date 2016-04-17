@@ -4,50 +4,56 @@ MPV wrapper with somewhat stable history support
 """
 
 from subprocess import call as launch
-import sys
-import os
-import re
-
-CLI_ARGS = sys.argv
-LOG_FILE = os.getenv('MPV_HIST', '/tmp/mpv_history.log')
+from sys import exit as os_return
+from os import path, getenv
+from re import match as regex
+import argparse
 
 
-def main(arguments):
+def main(flags=None, mpv_args=None):
     """
     Execute mpv with the passed params
         and record it to history
 
     Args:
-        arguments: all the arguments, likely passed from cli
+        flags: a namespace of usable flags
+        mpv_args: raw arguments for mpv as an iterable
 
     Returns:
         0: if all okay
         !0: if mpv crashed
     """
-    mpv_args = ["/usr/bin/mpv"]
 
-    for arg in arguments:
-        argument = arg
+    mpv = ["/usr/bin/mpv"]
 
-        if arg[0] != '-' and os.path.isfile(arg):
-            realfile = os.path.realpath(arg)
-            log_text(realfile)
-            argument = realfile
-        elif arg == '--last':
-            argument = get_last(1)
-        elif arg[:2] == '-H':
-            argument = get_last(int(arg[2:]))
-        elif arg[:7] == '--hist=':
-            argument = get_last(int(arg[7:]))
-        elif re.match(r'http|//', arg):
-            log_text(arg)
+    if any(vars(flags).values()):
+        hist_file = None
 
-        if not argument:
-            return 255
+        if flags.hist:
+            hist_file = get_last(flags.hist)
+        elif flags.H:
+            hist_file = get_last(flags.H)
+        elif flags.last:
+            hist_file = get_last(1)
+
+        if hist_file:
+            mpv.append(hist_file)
         else:
-            mpv_args.append(argument)
+            return 255
 
-    return launch(mpv_args)
+    if mpv_args:
+        for arg in mpv_args:
+            if arg[0] != '-' and path.isfile(arg):
+                filename = path.realpath(arg)
+                log_text(filename)
+            elif regex(r'http|//', arg):
+                log_text(arg)
+            mpv.append(arg)
+
+    if not mpv_args and not flags:
+        return 255
+    else:
+        return launch(mpv)
 
 
 def log_text(text):
@@ -72,7 +78,7 @@ def get_last(nth):
         the nth-last line from the log file.
         If "nth" is out of range, returns the last line from the log.
     """
-    if not os.path.isfile(LOG_FILE):
+    if not path.isfile(LOG_FILE):
         print('The history file doesn\'t exist.',
               'Please play something normally first.')
         return False
@@ -89,4 +95,15 @@ def get_last(nth):
 
 
 if __name__ == "__main__":
-    sys.exit(main(CLI_ARGS[1:]))
+    LOG_FILE = getenv('MPV_HIST', '/tmp/mpv_history.log')
+
+    PARSER = argparse.ArgumentParser(prog='MPV +history', add_help=False)
+
+    MPVH = PARSER.add_mutually_exclusive_group()
+    MPVH.add_argument('-H', type=int)
+    MPVH.add_argument('--hist', type=int)
+    MPVH.add_argument('--last', action='store_true')
+
+    (MY_FLAGS, MPV_ARGS) = PARSER.parse_known_args()
+
+    os_return(main(MY_FLAGS, MPV_ARGS))

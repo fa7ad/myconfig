@@ -9,7 +9,7 @@ These are the dotfiles/configurations for most of my CLI apps
 * [cava](https://github.com/karlstav/cava) from git master
 * [mpDris2](https://github.com/eonpatapon/mpDris2) from git master
 * vapoursynth-\* (http://ppa.launchpad.net/djcj/vapoursynth/ubuntu/)
-* mpv 0.16 from [djcj/vapoursynth](http://ppa.launchpad.net/djcj/vapoursynth/ubuntu/)
+* mpv 0.17 from [djcj/vapoursynth](http://ppa.launchpad.net/djcj/vapoursynth/ubuntu/)
 * mpd 0.19.10 from wily sources
 * mpdas 0.3
 * ncmpcpp 0.7.2 from [aguinard/ppa](http://ppa.launchpad.net/aguignard/ppa/ubuntu/)
