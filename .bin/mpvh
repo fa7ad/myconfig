@@ -24,7 +24,7 @@ def main(flags=None, mpv_args=None):
         !0: if mpv crashed
     """
 
-    mpv = ["/usr/bin/mpv"]
+    mpv = ["/usr/bin/env", "mpv"]
 
     if any(vars(flags).values()):
         hist_file = None
