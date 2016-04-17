@@ -3,12 +3,12 @@
 MPV wrapper with somewhat stable history support
 """
 
-from sys import argv as cli_args
 from subprocess import call as launch
+import sys
 import os
 import re
 
-
+CLI_ARGS = sys.argv
 LOG_FILE = os.getenv('MPV_HIST', '/tmp/mpv_history.log')
 
 
@@ -42,7 +42,10 @@ def main(arguments):
         elif re.match(r'http|//', arg):
             log_text(arg)
 
-        mpv_args.append(argument)
+        if not argument:
+            return 255
+        else:
+            mpv_args.append(argument)
 
     return launch(mpv_args)
 
@@ -69,6 +72,10 @@ def get_last(nth):
         the nth-last line from the log file.
         If "nth" is out of range, returns the last line from the log.
     """
+    if not os.path.isfile(LOG_FILE):
+        print('The history file doesn\'t exist.',
+              'Please play something normally first.')
+        return False
 
     with open(LOG_FILE, 'r') as file_cont:
         log = file_cont.readlines()
@@ -82,4 +89,4 @@ def get_last(nth):
 
 
 if __name__ == "__main__":
-    main(cli_args[1:])
+    sys.exit(main(CLI_ARGS[1:]))
