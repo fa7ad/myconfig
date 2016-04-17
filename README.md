@@ -17,6 +17,7 @@ These are the dotfiles/configurations for most of my CLI apps
 * [oh-my-zsh](http://ohmyz.sh)
 * GitHub's [hub](https://hub.github.com/) CLI
 * terminology from [this ppa](http://ppa.launchpad.net/niko2040/e19/ubuntu/)
+* Visual Studio Code ([vscode](http://code.visualstudio.com/))
 
 ## LICENSE
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
