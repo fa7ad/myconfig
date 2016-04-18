@@ -1,0 +1,3 @@
+[submodule ".zprezto"]
+	path = .zprezto
+	url = git@github.com:fa7ad/prezto

@@ -1,0 +1,68 @@
+# General
+
+# Set case-sensitivity for completion, history lookup, etc.
+zstyle ':prezto:*:*' case-sensitive 'yes'
+
+# Color output (auto set to 'no' on dumb terminals).
+zstyle ':prezto:*:*' color 'yes'
+
+# Set the Zsh modules to load (man zshmodules).
+# zstyle ':prezto:load' zmodule 'attr' 'stat'
+
+# Set the Zsh functions to load (man zshcontrib).
+# zstyle ':prezto:load' zfunction 'zargs' 'zmv'
+
+# Set the Prezto modules to load (browse modules).
+# The order matters.
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'history' \
+  'history-substring-search' \
+  'syntax-highlighting' \
+  'directory' \
+  'utility' \
+  'completion' \
+  'prompt' \
+  'command-not-found' \
+  'git' \
+  'fasd' \
+  'node' \
+  'python' \
+  'ssh' \
+  'apt' \
+  'github'
+
+# Prompt
+zstyle ':prezto:module:prompt' theme 'agnoster'
+
+
+# SSH
+
+# Set the SSH identities to load into the agent.
+zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_dsa'
+
+# Syntax Highlighting
+
+# Set syntax highlighters.
+# By default, only the main highlighter is enabled.
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+  'main' \
+  'brackets' \
+  'pattern' \
+  'line' \
+  'cursor' \
+  'root'
+
+
+# Terminal
+
+# Auto set the tab and window titles.
+zstyle ':prezto:module:terminal' auto-title 'yes'
+
+# Set the window title format.
+zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+
+# Set the tab title format.
+# zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+
