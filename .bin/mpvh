@@ -29,17 +29,15 @@ def main(flags=None, mpv_args=None):
     if any(vars(flags).values()):
         hist_file = None
 
-        if flags.hist:
-            hist_file = get_last(flags.hist)
-        elif flags.H:
-            hist_file = get_last(flags.H)
-        elif flags.last:
+        if flags.last:
             hist_file = get_last(1)
+        else:
+            hist_file = get_last(flags.hist)
 
         if hist_file:
             mpv.append(hist_file)
         else:
-            return 255
+            return False
 
     if mpv_args:
         for arg in mpv_args:
@@ -50,10 +48,10 @@ def main(flags=None, mpv_args=None):
                 log_text(arg)
             mpv.append(arg)
 
-    if not mpv_args and not flags:
-        return 255
-    else:
+    if mpv_args or flags:
         return launch(mpv)
+    else:
+        return False
 
 
 def log_text(text):
@@ -77,11 +75,12 @@ def get_last(nth):
     Returns:
         the nth-last line from the log file.
         If "nth" is out of range, returns the last line from the log.
+        and if the file does not exist, returns None
     """
     if not path.isfile(LOG_FILE):
         print('The history file doesn\'t exist.',
               'Please play something normally first.')
-        return False
+        return None
 
     with open(LOG_FILE, 'r') as file_cont:
         log = file_cont.readlines()
@@ -100,8 +99,7 @@ if __name__ == "__main__":
     PARSER = argparse.ArgumentParser(prog='MPV +history', add_help=False)
 
     MPVH = PARSER.add_mutually_exclusive_group()
-    MPVH.add_argument('-H', type=int)
-    MPVH.add_argument('--hist', type=int)
+    MPVH.add_argument('--hist', '-H', type=int)
     MPVH.add_argument('--last', action='store_true')
 
     (MY_FLAGS, MPV_ARGS) = PARSER.parse_known_args()
