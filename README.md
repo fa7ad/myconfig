@@ -14,7 +14,7 @@ These are the dotfiles/configurations for most of my CLI apps
 * mpdas 0.3
 * ncmpcpp 0.7.2 from [aguinard/ppa](http://ppa.launchpad.net/aguignard/ppa/ubuntu/)
 * [vim spf13 distribution](http://vim.spf13.com)
-* [oh-my-zsh](http://ohmyz.sh)
+* My [prezto](http://github.com/fa7ad/prezto) fork
 * GitHub's [hub](https://hub.github.com/) CLI
 * terminology from [this ppa](http://ppa.launchpad.net/niko2040/e19/ubuntu/)
 * Visual Studio Code ([vscode](http://code.visualstudio.com/))
