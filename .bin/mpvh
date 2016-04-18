@@ -37,7 +37,7 @@ def main(flags=None, mpv_args=None):
         if hist_file:
             mpv.append(hist_file)
         else:
-            return False
+            return 255
 
     if mpv_args:
         for arg in mpv_args:
@@ -51,7 +51,7 @@ def main(flags=None, mpv_args=None):
     if mpv_args or flags:
         return launch(mpv)
     else:
-        return False
+        return 255
 
 
 def log_text(text):
