@@ -29,7 +29,6 @@ zstyle ':prezto:load' pmodule \
   'fasd' \
   'node' \
   'python' \
-  'ssh' \
   'apt' \
   'github'
 
@@ -50,7 +49,6 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
   'main' \
   'brackets' \
   'pattern' \
-  'line' \
   'cursor' \
   'root'
 
