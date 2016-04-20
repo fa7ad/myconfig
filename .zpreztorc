@@ -20,16 +20,18 @@ zstyle ':prezto:load' pmodule \
   'history' \
   'history-substring-search' \
   'syntax-highlighting' \
+  'command-not-found' \
   'directory' \
   'utility' \
+  'fa7ad-utility' \
   'completion' \
   'prompt' \
-  'command-not-found' \
   'git' \
+  'github' \
   'fasd' \
   'node' \
   'apt' \
-  'github'
+  'red-completion-dots'
 
 # Prompt
 zstyle ':prezto:module:prompt' theme 'paradox'
