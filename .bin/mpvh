@@ -10,13 +10,13 @@ from re import match as regex
 import argparse
 
 
-def main(flags=None, mpv_args=None):
+def main(history=None, mpv_args=None):
     """
     Execute mpv with the passed params
         and record it to history
 
     Args:
-        flags: a namespace of usable flags
+        history: history nth count
         mpv_args: raw arguments for mpv as an iterable
 
     Returns:
@@ -25,12 +25,9 @@ def main(flags=None, mpv_args=None):
     """
 
     mpv = ["/usr/bin/env", "mpv"]
-    hist_file = get_last(flags.last)
 
-    if hist_file:
-        mpv.append(hist_file)
-    else:
-        return 255
+    if history:
+        mpv.append(get_last(history))
 
     if mpv_args:
         for arg in mpv_args:
@@ -41,7 +38,7 @@ def main(flags=None, mpv_args=None):
                 log_text(arg)
             mpv.append(arg)
 
-    if mpv_args or flags:
+    if mpv_args or history:
         return launch(mpv)
     else:
         return 255
@@ -68,12 +65,12 @@ def get_last(nth):
     Returns:
         the nth-last line from the log file.
         If "nth" is out of range, returns the last line from the log.
-        and if the file does not exist, returns None
+        and if the file does not exist, returns empty string
     """
     if not path.isfile(LOG_FILE):
         print('The history file doesn\'t exist.',
               'Please play something normally first.')
-        return None
+        return ''
 
     with open(LOG_FILE, 'r') as file_cont:
         log = file_cont.readlines()
@@ -92,6 +89,7 @@ if __name__ == "__main__":
     PARSER = argparse.ArgumentParser(prog='MPV +history', add_help=False)
     PARSER.add_argument('--last', '-L', nargs='?', const=1, type=int)
 
-    (MY_FLAGS, MPV_ARGS) = PARSER.parse_known_args()
+    (FLAG, MPV_ARGS) = PARSER.parse_known_args()
+    LAST = FLAG.last
 
-    os_return(main(MY_FLAGS, MPV_ARGS))
+    os_return(main(LAST, MPV_ARGS))
