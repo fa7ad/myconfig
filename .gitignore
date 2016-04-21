@@ -273,3 +273,4 @@ build/
 grive/
 myzshrc
 .TelegramDesktop
+.config/htop

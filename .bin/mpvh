@@ -25,19 +25,12 @@ def main(flags=None, mpv_args=None):
     """
 
     mpv = ["/usr/bin/env", "mpv"]
+    hist_file = get_last(flags.last)
 
-    if any(vars(flags).values()):
-        hist_file = None
-
-        if flags.last:
-            hist_file = get_last(1)
-        else:
-            hist_file = get_last(flags.hist)
-
-        if hist_file:
-            mpv.append(hist_file)
-        else:
-            return 255
+    if hist_file:
+        mpv.append(hist_file)
+    else:
+        return 255
 
     if mpv_args:
         for arg in mpv_args:
@@ -97,10 +90,7 @@ if __name__ == "__main__":
     LOG_FILE = getenv('MPV_HIST', '/tmp/mpv_history.log')
 
     PARSER = argparse.ArgumentParser(prog='MPV +history', add_help=False)
-
-    MPVH = PARSER.add_mutually_exclusive_group()
-    MPVH.add_argument('--hist', '-H', type=int)
-    MPVH.add_argument('--last', action='store_true')
+    PARSER.add_argument('--last', '-L', nargs='?', const=1, type=int)
 
     (MY_FLAGS, MPV_ARGS) = PARSER.parse_known_args()
 
