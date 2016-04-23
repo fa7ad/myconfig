@@ -31,7 +31,8 @@ zstyle ':prezto:load' pmodule \
   'fasd' \
   'node' \
   'apt' \
-  'red-completion-dots'
+  'red-completion-dots' \
+  'sudo'
 
 # Prompt
 zstyle ':prezto:module:prompt' theme 'paradox'
