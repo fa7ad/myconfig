@@ -10,13 +10,12 @@ These are the dotfiles/configurations for most of my CLI apps
 * [mpDris2](https://github.com/eonpatapon/mpDris2) from git master
 * vapoursynth-\* (http://ppa.launchpad.net/djcj/vapoursynth/ubuntu/)
 * mpv 0.17 from [djcj/vapoursynth](http://ppa.launchpad.net/djcj/vapoursynth/ubuntu/)
-* mpd 0.19.10 from wily sources
+* mpd 0.19.10 from xenial sources
 * mpdas 0.3
-* ncmpcpp 0.7.2 from [aguinard/ppa](http://ppa.launchpad.net/aguignard/ppa/ubuntu/)
+* ncmpcpp 0.7.3 from [nilarimogard/webupd8](http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu/)
 * [vim spf13 distribution](http://vim.spf13.com)
 * My [prezto](http://github.com/fa7ad/prezto) fork
 * GitHub's [hub](https://hub.github.com/) CLI
-* terminology from [this ppa](http://ppa.launchpad.net/niko2040/e19/ubuntu/)
 * Visual Studio Code ([vscode](http://code.visualstudio.com/))
 
 ## LICENSE
