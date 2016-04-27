@@ -24,6 +24,7 @@
 .coffee_history
 .colordiffrc
 .config/Atom/
+.config/terminology/
 .config/Butter/
 .config/Code/
 .config/Empathy/
@@ -232,7 +233,6 @@
 .themes/
 .thumbnails/
 .tmux.conf
-.toprc
 .torrenttunes-client/
 .urserver/
 .v8flags.4.6.85.31.fahad.json
