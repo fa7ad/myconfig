@@ -23,3 +23,6 @@ alias mpa='mpv --no-vid'
 
 # override the override back to top, i dont like htop
 unalias top
+
+# i keep forgetting the other one -_-
+alias gSS='git status'
