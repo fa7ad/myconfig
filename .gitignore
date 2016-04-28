@@ -282,3 +282,4 @@ myzshrc
 .dmrc
 .xsession-errors
 .xsession-errors.old
+.wget-hsts
