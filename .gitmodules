@@ -1,3 +1,16 @@
-[submodule ".zprezto"]
+[submodule "prezto"]
 	path = .zprezto
-	url = git@github.com:fa7ad/prezto
+	url = https://github.com/fa7ad/prezto.git
+	branch = master
+[submodule "ldbus-mpv"]
+	path = .config/mpv/scripts/ldbus
+	url = https://github.com/dodo/ldbus.git
+	branch = master
+[submodule "lua-ldbus-mpv"]
+	path = .config/mpv/scripts/lua-dbus
+	url = https://github.com/dodo/lua-dbus.git
+	branch = master
+[submodule "lua-mpris-mpv"]
+	path = .config/mpv/scripts/mpris
+	url = https://github.com/dodo/lua-mpris.git
+	branch = master
