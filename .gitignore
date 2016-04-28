@@ -276,3 +276,9 @@ myzshrc
 .config/htop
 .elm
 .config/nvim
+.config/marlin/
+.config/midori/
+.config/plank/
+.dmrc
+.xsession-errors
+.xsession-errors.old
