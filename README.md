@@ -17,18 +17,3 @@ These are the dotfiles/configurations for most of my CLI apps
 * My [prezto](http://github.com/fa7ad/prezto) fork
 * GitHub's [hub](https://hub.github.com/) CLI
 * Visual Studio Code ([vscode](http://code.visualstudio.com/))
-
-## LICENSE
-DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                Version 2, December 2004
-
-Copyright 2016 Fahad Hossain
-
-Everyone is permitted to copy and distribute verbatim or modified
-copies of this license document, and changing it is allowed as long
-as the name is changed.
-
-        DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-
- 0. You just DO WHAT THE FUCK YOU WANT TO.
