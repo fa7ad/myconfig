@@ -17,3 +17,10 @@ These are the dotfiles/configurations for most of my CLI apps
 * My [prezto](http://github.com/fa7ad/prezto) fork
 * GitHub's [hub](https://hub.github.com/) CLI
 * Visual Studio Code ([vscode](http://code.visualstudio.com/))
+
+
+## Get the basic stuff:
+
+```bash
+wget -O- https://raw.githubusercontent.com/fa7ad/myconfig/master/install.sh | bash
+```
