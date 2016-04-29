@@ -20,3 +20,8 @@ export GITHUB_PASSWORD=$(base64 -d <<< ${MYGITPASS})
 # mpv +history
 alias mpv='mpvh'
 alias mpa='mpv --no-vid'
+
+# look up aliases
+function als {
+  alias | grep "$1" | less
+}
