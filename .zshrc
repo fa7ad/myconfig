@@ -20,6 +20,3 @@ export GITHUB_PASSWORD=$(base64 -d <<< ${MYGITPASS})
 # mpv +history
 alias mpv='mpvh'
 alias mpa='mpv --no-vid'
-
-# i keep forgetting the other one -_-
-alias gSS='git status'
