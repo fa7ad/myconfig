@@ -159,6 +159,11 @@
 .config/yakyak/
 .config/yelp/
 .conkycolors/
+.config/mpv/scripts/dbus.lua
+.config/mpv/scripts/ldbus
+.config/mpv/scripts/ldbus.so
+.config/mpv/scripts/lua-dbus
+.config/mpv/scripts/mpris
 .conkyrc
 .dbshell
 .dbus/
@@ -223,7 +228,6 @@
 .python-eggs/
 .python_history
 .recently-used
-.spf13-vim-3/
 .ssh/
 .ssr/
 .strapipass
@@ -236,12 +240,10 @@
 .torrenttunes-client/
 .urserver/
 .v8flags.4.6.85.31.fahad.json
-.vim/
 .vimbackup/
 .viminfo
-.vimrc
+.vim/bundle
 .vimrc.before
-.vimrc.bundles
 .vimswap/
 .vimundo/
 .vimviews/

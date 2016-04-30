@@ -2,15 +2,7 @@
 	path = .zprezto
 	url = https://github.com/fa7ad/prezto.git
 	branch = master
-[submodule "ldbus-mpv"]
-	path = .config/mpv/scripts/ldbus
-	url = https://github.com/dodo/ldbus.git
-	branch = master
-[submodule "lua-ldbus-mpv"]
-	path = .config/mpv/scripts/lua-dbus
-	url = https://github.com/dodo/lua-dbus.git
-	branch = master
-[submodule "lua-mpris-mpv"]
-	path = .config/mpv/scripts/mpris
-	url = https://github.com/dodo/lua-mpris.git
-	branch = master
+[submodule "spf13"]
+	path = .spf13-vim-3
+	url = https://github.com/spf13/spf13-vim.git
+	branch = 3.0
