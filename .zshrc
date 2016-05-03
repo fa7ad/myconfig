@@ -25,3 +25,8 @@ alias mpa='mpv --no-vid'
 function als {
   alias | grep "$1" | less
 }
+
+# git ignore
+function gign {
+  echo "$1" >>! .gitignore
+}
