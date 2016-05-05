@@ -285,3 +285,4 @@ myzshrc
 .xsession-errors.old
 .wget-hsts
 .config/puddletag
+.config/update-notifier
