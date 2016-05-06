@@ -30,3 +30,12 @@ function als {
 function gign {
   echo "$1" >>! .gitignore
 }
+
+# update myconfig
+function update_config {
+    current=$(pwd)
+    cd "${ZDOTDIR:-$HOME}/myconfig"
+    git pull -X theirs
+    rsync -ar .config/ "${ZDOTDIR:-$HOME}/.config/"
+    cd $current
+}

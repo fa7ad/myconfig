@@ -2,7 +2,3 @@
 	path = .zprezto
 	url = https://github.com/fa7ad/prezto.git
 	branch = master
-[submodule ".spf13-vim-3"]
-	path = .spf13-vim-3
-	url = https://github.com/spf13/spf13-vim.git
-	branch = 3.0
