@@ -30,7 +30,7 @@ zstyle ':prezto:load' pmodule \
   'github' \
   'fasd' \
   'node' \
-  'apt' \
+  'arch' \
   'red-completion-dots' \
   'sudo'
 
