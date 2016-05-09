@@ -287,3 +287,4 @@ myzshrc
 .config/update-notifier
 .mpd/mpd.log
 .mpd/mpd.pid
+.mpd/state
