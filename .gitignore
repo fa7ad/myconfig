@@ -285,3 +285,5 @@ myzshrc
 .wget-hsts
 .config/puddletag
 .config/update-notifier
+.mpd/mpd.log
+.mpd/mpd.pid

@@ -855,3 +855,5 @@ May 09 22:44 : client: [3] closed
 May 09 22:44 : client: [4] opened from [::1]:40436
 May 09 22:44 : player: played "Arctic Monkeys/AM (2013)/01. Do I Wanna Know.mp3"
 May 09 22:44 : client: [4] closed
+May 09 22:46 : avahi: Service 'MPD Music Player' successfully established.
+May 09 22:46 : client: [0] opened from [::1]:40536
