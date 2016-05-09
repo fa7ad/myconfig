@@ -1,9 +1,0 @@
-#!/usr/bin/env zsh
-echo "About to execute:"
-echo "\t$@"
-read "ANS?Confirm execution with administrative authorization? [y/N]"
-if [[ $ANS =~ (Y|y|yes|Yes) ]];then
-    /usr/bin/sudo "$@"
-elif [[ $ANS =~ (N|n|no|No|) ]];then
-    echo "Cancelled!" && return 1
-fi
