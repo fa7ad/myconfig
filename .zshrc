@@ -39,3 +39,5 @@ function update_config {
     rsync -ar .config/ "${ZDOTDIR:-$HOME}/.config/"
     cd $current
 }
+
+export PATH="$PATH:node_modules/.bin"
