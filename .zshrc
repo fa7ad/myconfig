@@ -40,4 +40,7 @@ function update_config {
     cd $current
 }
 
-export PATH="$PATH:node_modules/.bin"
+export GOPATH=$HOME/go
+export GOROOT=/usr/lib/go
+
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:node_modules/.bin"
