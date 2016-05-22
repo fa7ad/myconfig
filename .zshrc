@@ -8,15 +8,6 @@ fi
 unsetopt CORRECT
 
 
-# Key timeout
-export KEYTIMEOUT=1
-
-
-# GitHub Hub CLI Config
-export GITHUB_USER='fa7ad'
-export GITHUB_PASSWORD=$(base64 -d <<< ${MYGITPASS})
-
-
 # mpv +history
 alias mpv='mpvh'
 alias mpa='mpv --no-vid'
@@ -39,8 +30,3 @@ function update_config {
     rsync -ar .config/ "${ZDOTDIR:-$HOME}/.config/"
     cd $current
 }
-
-export GOPATH=$HOME/go
-export GOROOT=/usr/lib/go
-
-export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:node_modules/.bin"

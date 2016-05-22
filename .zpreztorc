@@ -30,7 +30,7 @@ zstyle ':prezto:load' pmodule \
   'github' \
   'fasd' \
   'node' \
-  'yo' \
+  'python' \
   'pip' \
   'arch' \
   'red-completion-dots' \
