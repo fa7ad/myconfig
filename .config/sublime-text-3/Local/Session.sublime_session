@@ -1,0 +1,650 @@
+{
+	"folder_history":
+	[
+		"/home/fahad/PyProjects/lovelylady",
+		"/home/fahad/Documents/clone-org",
+		"/home/fahad/Documents/mpd-php-hempd",
+		"/home/fahad/Documents/ReactApp",
+		"/home/fahad/Documents/react-mvcx",
+		"/home/fahad/Documents/react-todo",
+		"/home/fahad/Documents/apex-by-itsumrat",
+		"/home/fahad/Documents/react-client-learn",
+		"/home/fahad/Documents/reaxpress"
+	],
+	"last_version": 3114,
+	"last_window_id": 14,
+	"log_indexing": false,
+	"settings":
+	{
+		"new_window_height": 0.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"pr",
+						"prompt"
+					],
+					[
+						"git_",
+						"git_clone_org"
+					],
+					[
+						"call",
+						"callback_final"
+					],
+					[
+						"get",
+						"get_repos"
+					],
+					[
+						"user",
+						"user_pass"
+					],
+					[
+						"use",
+						"user_pass"
+					],
+					[
+						"ge",
+						"get_repos"
+					],
+					[
+						"as",
+						"ask_org_name"
+					],
+					[
+						"tr",
+						"true"
+					],
+					[
+						"req",
+						"required"
+					],
+					[
+						"org",
+						"org_name"
+					],
+					[
+						"Too",
+						"ToolbarGroup"
+					],
+					[
+						"ff",
+						"font-family"
+					]
+				]
+			},
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 342.0,
+				"last_filter": "men",
+				"selected_items":
+				[
+					[
+						"men",
+						"View: Toggle Menu"
+					],
+					[
+						"ins",
+						"Package Control: Install Package"
+					],
+					[
+						"sideba",
+						"View: Toggle Side Bar"
+					],
+					[
+						"pref",
+						"Preferences: Settings - User"
+					],
+					[
+						"remove",
+						"Package Control: Remove Package"
+					],
+					[
+						"setting",
+						"Preferences: Settings - User"
+					],
+					[
+						"sc",
+						"Schemr: List all schemes"
+					],
+					[
+						"sch",
+						"Schemr: List all schemes"
+					],
+					[
+						"m",
+						"View: Toggle Menu"
+					],
+					[
+						"them",
+						"Themr: List themes"
+					],
+					[
+						"inst",
+						"Package Control: Install Package"
+					],
+					[
+						"settin",
+						"Preferences: Settings - User"
+					],
+					[
+						"",
+						"About"
+					]
+				],
+				"width": 467.0
+			},
+			"console":
+			{
+				"height": 126.0,
+				"history":
+				[
+					"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/fahad/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+				"/home/fahad/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+				"/home/fahad/Documents/clone-org/main.py",
+				"/home/fahad/Documents/clone-org/bin/cli.coffee",
+				"/home/fahad/Documents/mpd-php-hempd/mpd/mpd.class.php",
+				"/home/fahad/Documents/ReactApp/.meteor/packages",
+				"/home/fahad/Documents/ReactApp/components/Homepage.jsx",
+				"/home/fahad/Documents/ReactApp/components/App.jsx",
+				"/home/fahad/Documents/ReactApp/components/Footer.jsx",
+				"/home/fahad/Documents/ReactApp/components/Header.jsx",
+				"/home/fahad/Documents/ReactApp/components/Homepage/Content.jsx",
+				"/home/fahad/Documents/ReactApp/components/Layout.jsx",
+				"/home/fahad/Documents/react-todo/src/components/NavBar.jsx",
+				"/home/fahad/Documents/react-todo/package.json",
+				"/home/fahad/Documents/react-todo/src/index.js",
+				"/home/fahad/Documents/react-todo/webpack.config.js",
+				"/home/fahad/.config/sublime-text-3/Packages/Stylus/Stylus.sublime-settings",
+				"/home/fahad/Documents/apex-by-itsumrat/package.json",
+				"/home/fahad/Documents/react-client-learn/client.min.js",
+				"/home/fahad/Documents/reaxpress/app.js",
+				"/home/fahad/Documents/reaxpress/config/config.js"
+			],
+			"find":
+			{
+				"height": 34.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"remember",
+					"open",
+					"dir",
+					"prompt.",
+					"var",
+					"sys",
+					"is",
+					"'",
+					"getUrlParam",
+					"';\n",
+					"import",
+					"habana"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 27.0
+			},
+			"input":
+			{
+				"height": 31.0
+			},
+			"menu_visible": false,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 50.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"cli.js",
+						"bin/cli.js"
+					],
+					[
+						"pac",
+						".meteor/packages"
+					],
+					[
+						"home",
+						"components/Homepage.jsx"
+					],
+					[
+						"pack",
+						".meteor/packages"
+					],
+					[
+						"foo",
+						"components/Footer.jsx"
+					],
+					[
+						"pa",
+						".meteor/packages"
+					],
+					[
+						"package",
+						".meteor/packages"
+					],
+					[
+						"",
+						"src/index.js"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": true,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 220.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 0.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"pr",
+						"prompt"
+					],
+					[
+						"git_",
+						"git_clone_org"
+					],
+					[
+						"call",
+						"callback_final"
+					],
+					[
+						"get",
+						"get_repos"
+					],
+					[
+						"user",
+						"user_pass"
+					],
+					[
+						"use",
+						"user_pass"
+					],
+					[
+						"ge",
+						"get_repos"
+					],
+					[
+						"as",
+						"ask_org_name"
+					],
+					[
+						"tr",
+						"true"
+					],
+					[
+						"req",
+						"required"
+					],
+					[
+						"org",
+						"org_name"
+					],
+					[
+						"Too",
+						"ToolbarGroup"
+					],
+					[
+						"ff",
+						"font-family"
+					]
+				]
+			},
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 342.0,
+				"last_filter": "men",
+				"selected_items":
+				[
+					[
+						"men",
+						"View: Toggle Menu"
+					],
+					[
+						"ins",
+						"Package Control: Install Package"
+					],
+					[
+						"sideba",
+						"View: Toggle Side Bar"
+					],
+					[
+						"pref",
+						"Preferences: Settings - User"
+					],
+					[
+						"remove",
+						"Package Control: Remove Package"
+					],
+					[
+						"setting",
+						"Preferences: Settings - User"
+					],
+					[
+						"sc",
+						"Schemr: List all schemes"
+					],
+					[
+						"sch",
+						"Schemr: List all schemes"
+					],
+					[
+						"m",
+						"View: Toggle Menu"
+					],
+					[
+						"them",
+						"Themr: List themes"
+					],
+					[
+						"inst",
+						"Package Control: Install Package"
+					],
+					[
+						"settin",
+						"Preferences: Settings - User"
+					],
+					[
+						"",
+						"About"
+					]
+				],
+				"width": 467.0
+			},
+			"console":
+			{
+				"height": 126.0,
+				"history":
+				[
+					"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/fahad/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+				"/home/fahad/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+				"/home/fahad/Documents/clone-org/main.py",
+				"/home/fahad/Documents/clone-org/bin/cli.coffee",
+				"/home/fahad/Documents/mpd-php-hempd/mpd/mpd.class.php",
+				"/home/fahad/Documents/ReactApp/.meteor/packages",
+				"/home/fahad/Documents/ReactApp/components/Homepage.jsx",
+				"/home/fahad/Documents/ReactApp/components/App.jsx",
+				"/home/fahad/Documents/ReactApp/components/Footer.jsx",
+				"/home/fahad/Documents/ReactApp/components/Header.jsx",
+				"/home/fahad/Documents/ReactApp/components/Homepage/Content.jsx",
+				"/home/fahad/Documents/ReactApp/components/Layout.jsx",
+				"/home/fahad/Documents/react-todo/src/components/NavBar.jsx",
+				"/home/fahad/Documents/react-todo/package.json",
+				"/home/fahad/Documents/react-todo/src/index.js",
+				"/home/fahad/Documents/react-todo/webpack.config.js",
+				"/home/fahad/.config/sublime-text-3/Packages/Stylus/Stylus.sublime-settings",
+				"/home/fahad/Documents/apex-by-itsumrat/package.json",
+				"/home/fahad/Documents/react-client-learn/client.min.js",
+				"/home/fahad/Documents/reaxpress/app.js",
+				"/home/fahad/Documents/reaxpress/config/config.js"
+			],
+			"find":
+			{
+				"height": 34.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"remember",
+					"open",
+					"dir",
+					"prompt.",
+					"var",
+					"sys",
+					"is",
+					"'",
+					"getUrlParam",
+					"';\n",
+					"import",
+					"habana"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 27.0
+			},
+			"input":
+			{
+				"height": 31.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": false,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,1,0,0,0,0,0,0,0,1366,768",
+			"replace":
+			{
+				"height": 50.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"cli.js",
+						"bin/cli.js"
+					],
+					[
+						"pac",
+						".meteor/packages"
+					],
+					[
+						"home",
+						"components/Homepage.jsx"
+					],
+					[
+						"pack",
+						".meteor/packages"
+					],
+					[
+						"foo",
+						"components/Footer.jsx"
+					],
+					[
+						"pa",
+						".meteor/packages"
+					],
+					[
+						"package",
+						".meteor/packages"
+					],
+					[
+						"",
+						"src/index.js"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": true,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 220.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 14
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}

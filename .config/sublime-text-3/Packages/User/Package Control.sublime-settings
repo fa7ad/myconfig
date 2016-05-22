@@ -1,0 +1,27 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Babel",
+		"Better CoffeeScript",
+		"Color Highlighter",
+		"Dark Neon Color Scheme",
+		"Emmet",
+		"Git",
+		"GTKDarkThemeVariantSetter",
+		"Materialize",
+		"Neon Color Scheme",
+		"Package Control",
+		"PHPIntel",
+		"Project Manager",
+		"Schemr",
+		"Seti_UI",
+		"Stylus",
+		"Theme - Afterglow",
+		"Theme - Farzher",
+		"Themr"
+	]
+}
