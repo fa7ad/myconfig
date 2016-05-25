@@ -30,3 +30,6 @@ function update_config {
     rsync -ar .config/ "${ZDOTDIR:-$HOME}/.config/"
     cd $current
 }
+
+# get sudo without pass
+alias getsudo="sudo -S echo 'Got SUDO!' <<< ${MYPASSWORD_CLEARTEXT}"
