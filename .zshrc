@@ -32,4 +32,6 @@ function update_config {
 }
 
 # get sudo without pass
-alias getsudo="sudo -S echo 'Got SUDO!' <<< ${MYPASSWORD_CLEARTEXT}"
+function getsudo {
+  sudo -S echo 'Got SUDO!' <<< ${MYPASSWORD_CLEARTEXT}
+}

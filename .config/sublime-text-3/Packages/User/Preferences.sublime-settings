@@ -21,6 +21,7 @@
 	],
 	"font_size": 11,
 	"highlight_line": true,
+	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -31,8 +32,12 @@
 		"draw_active"
 	],
 	"overlay_scroll_bars": "enabled",
-	"theme": "Seti.sublime-theme",
-	"update_check": false,
-	"hot_exit": false,
-	"remember_full_screen": true
+	"remember_full_screen": true,
+	"rulers":
+	[
+		80,
+		120
+	],
+	"theme": "Material Seti.sublime-theme",
+	"update_check": false
 }
