@@ -35,3 +35,5 @@ function update_config {
 function getsudo {
   sudo -S echo 'Got SUDO!' <<< ${MYPASSWORD_CLEARTEXT}
 }
+
+alias phpu='php -dzend_extension=xdebug.so $(which phpunit)'
