@@ -3,6 +3,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Source zshenv to make changes immidiate
+source "${ZDOTDIR:-$HOME}/.zshenv"
 
 # Disable autocorrecting entered commands
 unsetopt CORRECT
