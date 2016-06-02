@@ -31,10 +31,20 @@ def convert_to_mp3(flac_file=None, output_dir=None):
 
     file_name = os.path.basename(flac_file).replace('.flac', '.mp3')
 
-    ffmpeg = "ffmpeg -i {0} -codec:a libmp3lame -aq 0 -ab 320k -ar 48000 -codec:v mjpeg {1}"
-    ffmpeg = ffmpeg.format(shlex.quote(flac_file), shlex.quote(out_dir + '/' + file_name))
+    ffmpeg = ("ffmpeg -i {0} -codec:a libmp3lame"
+              " -aq 0 -ab 320k -ar 48000 -codec:v mjpeg {1}")
+    ffmpeg = ffmpeg.format(
+        shlex.quote(flac_file),
+        shlex.quote(out_dir + '/' + file_name))
 
-    return subprocess.call(ffmpeg, shell=True)
+    try:
+        return subprocess.call(ffmpeg, shell=True)
+    except KeyboardInterrupt:
+        print("Quitting...")
+        return subprocess.call(['rm', '-fv', (out_dir + '/' + file_name)])
+    except:
+        raise
+        return 255
 
 
 def cli():
