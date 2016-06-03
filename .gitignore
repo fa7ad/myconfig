@@ -8,3 +8,4 @@
 .mpd/mpd.log
 .mpd/mpd.pid
 .mpd/state
+.mpd/database
