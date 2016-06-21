@@ -90,3 +90,7 @@ let g:ctrlp_map = '<Leader>t'
 " Switch buffers
 nmap <Leader>n :bnext<CR>
 nmap <Leader>p :bprev<CR>
+
+
+" path to python3
+let g:ycm_python_binary_path = '/usr/bin/python3'
