@@ -41,3 +41,4 @@ function getsudo {
 alias phpu='php -dzend_extension=xdebug.so $(which phpunit)'
 alias ....='../..'
 alias ......='../../..'
+alias -g chahc='--cache-min 99999999'

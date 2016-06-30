@@ -54,7 +54,7 @@ let g:airline_symbols.linenr = ''
 " GVim window size
 if has("gui_running")
   set lines=30 columns=90
-  set guifont=Monaco\ for\ Powerline\ 12
+  set guifont=Monaco\ 12
 endif
 
 
