@@ -2,7 +2,6 @@
 " This only works with spf13 VIM
 " This config is how *I* like my vim
 
-
 " change the mapleader from \ to ,
 let mapleader=","
 
@@ -13,7 +12,7 @@ set timeout timeoutlen=750 ttimeoutlen=50
 
 " Indentation
 "set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-let g:detectindent_preferred_indent = 4
+let g:detectindent_preferred_indent = 2
 let g:expandtab = 1
 augroup DetectIndent
   autocmd!
@@ -26,7 +25,11 @@ set nowrap
 
 
 " Enable line numbers
-set number
+"set number
+autocmd FocusLost * :set number
+autocmd FocusGained * :set relativenumber
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
 
 
 " Number of terminal colors
@@ -54,7 +57,8 @@ let g:airline_symbols.linenr = ''
 " GVim window size
 if has("gui_running")
   set lines=30 columns=90
-  set guifont=Monaco\ 12
+  "set guifont=Monaco\ 12
+  set guifont=FantasqueSansMono\ Nerd\ Font\ 14
 endif
 
 
