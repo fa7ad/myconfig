@@ -12,7 +12,7 @@ unsetopt CORRECT
 # lua
 export LUA_PATH="$LUA_PATH;$HOME/.luarocks/share/lua/5.2/?.lua;$HOME/.luarocks/share/lua/5.2/?/init.lua;$HOME/.luarocks/share/lua/5.3/?.lua;$HOME/.luarocks/share/lua/5.3/?/init.lua"
 export LUA_CPATH="$LUA_CPATH;$HOME/.luarocks/lib/lua/5.2/?.so;$HOME/.luarocks/lib/lua/5.3/?.so"
-export PATH="$HOME/.bin:$HOME/.luarocks/bin:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$HOME/.gem/ruby/2.3.0/bin:$PATH"
+export PATH="$HOME/.bin:$HOME/.luarocks/bin:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$HOME/.gem/ruby/2.3.0/bin:/ldata/android-studio/bin:$PATH"
 
 # mpv +history
 alias mpv='mpvh'
