@@ -97,4 +97,4 @@ nmap <Leader>p :bprev<CR>
 
 
 " path to python3
-let g:ycm_python_binary_path = '/usr/bin/python3'
+let g:ycm_python_binary_path = '/usr/bin/python2'
