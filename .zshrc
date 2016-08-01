@@ -44,6 +44,19 @@ function getsudo {
   sudo -S echo 'Got SUDO!' <<< ${MYPASSWORD_CLEARTEXT}
 }
 
+# LEMP
+function stop_emp {
+  _ systemctl stop nginx
+  _ systemctl stop php-fpm
+  _ systemctl stop mariadb
+}
+
+function start_emp {
+  _ systemctl start nginx
+  _ systemctl start php-fpm
+  _ systemctl start mariadb
+}
+
 alias phpu='php -dzend_extension=xdebug.so $(which phpunit)'
 alias ....='../..'
 alias tree='tree -I node_modules'
