@@ -1,10 +1,9 @@
 {
 	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
-	"caret_extra_bottom": 3,
-	"caret_extra_top": 3,
-	"caret_extra_width": 1,
-	"color_scheme": "Packages/User/NeonGlow.tmTheme",
+	"caret_extra_bottom": 2,
+	"caret_extra_top": 2,
+	"color_scheme": "Packages/User/Color Highlighter/themes/NeonGlow.tmTheme",
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -14,12 +13,12 @@
 		"node_modules",
 		"bower_components"
 	],
-	"font_face": "Monaco, Source Code Pro, monospace",
+	"font_face": "Operator Mono Medium, Source Code Pro, monospace",
 	"font_options":
 	[
 		"gray_antialias"
 	],
-	"font_size": 11,
+	"font_size": 10,
 	"highlight_line": true,
 	"hot_exit": false,
 	"ignored_packages":
@@ -31,6 +30,17 @@
 		"draw_normal",
 		"draw_active"
 	],
+	"material_theme_accent_red": true,
+	"material_theme_appbar_red": true,
+	"material_theme_bold_tab": true,
+	"material_theme_compact_panel": true,
+	"material_theme_compact_sidebar": true,
+	"material_theme_contrast_mode": true,
+	"material_theme_panel_separator": true,
+	"material_theme_small_statusbar": true,
+	"material_theme_small_tab": true,
+	"material_theme_tabs_autowidth": true,
+	"material_theme_tree_headings": true,
 	"overlay_scroll_bars": "enabled",
 	"remember_full_screen": true,
 	"rulers":
@@ -38,6 +48,6 @@
 		80,
 		120
 	],
-	"theme": "Material Seti.sublime-theme",
+	"theme": "Material-Theme-Darker.sublime-theme",
 	"update_check": false
 }

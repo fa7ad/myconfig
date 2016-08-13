@@ -59,4 +59,5 @@ function start_emp {
 
 alias phpu='php -dzend_extension=xdebug.so $(which phpunit)'
 alias ....='../..'
-alias tree='tree -I node_modules'
+alias tree="tree -I 'node_modules|bower_components'"
+alias \%=command
