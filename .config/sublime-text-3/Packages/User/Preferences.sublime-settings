@@ -4,6 +4,7 @@
 	"caret_extra_bottom": 2,
 	"caret_extra_top": 2,
 	"color_scheme": "Packages/User/Color Highlighter/themes/NeonGlow.tmTheme",
+	"draw_white_space": "all",
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -18,7 +19,7 @@
 	[
 		"gray_antialias"
 	],
-	"font_size": 10,
+	"font_size": 12,
 	"highlight_line": true,
 	"hot_exit": false,
 	"ignored_packages":
@@ -49,5 +50,8 @@
 		120
 	],
 	"theme": "Material-Theme-Darker.sublime-theme",
-	"update_check": false
+	"translate_tabs_to_spaces": true,
+	"update_check": false,
+	"detect_indentation": true,
+	"use_tab_stops": true
 }
