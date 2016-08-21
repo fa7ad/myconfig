@@ -46,18 +46,18 @@ function getsudo {
 
 # LEMP
 function stop_emp {
-  _ systemctl stop nginx
-  _ systemctl stop php-fpm
-  _ systemctl stop mariadb
+  _ systemctl stop {nginx,php-fpm,mariadb}
 }
 
 function start_emp {
-  _ systemctl start nginx
-  _ systemctl start php-fpm
-  _ systemctl start mariadb
+  _ systemctl start {nginx,php-fpm,mariadb}
 }
 
 alias phpu='php -dzend_extension=xdebug.so $(which phpunit)'
 alias ....='../..'
 alias tree="tree -I 'node_modules|bower_components'"
 alias \%=command
+
+alias systop="sudo systemctl stop"
+alias systart="sudo systemctl start"
+alias syrestart="sudo systemctl restart"
