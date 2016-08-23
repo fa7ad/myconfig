@@ -5,6 +5,7 @@ Xft.rgba:                   rgb
 Xft.hinting:                true
 Xft.hintstyle:              hintfull
 
+
 ! Looks
 URxvt*termName:             xterm-256color
 URxvt*geometry:             80x23
@@ -31,20 +32,21 @@ URxvt.transparent:          true
 URxvt.tintColor:            white
 URxvt.shading:              20
 
-! Fonts
-!URxvt*font:                 xft:Monaco for Powerline:regular:size=12
-!URxvt*imFont:               xft:Monaco for Powerline:regular:size=12
-!URxvt*boldFont:             xft:Monaco for Powerline:bold:size=12
-!URxvt*italicFont:           xft:Monaco for Powerline:italic:size=12
-!URxvt*boldItalicFont:       xft:Monaco for Powerline:bold:italic:size=12
+!! Fonts
+!!URxvt*font:                 xft:Monaco:regular:size=12:antialias=true:hinting=true
+!!URxvt*imFont:               xft:Monaco:regular:size=12:antialias=true:hinting=true
+!!URxvt*boldFont:             xft:Monaco:bold:size=12:antialias=true:hinting=true
+!!URxvt*italicFont:           xft:Monaco:italic:size=12:antialias=true:hinting=true
+!!URxvt*boldItalicFont:       xft:Monaco:bold:italic:size=12:antialias=true:hinting=true
 
-URxvt*font:                 xft:Monaco:regular:size=12:antialias=true:hinting=true,xft:Monaco for Powerline:regular:size=12
-URxvt*imFont:               xft:Monaco:regular:size=12:antialias=true:hinting=true,xft:Monaco for Powerline:regular:size=12
-URxvt*boldFont:             xft:Monaco:bold:size=12:antialias=true:hinting=true,xft:Monaco for Powerline:regular:size=12
-URxvt*italicFont:           xft:Monaco:italic:size=12:antialias=true:hinting=true,xft:Monaco for Powerline:regular:size=12
-URxvt*boldItalicFont:       xft:Monaco:bold:italic:size=12:antialias=true:hinting=true,xft:Monaco for Powerline:regular:size=12
+URxvt*font:            xft:Operator Mono Medium:regular:size=12:antialias=true:hinting=true,xft:Hack:regular:size=12
+URxvt*imFont:          xft:Operator Mono Medium:regular:size=12:antialias=true:hinting=true,xft:Hack:regular:size=12
+URxvt*boldFont:        xft:Operator Mono Medium:bold:size=12:antialias=true:hinting=true,xft:Hack:regular:size=12
+URxvt*italicFont:      xft:Operator Mono Medium:italic:size=12:antialias=true:hinting=true,xft:Hack:regular:size=12
+URxvt*boldItalicFont:  xft:Operator Mono Medium:bold:italic:size=12:antialias=true:hinting=true,xft:Hack:regular:size=12
 
-! Colors
+
+!! Colors
 !!Source http://github.com/altercation/solarized
 
 *background: #002b36
@@ -85,3 +87,22 @@ URxvt*boldItalicFont:       xft:Monaco:bold:italic:size=12:antialias=true:hintin
 !! white dark/light
 *color7: #eee8d5
 *color15: #fdf6e3
+
+
+
+! urxvt settings
+! transparency settings
+!URxvt.inheritPixmap: true
+!URxvt.transparent: true
+!URxvt.tintColor: #000
+!URxvt.shading: 45
+!! other settings
+!URxvt.geometry: 90x25+180+200
+!URxvt.cursorColor:red3
+!URxvt.scrollBar:False
+!URxvt.saveLines:3000
+!URxvt.preeditType:Root
+!! open URL in browser
+!URxvt.urlLauncher: google-chrome
+!URxvt.matcher.button: 1
+!URxvt.perl-ext-common: matcher
