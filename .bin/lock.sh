@@ -1,17 +1,17 @@
 #!/bin/bash
 scrot /tmp/screen.png
-convert /tmp/screen.png -scale 10% -scale 1000% /tmp/screen.png
+convert /tmp/screen.png -blur 5x5 -scale 10% -scale 1000% /tmp/screen.png
 convert /tmp/screen.png ~/.config/i3/lock.png -gravity center -composite -matte /tmp/screen.png
 
 i3lock -i /tmp/screen.png
 rm /tmp/screen.png
 
 # Wanted trigger timeout in milliseconds.
-IDLE_TIME=$((1*30*1000))
+IDLE_TIME=$((1*15*1000))
 
 # Sequence to execute when timeout triggers.
 trigger_cmd() {
-    pgrep i3lock && xset dpms force off
+    xset dpms force off
 }
 
 sleep_time=$IDLE_TIME
