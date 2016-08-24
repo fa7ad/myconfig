@@ -226,7 +226,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec /usr/local/bin/toggletouchpad.sh # toggle touchpad
+bindsym XF86TouchpadToggle exec ~/.bin/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -244,3 +244,5 @@ exec --no-startup-id google-chrome-stable
 exec --no-startup-id nitrogen --restore
 
 exec compton -f
+
+exec --no-startup-id ~/.bin/autolock.sh
