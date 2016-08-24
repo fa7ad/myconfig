@@ -110,7 +110,7 @@ set $ws6 "6: ?"
 set $ws7 "7: ?"
 set $ws8 "9: ?"
 set $ws9 "9: ?"
-set $ws0 "10: 🎜"
+set $ws0 "10: 🎜 | "
 
 
 # switch to workspace
