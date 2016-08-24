@@ -214,7 +214,7 @@ bar {
 }
 
 # Lock using Mod+shift+X
-bindsym $mod+l exec ~/.bin/lock.sh ~/.config/i3/lock.png
+bindsym $mod+l exec ~/.bin/lock.sh
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
@@ -238,11 +238,9 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
+exec compton -f
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id xautolock -time 5 -locker ~/.bin/lock.sh
 
 exec --no-startup-id google-chrome-stable
-
-exec --no-startup-id nitrogen --restore
-
-exec compton -f
-
-exec --no-startup-id ~/.bin/autolock.sh
+exec --no-startup-id i3-sensible-terminal
