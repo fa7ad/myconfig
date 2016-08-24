@@ -201,6 +201,7 @@ hide_edge_borders both
 # finds out, if available)
 bar {
         #status_command i3status
+        tray_output primary
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
         colors {
                 background $bg-color
@@ -243,3 +244,4 @@ exec --no-startup-id xautolock -time 5 -locker ~/.bin/lock.sh
 
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id i3-sensible-terminal
+exec --no-startup-id ~/.bin/startapps.sh
