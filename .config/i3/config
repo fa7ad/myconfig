@@ -106,11 +106,11 @@ set $ws2 "2: "
 set $ws3 "3: "
 set $ws4 "4: "
 set $ws5 "5: "
-set $ws6 "6: "
+set $ws6 "6: ?"
 set $ws7 "7: ?"
 set $ws8 "9: ?"
 set $ws9 "9: ?"
-set $ws0 "10: 🎜"
+set $ws0 "10: 🎜"
 
 
 # switch to workspace
@@ -153,7 +153,6 @@ assign [class="Gvim"] $ws4
 assign [class="GVim"] $ws4
 assign [class="Vim"] $ws4
 assign [class="Nautilus"] $ws5
-assign [class="mpv"] $ws6
 assign [class="mpv"] $ws0
 
 # reload the configuration file
