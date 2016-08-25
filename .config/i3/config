@@ -238,6 +238,10 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
+# Screenshot
+bindsym --release Print exec scrot -q 100 'scrot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+bindsym --release Shift+Print exec scrot -q 100 'scrot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/' -s
+
 exec compton -f
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xautolock -time 5 -locker ~/.bin/lock.sh
