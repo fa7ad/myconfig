@@ -250,7 +250,7 @@ bindsym --release Mod1+Shift+Print exec scrot -u -q 100 'scrot_%Y-%m-%d_%H%M%S.j
 
 exec --no-startup-id compton -f
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id xautolock -time 5 -locker ~/.bin/lock.sh
+exec --no-startup-id xautolock -corners -000 -time 5 -locker ~/.bin/lock.sh
 
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id i3-sensible-terminal
