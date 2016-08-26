@@ -58,7 +58,7 @@ let g:airline_symbols.linenr = ''
 if has("gui_running")
   set lines=30 columns=90
   "set guifont=Monaco\ 12
-  set guifont=FantasqueSansMono\ Nerd\ Font\ 14
+  set guifont=Operator\ Mono\ Medium\ 12
 endif
 
 
