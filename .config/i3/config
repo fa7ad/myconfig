@@ -112,6 +112,17 @@ set $ws8 "9: ?"
 set $ws9 "9: ?"
 set $ws0 "10: 🎜 | "
 
+# Secret workspaces
+set $wss0 "🔒 0"
+set $wss1 "🔒 1"
+set $wss2 "🔒 2"
+set $wss3 "🔒 3"
+set $wss4 "🔒 4"
+set $wss5 "🔒 5"
+set $wss6 "🔒 6"
+set $wss7 "🔒 7"
+set $wss8 "🔒 8"
+set $wss9 "🔒 9"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -125,6 +136,17 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws0
 
+bindsym $mod+KP_1 workspace $wss1
+bindsym $mod+KP_2 workspace $wss2
+bindsym $mod+KP_3 workspace $wss3
+bindsym $mod+KP_4 workspace $wss4
+bindsym $mod+KP_5 workspace $wss5
+bindsym $mod+KP_6 workspace $wss6
+bindsym $mod+KP_7 workspace $wss7
+bindsym $mod+KP_8 workspace $wss8
+bindsym $mod+KP_9 workspace $wss9
+bindsym $mod+KP_0 workspace $wss0
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
@@ -136,6 +158,17 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws0
+
+bindsym $mod+Shift+KP_1 move container to workspace $wss1
+bindsym $mod+Shift+KP_2 move container to workspace $wss2
+bindsym $mod+Shift+KP_3 move container to workspace $wss3
+bindsym $mod+Shift+KP_4 move container to workspace $wss4
+bindsym $mod+Shift+KP_5 move container to workspace $wss5
+bindsym $mod+Shift+KP_6 move container to workspace $wss6
+bindsym $mod+Shift+KP_7 move container to workspace $wss7
+bindsym $mod+Shift+KP_8 move container to workspace $wss8
+bindsym $mod+Shift+KP_9 move container to workspace $wss9
+bindsym $mod+Shift+KP_0 move container to workspace $wss0
 
 # fixed windows
 assign [class="google-chrome"] $ws2
@@ -156,6 +189,10 @@ assign [class="Nautilus"] $ws5
 assign [class="Thunar"] $ws5
 assign [class="thunar"] $ws5
 assign [class="mpv"] $ws0
+
+# floating workspaces
+for_window [workspace=$ws1] floating enable
+for_window [workspace=$wss9] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -193,8 +230,8 @@ bindsym $mod+r mode "resize"
 # window colors
 #                       border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 hide_edge_borders both
@@ -215,8 +252,10 @@ bar {
         }
 }
 
+set $locker ~/.bin/lock.sh
+
 # Lock using Mod+l
-bindsym $mod+l exec ~/.bin/lock.sh
+bindsym $mod+l exec $locker
 
 # Open thunar
 bindsym $mod+Mod1+e exec thunar
@@ -229,6 +268,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute s
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Sleep
+bindsym XF86Sleep exec "$locker& sleep 15 && systemctl suspend"
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec ~/.bin/toggletouchpad.sh # toggle touchpad
@@ -244,14 +286,18 @@ bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 # Screenshot
-bindsym --release Print exec scrot -q 100 'scrot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
-bindsym --release Shift+Print exec scrot -s -q 100 'scrot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
-bindsym --release Mod1+Shift+Print exec scrot -u -q 100 'scrot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+bindsym --release Print exec scrot -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+bindsym --release Shift+Print exec scrot -s -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+bindsym --release $mod+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
 
+# Startup
 exec --no-startup-id compton -f
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id xautolock -corners -000 -time 5 -locker ~/.bin/lock.sh
+exec --no-startup-id xset dpms 600
+exec --no-startup-id xautolock -corners -000 -time 5 -locker $locker
+exec --no-startup-id gsettings set org.gnome.desktop.background show-desktop-icons false
 
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id i3-sensible-terminal
+exec --no-startup-id thunar
 exec --no-startup-id ~/.bin/startapps.sh
