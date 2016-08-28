@@ -194,6 +194,9 @@ assign [class="mpv"] $ws0
 for_window [workspace=$ws1] floating enable
 for_window [workspace=$wss9] floating enable
 
+# floating windows
+for_window [class="mpv"] floating enable
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
