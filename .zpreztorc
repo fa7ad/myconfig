@@ -37,7 +37,7 @@ zstyle ':prezto:load' pmodule \
   'sudo'
 
 # Prompt
-zstyle ':prezto:module:prompt' theme 'paradox'
+zstyle ':prezto:module:prompt' theme 'paradise'
 
 
 # SSH

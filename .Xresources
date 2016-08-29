@@ -8,7 +8,8 @@ Xft.hintstyle:              hintfull
 
 ! Looks
 URxvt*termName:             xterm-256color
-URxvt*geometry:             80x23
+URxvt*iso14755:             False
+URxvt*geometry:             80x24
 URxvt*depth:                32
 URxvt*loginShell:           false
 URxvt*scrollColor:          #333333
@@ -24,21 +25,18 @@ URxvt*letterSpace:          -1
 URxvt*cursorBlink:          true
 URxvt*cursorColor:          #657b83
 URxvt*cursorUnderline:      false
+! open URL in browser
+URxvt.urlLauncher:          google-chrome-stable
+URxvt.matcher.button:       1
+URxvt.perl-ext-common:      matcher
 
 ! Transparency
 urxvt*background:           rgba:0000/0000/0000/cccc
-
 URxvt.transparent:          true
 URxvt.tintColor:            white
 URxvt.shading:              20
 
-!! Fonts
-!!URxvt*font:                 xft:Monaco:regular:size=12:antialias=true:hinting=true
-!!URxvt*imFont:               xft:Monaco:regular:size=12:antialias=true:hinting=true
-!!URxvt*boldFont:             xft:Monaco:bold:size=12:antialias=true:hinting=true
-!!URxvt*italicFont:           xft:Monaco:italic:size=12:antialias=true:hinting=true
-!!URxvt*boldItalicFont:       xft:Monaco:bold:italic:size=12:antialias=true:hinting=true
-
+! Fonts
 URxvt*font:            xft:Operator Mono Medium:regular:size=12:antialias=true:hinting=true,xft:Hack:regular:size=12
 URxvt*imFont:          xft:Operator Mono Medium:regular:size=12:antialias=true:hinting=true,xft:Hack:regular:size=12
 URxvt*boldFont:        xft:Operator Mono Medium:bold:size=12:antialias=true:hinting=true,xft:Hack:regular:size=12
@@ -59,60 +57,48 @@ URxvt*boldItalicFont:  xft:Operator Mono Medium:bold:italic:size=12:antialias=tr
 !! black dark/light
 *color0: #073642
 *color8: #002b36
-
 !! red dark/light
 *color1: #dc322f
 *color9: #cb4b16
-
 !! green dark/light
 *color2: #859900
 *color10: #586e75
-
 !! yellow dark/light
 *color3: #b58900
 *color11: #657b83
-
 !! blue dark/light
 *color4: #268bd2
 *color12: #839496
-
 !! magenta dark/light
 *color5: #d33682
 *color13: #6c71c4
-
 !! cyan dark/light
 *color6: #2aa198
 *color14: #93a1a1
-
 !! white dark/light
 *color7: #eee8d5
 *color15: #fdf6e3
 
 
-
-! urxvt settings
-! transparency settings
-!URxvt.inheritPixmap: true
-!URxvt.transparent: true
-!URxvt.tintColor: #000
-!URxvt.shading: 45
-!! other settings
-!URxvt.geometry: 90x25+180+200
-!URxvt.cursorColor:red3
-!URxvt.scrollBar:False
-!URxvt.saveLines:3000
-!URxvt.preeditType:Root
-!! open URL in browser
-!URxvt.urlLauncher: google-chrome
-!URxvt.matcher.button: 1
-!URxvt.perl-ext-common: matcher
-
-
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
+!! ROFI Color theme
 rofi.color-enabled: true
-rofi.color-window: #273238, #273238, #1e2529
-rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
-rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
-rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
+rofi.color-window:  #273238, #273238, #1e2529
+rofi.color-normal:  #273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active:  #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent:  #273238, #ff1844, #273238, #394249, #ff1844
+
+
+! xterm
+xterm*font:            xft:Operator Mono Medium:regular:size=16:antialias=true:hinting=true,xft:Hack:regular:size=16
+xterm*imFont:          xft:Operator Mono Medium:regular:size=16:antialias=true:hinting=true,xft:Hack:regular:size=16
+xterm*boldFont:        xft:Operator Mono Medium:bold:size=16:antialias=true:hinting=true,xft:Hack:regular:size=16
+xterm*italicFont:      xft:Operator Mono Medium:italic:size=16:antialias=true:hinting=true,xft:Hack:regular:size=16
+xterm*boldItalicFont:  xft:Operator Mono Medium:bold:italic:size=16:antialias=true:hinting=true,xft:Hack:regular:size=16
+
+xterm*loginShell:       false
+xterm*vt100*geometry:   80x24
+xterm*saveLines:        3000
+xterm*charClass:        33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName:         xterm-256color
+xterm*eightBitInput:    false
+
