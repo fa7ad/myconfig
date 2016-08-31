@@ -279,7 +279,7 @@ bindsym XF86Sleep exec "$locker& sleep 15 && systemctl suspend"
 bindsym XF86TouchpadToggle exec ~/.bin/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl pause
+bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioStop exec playerctl stop
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous

@@ -73,4 +73,15 @@ my $title = qx(playerctl $player_arg metadata title);
 exit(0) if $?;
 push(@metadata, $title) if $title;
 
-print(join(" - ", @metadata)) if @metadata;
+my $status = qx(playerctl $player_arg status);
+my $icon = "";
+
+if ($status =~ /Playing/) {
+    $icon = "";
+} elsif ($status =~ /Paused/) {
+    $icon = "";
+} elsif ($status =~ /Stopped/) {
+    $icon = "";
+}
+
+print($icon . ' ' . join(" - ", @metadata)) if @metadata;
