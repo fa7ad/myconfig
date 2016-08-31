@@ -31,9 +31,9 @@ if ($BLOCK_INSTANCE) {
 }
 
 if ($ENV{'BLOCK_BUTTON'} == 1) {
-    system("playerctl $player_arg previous");
-} elsif ($ENV{'BLOCK_BUTTON'} == 2) {
     system("playerctl $player_arg play-pause");
+} elsif ($ENV{'BLOCK_BUTTON'} == 2) {
+    system("playerctl $player_arg previous");
 } elsif ($ENV{'BLOCK_BUTTON'} == 3) {
     system("playerctl $player_arg next");
 }
