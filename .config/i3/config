@@ -21,7 +21,6 @@ font pango:SFNS Display Regular 10
 
 # color variables
 set $bg-color            #2f343f
-#set $bg-color            #2f343f
 set $inactive-bg-color   #363846
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
@@ -232,27 +231,28 @@ bindsym $mod+r mode "resize"
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+client.focused          $bg-color           $bg-color          $text-color          #ff0000
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #ff0000
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #ff0000
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #ff0000
 
 hide_edge_borders both
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        #status_command i3status
         tray_output primary
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        font pango:SFNS Display Regular 10, xft:FontAwesome 10
         colors {
                 background $bg-color
+                statusline #00A5FF
                 separator #757575
                 #                  border             background         text
                 focused_workspace  $bg-color          $bg-color          $text-color
                 inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
                 urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
         }
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
 
 set $locker ~/.bin/lock.sh
@@ -279,8 +279,8 @@ bindsym XF86Sleep exec "$locker& sleep 15 && systemctl suspend"
 bindsym XF86TouchpadToggle exec ~/.bin/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioPlay exec playerctl pause
+bindsym XF86AudioStop exec playerctl stop
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
