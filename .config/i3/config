@@ -192,6 +192,8 @@ assign [class="mpv"] $ws0
 # floating workspaces
 for_window [workspace=$ws1] floating enable
 for_window [workspace=$wss9] floating enable
+for_window [workspace=$ws4 class="Xfce4-terminal"] floating enable
+for_window [workspace=$ws4 class="wall-down"] floating enable
 
 # floating windows
 for_window [class="mpv"] floating enable
