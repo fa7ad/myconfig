@@ -1,6 +1,13 @@
 servers = (
   { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
-  { address = "irc.freenode.net"; chatnet = "Freenode"; port = "6667"; },
+  {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    autoconnect = "yes";
+  },
   { address = "open.ircnet.net"; chatnet = "IRCnet"; port = "6667"; },
   { address = "irc.efnet.org"; chatnet = "EFNet"; port = "6667"; },
   { 
@@ -79,11 +86,18 @@ chatnets = {
   };
   LinkNet = { type = "IRC"; };
   SILC = { type = "SILC"; };
+  freenode = {
+    type = "IRC";
+    sasl_mechanism = "PLAIN";
+    sasl_username = "fa7ad";
+    sasl_password = "Fuck1tman";
+  };
 };
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; }
+  { name = "silc"; chatnet = "silc"; autojoin = "No"; },
+  { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
