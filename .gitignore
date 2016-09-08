@@ -9,3 +9,4 @@
 .mpd/mpd.pid
 .mpd/state
 .mpd/database
+.irssi/away.log

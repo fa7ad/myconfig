@@ -91,7 +91,7 @@ sub read_settings {
 	($prefix_mode{'%'} = Irssi::settings_get_str('nicklist_prefix_mode_halfop')) =~ s/\\e/\033/g;
 	($prefix_mode{'+'} = Irssi::settings_get_str('nicklist_prefix_mode_voice')) =~ s/\\e/\033/g;
 	($prefix_mode{' '} = Irssi::settings_get_str('nicklist_prefix_mode_normal')) =~ s/\\e/\033/g;
-	
+
 	(my $prefix_mode_other = Irssi::settings_get_str('nicklist_prefix_mode_other')) =~ s/\\e/\033/g;
 	foreach my $p (split (/ /, $prefix_mode_other)) {
 		next if $p eq '';
@@ -102,7 +102,7 @@ sub read_settings {
 			$prefix_mode{$1} = $2;
 		}
 	}
-	
+
 	(my $prefix_friends = Irssi::settings_get_str('nicklist_prefix_friends')) =~ s/\\e/\033/g;
 	foreach my $p (split (/ /, $prefix_friends)) {
 		next if $p eq '';
@@ -113,9 +113,9 @@ sub read_settings {
 			push @prefix_friends, {'flags' => $1, 'prefix' => $2};
 		}
 	}
-	
+
 	$check_friends = ($prefix_friends ne '');
-	
+
 	if ($mode != $SCREEN) {
 		$height = Irssi::settings_get_int('nicklist_height');
 	}
@@ -217,7 +217,7 @@ sub screen_size {
 	system 'screen -x '.$ENV{'STY'}.' -X fit';
 	# we wait a second to make sure the fit command was processed
 	Irssi::timeout_add_once(1000, \&screen_size_real, []);
-}		
+}
 
 sub screen_size_real {
 	# get size (from perldoc -q size)
@@ -232,10 +232,10 @@ sub screen_size_real {
 			# without this reloading doesn't work. workaround for some unknown bug
 			do 'asm/ioctls.ph';
 		};
-		
+
 		# ugly way not working, let's try something uglier, the dg-hack(tm) (constant for linux only?)
 		if($@) { no strict 'refs'; *TIOCGWINSZ = sub { return 0x5413 } }
-		
+
 		unless (defined &TIOCGWINSZ) {
 			die "Term::ReadKey not found, and ioctl 'workaround' failed. Install the Term::ReadKey perl module to use screen mode.\n";
 		}
@@ -246,11 +246,11 @@ sub screen_size_real {
 		close(TTY);
 		($row, $col, $xpixel, $ypixel) = unpack('S4', $winsize);
 	}
-	
+
 	# set screen width
 	$irssi_width = $col-$nicklist_width-1;
 	$height = $row-1;
-	
+
 	system 'screen -x '.$ENV{'STY'}.' -X width -w ' . $irssi_width;
 	# wait another second for the resizing, and then redraw.
 	Irssi::timeout_add_once(1000,sub {$screen_resizing = 0; redraw()}, []);
@@ -303,9 +303,9 @@ sub calc_prefix_friends {
 	return '' unless $check_friends
 		&& $nick->{'host'}
 		&& is_friend($active_channel->{'server'}->{'chatnet'}, $active_channel->{'name'}, $nick->{'nick'}, $nick->{'host'});
-	
+
 	my $flags = get_flags($active_channel->{'server'}->{'chatnet'}, $active_channel->{'name'}, $nick->{'nick'}, $nick->{'host'});
-	
+
 	my $prefix;
 	foreach my $prefix_friend (@prefix_friends) {
 		if ($prefix_friend->{'flags'} eq 'noflag') {
@@ -317,7 +317,7 @@ sub calc_prefix_friends {
 			$prefix = $prefix_friend->{'prefix'};
 		}
 	}
-	
+
 	return $prefix ? $prefix : '';
 }
 
@@ -326,14 +326,14 @@ sub calc_text {
 	my ($nick) = @_;
 	my $tmp = $nicklist_width-3;
 	(my $text = $nick->{'nick'}) =~ s/^(.{$tmp})..+$/$1\033[34m~/; # strip nick if too long
-	
+
 	my $prefix_mode = $prefix_mode{$nick->{'modeflag'}};
 	if (! defined($prefix_mode) ) {
 		$prefix_mode = $nick->{'modeflag'};
 	}
-	
+
 	my $prefix_friends = calc_prefix_friends($nick);
-	
+
 	$nick->{'text'} =
 		$prefix_mode .
 		$prefix_friends .
@@ -484,7 +484,7 @@ sub get_flags {
 	my ($chatnet, $channel, $nick, $address) = @_;
 	my $flags;
 	no strict 'refs';
-	if (defined %{ 'Irssi::Script::people::' }) {
+	if (%{ 'Irssi::Script::people::' }) {
 		if (defined ($channel)) {
 			$flags = (&{ 'Irssi::Script::people::find_local_flags' }($chatnet,$channel,$nick,$address));
 		} else {
@@ -493,7 +493,7 @@ sub get_flags {
 		$flags = join('',keys(%{$flags}));
 	} else {
 		my $shasta;
-		if (defined %{ 'Irssi::Script::friends_shasta::' }) {
+		if (%{ 'Irssi::Script::friends_shasta::' }) {
 			$shasta = 'friends_shasta';
 		} elsif (defined &{ 'Irssi::Script::friends::get_idx' }) {
 			$shasta = 'friends';
@@ -516,7 +516,7 @@ sub get_flags {
 sub is_friend {
 	my ($chatnet, $channel, $nick, $address) = @_;
 	no strict 'refs';
-	if (defined %{ 'Irssi::Script::people::' }) {
+	if (%{ 'Irssi::Script::people::' }) {
 		return (() != &{'Irssi::Script::people::find_users'}($chatnet, $nick, $address));
 		my $flags;
 		if (defined ($channel)) {
@@ -527,7 +527,7 @@ sub is_friend {
 		return ($flags ne ''); # TODO: test this
 	} else {
 		my $shasta;
-		if (defined %{ 'Irssi::Script::friends_shasta::' }) {
+		if (%{ 'Irssi::Script::friends_shasta::' }) {
 			$shasta = 'friends_shasta';
 		} elsif (defined &{ 'Irssi::Script::friends::get_idx' }) {
 			$shasta = 'friends';
@@ -538,7 +538,7 @@ sub is_friend {
 		my $idx = (&{ 'Irssi::Script::'.$shasta.'::get_idx' }($nick,$address));
 		return ($idx != -1);
 	}
-}	
+}
 
 ####################
 ##### NICKLIST #####
@@ -612,23 +612,23 @@ sub recalc_nick {
 	if (! $nickrec) {
 		$nickrec = $active_channel->nick_find($nick->{'nick'});
 	}
-	
+
 	my $nickflags = $active_channel->{'server'}->get_nick_flags() . ' ';
-	
+
 	my $flag = (
 		$nickrec->{'op'} ? '@' :
 		$nickrec->{'halfop'} ? '%' :
 		$nickrec->{'voice'} ? '+' :
 		' '
 	);
-	
+
 	if ($nickrec->{'other'} && index($nickflags, $nick->{'other'}) < index($nickflags, $flag)) {
 		$flag = chr($nickrec->{'other'});
 	}
-	
+
 	$nick->{'modepos'} = index($nickflags, $flag);
 	$nick->{'modeflag'} = $flag;
-	
+
 	$nick->{'host'} = $nickrec->{'host'};
 	calc_text($nick);
 }

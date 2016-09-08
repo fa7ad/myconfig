@@ -55,9 +55,11 @@ function start_emp {
 
 alias phpu='php -dzend_extension=xdebug.so $(which phpunit)'
 alias ....='../..'
-alias tree="tree -I 'node_modules|bower_components'"
-alias \%=command
+alias tree='tree -I "node_modules|bower_components"'
+alias \%='command'
 
-alias systop="sudo systemctl stop"
-alias systart="sudo systemctl start"
-alias syrestart="sudo systemctl restart"
+alias systop='sudo systemctl stop'
+alias systart='sudo systemctl start'
+alias syrestart='sudo systemctl restart'
+
+alias irssi='screen irssi'
