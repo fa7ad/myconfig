@@ -194,6 +194,7 @@ for_window [workspace=$ws1] floating enable
 for_window [workspace=$wss9] floating enable
 for_window [workspace=$ws4 class="Xfce4-terminal"] floating enable
 for_window [workspace=$ws4 class="wall-down"] floating enable
+for_window [workspace=$ws4 class="nfeh"] floating enable
 
 # floating windows
 for_window [class="mpv"] floating enable
@@ -296,14 +297,18 @@ bindsym --release Shift+Print exec scrot -s -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e
 bindsym --release Mod1+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
 bindsym --release $mod+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
 
-# Startup
-#exec --no-startup-id nitrogen --restore
-exec --no-startup-id xset dpms 600 600
-exec --no-startup-id compton -f
-exec --no-startup-id ~/.fehbg
-exec --no-startup-id xautolock -corners -000 -time 10 -locker $locker
+# fix nautilus
 exec --no-startup-id gsettings set org.gnome.desktop.background show-desktop-icons false
-exec --no-startup-id ibus-daemon -rd
 
-exec --no-startup-id i3-sensible-terminal
+# Startup
+exec xautolock -corners -000 -time 10 -locker $locker
+exec xset dpms 600 600
+exec numlockx on
+exec compton -f
+exec ~/.fehbg
+
+
 exec --no-startup-id ~/.bin/startapps.sh
+exec --no-startup-id ibus-daemon -rd
+exec --no-startup-id nm-applet
+exec --no-startup-id i3-sensible-terminal
