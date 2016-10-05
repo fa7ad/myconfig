@@ -172,8 +172,6 @@ bindsym $mod+Shift+KP_0 move container to workspace $wss0
 # fixed windows
 assign [class="google-chrome"] $ws2
 assign [class="google-chrome-stable"] $ws2
-assign [class="firefox"] $ws2
-assign [class="Firefox"] $ws2
 assign [class="Gnome-terminal"] $ws3
 assign [class="URxvt"] $ws3
 assign [class="Terminix"] $ws3
