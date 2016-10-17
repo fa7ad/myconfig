@@ -3,7 +3,8 @@
 	"bold_folder_labels": true,
 	"caret_extra_bottom": 2,
 	"caret_extra_top": 2,
-	"color_scheme": "Packages/User/Color Highlighter/themes/NeonGlow.tmTheme",
+	"color_scheme": "Packages/ayu/ayu.tmTheme",
+	"detect_indentation": true,
 	"draw_white_space": "all",
 	"folder_exclude_patterns":
 	[
@@ -19,7 +20,7 @@
 	[
 		"gray_antialias"
 	],
-	"font_size": 12,
+	"font_size": 10,
 	"highlight_line": true,
 	"hot_exit": false,
 	"ignored_packages":
@@ -31,17 +32,6 @@
 		"draw_normal",
 		"draw_active"
 	],
-	"material_theme_accent_red": true,
-	"material_theme_appbar_red": true,
-	"material_theme_bold_tab": true,
-	"material_theme_compact_panel": true,
-	"material_theme_compact_sidebar": true,
-	"material_theme_contrast_mode": true,
-	"material_theme_panel_separator": true,
-	"material_theme_small_statusbar": true,
-	"material_theme_small_tab": true,
-	"material_theme_tabs_autowidth": true,
-	"material_theme_tree_headings": true,
 	"overlay_scroll_bars": "enabled",
 	"remember_full_screen": true,
 	"rulers":
@@ -49,9 +39,11 @@
 		80,
 		120
 	],
-	"theme": "Material-Theme-Darker.sublime-theme",
+	"tab_size": 2,
+	"theme": "ayu.sublime-theme",
 	"translate_tabs_to_spaces": true,
+	"ui_font_size_small": false,
+	"ui_separator": false,
 	"update_check": false,
-	"detect_indentation": true,
 	"use_tab_stops": true
 }

@@ -10,3 +10,8 @@
 .mpd/state
 .mpd/database
 .irssi/away.log
+config/sublime-text-3/Cache
+config/sublime-text-3/Backup
+config/sublime-text-3/Index
+config/sublime-text-3/Installed Packages/*.sublime-package
+config/sublime-text-3/Packages

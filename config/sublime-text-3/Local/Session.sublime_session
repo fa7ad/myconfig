@@ -1,6 +1,19 @@
 {
 	"folder_history":
 	[
+		"/home/fahad/.config/nvim",
+		"/home/fahad/Desktop/edukave",
+		"/home/fahad/Desktop/wall-down",
+		"/home/fahad/Desktop/veritas",
+		"/home/fahad/Desktop/veritas/css",
+		"/home/fahad/Desktop/nfeh",
+		"/home/fahad/PyProjects/npim",
+		"/ldata/fromDesktop/wall-down",
+		"/home/fahad/Desktop/proj/wall-down",
+		"/home/fahad",
+		"/home/fahad/Desktop/edukave/assets/styles/common",
+		"/home/fahad/schemes",
+		"/home/fahad/Desktop/adkave-pk",
 		"/home/fahad/PyProjects/lovelylady",
 		"/home/fahad/Documents/clone-org",
 		"/home/fahad/Documents/mpd-php-hempd",
@@ -11,18 +24,130 @@
 		"/home/fahad/Documents/react-client-learn",
 		"/home/fahad/Documents/reaxpress"
 	],
-	"last_version": 3114,
-	"last_window_id": 14,
+	"last_version": 3126,
+	"last_window_id": 21,
 	"log_indexing": false,
 	"settings":
 	{
-		"new_window_height": 0.0,
+		"new_window_height": 477.0,
 		"new_window_settings":
 		{
 			"auto_complete":
 			{
 				"selected_items":
 				[
+					[
+						"bgc",
+						"background-color"
+					],
+					[
+						"for",
+						"foreach\tforeach …"
+					],
+					[
+						"spac",
+						"letter-spacing"
+					],
+					[
+						"create",
+						"createOption"
+					],
+					[
+						"anim",
+						"animation"
+					],
+					[
+						"wi",
+						"width"
+					],
+					[
+						"ribb",
+						"ribbon-color"
+					],
+					[
+						"get_th",
+						"get_the_ID"
+					],
+					[
+						"get_the_",
+						"get_the_title"
+					],
+					[
+						"get_t",
+						"get_the_ID"
+					],
+					[
+						"course",
+						"courseBox"
+					],
+					[
+						"C",
+						"Courses"
+					],
+					[
+						"max",
+						"max-width"
+					],
+					[
+						"os",
+						"ov:s\toverflow:scroll"
+					],
+					[
+						"image",
+						"image_count"
+					],
+					[
+						"ima",
+						"image_count"
+					],
+					[
+						"sl",
+						"slides"
+					],
+					[
+						"sld",
+						"slideBox"
+					],
+					[
+						"crea",
+						"createOption"
+					],
+					[
+						"li",
+						"lisi\tlist-style-image"
+					],
+					[
+						"wp",
+						"wp_get_attachment_image_src"
+					],
+					[
+						"is_n",
+						"is_numeric"
+					],
+					[
+						"cre",
+						"createOption"
+					],
+					[
+						"tes",
+						"testimonyBox"
+					],
+					[
+						"Tes",
+						"Testimonies"
+					],
+					[
+						"ed",
+						"edukave_flush_rewrite"
+					],
+					[
+						"items",
+						"itemsCount"
+					],
+					[
+						"current",
+						"currentPos"
+					],
 					[
 						"pr",
 						"prompt"
@@ -83,17 +208,157 @@
 			"build_varint": "",
 			"command_palette":
 			{
-				"height": 342.0,
-				"last_filter": "men",
+				"height": 320.0,
+				"last_filter": "in",
 				"selected_items":
 				[
+					[
+						"in",
+						"Package Control: Install Package"
+					],
 					[
 						"men",
 						"View: Toggle Menu"
 					],
 					[
+						"them",
+						"Themr: List themes"
+					],
+					[
+						"sett",
+						"Preferences: Settings"
+					],
+					[
+						"rem",
+						"Package Control: Remove Package"
+					],
+					[
+						"close",
+						"File: Close All"
+					],
+					[
 						"ins",
 						"Package Control: Install Package"
+					],
+					[
+						"form",
+						"CodeFormatter: Format Code"
+					],
+					[
+						"css",
+						"Set Syntax: CSS"
+					],
+					[
+						"emmet",
+						"Set Syntax: Emmet"
+					],
+					[
+						"remo",
+						"Package Control: Remove Package"
+					],
+					[
+						"snipper",
+						"Snippet: Insert livereload.js script"
+					],
+					[
+						"sidebar",
+						"View: Toggle Side Bar"
+					],
+					[
+						"term",
+						"Terminal: Open in project folder"
+					],
+					[
+						"ter",
+						"Terminal: Open"
+					],
+					[
+						"linter sett",
+						"Preferences: SublimeLinter Settings – User"
+					],
+					[
+						"linter",
+						"SublimeLinter: Lint This View"
+					],
+					[
+						"lint",
+						"SublimeLinter: Show All Errors"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"fo",
+						"CodeFormatter: Format Code"
+					],
+					[
+						"format",
+						"CodeFormatter: Format Code"
+					],
+					[
+						"me",
+						"View: Toggle Menu"
+					],
+					[
+						"for",
+						"CodeFormatter: Format Code"
+					],
+					[
+						"beau",
+						"HTMLBeautify"
+					],
+					[
+						"w",
+						"Word Wrap: Toggle"
+					],
+					[
+						"wor",
+						"Word Wrap: Toggle"
+					],
+					[
+						"wrap",
+						"Word Wrap: Toggle"
+					],
+					[
+						"sche",
+						"Schemr: List all schemes"
+					],
+					[
+						"settin",
+						"Preferences: Settings - User"
+					],
+					[
+						"settings",
+						"Preferences: Settings - User"
+					],
+					[
+						"",
+						"Build: Cancel"
+					],
+					[
+						"inst",
+						"Package Control: Install Package"
+					],
+					[
+						"schem",
+						"Schemr: List all schemes"
+					],
+					[
+						"th",
+						"Themr: List themes"
+					],
+					[
+						"theme",
+						"Themr: List themes"
+					],
+					[
+						"the",
+						"Themr: List themes"
+					],
+					[
+						"setting",
+						"Preferences: Settings - User"
 					],
 					[
 						"sideba",
@@ -108,10 +373,6 @@
 						"Package Control: Remove Package"
 					],
 					[
-						"setting",
-						"Preferences: Settings - User"
-					],
-					[
 						"sc",
 						"Schemr: List all schemes"
 					],
@@ -122,31 +383,33 @@
 					[
 						"m",
 						"View: Toggle Menu"
-					],
-					[
-						"them",
-						"Themr: List themes"
-					],
-					[
-						"inst",
-						"Package Control: Install Package"
-					],
-					[
-						"settin",
-						"Preferences: Settings - User"
-					],
-					[
-						"",
-						"About"
 					]
 				],
-				"width": 467.0
+				"width": 453.0
 			},
 			"console":
 			{
 				"height": 126.0,
 				"history":
 				[
+					"sys",
+					"echo",
+					"launch(['node_modules/.bin/electron', '.'])",
+					"launch(['/node_modules/.bin/electron', '.'])",
+					"os.getcwd()",
+					"os.chdir('/ldata/fromDesktop/wall-down')",
+					"os.getcwd()",
+					"import os",
+					"os",
+					"print $CWD",
+					"print ",
+					"print",
+					"launch(['/node_modules/.bin/electron', '.'])",
+					"launch(['./node_modules/.bin/electron', '.'])",
+					"launch(['electron', '.'])",
+					"from subprocess import call as launch",
+					"import child_process",
+					"?",
 					"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 				]
 			},
@@ -161,7 +424,73 @@
 			},
 			"file_history":
 			[
+				"/usr/share/themes/Hooli/gtk-3.22/gtk.css",
+				"/home/fahad/.config/nvim/init.vim",
+				"/home/fahad/Desktop/edukave/base.php",
+				"/home/fahad/Desktop/edukave/templates/sidebar.php",
+				"/home/fahad/Desktop/edukave/templates/content-single.php",
+				"/home/fahad/Desktop/edukave/templates/content-page.php",
+				"/home/fahad/Desktop/edukave/template-page.php",
+				"/home/fahad/Desktop/veritas/css/not-min/rig-grid.css",
+				"/home/fahad/Desktop/veritas/index.html",
+				"/home/fahad/Desktop/veritas/css/not-min/style.css",
+				"/home/fahad/Desktop/nfeh/src/Store.js",
+				"/home/fahad/Desktop/nfeh/src/components/PicturesView.js",
+				"/home/fahad/Desktop/nfeh/src/components/PictureItem.js",
+				"/home/fahad/Desktop/nfeh/package.json",
+				"/home/fahad/Desktop/wall-down/app/src/components/DirView.js",
+				"/home/fahad/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
 				"/home/fahad/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+				"/home/fahad/.config/sublime-text-3/Packages/User/StandardFormat.sublime-settings",
+				"/home/fahad/Desktop/wall-down/app/components/GetReddit.js",
+				"/home/fahad/Desktop/wall-down/main.js",
+				"/home/fahad/Desktop/wall-down/app/Store.js",
+				"/home/fahad/Desktop/wall-down/app/components/GmbGrid.js",
+				"/home/fahad/Desktop/wall-down/package.json",
+				"/home/fahad/Desktop/wall-down/dist/linux-unpacked/resources/app.asar",
+				"/home/fahad/Desktop/wall-down/webpack.config.js",
+				"/home/fahad/.config/sublime-text-3/Packages/User/CodeFormatter.sublime-settings",
+				"/home/fahad/.config/sublime-text-3/Packages/CodeFormatter/CodeFormatter.sublime-settings",
+				"/home/fahad/.config/sublime-text-3/Packages/User/Terminal.sublime-settings",
+				"/home/fahad/Desktop/proj/wall-down/app/js/index.js",
+				"/home/fahad/Desktop/edukave/assets/styles/layouts/_home.scss",
+				"/home/fahad/Desktop/edukave/templates/footer.php",
+				"/home/fahad/Desktop/edukave/templates/home-slider.php",
+				"/home/fahad/Desktop/edukave/template-homepage.php",
+				"/home/fahad/Desktop/edukave/utils/theme-options.php",
+				"/home/fahad/Desktop/edukave/functions.php",
+				"/home/fahad/Desktop/edukave/utils/kirki-options.php",
+				"/home/fahad/Desktop/edukave/lib/plugins.php",
+				"/home/fahad/Desktop/edukave/assets/styles/components/_slider.scss",
+				"/home/fahad/Desktop/edukave/assets/styles/layouts/_header.scss",
+				"/home/fahad/Desktop/wall-down/app/index.js",
+				"/home/fahad/Desktop/wall-down/app/components/App.js",
+				"/home/fahad/PyProjects/clone-org/main.py",
+				"/home/fahad/.config/i3/config",
+				"/home/fahad/.Xresources",
+				"/home/fahad/Desktop/edukave/assets/styles/main.scss",
+				"/home/fahad/Desktop/edukave/assets/styles/layouts/_pages.scss",
+				"/home/fahad/Desktop/edukave/gulpfile.js",
+				"/home/fahad/Desktop/edukave/assets/manifest.json",
+				"/home/fahad/Desktop/edukave/utils/custom-types.php",
+				"/home/fahad/Desktop/edukave/bower.json",
+				"/home/fahad/Desktop/edukave/page.php",
+				"/home/fahad/Desktop/edukave/LICENSE.md",
+				"/home/fahad/Desktop/edukave/example.php",
+				"/home/fahad/Desktop/edukave/lib/setup.php",
+				"/home/fahad/Desktop/edukave/templates/head.php",
+				"/home/fahad/Desktop/edukave/.eslintrc.js",
+				"/home/fahad/Desktop/edukave/assets/scripts/cbpFWSlider.js",
+				"/home/fahad/Desktop/edukave/lib/assets.php",
+				"/home/fahad/Desktop/edukave/templates/header.php",
+				"/home/fahad/Desktop/EduKaveHTML/css/style.css",
+				"/home/fahad/Desktop/edukave/assets/styles/common/_variables.scss",
+				"/fahad/Downloads/PHProxy/index.php",
+				"/home/fahad/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+				"/home/fahad/schemes/aci.json",
+				"/home/fahad/Desktop/adkave-pk/index.php",
+				"/home/fahad/Desktop/adkave-pk/src/Controller/MLandController.php",
+				"/home/fahad/Desktop/adkave-pk/js/mland.js",
 				"/home/fahad/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 				"/home/fahad/Documents/clone-org/main.py",
 				"/home/fahad/Documents/clone-org/bin/cli.coffee",
@@ -185,11 +514,11 @@
 			],
 			"find":
 			{
-				"height": 34.0
+				"height": 54.0
 			},
 			"find_in_files":
 			{
-				"height": 0.0,
+				"height": 136.0,
 				"where_history":
 				[
 				]
@@ -199,6 +528,78 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"m, alpha(currentColor, 0.05))",
+					"m, alpha(currentColor, 0))",
+					"m, alpha(currentColor, 0.1))",
+					", alpha(currentColor, 0.1))",
+					", alpha(currentColor, 0))",
+					", alpha(currentColor, 0.1))",
+					"linear-gradient\\((to.*), (al.*)\\)",
+					"linear-gradient\\((.*), (.*)\\)",
+					"\n      <li>\n        <div class=\"rig-cell\">\n          <img class=\"rig-img\" src=\"images/kids/kid_2.jpg\" />\n          <span class=\"rig-text\">Celebrating</span>\n        </div>\n      </li>",
+					"<div class=\"rig-cell\">\n          <img class=\"rig-img\" src=\"images/kids/kid_2.jpg\" />\n          <span class=\"rig-text\">Celebrating</span>\n        </div>",
+					"    ",
+					"  ",
+					"h100p",
+					"%;\n",
+					"rig\"",
+					"cell",
+					"#g-block",
+					"    ",
+					"Learn\\n",
+					"\">\n",
+					"\n  componentDidMount () {\n    this.updateImages()\n  }",
+					"    ",
+					"array(\n      'name'      => 'Titan Framework',\n      'slug'      => 'titan-framework',\n      'required'  => true,\n    ),",
+					"$footerSection->createOption(array(\n    'name' => 'Copyright Text',\n    'id' => 'footer_copyright',\n    'type' => 'text',\n    'default' => 'Copyright &copy; ' . date('Y') . ' ACME Fake Corp Ltd.'\n  ));",
+					"esc_",
+					"\n  $sectionOne->createOption(array(\n    'name' => 'Heading',\n    'id' => 's1_title',\n    'type' => 'text',\n    'default' => 'Lorem ipsum not real'\n  ));",
+					"\n  $sectionOne->createOption(array(\n    'name' => 'Icon Class',\n    'id' => 's1_icon',\n    'type' => 'text',\n    'desc' => 'FontAwesome class name for the icon.'\n  ));\n",
+					"Homepage Options",
+					"Hompeage",
+					"note",
+					"',\n",
+					"sk-cube",
+					"sk-folding-",
+					"255, 255, 255",
+					"()}\n",
+					"}\n",
+					"\"\n",
+					"!!!",
+					".wrap",
+					"());\n",
+					"replace",
+					"cssTa",
+					"styles",
+					"globs",
+					"dep.globs",
+					"js",
+					"java",
+					"javas",
+					"images",
+					"item",
+					";\n",
+					"item",
+					"brand",
+					"xs",
+					"Geor",
+					"font",
+					"loremp",
+					"images",
+					"navbar",
+					"nav",
+					"your-plugin-textdomain",
+					"jstas",
+					"initialPos",
+					"plumber",
+					"background",
+					"$el",
+					"test",
+					"terstimon",
+					"wp_enqueue_script('jquery-easing', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', ['jquery'], '1.3.0', false);",
+					"0",
+					"draw",
+					";\n",
 					"remember",
 					"open",
 					"dir",
@@ -218,6 +619,27 @@
 				"regex": false,
 				"replace_history":
 				[
+					"m, alpha(currentColor, 0.05), alpha(currentColor, 0.05))",
+					"m, alpha(currentColor, 0), alpha(currentColor, 0))",
+					", alpha(currentColor, 0.1), alpha(currentColor, 0.1))",
+					", alpha(currentColor, 0), alpha(currentColor, 0))",
+					", alpha(currentColor, 0), alpha(currentColor, 0)))",
+					", alpha(currentColor, 0.1), alpha(currentColor, 0.1)))",
+					", alpha(currentColor, 0.1), alpha(currentColor, 0.1))",
+					"linear-gradient(\\1, \\2, \\2)",
+					"  ",
+					"    ",
+					"#rig",
+					"  ",
+					"",
+					"  ",
+					"Homepage Sections",
+					"Homepage Options",
+					"cube",
+					"loading-",
+					"0, 0, 0",
+					"",
+					"edukave"
 				],
 				"reverse": false,
 				"show_context": true,
@@ -241,7 +663,7 @@
 			"pinned_build_system": "",
 			"replace":
 			{
-				"height": 50.0
+				"height": 94.0
 			},
 			"save_all_on_build": true,
 			"select_file":
@@ -251,20 +673,256 @@
 				"selected_items":
 				[
 					[
-						"cli.js",
-						"bin/cli.js"
+						"content",
+						"templates/content-page.php"
 					],
 					[
-						"pac",
-						".meteor/packages"
+						"sidebar",
+						"templates/sidebar.php"
 					],
 					[
-						"home",
-						"components/Homepage.jsx"
+						"sign",
+						"templates/content-single.php"
+					],
+					[
+						"base",
+						"base.php"
+					],
+					[
+						"in",
+						"index.html"
 					],
 					[
 						"pack",
-						".meteor/packages"
+						"package.json"
+					],
+					[
+						"dir",
+						"app/src/components/DirView.js"
+					],
+					[
+						"di",
+						"app/src/components/DirView.js"
+					],
+					[
+						"dirv",
+						"app/src/components/DirView.js"
+					],
+					[
+						"pac",
+						"package.json"
+					],
+					[
+						"web",
+						"webpack.config.js"
+					],
+					[
+						"app/in",
+						"app/js/index.js"
+					],
+					[
+						"",
+						"index.html"
+					],
+					[
+						"fun",
+						"functions.php"
+					],
+					[
+						"home-",
+						"templates/home-slider.php"
+					],
+					[
+						"footer",
+						"templates/footer.php"
+					],
+					[
+						"tem",
+						"template-homepage.php"
+					],
+					[
+						"templa",
+						"template-homepage.php"
+					],
+					[
+						"_h",
+						"assets/styles/layouts/_header.scss"
+					],
+					[
+						"opt",
+						"utils/theme-options.php"
+					],
+					[
+						"main",
+						"main.js"
+					],
+					[
+						"inde",
+						"index.html"
+					],
+					[
+						"app",
+						"app/components/App.js"
+					],
+					[
+						"app.",
+						"app/components/App.js"
+					],
+					[
+						"slider.sc",
+						"assets/styles/components/_slider.scss"
+					],
+					[
+						"home",
+						"assets/styles/layouts/_home.scss"
+					],
+					[
+						"slider",
+						"assets/styles/components/_slider.scss"
+					],
+					[
+						"gul",
+						"gulpfile.js"
+					],
+					[
+						"man",
+						"assets/manifest.json"
+					],
+					[
+						"ty",
+						"utils/custom-types.php"
+					],
+					[
+						"type",
+						"utils/custom-types.php"
+					],
+					[
+						"hpm",
+						"template-homepage.php"
+					],
+					[
+						"bow",
+						"bower.json"
+					],
+					[
+						"scss",
+						"assets/styles/layouts/_home.scss"
+					],
+					[
+						"main.",
+						"assets/scripts/main.js"
+					],
+					[
+						"header",
+						"templates/header.php"
+					],
+					[
+						"slide",
+						"assets/styles/components/_slider.scss"
+					],
+					[
+						"var",
+						"assets/styles/common/_variables.scss"
+					],
+					[
+						"temp",
+						"template-homepage.php"
+					],
+					[
+						"slider.",
+						"templates/home-slider.php"
+					],
+					[
+						"g",
+						"gulpfile.js"
+					],
+					[
+						"gulp",
+						"gulpfile.js"
+					],
+					[
+						"slider.p",
+						"templates/home-slider.php"
+					],
+					[
+						"opti",
+						"utils/theme-options.php"
+					],
+					[
+						"te",
+						"template-homepage.php"
+					],
+					[
+						"custom",
+						"utils/custom-types.php"
+					],
+					[
+						"header.s",
+						"assets/styles/layouts/_header.scss"
+					],
+					[
+						"_sl",
+						"assets/styles/components/_slider.scss"
+					],
+					[
+						"templ",
+						"template-homepage.php"
+					],
+					[
+						"cust",
+						"utils/custom-types.php"
+					],
+					[
+						"content-p",
+						"templates/content-page.php"
+					],
+					[
+						"homep",
+						"template-homepage.php"
+					],
+					[
+						"header.",
+						"templates/header.php"
+					],
+					[
+						"custom-",
+						"utils/custom-types.php"
+					],
+					[
+						"ex",
+						"example.php"
+					],
+					[
+						"esl",
+						".eslintrc.js"
+					],
+					[
+						"asset",
+						"lib/assets.php"
+					],
+					[
+						"cbp",
+						"assets/scripts/cbpFWSlider.js"
+					],
+					[
+						"head",
+						"templates/head.php"
+					],
+					[
+						"cb",
+						"assets/scripts/cbpFWSlider.js"
+					],
+					[
+						"ass",
+						"lib/assets.php"
+					],
+					[
+						"ml",
+						"src/Controller/MLandController.php"
+					],
+					[
+						"cli.js",
+						"bin/cli.js"
 					],
 					[
 						"foo",
@@ -277,10 +935,6 @@
 					[
 						"package",
 						".meteor/packages"
-					],
-					[
-						"",
-						"src/index.js"
 					]
 				],
 				"width": 0.0
@@ -304,16 +958,16 @@
 				"width": 0.0
 			},
 			"show_minimap": true,
-			"show_open_files": true,
+			"show_open_files": false,
 			"show_tabs": true,
-			"side_bar_visible": true,
+			"side_bar_visible": false,
 			"side_bar_width": 220.0,
 			"status_bar_visible": true,
 			"template_settings":
 			{
 			}
 		},
-		"new_window_width": 0.0
+		"new_window_width": 640.0
 	},
 	"windows":
 	[
@@ -322,6 +976,118 @@
 			{
 				"selected_items":
 				[
+					[
+						"bgc",
+						"background-color"
+					],
+					[
+						"for",
+						"foreach\tforeach …"
+					],
+					[
+						"spac",
+						"letter-spacing"
+					],
+					[
+						"create",
+						"createOption"
+					],
+					[
+						"anim",
+						"animation"
+					],
+					[
+						"wi",
+						"width"
+					],
+					[
+						"ribb",
+						"ribbon-color"
+					],
+					[
+						"get_th",
+						"get_the_ID"
+					],
+					[
+						"get_the_",
+						"get_the_title"
+					],
+					[
+						"get_t",
+						"get_the_ID"
+					],
+					[
+						"course",
+						"courseBox"
+					],
+					[
+						"C",
+						"Courses"
+					],
+					[
+						"max",
+						"max-width"
+					],
+					[
+						"os",
+						"ov:s\toverflow:scroll"
+					],
+					[
+						"image",
+						"image_count"
+					],
+					[
+						"ima",
+						"image_count"
+					],
+					[
+						"sl",
+						"slides"
+					],
+					[
+						"sld",
+						"slideBox"
+					],
+					[
+						"crea",
+						"createOption"
+					],
+					[
+						"li",
+						"lisi\tlist-style-image"
+					],
+					[
+						"wp",
+						"wp_get_attachment_image_src"
+					],
+					[
+						"is_n",
+						"is_numeric"
+					],
+					[
+						"cre",
+						"createOption"
+					],
+					[
+						"tes",
+						"testimonyBox"
+					],
+					[
+						"Tes",
+						"Testimonies"
+					],
+					[
+						"ed",
+						"edukave_flush_rewrite"
+					],
+					[
+						"items",
+						"itemsCount"
+					],
+					[
+						"current",
+						"currentPos"
+					],
 					[
 						"pr",
 						"prompt"
@@ -383,17 +1149,157 @@
 			"build_varint": "",
 			"command_palette":
 			{
-				"height": 342.0,
-				"last_filter": "men",
+				"height": 320.0,
+				"last_filter": "in",
 				"selected_items":
 				[
+					[
+						"in",
+						"Package Control: Install Package"
+					],
 					[
 						"men",
 						"View: Toggle Menu"
 					],
 					[
+						"them",
+						"Themr: List themes"
+					],
+					[
+						"sett",
+						"Preferences: Settings"
+					],
+					[
+						"rem",
+						"Package Control: Remove Package"
+					],
+					[
+						"close",
+						"File: Close All"
+					],
+					[
 						"ins",
 						"Package Control: Install Package"
+					],
+					[
+						"form",
+						"CodeFormatter: Format Code"
+					],
+					[
+						"css",
+						"Set Syntax: CSS"
+					],
+					[
+						"emmet",
+						"Set Syntax: Emmet"
+					],
+					[
+						"remo",
+						"Package Control: Remove Package"
+					],
+					[
+						"snipper",
+						"Snippet: Insert livereload.js script"
+					],
+					[
+						"sidebar",
+						"View: Toggle Side Bar"
+					],
+					[
+						"term",
+						"Terminal: Open in project folder"
+					],
+					[
+						"ter",
+						"Terminal: Open"
+					],
+					[
+						"linter sett",
+						"Preferences: SublimeLinter Settings – User"
+					],
+					[
+						"linter",
+						"SublimeLinter: Lint This View"
+					],
+					[
+						"lint",
+						"SublimeLinter: Show All Errors"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"fo",
+						"CodeFormatter: Format Code"
+					],
+					[
+						"format",
+						"CodeFormatter: Format Code"
+					],
+					[
+						"me",
+						"View: Toggle Menu"
+					],
+					[
+						"for",
+						"CodeFormatter: Format Code"
+					],
+					[
+						"beau",
+						"HTMLBeautify"
+					],
+					[
+						"w",
+						"Word Wrap: Toggle"
+					],
+					[
+						"wor",
+						"Word Wrap: Toggle"
+					],
+					[
+						"wrap",
+						"Word Wrap: Toggle"
+					],
+					[
+						"sche",
+						"Schemr: List all schemes"
+					],
+					[
+						"settin",
+						"Preferences: Settings - User"
+					],
+					[
+						"settings",
+						"Preferences: Settings - User"
+					],
+					[
+						"",
+						"Build: Cancel"
+					],
+					[
+						"inst",
+						"Package Control: Install Package"
+					],
+					[
+						"schem",
+						"Schemr: List all schemes"
+					],
+					[
+						"th",
+						"Themr: List themes"
+					],
+					[
+						"theme",
+						"Themr: List themes"
+					],
+					[
+						"the",
+						"Themr: List themes"
+					],
+					[
+						"setting",
+						"Preferences: Settings - User"
 					],
 					[
 						"sideba",
@@ -408,10 +1314,6 @@
 						"Package Control: Remove Package"
 					],
 					[
-						"setting",
-						"Preferences: Settings - User"
-					],
-					[
 						"sc",
 						"Schemr: List all schemes"
 					],
@@ -422,31 +1324,33 @@
 					[
 						"m",
 						"View: Toggle Menu"
-					],
-					[
-						"them",
-						"Themr: List themes"
-					],
-					[
-						"inst",
-						"Package Control: Install Package"
-					],
-					[
-						"settin",
-						"Preferences: Settings - User"
-					],
-					[
-						"",
-						"About"
 					]
 				],
-				"width": 467.0
+				"width": 453.0
 			},
 			"console":
 			{
 				"height": 126.0,
 				"history":
 				[
+					"sys",
+					"echo",
+					"launch(['node_modules/.bin/electron', '.'])",
+					"launch(['/node_modules/.bin/electron', '.'])",
+					"os.getcwd()",
+					"os.chdir('/ldata/fromDesktop/wall-down')",
+					"os.getcwd()",
+					"import os",
+					"os",
+					"print $CWD",
+					"print ",
+					"print",
+					"launch(['/node_modules/.bin/electron', '.'])",
+					"launch(['./node_modules/.bin/electron', '.'])",
+					"launch(['electron', '.'])",
+					"from subprocess import call as launch",
+					"import child_process",
+					"?",
 					"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 				]
 			},
@@ -461,7 +1365,73 @@
 			},
 			"file_history":
 			[
+				"/usr/share/themes/Hooli/gtk-3.22/gtk.css",
+				"/home/fahad/.config/nvim/init.vim",
+				"/home/fahad/Desktop/edukave/base.php",
+				"/home/fahad/Desktop/edukave/templates/sidebar.php",
+				"/home/fahad/Desktop/edukave/templates/content-single.php",
+				"/home/fahad/Desktop/edukave/templates/content-page.php",
+				"/home/fahad/Desktop/edukave/template-page.php",
+				"/home/fahad/Desktop/veritas/css/not-min/rig-grid.css",
+				"/home/fahad/Desktop/veritas/index.html",
+				"/home/fahad/Desktop/veritas/css/not-min/style.css",
+				"/home/fahad/Desktop/nfeh/src/Store.js",
+				"/home/fahad/Desktop/nfeh/src/components/PicturesView.js",
+				"/home/fahad/Desktop/nfeh/src/components/PictureItem.js",
+				"/home/fahad/Desktop/nfeh/package.json",
+				"/home/fahad/Desktop/wall-down/app/src/components/DirView.js",
+				"/home/fahad/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
 				"/home/fahad/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+				"/home/fahad/.config/sublime-text-3/Packages/User/StandardFormat.sublime-settings",
+				"/home/fahad/Desktop/wall-down/app/components/GetReddit.js",
+				"/home/fahad/Desktop/wall-down/main.js",
+				"/home/fahad/Desktop/wall-down/app/Store.js",
+				"/home/fahad/Desktop/wall-down/app/components/GmbGrid.js",
+				"/home/fahad/Desktop/wall-down/package.json",
+				"/home/fahad/Desktop/wall-down/dist/linux-unpacked/resources/app.asar",
+				"/home/fahad/Desktop/wall-down/webpack.config.js",
+				"/home/fahad/.config/sublime-text-3/Packages/User/CodeFormatter.sublime-settings",
+				"/home/fahad/.config/sublime-text-3/Packages/CodeFormatter/CodeFormatter.sublime-settings",
+				"/home/fahad/.config/sublime-text-3/Packages/User/Terminal.sublime-settings",
+				"/home/fahad/Desktop/proj/wall-down/app/js/index.js",
+				"/home/fahad/Desktop/edukave/assets/styles/layouts/_home.scss",
+				"/home/fahad/Desktop/edukave/templates/footer.php",
+				"/home/fahad/Desktop/edukave/templates/home-slider.php",
+				"/home/fahad/Desktop/edukave/template-homepage.php",
+				"/home/fahad/Desktop/edukave/utils/theme-options.php",
+				"/home/fahad/Desktop/edukave/functions.php",
+				"/home/fahad/Desktop/edukave/utils/kirki-options.php",
+				"/home/fahad/Desktop/edukave/lib/plugins.php",
+				"/home/fahad/Desktop/edukave/assets/styles/components/_slider.scss",
+				"/home/fahad/Desktop/edukave/assets/styles/layouts/_header.scss",
+				"/home/fahad/Desktop/wall-down/app/index.js",
+				"/home/fahad/Desktop/wall-down/app/components/App.js",
+				"/home/fahad/PyProjects/clone-org/main.py",
+				"/home/fahad/.config/i3/config",
+				"/home/fahad/.Xresources",
+				"/home/fahad/Desktop/edukave/assets/styles/main.scss",
+				"/home/fahad/Desktop/edukave/assets/styles/layouts/_pages.scss",
+				"/home/fahad/Desktop/edukave/gulpfile.js",
+				"/home/fahad/Desktop/edukave/assets/manifest.json",
+				"/home/fahad/Desktop/edukave/utils/custom-types.php",
+				"/home/fahad/Desktop/edukave/bower.json",
+				"/home/fahad/Desktop/edukave/page.php",
+				"/home/fahad/Desktop/edukave/LICENSE.md",
+				"/home/fahad/Desktop/edukave/example.php",
+				"/home/fahad/Desktop/edukave/lib/setup.php",
+				"/home/fahad/Desktop/edukave/templates/head.php",
+				"/home/fahad/Desktop/edukave/.eslintrc.js",
+				"/home/fahad/Desktop/edukave/assets/scripts/cbpFWSlider.js",
+				"/home/fahad/Desktop/edukave/lib/assets.php",
+				"/home/fahad/Desktop/edukave/templates/header.php",
+				"/home/fahad/Desktop/EduKaveHTML/css/style.css",
+				"/home/fahad/Desktop/edukave/assets/styles/common/_variables.scss",
+				"/fahad/Downloads/PHProxy/index.php",
+				"/home/fahad/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+				"/home/fahad/schemes/aci.json",
+				"/home/fahad/Desktop/adkave-pk/index.php",
+				"/home/fahad/Desktop/adkave-pk/src/Controller/MLandController.php",
+				"/home/fahad/Desktop/adkave-pk/js/mland.js",
 				"/home/fahad/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 				"/home/fahad/Documents/clone-org/main.py",
 				"/home/fahad/Documents/clone-org/bin/cli.coffee",
@@ -485,11 +1455,11 @@
 			],
 			"find":
 			{
-				"height": 34.0
+				"height": 54.0
 			},
 			"find_in_files":
 			{
-				"height": 0.0,
+				"height": 136.0,
 				"where_history":
 				[
 				]
@@ -499,6 +1469,78 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"m, alpha(currentColor, 0.05))",
+					"m, alpha(currentColor, 0))",
+					"m, alpha(currentColor, 0.1))",
+					", alpha(currentColor, 0.1))",
+					", alpha(currentColor, 0))",
+					", alpha(currentColor, 0.1))",
+					"linear-gradient\\((to.*), (al.*)\\)",
+					"linear-gradient\\((.*), (.*)\\)",
+					"\n      <li>\n        <div class=\"rig-cell\">\n          <img class=\"rig-img\" src=\"images/kids/kid_2.jpg\" />\n          <span class=\"rig-text\">Celebrating</span>\n        </div>\n      </li>",
+					"<div class=\"rig-cell\">\n          <img class=\"rig-img\" src=\"images/kids/kid_2.jpg\" />\n          <span class=\"rig-text\">Celebrating</span>\n        </div>",
+					"    ",
+					"  ",
+					"h100p",
+					"%;\n",
+					"rig\"",
+					"cell",
+					"#g-block",
+					"    ",
+					"Learn\\n",
+					"\">\n",
+					"\n  componentDidMount () {\n    this.updateImages()\n  }",
+					"    ",
+					"array(\n      'name'      => 'Titan Framework',\n      'slug'      => 'titan-framework',\n      'required'  => true,\n    ),",
+					"$footerSection->createOption(array(\n    'name' => 'Copyright Text',\n    'id' => 'footer_copyright',\n    'type' => 'text',\n    'default' => 'Copyright &copy; ' . date('Y') . ' ACME Fake Corp Ltd.'\n  ));",
+					"esc_",
+					"\n  $sectionOne->createOption(array(\n    'name' => 'Heading',\n    'id' => 's1_title',\n    'type' => 'text',\n    'default' => 'Lorem ipsum not real'\n  ));",
+					"\n  $sectionOne->createOption(array(\n    'name' => 'Icon Class',\n    'id' => 's1_icon',\n    'type' => 'text',\n    'desc' => 'FontAwesome class name for the icon.'\n  ));\n",
+					"Homepage Options",
+					"Hompeage",
+					"note",
+					"',\n",
+					"sk-cube",
+					"sk-folding-",
+					"255, 255, 255",
+					"()}\n",
+					"}\n",
+					"\"\n",
+					"!!!",
+					".wrap",
+					"());\n",
+					"replace",
+					"cssTa",
+					"styles",
+					"globs",
+					"dep.globs",
+					"js",
+					"java",
+					"javas",
+					"images",
+					"item",
+					";\n",
+					"item",
+					"brand",
+					"xs",
+					"Geor",
+					"font",
+					"loremp",
+					"images",
+					"navbar",
+					"nav",
+					"your-plugin-textdomain",
+					"jstas",
+					"initialPos",
+					"plumber",
+					"background",
+					"$el",
+					"test",
+					"terstimon",
+					"wp_enqueue_script('jquery-easing', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', ['jquery'], '1.3.0', false);",
+					"0",
+					"draw",
+					";\n",
 					"remember",
 					"open",
 					"dir",
@@ -518,6 +1560,27 @@
 				"regex": false,
 				"replace_history":
 				[
+					"m, alpha(currentColor, 0.05), alpha(currentColor, 0.05))",
+					"m, alpha(currentColor, 0), alpha(currentColor, 0))",
+					", alpha(currentColor, 0.1), alpha(currentColor, 0.1))",
+					", alpha(currentColor, 0), alpha(currentColor, 0))",
+					", alpha(currentColor, 0), alpha(currentColor, 0)))",
+					", alpha(currentColor, 0.1), alpha(currentColor, 0.1)))",
+					", alpha(currentColor, 0.1), alpha(currentColor, 0.1))",
+					"linear-gradient(\\1, \\2, \\2)",
+					"  ",
+					"    ",
+					"#rig",
+					"  ",
+					"",
+					"  ",
+					"Homepage Sections",
+					"Homepage Options",
+					"cube",
+					"loading-",
+					"0, 0, 0",
+					"",
+					"edukave"
 				],
 				"reverse": false,
 				"show_context": true,
@@ -561,10 +1624,10 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,1,0,0,0,0,0,0,0,1366,768",
+			"position": "0,0,0,0,0,430,137,1070,614,1366,768",
 			"replace":
 			{
-				"height": 50.0
+				"height": 94.0
 			},
 			"save_all_on_build": true,
 			"select_file":
@@ -574,20 +1637,256 @@
 				"selected_items":
 				[
 					[
-						"cli.js",
-						"bin/cli.js"
+						"content",
+						"templates/content-page.php"
 					],
 					[
-						"pac",
-						".meteor/packages"
+						"sidebar",
+						"templates/sidebar.php"
 					],
 					[
-						"home",
-						"components/Homepage.jsx"
+						"sign",
+						"templates/content-single.php"
+					],
+					[
+						"base",
+						"base.php"
+					],
+					[
+						"in",
+						"index.html"
 					],
 					[
 						"pack",
-						".meteor/packages"
+						"package.json"
+					],
+					[
+						"dir",
+						"app/src/components/DirView.js"
+					],
+					[
+						"di",
+						"app/src/components/DirView.js"
+					],
+					[
+						"dirv",
+						"app/src/components/DirView.js"
+					],
+					[
+						"pac",
+						"package.json"
+					],
+					[
+						"web",
+						"webpack.config.js"
+					],
+					[
+						"app/in",
+						"app/js/index.js"
+					],
+					[
+						"",
+						"index.html"
+					],
+					[
+						"fun",
+						"functions.php"
+					],
+					[
+						"home-",
+						"templates/home-slider.php"
+					],
+					[
+						"footer",
+						"templates/footer.php"
+					],
+					[
+						"tem",
+						"template-homepage.php"
+					],
+					[
+						"templa",
+						"template-homepage.php"
+					],
+					[
+						"_h",
+						"assets/styles/layouts/_header.scss"
+					],
+					[
+						"opt",
+						"utils/theme-options.php"
+					],
+					[
+						"main",
+						"main.js"
+					],
+					[
+						"inde",
+						"index.html"
+					],
+					[
+						"app",
+						"app/components/App.js"
+					],
+					[
+						"app.",
+						"app/components/App.js"
+					],
+					[
+						"slider.sc",
+						"assets/styles/components/_slider.scss"
+					],
+					[
+						"home",
+						"assets/styles/layouts/_home.scss"
+					],
+					[
+						"slider",
+						"assets/styles/components/_slider.scss"
+					],
+					[
+						"gul",
+						"gulpfile.js"
+					],
+					[
+						"man",
+						"assets/manifest.json"
+					],
+					[
+						"ty",
+						"utils/custom-types.php"
+					],
+					[
+						"type",
+						"utils/custom-types.php"
+					],
+					[
+						"hpm",
+						"template-homepage.php"
+					],
+					[
+						"bow",
+						"bower.json"
+					],
+					[
+						"scss",
+						"assets/styles/layouts/_home.scss"
+					],
+					[
+						"main.",
+						"assets/scripts/main.js"
+					],
+					[
+						"header",
+						"templates/header.php"
+					],
+					[
+						"slide",
+						"assets/styles/components/_slider.scss"
+					],
+					[
+						"var",
+						"assets/styles/common/_variables.scss"
+					],
+					[
+						"temp",
+						"template-homepage.php"
+					],
+					[
+						"slider.",
+						"templates/home-slider.php"
+					],
+					[
+						"g",
+						"gulpfile.js"
+					],
+					[
+						"gulp",
+						"gulpfile.js"
+					],
+					[
+						"slider.p",
+						"templates/home-slider.php"
+					],
+					[
+						"opti",
+						"utils/theme-options.php"
+					],
+					[
+						"te",
+						"template-homepage.php"
+					],
+					[
+						"custom",
+						"utils/custom-types.php"
+					],
+					[
+						"header.s",
+						"assets/styles/layouts/_header.scss"
+					],
+					[
+						"_sl",
+						"assets/styles/components/_slider.scss"
+					],
+					[
+						"templ",
+						"template-homepage.php"
+					],
+					[
+						"cust",
+						"utils/custom-types.php"
+					],
+					[
+						"content-p",
+						"templates/content-page.php"
+					],
+					[
+						"homep",
+						"template-homepage.php"
+					],
+					[
+						"header.",
+						"templates/header.php"
+					],
+					[
+						"custom-",
+						"utils/custom-types.php"
+					],
+					[
+						"ex",
+						"example.php"
+					],
+					[
+						"esl",
+						".eslintrc.js"
+					],
+					[
+						"asset",
+						"lib/assets.php"
+					],
+					[
+						"cbp",
+						"assets/scripts/cbpFWSlider.js"
+					],
+					[
+						"head",
+						"templates/head.php"
+					],
+					[
+						"cb",
+						"assets/scripts/cbpFWSlider.js"
+					],
+					[
+						"ass",
+						"lib/assets.php"
+					],
+					[
+						"ml",
+						"src/Controller/MLandController.php"
+					],
+					[
+						"cli.js",
+						"bin/cli.js"
 					],
 					[
 						"foo",
@@ -600,10 +1899,6 @@
 					[
 						"package",
 						".meteor/packages"
-					],
-					[
-						"",
-						"src/index.js"
 					]
 				],
 				"width": 0.0
@@ -630,15 +1925,15 @@
 			{
 			},
 			"show_minimap": true,
-			"show_open_files": true,
+			"show_open_files": false,
 			"show_tabs": true,
-			"side_bar_visible": true,
+			"side_bar_visible": false,
 			"side_bar_width": 220.0,
 			"status_bar_visible": true,
 			"template_settings":
 			{
 			},
-			"window_id": 14
+			"window_id": 18
 		}
 	],
 	"workspaces":

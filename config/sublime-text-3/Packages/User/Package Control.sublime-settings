@@ -1,27 +1,38 @@
 {
+	"auto_upgrade": false,
 	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
 	"installed_packages":
 	[
+		"auto-save",
+		"ayu",
 		"Babel",
 		"Better CoffeeScript",
+		"CodeFormatter",
 		"Color Highlighter",
-		"Dark Neon Color Scheme",
+		"EditorConfig",
 		"Emmet",
+		"Focus File on Sidebar",
 		"Git",
 		"GTKDarkThemeVariantSetter",
-		"Materialize",
-		"Neon Color Scheme",
+		"Hide Sidebar When Not Focussed",
+		"HTMLBeautify",
+		"Javascript Beautify",
 		"Package Control",
 		"PHPIntel",
-		"Project Manager",
+		"ProjectManager",
+		"Sass",
 		"Schemr",
 		"Seti_UI",
+		"StandardFormat",
 		"Stylus",
-		"Theme - Afterglow",
+		"SublimeLinter",
+		"SublimeLinter-contrib-standard",
+		"Terminal",
 		"Theme - Farzher",
-		"Themr"
+		"Themr",
+		"VimL"
 	]
 }
