@@ -10,7 +10,7 @@ These are the dotfiles/configurations for most of my CLI apps
 git clone git@github.com:fa7ad/myconfig --branch arch --recursive
 cd myconfig
 git submodule update --init --recursive
-zsh link_files
+zsh INSTALL.zsh
 ```
 
 ## Update:

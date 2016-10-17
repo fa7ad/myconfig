@@ -1,0 +1,25 @@
+sw_volume: 100
+audio_device_state:1:MPD Audio Output
+audio_device_state:1:MPD FIFO
+state: pause
+current: 8
+time: 316.371000
+random: 1
+repeat: 0
+single: 0
+consume: 0
+crossfade: 5
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Gojira/Magma (2016)/01. The Shooting Star.flac
+1:Gojira/Magma (2016)/02. Silvera.flac
+2:Gojira/Magma (2016)/03. The Cell.flac
+3:Gojira/Magma (2016)/04. Stranded.flac
+4:Gojira/Magma (2016)/05. Yellow Stone.flac
+5:Gojira/Magma (2016)/06. Magma.flac
+6:Gojira/Magma (2016)/07. Pray.flac
+7:Gojira/Magma (2016)/08. Only Pain.flac
+8:Gojira/Magma (2016)/09. Low Lands.flac
+9:Gojira/Magma (2016)/10. Liberation.flac
+playlist_end

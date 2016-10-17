@@ -1,9 +1,0 @@
-#!/usr/bin/env zsh
-# First install script
-setopt EXTENDED_GLOB
-for rcfile in .^(git|config)*; do
-    ln -rsf "./${rcfile}" "${ZDOTDIR:-$HOME}/${rcfile:t}"
-done
-
-rsync -ar .config/ "${ZDOTDIR:-$HOME}/.config"
-unsetopt EXTENDED_GLOB
