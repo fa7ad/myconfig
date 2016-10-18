@@ -34,9 +34,8 @@
 
   " highlight current line
   set cursorline
-" }}}
 
-" OS Clipboard
+  " OS Clipboard
   set clipboard=unnamed,unnamedplus
 " }}}
 
@@ -64,10 +63,9 @@
   set wildmenu
 
   " Ignore compiled files
-  set wildignore=*.o,*~,*.pyc
-  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+  set wildignore=*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 
-  "Always show current position
+  " Always show current position
   set ruler
 
   " Height of the command bar
@@ -80,10 +78,8 @@
   set backspace=eol,start,indent
   set whichwrap+=<,>,h,l
 
-  " Ignore case when searching
-  set ignorecase
-
   " When searching try to be smart about cases
+  set ignorecase
   set smartcase
 
   " Highlight search results
@@ -100,8 +96,9 @@
 
   " Show matching brackets when text indicator is over them
   set showmatch
+
   " How many tenths of a second to blink when matching brackets
-  set mat=2
+  set mat=5
 
   " No annoying sound on errors
   set noerrorbells
@@ -118,9 +115,9 @@
 
   " show whitespace
   set lcs+=space:·
-  " }}}
+" }}}
 
-  " Colors and Fonts --- {{{
+" Colors and Fonts --- {{{
   " Enable syntax highlighting
   syntax enable
 
@@ -217,10 +214,6 @@
 " Status line --- {{{
   " Always show the status line
   set laststatus=2
-
-  " Format the status line
-  set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-  " }}}
 
   " Editing mappings --- {{{
   " Remap VIM 0 to first non-blank character
