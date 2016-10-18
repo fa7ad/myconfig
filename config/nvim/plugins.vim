@@ -2,7 +2,7 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
 
 " Syntax --- {{{
   Plug 'moll/vim-node'
-  Plug 'othree/yajs.vim'
+  Plug 'othree/yajs.vim' | Plug 'othree/es.next.syntax.vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'valloric/MatchTagAlways', {'on_ft': 'html'}
