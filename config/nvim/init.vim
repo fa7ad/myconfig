@@ -14,18 +14,29 @@
   set autoread
 
   " With a map leader it's possible to do extra key combinations
-  " like <leader>w saves the current file
   let mapleader = ","
   let g:mapleader = ","
 
+  " remap : to ;
+  " nnoremap : ;
+  nnoremap ; :
+
   " Fast saving
   nmap <leader>w :w!<cr>
+  nmap <leader>q :wq!<cr>
 
-  " :W sudo saves the file
-  " (useful for handling the permission-denied error)
-  command W w !sudo tee % > /dev/null
+  " :SW sudo saves the file (useful for handling the permission-denied error)
+  command SW w !sudo tee % > /dev/null
 
-  " OS Clipboard
+  " I make this mistake way too often
+  command W w
+  command Q q
+
+  " highlight current line
+  set cursorline
+" }}}
+
+" OS Clipboard
   set clipboard=unnamed,unnamedplus
 " }}}
 
@@ -42,7 +53,7 @@
 " }}}
 
 " VIM user interface --- {{{
-  " Set 7 lines to the cursor - when moving vertically using j/k
+  " Set 5 lines to the cursor - when moving vertically using j/k
   set so=5
 
   " Avoid garbled characters in Chinese language windows OS
@@ -54,11 +65,7 @@
 
   " Ignore compiled files
   set wildignore=*.o,*~,*.pyc
-  if has("win16") || has("win32")
-      set wildignore+=.git\*,.hg\*,.svn\*
-  else
-      set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
-  endif
+  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 
   "Always show current position
   set ruler
@@ -106,13 +113,14 @@
   set foldcolumn=0
 
   " show line numbers
+  set relativenumber
   set number
 
   " show whitespace
   set lcs+=space:·
-" }}}
+  " }}}
 
-" Colors and Fonts --- {{{
+  " Colors and Fonts --- {{{
   " Enable syntax highlighting
   syntax enable
 
@@ -154,12 +162,6 @@
   " Super useful! From an idea by Michael Naumann
   vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
   vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
-
-
-  " Moving around, tabs, windows and buffers
-  " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-  map <space> /
-  map <c-space> ?
 
   " Disable highlight when <leader><cr> is pressed
   map <silent> <leader><cr> :noh<cr>
@@ -294,13 +296,15 @@
   noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
   " Quickly open a buffer for scribble
-  map <leader>q :e ~/buffer<cr>
+  map <leader>n :e ~/buffer<cr>
 
   " Quickly open a markdown buffer for scribble
   map <leader>x :e ~/buffer.md<cr>
 
   " Toggle paste mode on and off
   map <leader>pp :setlocal paste!<cr>
+
+  map <c-e> :NERDTreeToggle<cr>
 " }}}
 
 " Helper functions --- {{{
@@ -327,15 +331,6 @@
     let @" = l:saved_reg
   endfunction
 
-
-  " Returns true if paste mode is enabled
-  function! HasPaste()
-    if &paste
-      return 'PASTE MODE  '
-    endif
-    return ''
-  endfunction
-
   " Don't close window, when deleting a buffer
   command! Bclose call <SID>BufcloseCloseIt()
   function! <SID>BufcloseCloseIt()
@@ -360,4 +355,39 @@
 
 " Color Scheme --- {{{
   colorscheme OceanicNext
+  let g:airline_theme='flatlandia'
+" }}}
+
+" Airline --- {{{
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#fnamemod = ':t'
+  let g:airline#extensions#tabline#show_tab_nr = 1
+  let g:airline_powerline_fonts = 1
+" }}}
+
+" Tabs --- {{{
+  nmap <leader>t :term<cr>
+  nmap <leader>, :bnext<CR>
+  tmap <leader>, <C-\><C-n>:bnext<cr>
+  nmap <leader>. :bprevious<CR>
+  tmap <leader>. <C-\><C-n>:bprevious<CR>
+  let g:airline#extensions#tabline#buffer_idx_mode = 1
+  tmap <leader>1  <C-\><C-n><Plug>AirlineSelectTab1
+  tmap <leader>2  <C-\><C-n><Plug>AirlineSelectTab2
+  tmap <leader>3  <C-\><C-n><Plug>AirlineSelectTab3
+  tmap <leader>4  <C-\><C-n><Plug>AirlineSelectTab4
+  tmap <leader>5  <C-\><C-n><Plug>AirlineSelectTab5
+  tmap <leader>6  <C-\><C-n><Plug>AirlineSelectTab6
+  tmap <leader>7  <C-\><C-n><Plug>AirlineSelectTab7
+  tmap <leader>8  <C-\><C-n><Plug>AirlineSelectTab8
+  tmap <leader>9  <C-\><C-n><Plug>AirlineSelectTab9
+  nmap <leader>1 <Plug>AirlineSelectTab1
+  nmap <leader>2 <Plug>AirlineSelectTab2
+  nmap <leader>3 <Plug>AirlineSelectTab3
+  nmap <leader>4 <Plug>AirlineSelectTab4
+  nmap <leader>5 <Plug>AirlineSelectTab5
+  nmap <leader>6 <Plug>AirlineSelectTab6
+  nmap <leader>7 <Plug>AirlineSelectTab7
+  nmap <leader>8 <Plug>AirlineSelectTab8
+  nmap <leader>9 <Plug>AirlineSelectTab9
 " }}}

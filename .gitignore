@@ -16,3 +16,7 @@ config/sublime-text-3/Index
 config/sublime-text-3/Installed Packages/*.sublime-package
 config/sublime-text-3/Packages
 config/sublime-text-3/Local/Session.sublime_session
+mpd/state
+mpd/mpd.log
+mpd/mpd.pid
+mpd/sticker.sql
