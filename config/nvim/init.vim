@@ -23,7 +23,7 @@
 
   " Fast saving
   nmap <leader>w :w!<cr>
-  nmap <leader>q :wq!<cr>
+  nmap <leader>q :q!<cr>
 
   " :SW sudo saves the file (useful for handling the permission-denied error)
   command SW w !sudo tee % > /dev/null
