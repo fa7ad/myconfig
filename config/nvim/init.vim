@@ -359,6 +359,10 @@
   let g:airline_powerline_fonts = 1
 " }}}
 
+" Neomake --- {{{
+  let g:neomake_javascript_enabled_makers = ['eslint']
+" }}}
+
 " Tabs --- {{{
   nmap <leader>t :term<cr>
   nmap <leader>, :bnext<CR>
