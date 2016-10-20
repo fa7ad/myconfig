@@ -3,10 +3,10 @@
     "ecmaVersion5": true,
     "ecmaVersion6": true
   },
-  "libs": {
-    "browser": true,
-    "jquery": true
-  },
+  "libs": [
+    "browser",
+    "jquery"
+  ],
   "plugins": {
     "complete_strings": {
       "maxLength": 15

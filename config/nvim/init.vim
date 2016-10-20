@@ -353,14 +353,20 @@
 " }}}
 
 " Airline --- {{{
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#disable_rtp_load = 0
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#fnamemod = ':t'
   let g:airline#extensions#tabline#show_tab_nr = 1
-  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#tabline#buffer_idx_mode = 1
+  let g:airline#extensions#branch#format = 2
+  let g:airline#extensions#branch#enabled = 1
 " }}}
 
 " Neomake --- {{{
   let g:neomake_javascript_enabled_makers = ['eslint']
+  " auto run neomake once the file is saved
+  autocmd BufWritePost,BufEnter * Neomake
 " }}}
 
 " Tabs --- {{{
@@ -369,7 +375,6 @@
   tmap <leader>, <C-\><C-n>:bnext<cr>
   nmap <leader>. :bprevious<CR>
   tmap <leader>. <C-\><C-n>:bprevious<CR>
-  let g:airline#extensions#tabline#buffer_idx_mode = 1
   tmap <leader>1  <C-\><C-n><Plug>AirlineSelectTab1
   tmap <leader>2  <C-\><C-n><Plug>AirlineSelectTab2
   tmap <leader>3  <C-\><C-n><Plug>AirlineSelectTab3
