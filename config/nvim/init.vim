@@ -37,6 +37,10 @@
 
   " OS Clipboard
   set clipboard=unnamed,unnamedplus
+
+  " keep undo history
+  set undofile
+  set undodir=expand("$HOME/.local/share/nvim/site/undo")
 " }}}
 
 " vim-plug --- {{{
@@ -124,8 +128,7 @@
   " Enable 256 colors
   set t_Co=256
   set termguicolors
-
-  set background=dark
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
   " Set utf8 as standard encoding and en_US as the standard language
   set encoding=utf8
@@ -346,6 +349,7 @@
 " }}}
 
 " Color Scheme --- {{{
+  set background=dark
   colorscheme OceanicNext
   let g:airline_theme='flatlandia'
 " }}}
@@ -391,6 +395,11 @@
 
   " close NERDTree once a file is selected
   let g:NERDTreeQuitOnOpen = 1
+" }}}
+"
+" Unite --- {{{
+  nmap <c-P> :Unite<cr>
+  nmap <c-p> :Unite buffer<cr>
 " }}}
 
 " Tabs --- {{{

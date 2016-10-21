@@ -42,6 +42,7 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+	Plug 'ujihisa/unite-colorscheme'
   Plug 'jordwalke/flatlandia'
   Plug 'trevordmiller/nova-vim'
   Plug 'mhartington/oceanic-next'
