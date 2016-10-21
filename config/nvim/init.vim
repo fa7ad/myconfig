@@ -23,7 +23,7 @@
 
   " Fast saving
   nmap <leader>w :w!<cr>
-  nmap <leader>q :q!<cr>
+  nmap <leader>q :q<cr>
 
   " :SW sudo saves the file (useful for handling the permission-denied error)
   command SW w !sudo tee % > /dev/null
@@ -297,8 +297,6 @@
 
   " Toggle paste mode on and off
   map <leader>pp :setlocal paste!<cr>
-
-  map <c-e> :NERDTreeToggle<cr>
 " }}}
 
 " Helper functions --- {{{
@@ -367,6 +365,32 @@
   let g:neomake_javascript_enabled_makers = ['eslint']
   " auto run neomake once the file is saved
   autocmd BufWritePost,BufEnter * Neomake
+" }}}
+
+" Deoplete --- {{{
+  let g:deoplete#enable_at_startup = 1
+" }}}
+
+" NERDTree --- {{{
+  " Show NERDTree if we open empty vim
+  function OpenNERD ()
+    if argc() == 0 && !exists("s:std_in")
+      NERDTree
+    elseif argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in")
+      exe 'NERDTree' argv()[0]
+      wincmd p
+      ene
+    endif
+  endfunction
+
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * :call OpenNERD()
+
+  " toggle NERDTree on <c-e>
+  map <c-e> :NERDTreeToggle<cr>
+
+  " close NERDTree once a file is selected
+  let g:NERDTreeQuitOnOpen = 1
 " }}}
 
 " Tabs --- {{{

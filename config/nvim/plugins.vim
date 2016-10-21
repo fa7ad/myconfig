@@ -4,7 +4,7 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
   Plug 'moll/vim-node'
   Plug 'othree/yajs.vim' | Plug 'othree/es.next.syntax.vim'
   Plug 'sheerun/vim-polyglot'
-  Plug 'editorconfig/editorconfig-vim'
+  Plug 'sgur/vim-editorconfig'
   Plug 'valloric/MatchTagAlways', {'on_ft': 'html'}
 " }}}
 
@@ -30,8 +30,7 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
 " Autocomplete {{{
   Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
   Plug 'Shougo/neoinclude.vim'
-  Plug 'ternjs/tern_for_vim', {'build': 'npm install'}
-  Plug 'carlitux/deoplete-ternjs'
+  Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'}
   Plug 'zchee/deoplete-jedi', {'on_ft': 'python'}
   Plug 'davidhalter/jedi-vim', {'on_ft': 'python'}
   Plug 'Shougo/neosnippet.vim' | Plug 'Shougo/neosnippet-snippets' | Plug 'honza/vim-snippets'
