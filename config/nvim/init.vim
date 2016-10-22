@@ -40,7 +40,7 @@
 
   " keep undo history
   set undofile
-  set undodir=expand("$HOME/.local/share/nvim/site/undo")
+  set undodir="$HOME/.local/share/nvim/site/undo"
 " }}}
 
 " vim-plug --- {{{
