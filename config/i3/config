@@ -184,8 +184,6 @@ assign [class="Gvim"] $ws4
 assign [class="GVim"] $ws4
 assign [class="Vim"] $ws4
 assign [class="Nautilus"] $ws5
-assign [class="Thunar"] $ws5
-assign [class="thunar"] $ws5
 assign [class="mpv"] $ws0
 
 # floating workspaces
@@ -262,8 +260,8 @@ set $locker ~/.bin/lock.sh
 # Lock using Mod+l
 bindsym $mod+l exec $locker
 
-# Open thunar
-bindsym $mod+Mod1+e exec thunar
+# Open nautilus
+bindsym $mod+Mod1+e exec nautilus --no-desktop
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
