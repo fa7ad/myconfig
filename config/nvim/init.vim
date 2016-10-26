@@ -392,8 +392,8 @@
   autocmd StdinReadPre * let s:std_in=1
   autocmd VimEnter * :call OpenNERD()
 
-  " toggle NERDTree on <c-e>
-  map <c-e> :NERDTreeToggle<cr>
+  " toggle NERDTree on <C-E>
+  map <C-E> :NERDTreeToggle<cr>
 
   " close NERDTree once a file is selected
   let g:NERDTreeQuitOnOpen = 1
@@ -405,6 +405,7 @@
 " }}}
 
 " Tabs --- {{{
+  nmap <C-W> :Bclose<cr>
   nmap <leader>t :term<cr>
   nmap <leader>, :bnext<CR>
   tmap <leader>, <C-\><C-n>:bnext<cr>
