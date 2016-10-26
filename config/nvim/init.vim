@@ -136,16 +136,17 @@
   " Use Unix as the standard file type
   set ffs=unix,dos,mac
 
+  " Show line at 80 columns
+  set colorcolumn=80
 " }}}
 
 " Text, tab and indent related --- {{{
   " Use spaces instead of tabs
-  set expandtab
-
   " Be smart when using tabs ;)
+  set expandtab
   set smarttab
 
-  " 1 tab == 4 spaces
+  " 1 tab == 2 spaces
   set shiftwidth=2
   set tabstop=2
 
@@ -153,9 +154,10 @@
   set lbr
   set tw=500
 
-  set ai "Auto indent
-  set si "Smart indent
-  set wrap "Wrap lines
+  " Auto indent, Smart indent, Wrap lines
+  set ai
+  set si
+  " set wrap
 " }}}
 
 " Visual mode related --- {{{
@@ -228,12 +230,10 @@
   vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
   vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
-  if has("mac") || has("macunix")
-    nmap <D-j> <M-j>
-    nmap <D-k> <M-k>
-    vmap <D-j> <M-j>
-    vmap <D-k> <M-k>
-  endif
+  nmap <C-UP> <M-k>
+  nmap <C-DOWN> <M-j>
+  vmap <C-UP> <M-k>
+  vmap <C-DOWN> <M-j>
 
   " Delete trailing white space on save, useful for Python and CoffeeScript ;)
   func! DeleteTrailingWS()
@@ -349,9 +349,11 @@
 " }}}
 
 " Color Scheme --- {{{
-  set background=dark
   colorscheme OceanicNext
   let g:airline_theme='flatlandia'
+
+  set background=dark
+  hi Normal guibg=none
 " }}}
 
 " Airline --- {{{
