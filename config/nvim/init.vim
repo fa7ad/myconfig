@@ -41,6 +41,10 @@
   " keep undo history
   set undofile
   set undodir="$HOME/.local/share/nvim/site/undo"
+
+  " Path to python3
+  let g:python_host_prog = '/usr/bin/python2'
+  let g:python3_host_prog = '/usr/bin/python3'
 " }}}
 
 " vim-plug --- {{{
