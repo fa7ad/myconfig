@@ -304,5 +304,6 @@ exec ~/.fehbg
 exec --no-startup-id ~/.bin/startapps.sh
 exec --no-startup-id ibus-daemon -rd
 exec --no-startup-id setxkbmap -model acer_laptop -layout us -option compose:menu
-exec --no-startup-id nm-applet
 exec --no-startup-id i3-sensible-terminal
+
+exec_always --no-startup-id ~/.bin/nm-tray.zsh
