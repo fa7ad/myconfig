@@ -30,7 +30,7 @@ zstyle ':prezto:load' pmodule \
   'github' \
   'fasd' \
   'node' \
-  'yarn' \
+  'yarn-completions' \
   'python' \
   'pip' \
   'arch' \
