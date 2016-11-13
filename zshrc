@@ -63,3 +63,7 @@ alias systart='sudo systemctl start'
 alias syrestart='sudo systemctl restart'
 
 alias irssi='screen irssi'
+
+# tabtab source for yarn package
+# uninstall by removing these lines or running `tabtab uninstall yarn`
+[[ -f /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh ]] && . /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh

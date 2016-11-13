@@ -174,10 +174,10 @@
   map <silent> <leader><cr> :noh<cr>
 
   " Smart way to move between windows
-  map <C-j> <C-W>j
-  map <C-k> <C-W>k
-  map <C-h> <C-W>h
-  map <C-l> <C-W>l
+  " map <C-j> <C-W>j
+  " map <C-k> <C-W>k
+  " map <C-h> <C-W>h
+  " map <C-l> <C-W>l
 
   " Close the current buffer
   map <leader>bd :Bclose<cr>:tabclose<cr>gT
@@ -381,6 +381,20 @@
   let g:deoplete#enable_at_startup = 1
 " }}}
 
+" Plugin key-mappings.
+  imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+  " SuperTab like snippets behavior.
+  "imap <expr><TAB>
+  " \ pumvisible() ? "\<C-n>" :
+  " \ neosnippet#expandable_or_jumpable() ?
+  " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+    \"\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" }}}
+
 " NERDTree --- {{{
   " Show NERDTree if we open empty vim
   function OpenNERD ()
@@ -399,6 +413,7 @@
   " toggle NERDTree on <C-E>
   map <C-E> :NERDTreeToggle<cr>
 
+" Neosnippet --- {{{
   " close NERDTree once a file is selected
   let g:NERDTreeQuitOnOpen = 1
 " }}}
