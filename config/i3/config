@@ -184,6 +184,7 @@ assign [class="Gvim"] $ws4
 assign [class="Vim"] $ws4
 assign [class="Brackets"] $ws4
 assign [class="Nautilus"] $ws5
+assign [class="Gimp-2.8"] $ws6
 assign [class="mpv"] $ws0
 
 # floating workspaces
