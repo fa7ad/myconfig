@@ -5,7 +5,7 @@ MPV wrapper with somewhat stable history support
 
 from subprocess import call as launch
 from sys import exit as os_return
-from os import path, getenv
+from os import path, getenv, makedirs
 from re import match as regex
 import argparse
 
@@ -84,7 +84,14 @@ def get_last(nth):
 
 
 if __name__ == "__main__":
-    LOG_FILE = getenv('MPV_HIST', '/tmp/mpv_history.log')
+    _LINUX_CACHE = path.join(getenv('HOME', '~'), '.cache')
+    _XDG_CACHE = getenv('XDG_CACHE_HOME', _LINUX_CACHE)
+    LOG_DIR = path.join(_XDG_CACHE, 'mpv')
+
+    if not path.isdir(LOG_DIR):
+        makedirs(LOG_DIR)
+
+    LOG_FILE = path.join(LOG_DIR, 'history.log')
 
     PARSER = argparse.ArgumentParser(prog='MPV +history', add_help=False)
     PARSER.add_argument('--last', '-L', nargs='?', const=1, type=int)
