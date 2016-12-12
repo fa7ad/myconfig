@@ -52,7 +52,7 @@ higher_cutoff_freq = 10000
 ; source = /tmp/mpd.fifo
 
  method = pulse
- source = 2
+ source = 0
 
 
 

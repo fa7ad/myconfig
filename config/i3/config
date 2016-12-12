@@ -184,6 +184,7 @@ assign [class="Gvim"] $ws4
 assign [class="Vim"] $ws4
 assign [class="Brackets"] $ws4
 assign [class="Nautilus"] $ws5
+assign [class="Pcmanfm"] $ws5
 assign [class="Gimp-2.8"] $ws6
 assign [class="mpv"] $ws0
 
@@ -257,7 +258,7 @@ set $locker ~/.bin/lock.sh
 bindsym $mod+l exec $locker
 
 # Open nautilus
-bindsym $mod+Mod1+e exec nautilus --no-desktop
+bindsym $mod+Mod1+e exec pcmanfm
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
