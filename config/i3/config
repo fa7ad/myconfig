@@ -170,10 +170,8 @@ bindsym $mod+Shift+KP_9 move container to workspace $wss9
 bindsym $mod+Shift+KP_0 move container to workspace $wss0
 
 # fixed windows
-assign [class="google-chrome"] $ws2
 assign [class="Google-chrome"] $ws2
 assign [class="Chromium"] $ws2
-assign [class="google-chrome-stable"] $ws2
 assign [class="Gnome-terminal"] $ws3
 assign [class="URxvt"] $ws3
 assign [class="konsole"] $ws3
@@ -201,6 +199,7 @@ for_window [class="nfeh"] floating enable
 for_window [class="Skype" window_role="ConversationsWindow"] floating enable
 for_window [class="kcalc"] floating enable
 for_window [class="Kmix"] floating enable
+for_window [class="Google-chrome"] border none
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
