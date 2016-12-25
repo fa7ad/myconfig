@@ -188,15 +188,24 @@ assign [class="Pcmanfm"] $ws5
 assign [class="Gimp-2.8"] $ws6
 assign [class="mpv"] $ws0
 
+# float all popups
+for_window [window_role="pop-up"] floating enable
+
 # floating workspaces
 for_window [workspace=$ws1] floating enable
 for_window [workspace=$wss9] floating enable
-for_window [workspace=$ws4 class="Xfce4-terminal"] floating enable
-for_window [workspace=$ws4 class="wall-down"] floating enable
-for_window [workspace=$ws4 class="nfeh"] floating enable
 
 # floating windows
 for_window [class="mpv"] floating enable
+for_window [class="wall-down"] floating enable
+for_window [class="nfeh"] floating enable
+for_window [class="Skype" window_role="ConversationsWindow"] floating enable
+for_window [class="kcalc"] floating enable
+for_window [class="Kmix"] floating enable
+
+# focus behaviour
+focus_follows_mouse no
+mouse_warping none
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -258,7 +267,7 @@ set $locker ~/.bin/lock.sh
 bindsym $mod+l exec $locker
 
 # Open nautilus
-bindsym $mod+Mod1+e exec pcmanfm
+bindsym $mod+Mod1+e exec pcmanfm-qt
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
