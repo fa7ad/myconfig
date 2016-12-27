@@ -275,9 +275,9 @@ bindsym --release $mod+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 
 # Startup
 exec numlockx on
 exec compton -f
-exec ~/.bin/feh2plasma
 
 exec --no-startup-id ~/.bin/startapps.sh
+exec --no-startup-id ~/.bin/feh2plasma
 exec --no-startup-id ibus-daemon -rd
 exec --no-startup-id setxkbmap -model acer_laptop -layout us -option compose:menu
 exec --no-startup-id i3-sensible-terminal

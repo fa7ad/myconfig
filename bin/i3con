@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-if [[ -f "$HOME/.config/i3/config.kde" ]]; then
-  cp $HOME/.config/i3/config.kde $HOME/.config/i3/config
-fi
