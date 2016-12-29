@@ -80,13 +80,19 @@ URxvt*boldItalicFont:  xft:Operator Mono Medium:bold:italic:size=12:antialias=tr
 *color15: #fdf6e3
 
 
-!! ROFI Color theme
+! ROFI Color theme
+rofi.eh: 1
+rofi.bw: 0
+rofi.lines: 3
+rofi.width: 100
+rofi.padding: 360
+rofi.font: Operator Pro Book Regular 18
+rofi.modi: run,drun
 rofi.color-enabled: true
-rofi.color-window:  #273238, #273238, #1e2529
-rofi.color-normal:  #273238, #c1c1c1, #273238, #394249, #ffffff
-rofi.color-active:  #273238, #80cbc4, #273238, #394249, #80cbc4
-rofi.color-urgent:  #273238, #ff1844, #273238, #394249, #ff1844
-
+rofi.color-window: #e0273238, #273238, #1e2529
+rofi.color-normal: #e0273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active: #e0273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #e0273238, #ff1844, #273238, #394249, #ff1844
 
 ! xterm
 xterm*font:            xft:Operator Mono Medium:regular:size=16:antialias=true:hinting=true,xft:Hack:regular:size=16
