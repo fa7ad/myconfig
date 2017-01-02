@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-export KDEWM=/usr/bin/i3
-$HOME/.bin/pi3conf
-exec /usr/bin/startkde

@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-
-# unlink any existing i3conf and symlink the kde conf
-
-unlink "$HOME/.config/i3/config"
-ln -s "$HOME/.config/i3/config.kde" "$HOME/.config/i3/config"
