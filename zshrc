@@ -64,6 +64,10 @@ alias syrestart='sudo systemctl restart'
 
 alias irssi='screen irssi'
 
-# tabtab source for yarn package
-# uninstall by removing these lines or running `tabtab uninstall yarn`
-[[ -f /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh ]] && . /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh
+if [[ -f /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh ]]; then
+  source /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh
+fi
+
+export N_PREFIX="/usr/local/n"
+[[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+
