@@ -14,7 +14,7 @@ export LUA_PATH="$LUA_PATH;$HOME/.luarocks/share/lua/5.2/?.lua;$HOME/.luarocks/s
 export LUA_CPATH="$LUA_CPATH;$HOME/.luarocks/lib/lua/5.2/?.so;$HOME/.luarocks/lib/lua/5.3/?.so"
 
 # PATH
-export PATH="$HOME/.bin:$HOME/.luarocks/bin:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$HOME/.gem/ruby/2.3.0/bin:/ldata/android-studio/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+export PATH="$HOME/.bin:$HOME/.luarocks/bin:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$HOME/.gem/ruby/*/bin:/ldata/android-studio/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
 
 # mpv +history
 alias mpv='mpvh'
@@ -64,10 +64,10 @@ alias syrestart='sudo systemctl restart'
 
 alias irssi='screen irssi'
 
-if [[ -f /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh ]]; then
-  source /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh
-fi
-
 export N_PREFIX="/usr/local/n"
 [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
+
+# tabtab source for yarn package
+# uninstall by removing these lines or running `tabtab uninstall yarn`
+[[ -f /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh ]] && . /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh
