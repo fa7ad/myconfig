@@ -1,0 +1,13 @@
+#!/bin/env zsh
+# Toggles the button order for mouse
+#
+
+togglefile=/tmp/mouseleft
+
+if [ -f $togglefile ]; then
+  xinput set-button-map 12 1 2 3
+  rm -f $togglefile
+else
+  xinput set-button-map 12 3 2 1
+  touch $togglefile
+fi
