@@ -2,12 +2,17 @@
 # Toggles the button order for mouse
 #
 
+mouseid=$(xinput list|sed -n 's/.*MOSART.*id=\([0-9]*\).*/\1/p'|head -n1)
 togglefile=/tmp/mouseleft
 
+if [[ -z "$mouseid" ]]; then
+  exit
+fi
+
 if [ -f $togglefile ]; then
-  xinput set-button-map 12 1 2 3
+  xinput set-button-map $mouseid 1 2 3
   rm -f $togglefile
 else
-  xinput set-button-map 12 3 2 1
+  xinput set-button-map $mouseid 3 2 1
   touch $togglefile
 fi
