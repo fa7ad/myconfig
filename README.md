@@ -9,7 +9,7 @@ For terminal:
 
 * zsh
 * fontconfig
-* python
+* python3
 
 ...
 
