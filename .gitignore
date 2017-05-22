@@ -22,3 +22,4 @@ mpd/mpd.pid
 mpd/sticker.sql
 mpd/database
 config/nvim/autoload
+npmrc

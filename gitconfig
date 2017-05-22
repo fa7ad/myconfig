@@ -1,0 +1,14 @@
+[alias]
+	bb = repo bb
+	lab = repo lab
+	hub = repo hub
+[user]
+	email = evilinfinite7@gmail.com
+	name = Fahad Hossain
+	signingkey = 1A900DF688634FA0
+[core]
+	autocrlf = input
+[commit]
+	gpgsign = true
+[include]
+	path = /home/fahad/.gitconfig-repos
