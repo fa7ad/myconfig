@@ -75,3 +75,7 @@ export N_PREFIX="/usr/local/n"
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
+
+
+# window buttons
+[[ $(gsettings get com.solus-project.budgie-wm button-layout) != 'close,minimize,maximize:appmenu' ]] && gsettings set com.solus-project.budgie-wm button-layout 'close,minimize,maximize:appmenu'
