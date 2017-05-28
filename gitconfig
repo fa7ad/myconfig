@@ -10,8 +10,8 @@
 	autocrlf = input
 [commit]
 	gpgsign = true
-[include]
-	path = /home/fahad/.gitconfig-repos
 [filter "gitignore"]
 	clean = sed '/\\/\\/.?gitignore$/'d
 	smudge = cat
+[include]
+	path = /home/fahad/.gitconfig-repos
