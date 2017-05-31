@@ -78,4 +78,6 @@ export N_PREFIX="/usr/local/n"
 
 
 # window buttons
-[[ $(gsettings get com.solus-project.budgie-wm button-layout) != 'close,minimize,maximize:' ]] && gsettings set com.solus-project.budgie-wm button-layout 'close,minimize,maximize:'
+if [ $(gsettings get com.solus-project.budgie-wm button-layout) != "'close,minimize,maximize:'" ]; then
+  gsettings set com.solus-project.budgie-wm button-layout 'close,minimize,maximize:'
+fi
