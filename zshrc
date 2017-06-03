@@ -35,7 +35,7 @@ function update_config {
   current=$(pwd)
   cd "${ZDOTDIR:-$HOME}/myconfig"
   git pull -X theirs
-  rsync -ar .config/ "${ZDOTDIR:-$HOME}/.config/"
+  rsync -ar config/ "$HOME/.config/"
   cd $current
 }
 
