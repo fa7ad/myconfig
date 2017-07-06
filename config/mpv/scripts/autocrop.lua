@@ -86,7 +86,7 @@ function do_crop()
             and cropdetect_metadata["lavfi.cropdetect.x"]
             and cropdetect_metadata["lavfi.cropdetect.y"]
         then
-            mp.command(string.format("vf add @%s:crop=%s:%s:%s:%s",
+            mp.command(string.format('vf add @%s:lavfi=graph="crop=%s:%s:%s:%s"',
                                      crop_label,
                                      cropdetect_metadata["lavfi.cropdetect.w"],
                                      cropdetect_metadata["lavfi.cropdetect.h"],

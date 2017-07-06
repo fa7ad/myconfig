@@ -11,7 +11,7 @@
 [commit]
 	gpgsign = true
 [filter "gitignore"]
-	clean = sed '/\\/\\/.?gitignore$/'d
+	clean = "sed -r '/(\\/\\/.?|#.?)gitignore$/d'"
 	smudge = cat
 [include]
 	path = /home/fahad/.gitconfig-repos

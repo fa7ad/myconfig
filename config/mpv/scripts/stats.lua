@@ -18,7 +18,7 @@ local o = {
     debug = false,
 
     -- Text style
-    font = "Source Sans Pro",
+    font = "Droid Sans",
     font_size = 11,
     font_color = "FFFFFF",
     border_size = 1.0,
@@ -110,8 +110,8 @@ function add_video(s)
                         {no=true})
     end
     append_property(s, sec, "avsync", {prefix="A-V:"})
-    if append_property(s, sec, "drop-frame-count", {prefix="Dropped:"}) then
-        append_property(s, sec, "vo-drop-frame-count", {prefix="VO:", nl=""})
+    if append_property(s, sec, "decoder-frame-drop-count", {prefix="Dropped:"}) then
+        append_property(s, sec, "frame-drop-count", {prefix="VO:", nl=""})
         append_property(s, sec, "mistimed-frame-count", {prefix="Mistimed:", nl=""})
         append_property(s, sec, "vo-delayed-frame-count", {prefix="Delayed:", nl=""})
     end

@@ -24,6 +24,4 @@ export GOROOT=/usr/lib/go
 
 export COMPOSER_ROOT=$HOME/.config/composer
 
-export GEM_PATH=$HOME/.gem/ruby/2.3.0/bin
-
-export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:node_modules/.bin:$COMPOSER_ROOT/vendor/bin:$GEM_PATH"
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:node_modules/.bin:$COMPOSER_ROOT/vendor/bin"
