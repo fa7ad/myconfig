@@ -1,0 +1,38 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "ctrl+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+b",
+    "command": "HookyQR.beautify",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+/",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+'",
+    "command": "extension.swapQuotes",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+meta+i",
+    "command": "format.standard",
+    "when": "editorTextFocus"
+  }
+]
