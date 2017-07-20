@@ -68,19 +68,11 @@ export N_PREFIX="/usr/local/n"
 [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
 # window buttons
-if [ $(gsettings get com.solus-project.budgie-wm button-layout) != "'close,minimize,maximize:'" ]; then
-  gsettings set com.solus-project.budgie-wm button-layout 'close,minimize,maximize:'
-fi
+# if [ $(gsettings get com.solus-project.budgie-wm button-layout) ! "'close,minimize,maximize:'" ]; then
+#   gsettings set com.solus-project.budgie-wm button-layout 'close,minimize,maximize:'
+# fi
 
 # Dedupe and export PATH
 export PATH=$(zsh -fc "typeset -TU P=$PATH p; echo \$P")
 
 # ===== Automatically Added ===== #
-
-# tabtab source for yarn package
-# uninstall by removing these lines or running `tabtab uninstall yarn`
-[[ -f /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh ]] && . /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh
-
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh

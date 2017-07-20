@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
   "editor.fontFamily": "'Fira Code', 'Operator Mono Book', PowerlineSymbols, monospace",
-  "editor.fontSize": 16,
+  "editor.fontSize": 18,
   "editor.fontLigatures": true,
   "editor.glyphMargin": true,
   "editor.rulers": [80, 120],
@@ -14,18 +14,17 @@
   "files.eol": "\n",
   "files.autoSave": "onFocusChange",
   "terminal.integrated.fontFamily": "'Operator Mono Medium', PowerlineSymbols, monospace",
-  "terminal.external.linuxExec": "xfce4-terminal",
+  "terminal.external.linuxExec": "tilix",
   "terminal.integrated.shell.linux": "zsh",
   "html.format.endWithNewline": true,
   "extensions.autoUpdate": true,
   "workbench.editor.showTabs": false,
-  "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorTheme": "Electron",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "window.menuBarVisibility": "toggle",
   "material-icon-theme.showUpdateMessage": false,
   "window.zoomLevel": 0,
   "editor.minimap.maxColumn": 120,
   "editor.minimap.renderCharacters": false,
-  "workbench.welcome.enabled": false
+  "vsicons.dontShowNewVersionMessage": true
 }
