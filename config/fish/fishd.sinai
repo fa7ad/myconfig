@@ -9,6 +9,7 @@ SET AGNOSTER_ICON_SCM_STAGED:\u2026
 SET AGNOSTER_ICON_SCM_STASHED:\x7e
 SET AGNOSTER_SEGMENT_RSEPARATOR:\ue0b2\x1e\ue0b3
 SET AGNOSTER_SEGMENT_SEPARATOR:\ue0b0\x1e\x20\ue0b1\x20
+SET PATH:/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/fahad/\x2ebin\x1e/home/fahad/\x2elocal/bin\x1e/home/fahad/\x2egem/ruby/2\x2e4\x2e0/bin\x1e/usr/local/n/bin
 SET __fish_init_2_39_8:\x1d
 SET __fish_init_2_3_0:\x1d
 SET __tf_func:function\x20__tf_alias\x20\x2dd\x20\x22Correct\x20your\x20previous\x20console\x20command\x22\x3b\x20\x20set\x20\x2dl\x20fucked_up_command\x20\x24history\x5b1\x5d\x3b\x20\x20env\x20TF_ALIAS\x3d__tf_alias\x20PYTHONIOENCODING\x3dutf\x2d8\x20thefuck\x20\x24fucked_up_command\x20\x7c\x20read\x20\x2dl\x20unfucked_command\x3b\x20\x20if\x20\x5b\x20\x22\x24unfucked_command\x22\x20\x21\x3d\x20\x22\x22\x20\x5d\x3b\x20\x20\x20\x20eval\x20\x24unfucked_command\x3b\x20\x20\x20\x20builtin\x20history\x20delete\x20\x2d\x2dexact\x20\x2d\x2dcase\x2dsensitive\x20\x2d\x2d\x20\x24fucked_up_command\x3b\x20\x20\x20\x20builtin\x20history\x20merge\x20\x5e\x20/dev/null\x3b\x20\x20end\x3bend\x3b
