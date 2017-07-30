@@ -89,6 +89,8 @@ function git-current-branch
   echo (git branch|grep \* |sed s/\*\ //)
 end
 
+alias git='hub'
+
 # Branch (b)
 alias gb='git branch'
 alias gba='git branch --all --verbose'
