@@ -3,10 +3,14 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+# VTE
+source /etc/profile.d/vte.sh
 
 # Key timeout
 export KEYTIMEOUT=1
 
+# source zsh globals
+source /etc/zsh/zprofile
 
 # virtualenvwrapper stuff
 export PROJECT_HOME="$HOME/PyProjects"

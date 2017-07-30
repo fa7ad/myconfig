@@ -15,3 +15,5 @@
 	smudge = cat
 [include]
 	path = /home/fahad/.gitconfig-repos
+[hub]
+	protocol = ssh

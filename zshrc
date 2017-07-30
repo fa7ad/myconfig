@@ -68,9 +68,10 @@ export N_PREFIX="/usr/local/n"
 [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
 # window buttons
-# if [ $(gsettings get com.solus-project.budgie-wm button-layout) ! "'close,minimize,maximize:'" ]; then
-#   gsettings set com.solus-project.budgie-wm button-layout 'close,minimize,maximize:'
-# fi
+if [[ $(gsettings get com.solus-project.budgie-wm button-layout) != "'close,minimize,maximize:'" ]]; then
+  gsettings set com.solus-project.budgie-wm button-layout 'close,minimize,maximize:'
+  gsettings set com.solus-project.budgie-helper.workarounds fix-button-layout 'close,minimize,maximize:menu'
+fi
 
 # Dedupe and export PATH
 export PATH=$(zsh -fc "typeset -TU P=$PATH p; echo \$P")
