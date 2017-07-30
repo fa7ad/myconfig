@@ -24,8 +24,8 @@ fundle plugin 'hauleth/agnoster'
 fundle init
 
 # Load env files
-. ./env.fish
+. ~/.config/fish/env.fish
 
 # load aliases
-. ./alias.fish
+. ~/.config/fish/alias.fish
 
