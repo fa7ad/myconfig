@@ -19,7 +19,8 @@ fundle plugin 'oh-my-fish/plugin-python'
 fundle plugin 'oh-my-fish/plugin-thefuck'
 
 # Theme
-fundle plugin 'hauleth/agnoster'
+# fundle plugin 'hauleth/agnoster'
+fundle plugin 'fisherman/flash'
 
 # Start Fundle
 fundle init
