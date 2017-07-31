@@ -38,6 +38,14 @@ end
 alias vim_clear_cache='rm -rf ~/.vim{backup,swap,undo,views}'
 alias vim_install_packages='vim +BundleInstall! +BundleClean! +q!'
 
+# Obvious short hands
+alias cls='clear'
+alias sshx='ssh -X'
+function mkcd
+  mkdir -p $argv
+  cd $argv
+end
+
 # Pacaur
 alias yaconf='pacaur -C'
 alias yain='pacaur -S'
