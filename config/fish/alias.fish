@@ -47,23 +47,26 @@ function mkcd
 end
 
 # Pacaur
-alias yaconf='pacaur -C'
-alias yain='pacaur -S'
-alias yains='pacaur -U'
-alias yainsd='pacaur -S --asdeps'
-alias yaloc='pacaur -Qi'
-alias yalocs='pacaur -Qs'
-alias yalst='pacaur -Qe'
-alias yamir='pacaur -Syy'
-alias yaorph='pacaur -Rns (pacaur -Qtdq)'
-alias yare='pacaur -Rns'
-alias yarem='pacaur -R'
-alias yarep='pacaur -Si'
-alias yareps='pacaur -Ss'
-alias yasu='pacaur -Syu --noconfirm'
-alias yaug='pacaur -Su'
-alias yaupg='pacaur -Syu --devel'
-alias yaupd='pacaur -Sy'
+if not set -q pacaur_aliases
+  set -U pacaur_aliases
+  abbr yaconf 'pacaur -C'
+  abbr yain 'pacaur -S'
+  abbr yains 'pacaur -U'
+  abbr yainsd 'pacaur -S --asdeps'
+  abbr yaloc 'pacaur -Qi'
+  abbr yalocs 'pacaur -Qs'
+  abbr yalst 'pacaur -Qe'
+  abbr yamir 'pacaur -Syy'
+  abbr yaorph 'pacaur -Rns (pacaur -Qtdq)'
+  abbr yare 'pacaur -Rns'
+  abbr yarem 'pacaur -R'
+  abbr yarep 'pacaur -Si'
+  abbr yareps 'pacaur -Ss'
+  abbr yasu 'pacaur -Syu --noconfirm'
+  abbr yaug 'pacaur -Su'
+  abbr yaupg 'pacaur -Syu --devel'
+  abbr yaupd 'pacaur -Sy'
+end
 
 # pip
 alias pip3='sudo -H pip3'

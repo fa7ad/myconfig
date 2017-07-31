@@ -59,6 +59,12 @@
   source ~/.config/nvim/plugins.vim
 " }}}
 
+" Get rid of fish --- {{{
+  if &shell =~# 'fish$'
+    set shell=bash
+  endif
+" }}}
+
 " VIM user interface --- {{{
   " Set 5 lines to the cursor - when moving vertically using j/k
   set so=5

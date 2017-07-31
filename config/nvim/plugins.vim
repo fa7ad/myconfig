@@ -6,6 +6,7 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
   Plug 'sheerun/vim-polyglot'
   Plug 'sgur/vim-editorconfig'
   Plug 'valloric/MatchTagAlways', {'on_ft': 'html'}
+  Plug 'dag/vim-fish'
 " }}}
 
 " Coding Style --- {{{
@@ -25,7 +26,6 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/denite.nvim'
   Plug 'neomake/neomake'
-  Plug 'floobits/floobits-neovim'
 " }}}
 
 " Autocomplete {{{
