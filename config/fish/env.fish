@@ -12,5 +12,5 @@ set -gx PAGER less
 set -gx N_PREFIX /usr/local/n
 
 # Add to PATH
-set -gx PATH $PATH $HOME/.bin $HOME/.local/bin (echo $HOME/.gem/ruby/*/bin) $N_PREFIX/bin
+set -gx PATH $PATH $HOME/.bin $HOME/.local/bin (echo $HOME/.gem/ruby/*/bin) $N_PREFIX/bin node_modules/.bin
 

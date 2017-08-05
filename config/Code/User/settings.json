@@ -13,9 +13,8 @@
   "editor.tabSize": 2,
   "files.eol": "\n",
   "files.autoSave": "onFocusChange",
-  "terminal.integrated.fontFamily": "'Operator Mono Medium', PowerlineSymbols, monospace",
   "terminal.external.linuxExec": "tilix",
-  "terminal.integrated.shell.linux": "zsh",
+  "terminal.integrated.shell.linux": "fish",
   "html.format.endWithNewline": true,
   "extensions.autoUpdate": true,
   "workbench.editor.showTabs": false,
@@ -26,5 +25,8 @@
   "window.zoomLevel": 0,
   "editor.minimap.maxColumn": 120,
   "editor.minimap.renderCharacters": false,
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "standard.options": {
+    "parser": "babel-eslint"
+  }
 }

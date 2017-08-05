@@ -4,6 +4,18 @@
 alias mpv mpvh
 alias mpa 'mpv --no-vid'
 
+# ncmpcpp
+function ncm
+  if not pgrep -f mpd > /dev/null
+    command mpd
+  end
+  ncmpcpp
+end
+
+# download using axel
+
+abbr axl 'axel -an 4'
+
 # systemd
 abbr systop 'sudo systemctl stop'
 abbr systart 'sudo systemctl start'
@@ -84,15 +96,8 @@ alias lt='ll -tr'
 alias lu='lt -u'
 alias lx='ll -XB'
 
-#
-# Defines Git aliases.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
 # Git
-function git-current-branch
+function git-branch-current
   echo (git branch|grep \* |sed s/\*\ //)
 end
 
