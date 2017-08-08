@@ -38,6 +38,10 @@
   " OS Clipboard
   set clipboard=unnamed,unnamedplus
 
+  " Enable mouse support
+  set mousef
+  set mouse=a
+
   " keep undo history
   set undofile
   set undodir="$HOME/.local/share/nvim/site/undo"
