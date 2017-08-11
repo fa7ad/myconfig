@@ -17,3 +17,7 @@
 	path = /home/fahad/.gitconfig-repos
 [hub]
 	protocol = ssh
+[gitrepo "github"]
+	token = d0aff3aedc08ecb2666cc16926c00a436d037d66
+[gitrepo "gitlab"]
+	token = hty1jzsfDL8dhwEpRi7y

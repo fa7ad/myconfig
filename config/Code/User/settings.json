@@ -28,5 +28,6 @@
   "vsicons.dontShowNewVersionMessage": true,
   "standard.options": {
     "parser": "babel-eslint"
-  }
+  },
+  "javascript.validate.enable": false
 }

@@ -21,3 +21,4 @@ config/nvim/autoload
 npmrc
 config/Code/
 config/fish/fundle
+config/mpv/watch_later
