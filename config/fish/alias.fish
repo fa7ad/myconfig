@@ -1,4 +1,5 @@
 #!/usr/bin/env fish
+set cwd (dirname (status -f))
 
 # MPV
 alias mpv mpvh
@@ -79,6 +80,6 @@ if command -v pygmentize > /dev/null
 end
 
 # Source the Yuuge alias files
-for file in (ls _aliases/*.fish)
+for file in (ls $cwd/_aliases/*.fish)
   . $file
 end

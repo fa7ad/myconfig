@@ -3,6 +3,8 @@ function fish_greeting
   fortune -a
 end
 
+set cwd (dirname (status -f))
+
 ### LOAD fundle
 if not functions -q fundle; eval (curl -sfL https://git.io/fundle-install); end
 
@@ -26,8 +28,8 @@ fundle plugin 'hauleth/agnoster'
 fundle init
 
 # Load env files
-. ~/.config/fish/env.fish
+. $cwd/env.fish
 
 # load aliases
-. ~/.config/fish/alias.fish
+. $cwd/alias.fish
 
