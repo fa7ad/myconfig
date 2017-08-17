@@ -1,0 +1,23 @@
+#!/bin/bash
+
+exec-mpc() {
+  mpc $* &> /dev/null
+}
+
+case $BLOCK_BUTTON in
+  1) exec-mpc toggle ;;
+  3) exec-mpc stop   ;;
+esac
+
+playing=
+paused=
+stopped=
+
+status=$(mpc status | sed -n 's/^\[\([^])]*\)\].*$/\1/p')
+current=$(mpc status | head -n1)
+case $status in
+  playing) echo -n $playing $current ;;
+  paused)  echo -n $paused $current ;;
+  *)       echo -n $stopped ;;
+esac
+

@@ -1,3 +1,6 @@
 #!/usr/bin/env zsh
-gtk-launch google-chrome
+mpd &
+gtk-launch google-chrome-stable
 gtk-launch clipit
+gtk-launch albert
+

@@ -10,10 +10,12 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $TERMINAL xfce4-terminal
+set $EDITOR nvim
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:SFNS Display Regular 10
+font pango:Fira Sans Regular 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -43,8 +45,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -font "Operator Pro Book Regular 18"
+# bindsym $mod+d exec dmenu_run
+# bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -font "Operator Pro Book Regular 18"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -52,24 +54,12 @@ bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 300 -opaci
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+l focus up
-#bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-#bindsym $mod+Shift+j move left
-#bindsym $mod+Shift+k move down
-#bindsym $mod+Shift+l move up
-#bindsym $mod+Shift+semicolon move right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -100,8 +90,8 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
-set $ws1 "1: "
-set $ws2 "2: "
+set $ws1 "1: "
+set $ws2 "2: "
 set $ws3 "3: "
 set $ws4 "4: "
 set $ws5 "5: "
@@ -109,19 +99,19 @@ set $ws6 "6: ?"
 set $ws7 "7: ?"
 set $ws8 "9: ?"
 set $ws9 "9: ?"
-set $ws0 "10: 🎜 | "
+set $ws0 "0: "
 
 # Secret workspaces
-set $wss0 "🔒 0"
-set $wss1 "🔒 1"
-set $wss2 "🔒 2"
-set $wss3 "🔒 3"
-set $wss4 "🔒 4"
-set $wss5 "🔒 5"
-set $wss6 "🔒 6"
-set $wss7 "🔒 7"
-set $wss8 "🔒 8"
-set $wss9 "🔒 9"
+set $wss0 " 0"
+set $wss1 " 1"
+set $wss2 " 2"
+set $wss3 " 3"
+set $wss4 " 4"
+set $wss5 " 5"
+set $wss6 " 6"
+set $wss7 " 7"
+set $wss8 " 8"
+set $wss9 " 9"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -170,13 +160,12 @@ bindsym $mod+Shift+KP_9 move container to workspace $wss9
 bindsym $mod+Shift+KP_0 move container to workspace $wss0
 
 # fixed windows
-assign [class="google-chrome"] $ws2
-assign [class="Google-chrome"] $ws2
-assign [class="Chromium"] $ws2
-assign [class="google-chrome-stable"] $ws2
-assign [class="Gnome-terminal"] $ws3
+assign [class="[gG]oogle-chrome*?"] $ws2
+assign [class="[cC]hromium"] $ws2
+assign [class="[gG]nome-terminal"] $ws3
+assign [class="[xX]fce4-terminal"] $ws3
 assign [class="URxvt"] $ws3
-assign [class="Terminix"] $ws3
+assign [class="Tilix"] $ws3
 assign [class="Code"] $ws4
 assign [class="Subl3"] $ws4
 assign [class="Atom"] $ws4
@@ -197,11 +186,10 @@ for_window [workspace=$wss9] floating enable
 
 # floating windows
 for_window [class="mpv"] floating enable
-for_window [class="wall-down"] floating enable
-for_window [class="nfeh"] floating enable
 for_window [class="Skype" window_role="ConversationsWindow"] floating enable
-for_window [class="kcalc"] floating enable
-for_window [class="Kmix"] floating enable
+
+# borderless window
+for_window [class=".oogle-chrome"] border pixel 1
 
 # focus behaviour
 focus_follows_mouse no
@@ -212,28 +200,65 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes!' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
-  # These bindings trigger as soon as you enter the resize mode
-  bindsym j resize shrink width 10 px or 10 ppt
-  bindsym k resize grow height 10 px or 10 ppt
-  bindsym l resize shrink height 10 px or 10 ppt
-  bindsym semicolon resize grow width 10 px or 10 ppt
+set $mode_resize "Resize: ⇧ Grow (V) | ⇩ Shrink (V) | ⇨ Grow (H) | ⇦ Shrink (H)"
 
-  # same bindings, but for the arrow keys
-  bindsym Left resize shrink width 10 px or 10 ppt
-  bindsym Down resize grow height 10 px or 10 ppt
-  bindsym Up resize shrink height 10 px or 10 ppt
-  bindsym Right resize grow width 10 px or 10 ppt
+mode $mode_resize {
+  bindsym Left resize shrink width 10 px or 5 ppt
+  bindsym Down resize grow height 10 px or 5 ppt
+  bindsym Up resize shrink height 10 px or 5 ppt
+  bindsym Right resize grow width 10 px or 5 ppt
 
   # back to normal: Enter or Escape
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode $mode_resize
+
+# Gaps
+gaps inner 5
+gaps outer 0
+smart_gaps on
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+  bindsym o      mode "$mode_gaps_outer"
+  bindsym i      mode "$mode_gaps_inner"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+  bindsym plus  gaps inner current plus 5
+  bindsym minus gaps inner current minus 5
+  bindsym 0     gaps inner current set 0
+
+  bindsym Shift+plus  gaps inner all plus 5
+  bindsym Shift+minus gaps inner all minus 5
+  bindsym Shift+0     gaps inner all set 0
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+  bindsym plus  gaps outer current plus 5
+  bindsym minus gaps outer current minus 5
+  bindsym 0     gaps outer current set 0
+
+  bindsym Shift+plus  gaps outer all plus 5
+  bindsym Shift+minus gaps outer all minus 5
+  bindsym Shift+0     gaps outer all set 0
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
 
 # window colors
 #                       border              background         text                 indicator
@@ -261,13 +286,13 @@ bar {
   status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
 
-set $locker ~/.bin/lock.sh
+set $locker "gnome-screensaver-command --lock"
 
 # Lock using Mod+l
 bindsym $mod+l exec $locker
 
 # Open nautilus
-bindsym $mod+Mod1+e exec pcmanfm-qt
+bindsym $mod+Mod1+e exec nautilus
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -304,8 +329,9 @@ bindsym --release $mod+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 
 exec --no-startup-id gsettings set org.gnome.desktop.background show-desktop-icons false
 
 # Startup
-exec xautolock -corners -000 -time 10 -locker $locker
-exec xset dpms 600 600
+exec dunst
+exec xset dpms 600
+exec xss-lock $locker 
 exec numlockx on
 exec compton -f
 exec ~/.fehbg
@@ -313,7 +339,7 @@ exec ~/.fehbg
 
 exec --no-startup-id ~/.bin/startapps.sh
 exec --no-startup-id ibus-daemon -rd
-exec --no-startup-id setxkbmap -model acer_laptop -layout us -option compose:menu
+exec --no-startup-id setxkbmap -model asus_laptop -layout us -option compose:menu
 exec --no-startup-id i3-sensible-terminal
 
 exec_always --no-startup-id ~/.bin/nm-tray.zsh
