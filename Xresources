@@ -18,8 +18,8 @@ URxvt*scrollTtyKeypress:    true
 URxvt*scrollBar:            false
 URxvt*scrollBar_right:      true
 URxvt*scrollBar_floating:   false
-URxvt*background:           #222222
-URxvt*foreground:           #dddddd
+URxvt*background:           #0d1926
+URxvt*foreground:           #b4e1fd
 URxvt*fading:               40
 URxvt*letterSpace:          -1
 URxvt*cursorBlink:          true
@@ -31,7 +31,6 @@ URxvt.matcher.button:       1
 URxvt.perl-ext-common:      matcher
 
 ! Transparency
-urxvt*background:           rgba:0000/0000/0000/cccc
 URxvt.transparent:          true
 URxvt.tintColor:            white
 URxvt.shading:              20
@@ -49,41 +48,42 @@ URxvt*boldItalicFont:  xft:FuraMono Nerd Font Mono:bold:italic:size=14:antialias
 *pointerColorForeground: #93a1a1
 
 ! special
-*.foreground:   #eeeeec
-*.background:   #263238
-*.cursorColor:  #eeeeec
+*.foreground:   #b4e1fd
+*.background:   #0d1926
+*.cursorColor:  #b4e1fd
 
 ! black
-*.color0:       #252525
-*.color8:       #708284
+*.color0:       #363636
+*.color8:       #424242
 
 ! red
-*.color1:       #ff5252
-*.color9:       #ff5252
+*.color1:       #ff0883
+*.color9:       #ff1e8e
 
 ! green
-*.color2:       #c3d82c
-*.color10:      #c3d82c
+*.color2:       #83ff08
+*.color10:      #8eff1e
 
 ! yellow
-*.color3:       #ffc135
-*.color11:      #ffc135
+*.color3:       #ff8308
+*.color11:      #ff8e1e
 
 ! blue
-*.color4:       #42a5f5
-*.color12:      #42a5f5
+*.color4:       #0883ff
+*.color12:      #1e8eff
 
 ! magenta
-*.color5:       #d81b60
-*.color13:      #d81b60
+*.color5:       #8308ff
+*.color13:      #8e1eff
 
 ! cyan
-*.color6:       #00acc1
-*.color14:      #00acc1
+*.color6:       #08ff83
+*.color14:      #1eff8e
 
 ! white
-*.color7:       #f5f5f5
-*.color15:      #f5f5f5
+*.color7:       #b6b6b6
+*.color15:      #c2c2c2
+
 
 ! xterm
 xterm*font:            xft:FuraMono Nerd Font Mono:regular:size=14:antialias=true:hinting=true,xft:Hack:regular:size=14
