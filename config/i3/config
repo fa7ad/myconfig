@@ -180,7 +180,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes!' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
-set $mode_resize "Resize: ⇧ Grow (V) | ⇩ Shrink (V) | ⇨ Grow (H) | ⇦ Shrink (H)"
+set $mode_resize "Resize: ⇧ Shrink (V) | ⇩ Grow (V) | ⇨ Grow (H) | ⇦ Shrink (H)"
 
 mode $mode_resize {
   bindsym Left resize shrink width 10 px or 5 ppt
