@@ -1,4 +1,6 @@
 #!/usr/bin/env zsh
+source /etc/profile.d/env.sh
+
 setxkbmap -model asus_laptop -layout us -option compose:menu
 ibus-daemon -rd
 numlockx on
@@ -8,7 +10,7 @@ light-locker &
 ~/.fehbg
 
 xset dpms 600 600 0
-xss-lock light-locker &
+xss-lock ~/.bin/lock.sh &
 
 mpd &
 dunst &
