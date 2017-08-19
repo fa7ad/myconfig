@@ -1,73 +1,59 @@
-# i3 config file (v4)
+#  _  _____                                  
+# (_)|___ /          __ _   __ _  _ __   ___ 
+# | |  |_ \  _____  / _` | / _` || '_ \ / __|
+# | | ___) ||_____|| (_| || (_| || |_) |\__ \
+# |_||____/         \__, | \__,_|| .__/ |___/
+#                   |___/        |_|         
+#____________________________________________
+#                __       ______          _  
+#     ____      / _|     |____  |        | | 
+#    / __ \    | |_  __ _    / /__ _   __| | 
+#   / / _` |   |  _|/ _` |  / // _` | / _` | 
+#  | | (_| |   | | | (_| | / /| (_| || (_| | 
+#   \ \__,_|   |_|  \__,_|/_/  \__,_| \__,_| 
+#    \____/                                  
+#                                            
+# vim: ft=i3
+# Window key
 set $mod Mod4
+set $alt Mod1
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-font pango:Overpass 10
-#font pango:DejaVu Sans Mono 8
+# set locker command
+set $locker ~/.bin/lock.sh
 
-# color variables
-set $bg-color            #2f343f
-set $inactive-bg-color   #363846
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+# set file manager
+set $file_man nautilus
 
-# Use Mouse+$mod to drag floating windows to their wanted position
+# Used for moving floating windows around
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# focus behaviour
+focus_follows_mouse no
+mouse_warping none
+# Font
+font pango:Overpass 10
 
-# kill focused window
-bindsym $mod+Shift+q kill
+# Colors
+set $bg-color              #2f343f
+set $inactive-bg-color     #363846
+set $text-color            #f3f4f5
+set $inactive-text-color   #676E7D
+set $urgent-bg-color       #E53935
 
-#toggle borderless
-bindsym $mod+b border toggle
+# window colors
+#                       border              background         text                 indicator
+client.focused          $bg-color           $bg-color          $text-color          #ff0000
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #ff0000
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #ff0000
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #ff0000
 
+# Hide borders
+hide_edge_borders both
 
-# start dmenu (a program launcher)
-# bindsym $mod+d exec dmenu_run
-# bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -font "Operator Pro Book Regular 18"
-# using Albert instead of Rofi or dmenu
-
-# change focus
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
-# split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
+# set Gaps
+gaps inner 5
+gaps outer 0
+smart_gaps on
 set $ws1 "1: "
 set $ws2 "2: "
 set $ws3 "3: "
@@ -136,23 +122,39 @@ bindsym $mod+Shift+KP_7 move container to workspace $wss7
 bindsym $mod+Shift+KP_8 move container to workspace $wss8
 bindsym $mod+Shift+KP_9 move container to workspace $wss9
 bindsym $mod+Shift+KP_0 move container to workspace $wss0
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
-# fixed windows
-assign [class="[gG]oogle-chrome*?"] $ws2
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# fix windows to workspace
 assign [class="[cC]hromium"] $ws2
+assign [class="[gG]oogle-chrome*?"] $ws2
+
 assign [class="[gG]nome-terminal"] $ws3
 assign [class="[xX]fce4-terminal"] $ws3
 assign [class="U?Rxvt"] $ws3
 assign [class="Tilix"] $ws3
-assign [class="Code"] $ws4
-assign [class="Subl3"] $ws4
-assign [class="Atom"] $ws4
-assign [class="Gvim"] $ws4
+
 assign [class="Vim"] $ws4
+assign [class="Gvim"] $ws4
+assign [class="Code"] $ws4
+assign [class="Atom"] $ws4
+assign [class="Subl3"] $ws4
 assign [class="Brackets"] $ws4
-assign [class="Nautilus"] $ws5
+
 assign [class="Pcmanfm"] $ws5
+assign [class="Nautilus"] $ws5
+
 assign [class="Gimp-2.8"] $ws6
+
 assign [class="[mM]pv"] $ws0
 
 # float all popups
@@ -167,52 +169,34 @@ for_window [class="[mM]pv"] floating enable
 
 # borderless window
 for_window [class=".oogle-chrome"] border pixel 0
-
-# focus behaviour
-focus_follows_mouse no
-mouse_warping none
-
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes!' 'i3-msg exit'"
-
-# resize window (you can also use the mouse for that)
+# Resize Mode
 set $mode_resize "Resize: ⇧ Shrink (V) | ⇩ Grow (V) | ⇨ Grow (H) | ⇦ Shrink (H)"
 
 mode $mode_resize {
-  bindsym Left resize shrink width 10 px or 5 ppt
-  bindsym Down resize grow height 10 px or 5 ppt
-  bindsym Up resize shrink height 10 px or 5 ppt
+  bindsym Left  resize shrink width 10 px or 5 ppt
+  bindsym Down  resize grow height 10 px or 5 ppt
+  bindsym Up    resize shrink height 10 px or 5 ppt
   bindsym Right resize grow width 10 px or 5 ppt
 
-  # back to normal: Enter or Escape
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
-
 bindsym $mod+r mode $mode_resize
+# Gap change mode
+set $mode_gaps "Gaps: (o) outer, (i) inner"
+set $mode_gaps_outer "Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)"
+set $mode_gaps_inner "Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)"
 
-# Gaps
-gaps inner 5
-gaps outer 0
-smart_gaps on
+bindsym $mod+Shift+g mode $mode_gaps
 
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
-
-mode "$mode_gaps" {
+mode $mode_gaps {
   bindsym o      mode "$mode_gaps_outer"
   bindsym i      mode "$mode_gaps_inner"
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
 
-mode "$mode_gaps_inner" {
+mode $mode_gaps_inner {
   bindsym plus  gaps inner current plus 5
   bindsym minus gaps inner current minus 5
   bindsym 0     gaps inner current set 0
@@ -224,7 +208,8 @@ mode "$mode_gaps_inner" {
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
-mode "$mode_gaps_outer" {
+
+mode $mode_gaps_outer {
   bindsym plus  gaps outer current plus 5
   bindsym minus gaps outer current minus 5
   bindsym 0     gaps outer current set 0
@@ -236,18 +221,81 @@ mode "$mode_gaps_outer" {
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
+# start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
 
-# window colors
-#                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #ff0000
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #ff0000
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #ff0000
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #ff0000
+# kill focused window
+bindsym $mod+Shift+q kill
 
-hide_edge_borders both
+# split in horizontal orientation
+bindsym $mod+h split h
+# split in vertical orientation
+bindsym $mod+v split v
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+#toggle borderless
+bindsym $mod+b border toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+# focus the child container
+bindsym $mod+d focus child
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3
+bindsym $mod+Shift+r restart
+# exit i3
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes!' 'i3-msg exit'"
+
+# Lock using Mod+l
+bindsym $mod+l exec xset dpms force standby
+
+# Open File Manager
+bindsym $mod+$alt+e exec $file_man
+
+# Pulse Audio controls
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+
+# Sleep
+bindsym XF86Sleep exec xset dpms force suspend
+bindsym XF86PowerOff exec xset dpms force suspend
+
+# Touchpad controls
+bindsym XF86TouchpadToggle exec ~/.bin/toggletouchpad.sh
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioStop exec playerctl stop
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Caps Lock / Num_Lock indicator kill signals
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+
+# Screenshot
+bindsym --release Print exec scrot -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+bindsym --release Shift+Print exec scrot -s -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+bindsym --release Mod1+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+bindsym --release $mod+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+# Start i3bar 
 bar {
   tray_output primary
   font pango:Overpass 10, pango:FontAwesome 10
@@ -262,54 +310,22 @@ bar {
   }
   status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
-
-set $locker ~/.bin/lock.sh
-
-# Lock using Mod+l
-bindsym $mod+l exec $locker
-
-# Open nautilus
-bindsym $mod+Mod1+e exec nautilus
-
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-
-# Sleep
-bindsym XF86Sleep exec xset dpms force suspend
-
-# Touchpad controls
-bindsym XF86TouchpadToggle exec ~/.bin/toggletouchpad.sh
-
-# Media player controls
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioStop exec playerctl stop
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-
-# Caps Lock
-bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
-bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-
-# Screenshot
-bindsym --release Print exec scrot -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
-bindsym --release Shift+Print exec scrot -s -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
-bindsym --release Mod1+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
-bindsym --release $mod+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
-
-# fix nautilus
+# Startup Apps
+exec --no-startup-id numlockx on
+exec --no-startup-id setxkbmap -model asus_laptop -layout us -option compose:menu
 exec --no-startup-id gsettings set org.gnome.desktop.background show-desktop-icons false
-
-# window controls to the left
-exec_always --no-startup-id ~/.bin/window-controls.sh
-
-# Startup
-exec --no-startup-id ~/.bin/startapps.sh
+exec --no-startup-id compton -f &
+exec --no-startup-id ~/.fehbg
+exec --no-startup-id mpd &
+exec --no-startup-id dunst &
+exec --no-startup-id gnome-screensaver &
+exec --no-startup-id xset dpms 600 600 0
+exec --no-startup-id xss-lock ~/.bin/lock.sh &
+exec --no-startup-id ibus-daemon -rd
 exec --no-startup-id i3-sensible-terminal
-
+exec --no-startup-id gtk-launch google-chrome
+exec --no-startup-id gtk-launch clipit
+exec --no-startup-id gtk-launch albert
+exec --no-startup-id transmission-gtk -m &
+exec_always --no-startup-id ~/.bin/window-controls.sh
 exec_always --no-startup-id ~/.bin/nm-tray.zsh

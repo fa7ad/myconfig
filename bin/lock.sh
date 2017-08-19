@@ -14,8 +14,8 @@
 
 # Mode 2: gnome-screensaver
 ###
-# exec gnome-screensaver-command --lock
+exec gnome-screensaver-command --lock
 
 # Mode 3: light-locker
 ###
-exec light-locker-command --lock
+# exec light-locker-command --lock

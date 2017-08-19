@@ -1,0 +1,25 @@
+#keyboard stuff
+numlockx on
+setxkbmap -model asus_laptop -layout us -option compose:menu
+
+# nautilus fuckery
+gsettings set org.gnome.desktop.background show-desktop-icons false
+
+# background and compositor
+compton -f &
+~/.fehbg
+
+# Related to locking and suspend mechanism and MPD
+mpd &
+dunst &
+gnome-screensaver &
+xset dpms 600 600 0
+xss-lock ~/.bin/lock.sh &
+
+# Visible stuff, actual GUI apps
+ibus-daemon -rd
+i3-sensible-terminal
+gtk-launch google-chrome
+gtk-launch clipit
+gtk-launch albert
+transmission-gtk -m &

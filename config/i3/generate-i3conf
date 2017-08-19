@@ -1,0 +1,32 @@
+#!/usr/bin/env fish
+if test -e config
+  echo "Backing up old config..."
+  if test -e config.bak
+    echo "Replacing old backup..."
+    mv -f config.bak config.bak.old
+  end
+  mv -f config config.bak
+end
+
+# create a blank config file
+touch config
+
+echo "Joining _includes together..."
+for file in _includes/_*
+  cat $file >> config
+end
+
+echo "Adding autostart apps (exec)..."
+echo "# Startup Apps" >> config
+for app in (cat _includes/startup.list)
+  if not string match -q "" $app; and not string match -q "#*" $app
+    echo 'exec --no-startup-id' $app >> config
+  end
+end
+
+echo "Adding persistent apps (exec_always)..."
+for app in (cat _includes/persist.list)
+  if not string match -q "" $app; and not string match -q "#*" $app
+    echo 'exec_always --no-startup-id' $app >> config
+  end
+end
