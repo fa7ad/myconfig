@@ -1,3 +1,4 @@
+# vim: ft=i3
 # Font
 font pango:Overpass 10
 
@@ -25,4 +26,4 @@ for_window [class="^.*"] border pixel 0
 # set Gaps
 gaps inner 5
 gaps outer 0
-smart_gaps on
+# smart_gaps on
