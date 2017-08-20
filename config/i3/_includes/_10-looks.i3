@@ -18,6 +18,10 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Hide borders
 hide_edge_borders both
 
+# No border on single windows
+smart_borders on
+for_window [class="^.*"] border pixel 0
+
 # set Gaps
 gaps inner 5
 gaps outer 0

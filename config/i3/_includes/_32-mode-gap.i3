@@ -6,8 +6,8 @@ set $mode_gaps_inner "Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)"
 bindsym $mod+Shift+g mode $mode_gaps
 
 mode $mode_gaps {
-  bindsym o      mode "$mode_gaps_outer"
-  bindsym i      mode "$mode_gaps_inner"
+  bindsym o      mode $mode_gaps_outer
+  bindsym i      mode $mode_gaps_inner
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }

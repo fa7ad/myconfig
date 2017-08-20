@@ -6,8 +6,9 @@ setxkbmap -model asus_laptop -layout us -option compose:menu
 gsettings set org.gnome.desktop.background show-desktop-icons false
 
 # background and compositor
-compton -f &
+compton -f --config ~/.compton.conf &
 ~/.fehbg
+polybar top &
 
 # Related to locking and suspend mechanism and MPD
 mpd &

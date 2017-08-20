@@ -1,0 +1,160 @@
+[colors]
+background = #00292d3e
+foreground = #bfc7d5
+yellow = #ffcb6b
+black = #073642
+white = #bfc7d5
+red = #ac4142
+green = #a9c77d
+blue = #82aaff
+magenta = #c792ea
+cyan = #89ddff
+
+[bar/top]
+monitor = ${env:MONITOR:eDP1}
+width = 100%
+height = 26
+separator = " "
+background = ${colors.background}
+foreground = ${colors.foreground}
+underline-size = 0
+overline-size = 0
+font-0 = "Overpass:pixelsize=10:antialias=true;1"
+font-1 = "FontAwesome:pixelsize=10:antialias=true;1"
+font-2 = MaterialIcons:size=10;1
+font-3 = "DejaVu Sans:pixelsize=8;1"
+
+modules-left = wm mpd
+modules-center = title
+modules-right = ram cpu volume time
+
+padding-right = 1
+
+tray-position = right
+tray-background = ${colors.background}
+tray-transparent = true
+
+
+[module/volume]
+type = internal/volume
+label-padding = 1
+format-padding = 1
+format-volume = <label-volume> <bar-volume>
+label-volume = 
+label-volume-foreground = ${colors.yellow}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.red}
+label-muted = muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.yellow}
+bar-volume-foreground-1 = ${colors.yellow}
+bar-volume-foreground-2 = ${colors.yellow}
+bar-volume-foreground-3 = ${colors.yellow}
+bar-volume-foreground-4 = ${colors.yellow}
+bar-volume-foreground-5 = ${colors.yellow}
+bar-volume-foreground-6 = ${colors.magenta}
+bar-volume-foreground-7 = ${colors.magenta}
+bar-volume-foreground-8 = ${colors.magenta}
+bar-volume-foreground-9 = ${colors.magenta}
+bar-volume-gradient = false
+bar-volume-indicator =
+; bar-volume-indicator-font = 2
+bar-volume-fill = 
+; bar-volume-fill-font = 2
+bar-volume-empty = 
+; bar-volume-empty-font = 2
+; bar-volume-empty-foreground = ${colors.foreground}
+
+[module/title]
+type = internal/xwindow
+label = %title%
+label-maxlen = 75
+
+[module/ram]
+type = internal/memory
+interval = 3
+
+label = %gb_free%
+label-padding = 1
+label-foreground = ${colors.blue}
+format-prefix = ""
+format-prefix-foreground = ${colors.blue}
+format-padding = 1
+
+[module/cpu]
+type = internal/cpu
+label = 
+interval = 0.5
+format = <label> <ramp-coreload>
+format-padding = 1
+ramp-coreload-0 = ▁
+ramp-coreload-0-foreground = ${colors.cyan}
+ramp-coreload-1 = ▂
+ramp-coreload-1-foreground = ${colors.cyan}
+ramp-coreload-2 = ▃
+ramp-coreload-2-foreground = ${colors.cyan}
+ramp-coreload-3 = ▄
+ramp-coreload-3-foreground = ${colors.cyan}
+ramp-coreload-4 = ▅
+ramp-coreload-4-foreground = ${colors.blue}
+ramp-coreload-5 = ▆
+ramp-coreload-5-foreground = ${colors.blue}
+ramp-coreload-6 = ▇
+ramp-coreload-6-foreground = ${colors.yellow}
+ramp-coreload-7 = █
+ramp-coreload-7-foreground = ${colors.yellow}
+
+[module/wm]
+type = internal/i3
+enable-click = true
+enable-scroll = true
+wrapping-scroll = false
+
+strip-wsnumbers = true
+format-padding = 1
+label-mode = %mode%
+label-mode-padding = 2
+label-focused-foreground = ${colors.magenta}
+label-focused-padding = 1
+
+label-unfocused-padding = 1
+
+label-visible-padding = 1
+
+label-urgent-foreground = ${colors.red}
+label-urgent-padding = 1
+
+[module/time]
+type = internal/date
+interval = 30
+
+format-padding = 1
+label-foreground = ${colors.magenta}
+
+date = "%I:%M %p"
+
+[module/mpd]
+type = internal/mpd
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+format-padding = 5
+icon-play = 
+icon-pause = 
+icon-stop = 
+icon-prev = 
+icon-next = 
+icon-random = 
+icon-repeat = 
+
+toggle-on-foreground =
+toggle-off-foreground = #55
+
+bar-progress-width = 32
+bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
+bar-progress-indicator = ·
+bar-progress-indicator-foreground = ${colors.magenta}
+bar-progress-fill = ─
+bar-progress-fill-foreground = ${colors.magenta}
+bar-progress-empty = ─
+bar-progress-empty-foreground = ${colors.foreground}

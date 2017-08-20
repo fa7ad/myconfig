@@ -1,5 +1,13 @@
 #!/usr/bin/env fish
-if test -e config
+
+for option in $argv
+  switch "$option"
+    case -n --no-backup
+      set backup no
+  end
+end
+
+function do_backup
   echo "Backing up old config..."
   if test -e config.bak
     echo "Replacing old backup..."
@@ -8,7 +16,12 @@ if test -e config
   mv -f config config.bak
 end
 
+if test -e config; and test -z $backup
+  do_backup
+end
+
 # create a blank config file
+rm -f config
 touch config
 
 echo "Joining _includes together..."
