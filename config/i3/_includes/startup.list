@@ -13,6 +13,7 @@ polybar top &
 # Related to locking and suspend mechanism and MPD
 mpd &
 dunst &
+mpDris2 &
 gnome-screensaver &
 xset dpms 600 600 0
 xss-lock ~/.bin/lock.sh &
