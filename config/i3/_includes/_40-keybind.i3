@@ -23,10 +23,10 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
-# focus the child container
-bindsym $mod+d focus child
+# # focus the parent container
+# bindsym $mod+a focus parent
+# # focus the child container
+# bindsym $mod+d focus child
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -72,3 +72,6 @@ bindsym --release Print exec scrot -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~
 bindsym --release Shift+Print exec scrot -s -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
 bindsym --release Mod1+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
 bindsym --release $mod+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+
+# show albert
+bindsym $mod+d exec albert toggle
