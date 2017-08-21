@@ -68,10 +68,15 @@ bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 # Screenshot
-bindsym --release Print exec scrot -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
-bindsym --release Shift+Print exec scrot -s -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
-bindsym --release Mod1+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
-bindsym --release $mod+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+# bindsym --release Print exec scrot -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+# bindsym --release Shift+Print exec scrot -s -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+# bindsym --release Mod1+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+# bindsym --release $mod+Print exec scrot -u -q 100 'shot_%Y-%m-%d_%H%M%S.jpg' -e 'mv $f ~/Pictures/'
+# scrot doesn't work sometimes
+bindsym --release Print exec gnome-screenshot
+bindsym --release Shift+Print exec gnome-screenshot -a
+bindsym --release $mod+Print exec gnome-screenshot -a -c
+bindsym --release $alt+Print exec gnome-screenshot -w
 
 # show albert
 bindsym $mod+d exec albert toggle
