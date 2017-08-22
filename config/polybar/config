@@ -1,3 +1,4 @@
+; vim: ft=dosini
 [colors]
 background = #66292d3e
 foreground = #bfc7d5
@@ -21,51 +22,47 @@ underline-size = 0
 overline-size = 0
 font-0 = "Overpass:pixelsize=10:antialias=true;1"
 font-1 = "FontAwesome:pixelsize=10:antialias=true;1"
-font-2 = MaterialIcons:size=10;1
-font-3 = "DejaVu Sans:pixelsize=8;1"
+font-2 = Symbola:pixelsize=10;1
+font-3 = MaterialIcons:size=10;1
+font-4 = "DejaVu Sans:pixelsize=10;1"
 
 modules-left = wm mpd
 modules-center = title
-modules-right = ram cpu volume time
+modules-right = kbd ram cpu volume time
 
-padding-right = 1
-
+padding-right = 2
 tray-position = right
 tray-background = ${colors.background}
-tray-transparent = true
+tray-transparent = false
 
+[module/kbd]
+type = internal/xkeyboard
+format = <label-indicator>
+format-spacing = 0
+
+label-indicator = %name%
+label-indicator-padding = 2
+label-indicator-background = ${colors.background}
 
 [module/volume]
 type = internal/volume
-label-padding = 1
-format-padding = 1
-format-volume = <label-volume> <bar-volume>
-label-volume = 
-label-volume-foreground = ${colors.yellow}
+format-volume = <ramp-volume> <label-volume>
+label-muted = 🔇 muted
+label-muted-foreground = ${colors.red}
 
-format-muted-prefix = " "
-format-muted-foreground = ${colors.red}
-label-muted = muted
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 🔈
+ramp-volume-1 = 🔉
+ramp-volume-2 = 🔊
 
-bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.yellow}
-bar-volume-foreground-1 = ${colors.yellow}
-bar-volume-foreground-2 = ${colors.yellow}
-bar-volume-foreground-3 = ${colors.yellow}
-bar-volume-foreground-4 = ${colors.yellow}
-bar-volume-foreground-5 = ${colors.yellow}
-bar-volume-foreground-6 = ${colors.magenta}
-bar-volume-foreground-7 = ${colors.magenta}
-bar-volume-foreground-8 = ${colors.magenta}
-bar-volume-foreground-9 = ${colors.magenta}
-bar-volume-gradient = false
-bar-volume-indicator =
-; bar-volume-indicator-font = 2
-bar-volume-fill = 
-; bar-volume-fill-font = 2
-bar-volume-empty = 
-; bar-volume-empty-font = 2
-; bar-volume-empty-foreground = ${colors.foreground}
+; format-volume = <label-volume>
+; label-volume =  %percentage%%
+; label-volume-padding = 2
+; label-volume-foreground = ${colors.yellow}
+;
+; label-muted =  0%
+; label-muted-padding = 2
+; label-muted-foreground = ${colors.red}
 
 [module/title]
 type = internal/xwindow
