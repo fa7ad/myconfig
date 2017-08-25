@@ -28,9 +28,9 @@ font-4 = "DejaVu Sans:pixelsize=10;1"
 
 modules-left = wm mpd
 modules-center = title
-modules-right = kbd ram cpu volume time
+modules-right = kbd ram cpu volume battery time
 
-padding-right = 2
+padding-right = 1
 tray-position = right
 tray-background = ${colors.background}
 tray-transparent = false
@@ -41,33 +41,26 @@ format = <label-indicator>
 format-spacing = 0
 
 label-indicator = %name%
-label-indicator-padding = 2
+label-indicator-padding = 1
 label-indicator-background = ${colors.background}
 
 [module/volume]
 type = internal/volume
 format-volume = <ramp-volume> <label-volume>
+label-volume-padding = 1
+
 label-muted = 🔇 muted
+label-muted-padding = 1
 label-muted-foreground = ${colors.red}
 
-; Only applies if <ramp-volume> is used
 ramp-volume-0 = 🔈
 ramp-volume-1 = 🔉
 ramp-volume-2 = 🔊
 
-; format-volume = <label-volume>
-; label-volume =  %percentage%%
-; label-volume-padding = 2
-; label-volume-foreground = ${colors.yellow}
-;
-; label-muted =  0%
-; label-muted-padding = 2
-; label-muted-foreground = ${colors.red}
-
 [module/title]
 type = internal/xwindow
 label = %title%
-label-maxlen = 75
+label-maxlen = 70
 
 [module/ram]
 type = internal/memory
@@ -87,20 +80,20 @@ interval = 0.5
 format = <label> <ramp-coreload>
 format-padding = 1
 ramp-coreload-0 = ▁
-ramp-coreload-0-foreground = ${colors.cyan}
 ramp-coreload-1 = ▂
-ramp-coreload-1-foreground = ${colors.cyan}
 ramp-coreload-2 = ▃
-ramp-coreload-2-foreground = ${colors.cyan}
 ramp-coreload-3 = ▄
-ramp-coreload-3-foreground = ${colors.cyan}
 ramp-coreload-4 = ▅
-ramp-coreload-4-foreground = ${colors.blue}
 ramp-coreload-5 = ▆
-ramp-coreload-5-foreground = ${colors.blue}
 ramp-coreload-6 = ▇
-ramp-coreload-6-foreground = ${colors.yellow}
 ramp-coreload-7 = █
+ramp-coreload-0-foreground = ${colors.cyan}
+ramp-coreload-1-foreground = ${colors.cyan}
+ramp-coreload-2-foreground = ${colors.cyan}
+ramp-coreload-3-foreground = ${colors.cyan}
+ramp-coreload-4-foreground = ${colors.blue}
+ramp-coreload-5-foreground = ${colors.blue}
+ramp-coreload-6-foreground = ${colors.yellow}
 ramp-coreload-7-foreground = ${colors.yellow}
 
 [module/wm]
@@ -110,18 +103,16 @@ enable-scroll = true
 wrapping-scroll = false
 
 strip-wsnumbers = true
-format-padding = 1
 label-mode = %mode%
 label-mode-padding = 2
-label-focused-foreground = ${colors.magenta}
-label-focused-padding = 1
-
-label-unfocused-padding = 1
-
-label-visible-padding = 1
 
 label-urgent-foreground = ${colors.red}
+label-focused-foreground = ${colors.magenta}
+
 label-urgent-padding = 1
+label-visible-padding = 1
+label-focused-padding = 1
+label-unfocused-padding = 1
 
 [module/time]
 type = internal/date
@@ -135,7 +126,7 @@ date = "%I:%M %p"
 [module/mpd]
 type = internal/mpd
 format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
-format-padding = 5
+format-online-padding = 4
 icon-play = 
 icon-pause = 
 icon-stop = 
@@ -155,3 +146,36 @@ bar-progress-fill = ─
 bar-progress-fill-foreground = ${colors.magenta}
 bar-progress-empty = ─
 bar-progress-empty-foreground = ${colors.foreground}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC0
+full-at = 95
+label-discharging-padding = 1
+label-charging-padding = 1
+label-full-padding = 1
+
+format-charging = <animation-charging> <label-charging>
+format-charging-foreground = ${colors.magenta}
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-foreground = ${colors.yellow}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.blue}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.yellow}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.magenta}
+animation-charging-framerate = 500

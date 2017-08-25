@@ -68,16 +68,16 @@ alias ls='ls --group-directories-first --color=auto'
 alias lsa='ls -lah'
 
 # Colored cat
-function pygmentize_cat
-  for file in $argv
-    pygmentize -g "$file" ^ /dev/null 
-    or command cat "$file"
-  end
-end
-
-if command -v pygmentize > /dev/null
-  alias cat pygmentize_cat
-end
+# function pygmentize_cat
+#   for file in $argv
+#     pygmentize -g "$file" ^ /dev/null 
+#     or command cat "$file"
+#   end
+# end
+#
+# if command -v pygmentize > /dev/null
+#   alias cat pygmentize_cat
+# end
 
 # Source the Yuuge alias files
 for file in (ls $cwd/_aliases/*.fish)
