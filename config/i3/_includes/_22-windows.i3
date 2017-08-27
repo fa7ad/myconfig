@@ -42,6 +42,7 @@ for_window [workspace=$wss9] floating enable
 
 # floating windows
 for_window [class="[mM]pv"] floating enable
+for_window [class="^[vV](lc|LC).*"] floating enable
 
 # borderless window
 for_window [class=".oogle-chrome"] border pixel 0
