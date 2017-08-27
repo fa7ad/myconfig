@@ -7,7 +7,7 @@
  mode = normal
 
 # Framerate Default: 60. Accepts only non-negative values.
- framerate = 65
+ framerate = 30
 
 # Sensitivity in  %. If you think the bars are to low/response is to littei, try
 # increasing this value 200 means double height. Accepts only non-negative values.
