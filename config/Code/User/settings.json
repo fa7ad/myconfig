@@ -22,7 +22,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "window.menuBarVisibility": "toggle",
   "material-icon-theme.showUpdateMessage": false,
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 0,
   "editor.minimap.maxColumn": 120,
   "editor.minimap.renderCharacters": false,
   "vsicons.dontShowNewVersionMessage": true,
