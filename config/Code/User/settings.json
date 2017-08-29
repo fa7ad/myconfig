@@ -23,6 +23,7 @@
   "window.menuBarVisibility": "toggle",
   "material-icon-theme.showUpdateMessage": false,
   "window.zoomLevel": 0,
+  "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 120,
   "editor.minimap.renderCharacters": false,
   "vsicons.dontShowNewVersionMessage": true,
