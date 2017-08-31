@@ -20,7 +20,6 @@ xss-lock ~/.bin/lock.sh &
 # Visible stuff, actual GUI apps
 ibus-daemon -rd
 i3-sensible-terminal
-gtk-launch google-chrome
 gtk-launch clipit
 gtk-launch albert
 transmission-gtk -m &
