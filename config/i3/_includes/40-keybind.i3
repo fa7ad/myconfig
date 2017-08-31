@@ -1,3 +1,4 @@
+# vim: ft=i3
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 

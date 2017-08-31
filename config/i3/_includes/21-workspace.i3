@@ -1,3 +1,4 @@
+# vim: ft=i3
 set $ws1 "1: "
 set $ws2 "2: "
 set $ws3 "3: "

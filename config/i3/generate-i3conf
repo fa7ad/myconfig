@@ -25,7 +25,7 @@ rm -f config
 touch config
 
 echo "Joining _includes together..."
-for file in _includes/_*
+for file in _includes/*.i3
   cat $file >> config
 end
 

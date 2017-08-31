@@ -1,3 +1,4 @@
+# vim: ft=i3
 # Gap change mode
 set $mode_gaps "Gaps: (o) outer, (i) inner"
 set $mode_gaps_outer "Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)"

@@ -1,3 +1,4 @@
+# vim: ft=i3
 # Start i3bar 
 # bar {
 #   height 25
@@ -16,3 +17,4 @@
 # }
 
 # Moved to polybar
+exec_always ~/.bin/polybar.fish

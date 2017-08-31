@@ -1,3 +1,4 @@
+# vim: ft=i3
 # Resize Mode
 set $mode_resize "Resize: ⇧ Shrink (V) | ⇩ Grow (V) | ⇨ Grow (H) | ⇦ Shrink (H)"
 
