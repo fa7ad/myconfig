@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 function fish_greeting
-  fortune -o
+  fortune -as
 end
 
 set cwd (dirname (status -f))
