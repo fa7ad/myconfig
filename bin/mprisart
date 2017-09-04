@@ -1,26 +1,39 @@
 #!/usr/bin/env fish
 set cwd (dirname (status -f))
-set termsize (bash $cwd/termsize.sh | string split ' ')
-set lines (stty size | cut -d' ' -f2)
+set curw (xdotool getactivewindow)
+set termsize (bash $cwd/termsize.sh $curw | string split ' ')
 set albumart (playerctl metadata mpris:artUrl | string replace file:// '')
+set title (playerctl metadata title)
+set artist (playerctl metadata artist)
 
 function show_img
+  clear
   set hi (math $argv[3] - 5)
   set wi (math $argv[2] - 5)
-  echo -e \
+  sleep 0.5; and echo -e \
     "0;1;0;0;"$wi";"$hi";;;;;"$argv[1]"\n4;\n3;" | \
     /usr/lib/w3m/w3mimgdisplay -bg 1
 end
 
-clear
-sleep 0.5; and show_img $albumart $termsize[2] $termsize[1]
+function show_curr_img
+  show_img $albumart $termsize[2] $termsize[1]
+end
+
+show_curr_img
 
 while sleep 1
   set aa2 (playerctl metadata mpris:artUrl | string replace file:// '')
-  if [ "$albumart" != "$aa2" ]
+  set ti2 (playerctl metadata title)
+  set ar2 (playerctl metadata artist)
+  set t2 (bash $cwd/termsize.sh $curw)
+  set trm "$termsize[1] $termsize[2]"
+
+  if [ "$albumart" != "$aa2" -o "$title" != "$ti2" -o "$artist" != "$ar2" -o "$trm" != "$t2" ]
     set albumart $aa2
-    clear
-    sleep 0.5; and show_img $albumart $termsize[2] $termsize[1]
+    set artist $ar2
+    set title $ti2
+    set termsize (bash $cwd/termsize.sh $curw | string split ' ')
+    show_curr_img
   end
 end
 

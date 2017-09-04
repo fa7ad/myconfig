@@ -72,7 +72,7 @@ higher_cutoff_freq = 10000
 
 # supported colors are: red, green, yellow, magenta, cyan, white, blue, black.
 ; background = black
- foreground = magenta
+ foreground = white
 
 
 [smoothing]

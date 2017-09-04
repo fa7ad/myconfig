@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-current_window="$(xdotool getactivewindow)"
-source <(xdotool getwindowgeometry --shell "$current_window")
+source <(xdotool getwindowgeometry --shell "$@")
 echo $HEIGHT $WIDTH
 
