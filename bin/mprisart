@@ -39,6 +39,9 @@ while sleep 1; do
     export title=$( (echo $ti2) )
     export termres=$( (getres $curw) )
     show_curr_img
+  else
+    read -n 1 -rst 0.5 char
+    [ -n "$char" ] && show_curr_img && export char=''
   fi
 done
 
