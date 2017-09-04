@@ -1,39 +1,44 @@
-#!/usr/bin/env fish
-set cwd (dirname (status -f))
-set curw (xdotool getactivewindow)
-set termsize (bash $cwd/termsize.sh $curw | string split ' ')
-set albumart (playerctl metadata mpris:artUrl | string replace file:// '')
-set title (playerctl metadata title)
-set artist (playerctl metadata artist)
+#!/bin/bash
+export curw=$(xdotool getactivewindow)
+getres () {
+  source <(xdotool getwindowgeometry --shell "$@")
+  echo $HEIGHT $WIDTH
+}
+albumart=$(playerctl metadata mpris:artUrl)
+export albumart=${albumart##file://}
+export title=$(playerctl metadata title)
+export artist=$(playerctl metadata artist)
+export termres=$( (getres $curw) )
 
-function show_img
+show_img () {
   clear
-  set hi (math $argv[3] - 5)
-  set wi (math $argv[2] - 5)
-  sleep 0.5; and echo -e \
-    "0;1;0;0;"$wi";"$hi";;;;;"$argv[1]"\n4;\n3;" | \
-    /usr/lib/w3m/w3mimgdisplay -bg 1
-end
+  sleep 0.5 && echo -e \
+    "0;1;0;0;$2;$3;;;;;${1}\n4;\n3;" | /usr/lib/w3m/w3mimgdisplay -bg 1
+}
 
-function show_curr_img
-  show_img $albumart $termsize[2] $termsize[1]
-end
+show_curr_img () {
+  height=${termres/\ *}
+  width=${termres/*\ }
+  show_img "$albumart" $width $height
+}
 
 show_curr_img
 
-while sleep 1
-  set aa2 (playerctl metadata mpris:artUrl | string replace file:// '')
-  set ti2 (playerctl metadata title)
-  set ar2 (playerctl metadata artist)
-  set t2 (bash $cwd/termsize.sh $curw)
-  set trm "$termsize[1] $termsize[2]"
+while sleep 1; do
+  aa2=$(playerctl metadata mpris:artUrl)
+  t2=$( (getres $curw) )
+  aa2=${albumart##file://}
+  ti2=$(playerctl metadata title)
+  ar2=$(playerctl metadata artist)
 
-  if [ "$albumart" != "$aa2" -o "$title" != "$ti2" -o "$artist" != "$ar2" -o "$trm" != "$t2" ]
-    set albumart $aa2
-    set artist $ar2
-    set title $ti2
-    set termsize (bash $cwd/termsize.sh $curw | string split ' ')
+  if [ "$albumart" != "$aa2" -o "$title" != "$ti2" -o "$artist" != "$ar2"\
+      -o "$termres" != "$t2" ]; then
+    albumart=$(playerctl metadata mpris:artUrl)
+    export albumart=${albumart##file://}
+    export artist=$( (echo $ar2) )
+    export title=$( (echo $ti2) )
+    export termres=$( (getres $curw) )
     show_curr_img
-  end
-end
+  fi
+done
 
