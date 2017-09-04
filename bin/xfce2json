@@ -4,7 +4,7 @@ path = require 'path'
 
 main = (argv) ->
   try
-    [input, output] = argv 
+    [input, output] = argv
     xfpairs = fs.readFileSync path.resolve(input), 'utf8'
       .split '\n'
       .filter RegExp::test.bind /Foreground|Background|Palette/
@@ -13,8 +13,7 @@ main = (argv) ->
     final = Object.assign {foreground: fg, background: bg}, colors.split ';'
   catch e
     if not fg? or not bg? or not colors? or e?
-      console.log e
-      console.error 'Invalid colorscheme file'
+      console.error e or 'Invalid colorscheme file'
       process.exit 1
   finally
     if output isnt '-' and final?
@@ -24,21 +23,29 @@ main = (argv) ->
       console.log JSON.stringify final, null, 4
 
 help = ->
+  t = '  '
   console.log """
 xfce2json - 1.0.0
 
-\t Converts xfce4-terminal color scheme to (termcolors compatible) JSON
+#{t} Converts xfce4-terminal color scheme to (termcolors compatible) JSON
 
 USAGE:
-\t Output to a file
-\t xfce2json <input> [output]
+#{t} Output to a file
+#{t} xfce2json <input> [output]
 
-\t Output to terminal(stdout)
-\t xfce2json <input> -
+#{t} Output to terminal(stdout)
+#{t} xfce2json <input> -
 
-\t Dispaly this message
-\t xfce2json --help
-\t xfce2json -h"""
+#{t} Dispaly this message
+#{t} xfce2json --help
+#{t} xfce2json -h
+
+Example with termcolors:
+#{t} Convert xfce4 colorscheme to termite colorscheme
+#{t} xfce2json ./sometheme.theme - | \\
+#{t}#{t} termcolors -i json -o termite | \\
+#{t}#{t} tee .config/termite/config
+"""
 
 if module is require.main
   argv = process.argv.slice 2
@@ -50,3 +57,4 @@ if module is require.main
     console.log 'Pass -h or --help for usage information'
     process.exit 1
   main argv
+
