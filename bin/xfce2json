@@ -8,44 +8,44 @@ main = (argv) ->
     xfpairs = fs.readFileSync path.resolve(input), 'utf8'
       .split '\n'
       .filter RegExp::test.bind /Foreground|Background|Palette/
-      .map (ln) => "#{ln.slice 0, ln.indexOf('=')}": ln.slice 1 + ln.indexOf '='
-    {ColorForeground: fg, ColorBackground: bg, ColorPalette: colors} = Object.assign ...xfpairs
-    final = Object.assign {foreground: fg, background: bg}, colors.split ';'
-  catch e
-    if not fg? or not bg? or not colors? or e?
-      console.error e or 'Invalid colorscheme file'
+      .map (ln) =>
+        [key, val] = ln.toLowerCase().split '='
+        "#{key.replace 'color', ''}": val
+    {foreground, background, palette} = Object.assign ...xfpairs
+    final = Object.assign {foreground, background}, palette.split ';'
+  catch err
+    if not (foreground? and background? and palette?) or err?
+      console.error err or 'Invalid colorscheme file'
       process.exit 1
-  finally
-    if output isnt '-' and final?
+  finally if final?
+    if output is '-'
+      console.log JSON.stringify final, null, 4
+    else
       fs.writeFileSync path.resolve(output), JSON.stringify(final, null, 4)
       console.log "Successfully output to file: '#{output}'"
-    else if final?
-      console.log JSON.stringify final, null, 4
 
 help = ->
   t = '  '
   console.log """
 xfce2json - 1.0.0
-
-#{t} Converts xfce4-terminal color scheme to (termcolors compatible) JSON
+#{t}Converts xfce4-terminal color scheme to (termcolors compatible) JSON
 
 USAGE:
-#{t} Output to a file
-#{t} xfce2json <input> [output]
+#{t}Output to a file
+#{t}$ xfce2json <input> [output]
 
-#{t} Output to terminal(stdout)
-#{t} xfce2json <input> -
+#{t}Output to terminal(stdout)
+#{t}$ xfce2json <input> -
 
-#{t} Dispaly this message
-#{t} xfce2json --help
-#{t} xfce2json -h
+#{t}Dispaly this message
+#{t}$ xfce2json --help
+#{t}$ xfce2json -h
 
 Example with termcolors:
-#{t} Convert xfce4 colorscheme to termite colorscheme
-#{t} xfce2json ./sometheme.theme - | \\
-#{t}#{t} termcolors -i json -o termite | \\
-#{t}#{t} tee .config/termite/config
-"""
+#{t}Convert xfce4 colorscheme to termite colorscheme
+#{t}$ xfce2json ./sometheme.theme - | \\
+#{t}  termcolors -i json -o termite | \\
+#{t}  tee .config/termite/config"""
 
 if module is require.main
   argv = process.argv.slice 2
