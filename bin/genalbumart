@@ -1,0 +1,12 @@
+#!/usr/bin/env fish
+
+set force 'n'
+
+if contains -- -f $argv or contains -- --force $argv
+  set force 'y'
+end
+
+for f in {./,./**/}01*
+  yes $force | ffmpeg -loglevel 16 -i $f -codec:v mjpeg (dirname $f)/folder.jpg
+  and echo (dirname $f)
+end
