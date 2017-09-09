@@ -1,18 +1,20 @@
 #!/bin/bash
-export curw=$(xdotool getactivewindow)
+# == Define functions ==
 getres () {
   source <(xdotool getwindowgeometry --shell "$@")
   echo $HEIGHT $WIDTH
 }
-art=$(playerctl metadata mpris:artUrl)
-export art=${art##file://}
-export title=$(playerctl metadata title)
-export artist=$(playerctl metadata artist)
-export res=$( (getres $curw) )
-show_img () {
-  echo -e "\e[47m"
+ctrl_c () {
+  echo -e "\e[?25h"
+  rm -f "$thumb"
   clear
-  echo -e "\e[47m"
+  exit
+}
+download () {
+  curl --location "$art" --output "$thumb" --silent
+}
+show_img () {
+  clear
   w=$(( $2 - 5 ))
   h=$(( $3 - 5 ))
   sleep 0.5 && echo -e \
@@ -21,27 +23,45 @@ show_img () {
 show_curr_img () {
   height=${res/\ *}
   width=${res/*\ }
-  show_img "$art" $width $height
+  show_img "$thumb" $width $height
 }
 
-show_curr_img
+# == Set Variables ==
+
+export curw=$(xdotool getactivewindow)
+export art=$(playerctl metadata mpris:artUrl)
+export title=$(playerctl metadata title)
+export artist=$(playerctl metadata artist)
+export res=$( (getres $curw) )
+export thumb=$(mktemp)".jpg"
+
+# == Bind SIGINT -- Ctrl-C to exit function
+trap ctrl_c INT TERM
+
+# == Show the initial art ==
+echo -e "\e[?25l"
+download && show_curr_img
+read -n 1 -rst 0.5 char
+[ "$char" = "q" ] && ctrl_c
+[ -n "$char" ] && show_curr_img && export char=''
+
+# == poll for change in art ==
 while sleep 1; do
-  aa2=$(playerctl metadata mpris:artUrl)
   t2=$( (getres $curw) )
-  aa2=${art##file://}
+  aa2=$(playerctl metadata mpris:artUrl)
   ti2=$(playerctl metadata title)
   ar2=$(playerctl metadata artist)
 
   if [ "$art" != "$aa2" -o "$title" != "$ti2" -o \
       "$artist" != "$ar2" -o "$res" != "$t2" ]; then
-    art=$(playerctl metadata mpris:artUrl)
-    export art=${art##file://}
+    export art=$(playerctl metadata mpris:artUrl)
     export artist=$( (echo $ar2) )
     export title=$( (echo $ti2) )
     export res=$( (getres $curw) )
-    show_curr_img
+    download && show_curr_img
   else
     read -n 1 -rst 0.5 char
+    [ "$char" = "q" ] && ctrl_c
     [ -n "$char" ] && show_curr_img && export char=''
   fi
 done
