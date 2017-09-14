@@ -11,7 +11,10 @@ ctrl_c () {
   exit
 }
 download () {
-  curl --location "$art" --output "$thumb" --silent
+  if [[ "$art" =~ ytimg ]]; then
+    arte=${art//\/default/\/hqdefault}
+  fi
+  curl --location "$arte" --output "$thumb" --silent
 }
 show_img () {
   clear
