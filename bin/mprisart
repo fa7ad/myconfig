@@ -11,17 +11,16 @@ ctrl_c () {
   exit
 }
 download () {
-  if [[ "$art" =~ ytimg ]]; then
-    arte=${art//\/default/\/hqdefault}
-  fi
-  curl --location "$arte" --output "$thumb" --silent
+  lurl=$art
+  [[ "$lurl" =~ "ytimg" ]] && lurl=${lurl//\/default/\/hqdefault}
+  curl --location "$lurl" --output "$thumb" --silent
 }
 show_img () {
   clear
   w=$(( $2 - 5 ))
   h=$(( $3 - 5 ))
-  sleep 0.5 && echo -e \
-    "0;1;0;0;$w;$h;;;;;${1}\n4;\n3;" | /usr/lib/w3m/w3mimgdisplay -bg 1
+  w3m_bin=/usr/lib/w3m/w3mimgdisplay
+  sleep 0.5 && echo -e "0;1;0;0;$w;$h;;;;;${1}\n4;\n3;" | $w3m_bin
 }
 show_curr_img () {
   height=${res/\ *}
@@ -31,12 +30,12 @@ show_curr_img () {
 
 # == Set Variables ==
 
-export curw=$(xdotool getactivewindow)
-export art=$(playerctl metadata mpris:artUrl)
-export title=$(playerctl metadata title)
-export artist=$(playerctl metadata artist)
-export res=$( (getres $curw) )
-export thumb=$(mktemp)".jpg"
+curw=$(xdotool getactivewindow)
+art=$(playerctl metadata mpris:artUrl)
+title=$(playerctl metadata title)
+artist=$(playerctl metadata artist)
+res=$( (getres $curw) )
+thumb=$(mktemp)".jpg"
 
 # == Bind SIGINT -- Ctrl-C to exit function
 trap ctrl_c INT TERM
@@ -46,7 +45,7 @@ echo -e "\e[?25l"
 download && show_curr_img
 read -n 1 -rst 0.5 char
 [ "$char" = "q" ] && ctrl_c
-[ -n "$char" ] && show_curr_img && export char=''
+[ -n "$char" ] && show_curr_img && char=''
 
 # == poll for change in art ==
 while sleep 1; do
@@ -57,15 +56,15 @@ while sleep 1; do
 
   if [ "$art" != "$aa2" -o "$title" != "$ti2" -o \
       "$artist" != "$ar2" -o "$res" != "$t2" ]; then
-    export art=$(playerctl metadata mpris:artUrl)
-    export artist=$( (echo $ar2) )
-    export title=$( (echo $ti2) )
-    export res=$( (getres $curw) )
+    art=$aa2
+    title=$ti2
+    artist=$ar2
+    res=$( (getres $curw) )
     download && show_curr_img
   else
     read -n 1 -rst 0.5 char
     [ "$char" = "q" ] && ctrl_c
-    [ -n "$char" ] && show_curr_img && export char=''
+    [ -n "$char" ] && show_curr_img && char=''
   fi
 done
 

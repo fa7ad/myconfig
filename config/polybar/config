@@ -33,7 +33,7 @@ modules-right = kbd ram cpu volume battery time
 padding-right = 1
 tray-position = right
 tray-background = ${colors.background}
-tray-transparent = false
+tray-transparent = true
 
 [module/kbd]
 type = internal/xkeyboard
