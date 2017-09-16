@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -z "$@" ]; then
+if [ $# -eq 0 ]; then
   exec mpv --idle
 else
   exec mpv "$@"
