@@ -32,7 +32,6 @@ modules-right = kbd ram cpu volume battery time
 
 padding-right = 1
 tray-position = right
-tray-background = ${colors.background}
 tray-transparent = true
 
 [module/kbd]
@@ -53,6 +52,7 @@ label-muted = 🔇 muted
 label-muted-padding = 1
 label-muted-foreground = ${colors.red}
 
+ramp-volume-foreground = ${colors.blue}
 ramp-volume-0 = 🔈
 ramp-volume-1 = 🔉
 ramp-volume-2 = 🔊
@@ -68,7 +68,7 @@ interval = 3
 
 label = %gb_free%
 label-padding = 1
-label-foreground = ${colors.blue}
+label-foreground = ${colors.magenta}
 format-prefix = ""
 format-prefix-foreground = ${colors.blue}
 format-padding = 1
@@ -76,6 +76,7 @@ format-padding = 1
 [module/cpu]
 type = internal/cpu
 label = 
+label-foreground = ${colors.blue}
 interval = 0.5
 format = <label> <ramp-coreload>
 format-padding = 1
@@ -87,14 +88,14 @@ ramp-coreload-4 = ▅
 ramp-coreload-5 = ▆
 ramp-coreload-6 = ▇
 ramp-coreload-7 = █
-ramp-coreload-0-foreground = ${colors.cyan}
-ramp-coreload-1-foreground = ${colors.cyan}
+ramp-coreload-0-foreground = ${colors.white}
+ramp-coreload-1-foreground = ${colors.white}
 ramp-coreload-2-foreground = ${colors.cyan}
-ramp-coreload-3-foreground = ${colors.cyan}
+ramp-coreload-3-foreground = ${colors.blue}
 ramp-coreload-4-foreground = ${colors.blue}
-ramp-coreload-5-foreground = ${colors.blue}
+ramp-coreload-5-foreground = ${colors.yellow}
 ramp-coreload-6-foreground = ${colors.yellow}
-ramp-coreload-7-foreground = ${colors.yellow}
+ramp-coreload-7-foreground = ${colors.red}
 
 [module/wm]
 type = internal/i3
@@ -118,10 +119,16 @@ label-unfocused-padding = 1
 type = internal/date
 interval = 30
 
+format =  <label>
 format-padding = 1
+format-foreground = ${colors.blue}
+
+label = %date%
+label-padding = 1
 label-foreground = ${colors.magenta}
 
-date = "%I:%M %p"
+date = %H:%M
+date-alt = %d %b %Y
 
 [module/mpd]
 type = internal/mpd
