@@ -6,8 +6,8 @@ set $ws4 "4: "
 set $ws5 "5: "
 set $ws6 "6: ?"
 set $ws7 "7: ?"
-set $ws8 "9: ?"
-set $ws9 "9: ?"
+set $ws8 "8: ?"
+set $ws9 "9: "
 set $ws0 "10: "
 
 # switch to workspace

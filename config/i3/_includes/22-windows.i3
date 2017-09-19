@@ -13,7 +13,8 @@ bindsym $mod+Shift+Right move right
 
 # fix windows to workspace
 assign [class="[cC]hromium"] $ws2
-assign [class="[gG]oogle-chrome*?"] $ws2
+assign [class="[gG]oogle-chrome.*?"] $ws2
+assign [class="[Vv]ivaldi.*?"] $ws2
 
 assign [class="[gG]nome-terminal"] $ws3
 assign [class="[xX]fce4-terminal"] $ws3
