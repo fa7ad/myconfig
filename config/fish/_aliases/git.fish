@@ -170,6 +170,7 @@ if not set -q git_aliases_set
 
   # My custom aliases
   abbr gI 'git init'
+  abbr Gcr 'git create'
   abbr gaa 'git add -A'
   abbr gis 'git status'
   abbr gpv 'git push -v'
