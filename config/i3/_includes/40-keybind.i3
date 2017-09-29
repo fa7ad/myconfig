@@ -74,3 +74,6 @@ bindsym --release $alt+Print exec i3-scrot -w
 
 # show albert
 bindsym $mod+d exec albert toggle
+
+# switch input using Scroll_lock
+bindsym Scroll_Lock exec ~/.bin/bn_en
