@@ -29,7 +29,7 @@ alias tree='tree -I "node_modules|bower_components"'
 
 # gitignore
 function gign
-  echo $argv >> .gitignore
+  echo $argv | tee --append .gitignore
 end
 
 # update_config

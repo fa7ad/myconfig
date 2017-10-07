@@ -34,5 +34,10 @@
     "key": "shift+meta+i",
     "command": "format.standard",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "editor.emmet.action.expandAbbreviation",
+    "when": "editorTextFocus"
   }
 ]
