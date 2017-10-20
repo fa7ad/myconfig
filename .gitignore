@@ -23,3 +23,5 @@ config/Code/
 config/fish/fundle
 config/mpv/watch_later
 node_modules
+config/gtk-3.0/bookmarks
+config/gtk-3.0/servers
