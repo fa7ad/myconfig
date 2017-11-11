@@ -1,6 +1,6 @@
 # vim: ft=i3
 # Font
-font pango:Overpass 10
+font pango:Overpass 0
 
 # Colors
 set $bg-color              #2f343f
