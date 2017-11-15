@@ -26,7 +26,6 @@
   "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 120,
   "editor.minimap.renderCharacters": false,
-  "vsicons.dontShowNewVersionMessage": true,
   "standard.options": {
     "parser": "babel-eslint"
   },
