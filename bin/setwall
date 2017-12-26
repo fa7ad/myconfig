@@ -1,8 +1,6 @@
 #!/usr/bin/env fish
 
-set wal (string escape $argv)
-
-feh --bg-scale $wal
-gsettings set org.gnome.desktop.screensaver picture-uri "file://"$wal
-gsettings set org.gnome.desktop.background picture-uri "file://"$wal
+feh --bg-scale $argv
+gsettings set org.gnome.desktop.screensaver picture-uri "file://"$argv
+gsettings set org.gnome.desktop.background picture-uri "file://"$argv
 

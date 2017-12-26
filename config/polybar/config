@@ -1,18 +1,18 @@
 ; vim: ft=dosini
 [colors]
-yellow = #e6cd69
-black = #151718
-white = #e6e6e6
-red = #cd3f45
-green = #9fca56
-blue = #55b5db
-magenta = #a074c4
-cyan = #55dbbe
-primary = #55dbbe
-secondary = #55b5db
-danger = #cd3f45
-background = #0a151718
-foreground = #b6b6b6
+black = #18262F
+red = #ef5253
+green = #7cc844
+yellow = #e4b51c
+blue = #33b5e1
+magenta = #a363d5
+cyan = #52cbb0
+white = #f5f7fa
+primary = #33b5e1
+secondary = #52cbb0
+danger = #ef5253
+background = #0a18262f
+foreground = #a6afb8
 
 [bar/top]
 monitor = ${env:MONITOR:eDP-1}
