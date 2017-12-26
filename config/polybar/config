@@ -11,7 +11,7 @@ cyan = #55dbbe
 primary = #55dbbe
 secondary = #55b5db
 danger = #cd3f45
-background = #06151718
+background = #0a151718
 foreground = #b6b6b6
 
 [bar/top]
