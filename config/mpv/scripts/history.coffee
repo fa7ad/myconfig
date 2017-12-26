@@ -23,12 +23,14 @@ getFile = (file = histfile) ->
 
 mp.register_event 'file-loaded', ->
   log = getFile histfile
-  file = join_path get_property('working-directory'), get_property('path')
+  [wd, path] = [get_property('working-directory'), get_property('path')]
+  file = if /^http/.test path then path else join_path wd, path
+  dump path
   log.push { time: Date.now(), file }
   writeToHistory uniqFile sortTime log
 
 mp.register_event 'idle', ->
-  log = R.slice 0, 20, uniqFile sortTime getFile histfile
+  log = R.slice 0, 20, sortTime uniqFile getFile histfile
   log.map (el) -> mp.commandv 'loadfile', el.file, 'append-play'
   writeToHistory log
 
