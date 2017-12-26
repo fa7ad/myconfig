@@ -11,13 +11,13 @@ cyan = #55dbbe
 primary = #55dbbe
 secondary = #55b5db
 danger = #cd3f45
-background = #06292d3e
+background = #06151718
 foreground = #b6b6b6
 
 [bar/top]
 monitor = ${env:MONITOR:eDP-1}
 width = 100%
-height = 26
+height = 24
 separator = " "
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -27,13 +27,13 @@ font-0 = "Overpass:pixelsize=10:antialias=true;1"
 font-1 = "FontAwesome:pixelsize=10:antialias=true;1"
 font-2 = Symbola:pixelsize=10;1
 font-3 = MaterialIcons:size=10;1
-font-4 = "DejaVu Sans:pixelsize=10;1"
+font-4 = "Droid Sans:pixelsize=10;1"
 
 modules-left = wm mpd
 modules-center = title
 modules-right = kbd ram cpu volume battery time
 
-padding-right = 1
+padding-right = 0
 tray-position = right
 tray-transparent = true
 
@@ -74,14 +74,13 @@ label-padding = 1
 label-foreground = ${colors.foreground}
 format-prefix = ""
 format-prefix-foreground = ${colors.primary}
-format-padding = 1
 
 [module/cpu]
 type = internal/cpu
-label = 
-label-foreground = ${colors.primary}
-interval = 0.5
-format = <label> <ramp-coreload>
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+interval = 1
+format = <ramp-coreload>
 format-padding = 1
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -145,10 +144,10 @@ icon-next = 
 icon-random = 
 icon-repeat = 
 
-toggle-on-foreground =
-toggle-off-foreground = #55
+toggle-on-foreground = ${colors.foreground}
+toggle-off-foreground = #55b6b6b6
 
-bar-progress-width = 32
+bar-progress-width = 24
 bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
 bar-progress-indicator = ·
 bar-progress-indicator-foreground = ${colors.primary}

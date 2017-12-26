@@ -34,6 +34,9 @@ assign [class="Nautilus"] $ws5
 
 assign [class="Gimp-2.8"] $ws6
 
+assign [title="^ncmpcpp.*"] $ws9
+assign [class="cantata"] $ws9
+
 assign [class="[mM]pv"] $ws0
 
 # float all popups
@@ -45,6 +48,7 @@ for_window [workspace=$wss9] floating enable
 
 # floating windows
 for_window [class="[mM]pv"] floating enable
+for_window [class="[tT]ermite"] floating enable
 for_window [class="^[vV](lc|LC).*"] floating enable
 
 # borderless window
