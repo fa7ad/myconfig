@@ -27,6 +27,8 @@ ask_for_locked_screen_width_part = "no"
 display_bitrate = "yes"
 external_editor = "vim"
 use_console_editor = "yes"
+titles_visibility = "no"
+song_window_title_format = "ncmpcpp - %a - %t"
 # colors
 colors_enabled = yes
 empty_tag_color = "cyan"

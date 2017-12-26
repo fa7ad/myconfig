@@ -1,15 +1,18 @@
 ; vim: ft=dosini
 [colors]
-background = #66292d3e
-foreground = #bfc7d5
-yellow = #ffcb6b
-black = #073642
-white = #bfc7d5
-red = #ac4142
-green = #a9c77d
-blue = #82aaff
-magenta = #c792ea
-cyan = #89ddff
+yellow = #e6cd69
+black = #151718
+white = #e6e6e6
+red = #cd3f45
+green = #9fca56
+blue = #55b5db
+magenta = #a074c4
+cyan = #55dbbe
+primary = #55dbbe
+secondary = #55b5db
+danger = #cd3f45
+background = #06292d3e
+foreground = #b6b6b6
 
 [bar/top]
 monitor = ${env:MONITOR:eDP-1}
@@ -48,11 +51,11 @@ type = internal/volume
 format-volume = <ramp-volume> <label-volume>
 label-volume-padding = 1
 
-label-muted = 🔇 muted
+label-muted = 🔇 MUTED
 label-muted-padding = 1
-label-muted-foreground = ${colors.red}
+label-muted-foreground = ${colors.danger}
 
-ramp-volume-foreground = ${colors.blue}
+ramp-volume-foreground = ${colors.primary}
 ramp-volume-0 = 🔈
 ramp-volume-1 = 🔉
 ramp-volume-2 = 🔊
@@ -68,15 +71,15 @@ interval = 3
 
 label = %gb_free%
 label-padding = 1
-label-foreground = ${colors.magenta}
+label-foreground = ${colors.foreground}
 format-prefix = ""
-format-prefix-foreground = ${colors.blue}
+format-prefix-foreground = ${colors.primary}
 format-padding = 1
 
 [module/cpu]
 type = internal/cpu
 label = 
-label-foreground = ${colors.blue}
+label-foreground = ${colors.primary}
 interval = 0.5
 format = <label> <ramp-coreload>
 format-padding = 1
@@ -91,11 +94,11 @@ ramp-coreload-7 = █
 ramp-coreload-0-foreground = ${colors.white}
 ramp-coreload-1-foreground = ${colors.white}
 ramp-coreload-2-foreground = ${colors.cyan}
-ramp-coreload-3-foreground = ${colors.blue}
-ramp-coreload-4-foreground = ${colors.blue}
-ramp-coreload-5-foreground = ${colors.yellow}
-ramp-coreload-6-foreground = ${colors.yellow}
-ramp-coreload-7-foreground = ${colors.red}
+ramp-coreload-3-foreground = ${colors.cyan}
+ramp-coreload-4-foreground = ${colors.green}
+ramp-coreload-5-foreground = ${colors.blue}
+ramp-coreload-6-foreground = ${colors.blue}
+ramp-coreload-7-foreground = ${colors.magenta}
 
 [module/wm]
 type = internal/i3
@@ -107,8 +110,8 @@ strip-wsnumbers = true
 label-mode = %mode%
 label-mode-padding = 2
 
-label-urgent-foreground = ${colors.red}
-label-focused-foreground = ${colors.magenta}
+label-urgent-foreground = ${colors.danger}
+label-focused-foreground = ${colors.primary}
 
 label-urgent-padding = 1
 label-visible-padding = 1
@@ -121,11 +124,11 @@ interval = 30
 
 format =  <label>
 format-padding = 1
-format-foreground = ${colors.blue}
+format-foreground = ${colors.primary}
 
 label = %date%
 label-padding = 1
-label-foreground = ${colors.magenta}
+label-foreground = ${colors.foreground}
 
 date = %H:%M
 date-alt = %d %b %Y
@@ -148,9 +151,9 @@ toggle-off-foreground = #55
 bar-progress-width = 32
 bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
 bar-progress-indicator = ·
-bar-progress-indicator-foreground = ${colors.magenta}
+bar-progress-indicator-foreground = ${colors.primary}
 bar-progress-fill = ─
-bar-progress-fill-foreground = ${colors.magenta}
+bar-progress-fill-foreground = ${colors.primary}
 bar-progress-empty = ─
 bar-progress-empty-foreground = ${colors.foreground}
 
@@ -164,25 +167,25 @@ label-charging-padding = 1
 label-full-padding = 1
 
 format-charging = <animation-charging> <label-charging>
-format-charging-foreground = ${colors.magenta}
+format-charging-foreground = ${colors.primary}
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-foreground = ${colors.yellow}
+format-discharging-foreground = ${colors.secondary}
 
 format-full-prefix = " "
-format-full-prefix-foreground = ${colors.blue}
+format-full-prefix-foreground = ${colors.primary}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-foreground = ${colors.yellow}
+ramp-capacity-foreground = ${colors.primary}
 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-foreground = ${colors.magenta}
+animation-charging-foreground = ${colors.primary}
 animation-charging-framerate = 500

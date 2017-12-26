@@ -11,14 +11,7 @@ set -gx PAGER less
 # N
 set -gx N_PREFIX /usr/local/n
 
-# Go
-if [ -z "$GOPATH" ];
-  set gopath $HOME/go
-else
-  set gopath $GOPATH
-end
-
 # Add to PATH
 # set -gx PATH $PATH /usr/local/sbin /usr/local/bin /usr/bin /usr/sbin
-set -gx PATH $PATH $HOME/.bin $HOME/.local/bin (echo $HOME/.gem/ruby/*/bin) $N_PREFIX/bin $HOME/.yarn/bin node_modules/.bin $gopath/bin
+set -gx PATH $PATH $HOME/.bin $HOME/.local/bin (echo $HOME/.gem/ruby/*/bin) $HOME/.cargo/bin $N_PREFIX/bin $HOME/.yarn/bin
 
