@@ -1,6 +1,8 @@
 #!/usr/bin/env fish
 
-feh --bg-scale $argv
-gsettings set org.gnome.desktop.screensaver picture-uri "file://"$argv
-gsettings set org.gnome.desktop.background picture-uri "file://"$argv
+set absarg (echo 'import sys;import os;print(os.path.abspath(sys.argv[1]))'| python - $argv)
+
+feh --bg-scale $absarg
+gsettings set org.gnome.desktop.screensaver picture-uri "file://"$absarg
+gsettings set org.gnome.desktop.background picture-uri "file://"$absarg
 
