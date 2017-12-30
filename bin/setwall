@@ -1,8 +1,17 @@
 #!/usr/bin/env fish
 
-set absarg (echo 'import sys;import os;print(os.path.abspath(sys.argv[1]))'| python - $argv)
+if set -q $argv
+  exit 1
+end
 
-feh --bg-scale $absarg
-gsettings set org.gnome.desktop.screensaver picture-uri "file://"$absarg
-gsettings set org.gnome.desktop.background picture-uri "file://"$absarg
+set resPath 'import sys;import os;print(os.path.abspath(sys.argv[-1]))'
 
+# set pic (node -p "require('path').resolve(process.argv.slice(-1)[0])" $argv)
+set pic (python -c $resPath $argv)
+
+
+feh --bg-scale $pic
+gsettings set org.gnome.desktop.screensaver picture-uri "file://"$pic
+gsettings set org.gnome.desktop.background picture-uri "file://"$pic
+
+echo Wallpaper set to \'$pic\'
