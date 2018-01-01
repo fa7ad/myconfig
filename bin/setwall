@@ -4,10 +4,11 @@ if set -q $argv
   exit 1
 end
 
-set resPath 'import sys;import os;print(os.path.abspath(sys.argv[-1]))'
+# set resPath 'import sys;import os;print(os.path.abspath(sys.argv[-1]))'
 
 # set pic (node -p "require('path').resolve(process.argv.slice(-1)[0])" $argv)
-set pic (python -c $resPath $argv)
+# set pic (python -c $resPath $argv)
+set pic (realpath $argv)
 
 
 feh --bg-scale $pic

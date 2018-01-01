@@ -1,6 +1,27 @@
 #!/usr/bin/env coffee
 fs = require 'fs'
 path = require 'path'
+{bold: b, italic: em, blue: bl} = require 'chalk'
+
+HELPMESSAGE = """
+#{b bl "xfce2json - 1.0.0"}
+  Converts xfce4-terminal color scheme to (termcolors compatible) JSON
+
+#{b "USAGE:"}
+  #{em "Dispaly this message"}
+  #{bl "$ xfce2json --help"}
+  #{bl "$ xfce2json -h"}
+
+  #{em "Output to a file"}
+  #{bl "$ xfce2json <input> [output]"}
+
+  #{em "Output to terminal(stdout)"}
+  #{bl "$ xfce2json <input> -"}
+
+#{b "Example with termcolors:"}
+  Convert xfce4 colorscheme to termite colorscheme
+  #{bl "$ xfce2json ./sometheme.theme - | termcolors -i json -o termite"}
+"""
 
 main = (argv) ->
   try
@@ -11,7 +32,7 @@ main = (argv) ->
       .map (ln) =>
         [key, val] = ln.toLowerCase().split '='
         "#{key.replace 'color', ''}": val
-    {foreground, background, palette} = Object.assign ...xfpairs
+    {foreground, background, palette} = Object.assign {}, xfpairs...
     final = Object.assign {foreground, background}, palette.split ';'
   catch err
     if not (foreground? and background? and palette?) or err?
@@ -25,31 +46,11 @@ main = (argv) ->
       console.log "Successfully output to file: '#{output}'"
 
 help = ->
-  t = '  '
-  console.log """
-xfce2json - 1.0.0
-#{t}Converts xfce4-terminal color scheme to (termcolors compatible) JSON
-
-USAGE:
-#{t}Output to a file
-#{t}$ xfce2json <input> [output]
-
-#{t}Output to terminal(stdout)
-#{t}$ xfce2json <input> -
-
-#{t}Dispaly this message
-#{t}$ xfce2json --help
-#{t}$ xfce2json -h
-
-Example with termcolors:
-#{t}Convert xfce4 colorscheme to termite colorscheme
-#{t}$ xfce2json ./sometheme.theme - | \\
-#{t}  termcolors -i json -o termite | \\
-#{t}  tee .config/termite/config"""
+  console.log HELPMESSAGE
 
 if module is require.main
   argv = process.argv.slice 2
-  if argv.length < 2 and ('-h' in argv or '--help' in argv)
+  if '-h' in argv or '--help' in argv
     do help
     process.exit 0
   else if argv.length isnt 2
