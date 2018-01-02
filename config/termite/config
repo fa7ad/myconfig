@@ -36,43 +36,42 @@ filter_unmatched_urls = true
 [colors]
 
 # special
-foreground      = #a6afb8
-foreground_bold = #a6afb8
-cursor          = #a6afb8
-background      = #18262f
+foreground      = #e5e9f0
+foreground_bold = #e5e9f0
+cursor          = #e5e9f0
+background      = #2e3440
 
 # black
-color0  = #18262f
-color8  = #667581
+color0  = #2e3440
+color8  = #4c566a
 
 # red
-color1  = #ef5253
-color9  = #ef5253
+color1  = #88c0d0
+color9  = #88c0d0
 
 # green
-color2  = #7cc844
-color10 = #7cc844
+color2  = #bf616a
+color10 = #bf616a
 
 # yellow
-color3  = #e4b51c
-color11 = #e4b51c
+color3  = #5e81ac
+color11 = #5e81ac
 
 # blue
-color4  = #33b5e1
-color12 = #33b5e1
+color4  = #ebcb8b
+color12 = #ebcb8b
 
 # magenta
-color5  = #a363d5
-color13 = #a363d5
+color5  = #a3be8c
+color13 = #a3be8c
 
 # cyan
-color6  = #52cbb0
-color14 = #52cbb0
+color6  = #d08770
+color14 = #d08770
 
 # white
-color7  = #a6afb8
-color15 = #f5f7fa
-
+color7  = #e5e9f0
+color15 = #8fbcbb
 
 [hints]
 #font = Monospace 12

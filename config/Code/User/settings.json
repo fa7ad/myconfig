@@ -29,5 +29,6 @@
   "standard.options": {
     "parser": "babel-eslint"
   },
-  "C_Cpp.intelliSenseEngine": "Default"
+  "C_Cpp.intelliSenseEngine": "Default",
+  "extensions.ignoreRecommendations": false
 }
