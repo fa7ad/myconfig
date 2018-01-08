@@ -1,6 +1,6 @@
 // Place your settings in this file to overwrite the default settings
 {
-  "editor.fontFamily": "'Fira Code', 'Operator Mono Book', PowerlineSymbols, monospace",
+  "editor.fontFamily": "'Fira Code', 'PragmataPro', 'Operator Mono Lig Book', PowerlineSymbols, monospace",
   "editor.fontSize": 18,
   "editor.fontLigatures": true,
   "editor.glyphMargin": true,
@@ -13,7 +13,7 @@
   "editor.tabSize": 2,
   "files.eol": "\n",
   "files.autoSave": "onFocusChange",
-  "terminal.external.linuxExec": "tilix",
+  "terminal.external.linuxExec": "termite",
   "terminal.integrated.shell.linux": "fish",
   "html.format.endWithNewline": true,
   "extensions.autoUpdate": true,
@@ -30,5 +30,11 @@
     "parser": "babel-eslint"
   },
   "C_Cpp.intelliSenseEngine": "Default",
-  "extensions.ignoreRecommendations": false
+  "extensions.ignoreRecommendations": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "explorer.confirmDelete": false,
+  "emmet.includeLanguages": {
+    "coffeescript": "javascriptreact",
+    "coffee": "javascriptreact"
+  }
 }
