@@ -1,8 +1,7 @@
 #!/usr/bin/env fish
 
 if [ (playerctl status) = "Stopped" ]
-  set ic 
-  printf "%s" $ic
+  echo " "
   exit
 end
 
