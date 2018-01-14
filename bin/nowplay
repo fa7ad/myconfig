@@ -1,0 +1,18 @@
+#!/usr/bin/env fish
+
+if [ (playerctl status) = "Stopped" ]
+  set ic 
+  printf "%s" $ic
+  exit
+end
+
+set title (playerctl metadata title)
+set artist (playerctl metadata artist)
+
+if [ (playerctl status) = "Playing" ]
+  set ic 
+else
+  set ic 
+end
+
+printf "%s %s - %s" $ic $artist $title

@@ -29,13 +29,34 @@ font-2 = Symbola:pixelsize=10;1
 font-3 = MaterialIcons:size=10;1
 font-4 = "Droid Sans:pixelsize=10;1"
 
-modules-left = wm mpd
+modules-left = wm plctl playing
 modules-center = title
 modules-right = kbd ram cpu volume battery time
 
 padding-right = 0
 tray-position = right
 tray-transparent = true
+
+[module/plctl]
+type = custom/menu
+format-padding = 2
+
+label-open = ""
+label-close = "  "
+label-separator = "  "
+
+menu-0-0 = 
+menu-0-0-exec = playerctl previous
+menu-0-1 = 
+menu-0-1-exec = playerctl stop
+menu-0-2 = 
+menu-0-2-exec = playerctl next
+
+[module/playing]
+type = custom/script
+exec = nowplay
+interval = 1
+click-left = playerctl play-pause
 
 [module/kbd]
 type = internal/xkeyboard

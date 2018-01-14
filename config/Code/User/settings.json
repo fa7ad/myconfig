@@ -36,5 +36,6 @@
   "emmet.includeLanguages": {
     "coffeescript": "javascriptreact",
     "coffee": "javascriptreact"
-  }
+  },
+  "git.autofetch": true
 }

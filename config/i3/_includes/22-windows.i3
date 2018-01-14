@@ -38,6 +38,7 @@ assign [title="^ncmpcpp.*"] $ws9
 assign [class="cantata"] $ws9
 assign [class="[gG]mpc"] $ws9
 assign [class="[lL]ollypop"] $ws9
+assign [class="[sS]ayonara"] $ws9
 
 assign [class="[mM]pv"] $ws0
 
