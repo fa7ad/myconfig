@@ -9,9 +9,9 @@ set title (playerctl metadata title)
 set artist (playerctl metadata artist)
 
 if [ (playerctl status) = "Playing" ]
-  set ic 
-else
   set ic 
+else
+  set ic 
 end
 
 printf "%s %s - %s" $ic $artist $title

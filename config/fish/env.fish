@@ -16,6 +16,6 @@ set -gx N_PREFIX /usr/local/n
 
 # Add to PATH
 # set -gx PATH $PATH /usr/local/sbin /usr/local/bin /usr/bin /usr/sbin
-set -gx PATH $PATH $HOME/.bin $HOME/.local/bin (string split \  $HOME/.gem/ruby/*/bin) $N_PREFIX/bin $HOME/.yarn/bin $GOPATH/bin
+set -gx PATH $PATH $HOME/.bin $HOME/.local/bin (string split \  $HOME/.gem/ruby/*/bin) $N_PREFIX/bin $HOME/.yarn/bin $HOME/.config/yarn/global/node_modules/.bin $GOPATH/bin
 
 set -U fish_user_paths $PATH
