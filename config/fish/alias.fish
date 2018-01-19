@@ -7,8 +7,9 @@ alias mpa 'mpv --no-vid'
 
 # ncmpcpp
 function ncm
-  if not pgrep -f mpd > /dev/null
-    command mpd
+  if not pgrep -f mopidy > /dev/null
+    command mopidy&
+    disown %mopidy
   end
   ncmpcpp
 end
