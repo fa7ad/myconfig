@@ -10,7 +10,7 @@ compton -b --config ~/.compton.conf
 ~/.fehbg
 
 # Related to locking and suspend mechanism and MPD
-mpd &
+mopidy &
 dunst &
 mpDris2 &
 gnome-screensaver &
