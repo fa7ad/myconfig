@@ -26,9 +26,6 @@
   "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 120,
   "editor.minimap.renderCharacters": false,
-  "standard.options": {
-    "parser": "babel-eslint"
-  },
   "C_Cpp.intelliSenseEngine": "Default",
   "extensions.ignoreRecommendations": false,
   "workbench.startupEditor": "newUntitledFile",
@@ -37,5 +34,8 @@
     "coffeescript": "javascriptreact",
     "coffee": "javascriptreact"
   },
-  "git.autofetch": true
+  "git.autofetch": true,
+  "standard.options": {
+    "parser": "babel-eslint"
+  }
 }

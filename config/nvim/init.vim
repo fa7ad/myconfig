@@ -128,7 +128,7 @@
   set foldcolumn=0
 
   " show line numbers
-  set relativenumber
+  " set relativenumber
   set number
 
   " show whitespace

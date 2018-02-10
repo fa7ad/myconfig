@@ -39,5 +39,10 @@
     "key": "ctrl+e",
     "command": "editor.emmet.action.expandAbbreviation",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+t r",
+    "command": "typescript.restartTsServer",
+    "when": "editorTextFocus"
   }
 ]
