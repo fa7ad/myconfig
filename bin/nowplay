@@ -14,4 +14,4 @@ else
   set ic 
 end
 
-printf "%s %s - %s" $ic $artist $title
+printf "%s %s - %s" $ic $artist (string sub -l 55 $title)

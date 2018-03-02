@@ -13,6 +13,7 @@ bindsym $mod+Shift+Right move right
 
 # fix windows to workspace
 assign [class="[cC]hromium"] $ws2
+assign [class="[fF]irefox"] $ws2
 assign [class="[gG]oogle-chrome.*?"] $ws2
 assign [class="[Vv]ivaldi.*?"] $ws2
 
@@ -39,6 +40,7 @@ assign [class="cantata"] $ws9
 assign [class="[gG]mpc"] $ws9
 assign [class="[lL]ollypop"] $ws9
 assign [class="[sS]ayonara"] $ws9
+assign [class="[sS]potify"] $ws9
 
 assign [class="[mM]pv"] $ws0
 

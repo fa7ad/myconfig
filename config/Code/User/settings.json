@@ -37,5 +37,6 @@
   "git.autofetch": true,
   "standard.options": {
     "parser": "babel-eslint"
-  }
+  },
+  "prettier.singleQuote": true
 }
