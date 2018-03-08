@@ -18,11 +18,11 @@
   "html.format.endWithNewline": true,
   "extensions.autoUpdate": true,
   "workbench.editor.showTabs": false,
-  "workbench.colorTheme": "Electron",
+  "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
   "window.menuBarVisibility": "toggle",
   "material-icon-theme.showUpdateMessage": false,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 120,
   "editor.minimap.renderCharacters": false,
@@ -38,5 +38,10 @@
   "standard.options": {
     "parser": "babel-eslint"
   },
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "workbench.statusBar.feedback.visible": false,
+  "cSpell.language": "en,en-GB",
+  "cSpell.userWords": [
+    "fecha"
+  ]
 }

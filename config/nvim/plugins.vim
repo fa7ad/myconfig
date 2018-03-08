@@ -31,7 +31,6 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
 " Autocomplete {{{
   Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
   Plug 'Shougo/neoinclude.vim'
-  Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'}
   Plug 'zchee/deoplete-jedi', {'on_ft': 'python'}
   Plug 'davidhalter/jedi-vim', {'on_ft': 'python'}
   Plug 'Shougo/neosnippet.vim' | Plug 'Shougo/neosnippet-snippets' | Plug 'honza/vim-snippets'
@@ -52,6 +51,10 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
 " Git --- {{{
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
+" }}}
+
+" GhostText --- {{{
+  Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
 " }}}
 
 call plug#end()
