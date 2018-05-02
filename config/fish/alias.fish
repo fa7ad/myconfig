@@ -68,6 +68,12 @@ alias ll='ls -lh'
 alias ls='ls --group-directories-first --color=auto'
 alias lsa='ls -lah'
 
+# Compile and run C++ programs
+function cpp_compile
+  g++ -Wall -O3 -o $argv[2] $argv[1]
+  and eval ./$argv[2]
+end
+
 # Source the Yuuge alias files
 for file in (ls $cwd/_aliases/*.fish)
   . $file

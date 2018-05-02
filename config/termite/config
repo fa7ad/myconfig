@@ -12,7 +12,7 @@ clickable_url = true
 font = FuraMono Nerd Font Mono 12
 scrollback_lines = 10000
 search_wrap = true
-#icon_name = terminal
+icon_name = termite
 #geometry = 640x480
 
 # "system", "on" or "off"
@@ -25,7 +25,7 @@ cursor_shape = block
 browser = google-chrome-stable
 
 # set size hints for the window
-#size_hints = false
+size_hints = true
 
 # Hide links that are no longer valid in url select overlay mode
 filter_unmatched_urls = true
@@ -36,49 +36,49 @@ filter_unmatched_urls = true
 [colors]
 
 # special
-foreground      = #e5e9f0
-foreground_bold = #e5e9f0
-cursor          = #e5e9f0
-background      = #2e3440
+foreground      = #e9e9f4
+foreground_bold = #e9e9f4
+cursor          = #e9e9f4
+background      = #282936
 
 # black
-color0  = #2e3440
-color8  = #4c566a
+color0  = #282936
+color8  = #626483
 
 # red
-color1  = #88c0d0
-color9  = #88c0d0
+color1  = #ea51b2
+color9  = #ea51b2
 
 # green
-color2  = #bf616a
-color10 = #bf616a
+color2  = #ebff87
+color10 = #ebff87
 
 # yellow
-color3  = #5e81ac
-color11 = #5e81ac
+color3  = #00f769
+color11 = #00f769
 
 # blue
-color4  = #ebcb8b
-color12 = #ebcb8b
+color4  = #62d6e8
+color12 = #62d6e8
 
 # magenta
-color5  = #a3be8c
-color13 = #a3be8c
+color5  = #b45bcf
+color13 = #b45bcf
 
 # cyan
-color6  = #d08770
-color14 = #d08770
+color6  = #a1efe4
+color14 = #a1efe4
 
 # white
-color7  = #e5e9f0
-color15 = #8fbcbb
+color7  = #e9e9f4
+color15 = #f7f7fb
 
 [hints]
-#font = Monospace 12
-#foreground = #dcdccc
-#background = #3f3f3f
-#active_foreground = #e68080
-#active_background = #3f3f3f
+font = FuraMono Nerd Font Mono 12
+background = #e9e9f4
+foreground = #282936
+active_foreground = #e9e9f4
+active_background = #282936
 #padding = 2
 #border = #3f3f3f
 #border_width = 0.5

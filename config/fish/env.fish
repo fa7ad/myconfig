@@ -19,3 +19,6 @@ set -gx N_PREFIX /usr/local/n
 set -gx PATH $PATH $HOME/.bin $HOME/.local/bin (string split \  $HOME/.gem/ruby/*/bin) $N_PREFIX/bin $HOME/.yarn/bin $HOME/.config/yarn/global/node_modules/.bin $GOPATH/bin
 
 set -U fish_user_paths $PATH
+
+# virtualfish
+set -gx VIRTUALFISH_HOME /ldata/.virtualfish

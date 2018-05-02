@@ -13,4 +13,14 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="ftp://denarycomputing.com/" added="2018-03-14T17:49:53Z" modified="2018-03-14T17:49:53Z" visited="2018-03-14T17:49:53Z">
+    <title>/ on denarycomputing.com</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2018-03-14T17:49:53Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>

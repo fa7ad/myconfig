@@ -25,6 +25,7 @@ fundle plugin 'fisherman/last_job_id'
 fundle plugin 'fisherman/humanize_duration'
 fundle plugin 'fisherman/pwd_is_home'
 fundle plugin 'fisherman/pwd_info'
+fundle plugin 'fisherman/fish-vte'
 
 # Theme
 # fundle plugin 'hauleth/agnoster'
@@ -42,6 +43,9 @@ fundle init
 
 # load aliases
 . $cwd/alias.fish
+
+# virtualfish
+eval (python -m virtualfish compat_aliases)
 
 # THEME PURE #
 set fish_function_path /home/fahad/.config/fish/functions/theme-pure $fish_function_path

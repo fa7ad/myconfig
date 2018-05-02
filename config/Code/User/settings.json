@@ -18,7 +18,7 @@
   "html.format.endWithNewline": true,
   "extensions.autoUpdate": true,
   "workbench.editor.showTabs": false,
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "One Dark Pro Vivid",
   "workbench.iconTheme": "material-icon-theme",
   "window.menuBarVisibility": "toggle",
   "material-icon-theme.showUpdateMessage": false,
@@ -27,12 +27,15 @@
   "editor.minimap.maxColumn": 120,
   "editor.minimap.renderCharacters": false,
   "C_Cpp.intelliSenseEngine": "Default",
+  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+  "C_Cpp.clang_format_style": "Google",
   "extensions.ignoreRecommendations": false,
   "workbench.startupEditor": "newUntitledFile",
   "explorer.confirmDelete": false,
   "emmet.includeLanguages": {
     "coffeescript": "javascriptreact",
-    "coffee": "javascriptreact"
+    "coffee": "javascriptreact",
+    "javascript": "javascriptreact"
   },
   "git.autofetch": true,
   "standard.options": {
@@ -40,8 +43,5 @@
   },
   "prettier.singleQuote": true,
   "workbench.statusBar.feedback.visible": false,
-  "cSpell.language": "en,en-GB",
-  "cSpell.userWords": [
-    "fecha"
-  ]
+  "git.confirmSync": false
 }

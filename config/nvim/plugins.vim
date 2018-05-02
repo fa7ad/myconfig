@@ -53,8 +53,4 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
   Plug 'airblade/vim-gitgutter'
 " }}}
 
-" GhostText --- {{{
-  Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
-" }}}
-
 call plug#end()
