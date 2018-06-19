@@ -31,6 +31,7 @@ assign [class="Brackets"] $ws4
 assign [class="[eE]clipse"] $ws4
 assign [class="qtcreator"] $ws4
 assign [class="QtCreator"] $ws4
+assign [class="MonoDevelop"] $ws4
 
 assign [class="Pcmanfm"] $ws5
 assign [class="Nautilus"] $ws5
