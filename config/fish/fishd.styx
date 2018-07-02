@@ -10,6 +10,7 @@ SET AGNOSTER_ICON_SCM_STASHED:\x7e
 SET AGNOSTER_SEGMENT_RSEPARATOR:\ue0b2\x1e\ue0b3
 SET AGNOSTER_SEGMENT_SEPARATOR:\ue0b0\x1e\x20\ue0b1\x20
 SET_EXPORT DESKTOP_SESSION:gnome
+SET EDITOR:vim
 SET GTK_MODULES:canberra\x2dgtk\x2dmodule
 SET PATH:/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/fahad/\x2ebin\x1e/home/fahad/\x2elocal/bin\x1e/home/fahad/\x2egem/ruby/2\x2e4\x2e0/bin\x1e/usr/local/n/bin
 SET __fish_init_2_39_8:\x1d
