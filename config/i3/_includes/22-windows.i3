@@ -38,6 +38,8 @@ assign [class="Nautilus"] $ws5
 
 assign [class="Gimp-2.8"] $ws6
 
+assign [class="[eE]vince"] $ws7
+
 assign [title="^ncmpcpp.*"] $ws9
 assign [class="cantata"] $ws9
 assign [class="[gG]mpc"] $ws9
