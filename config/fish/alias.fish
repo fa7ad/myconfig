@@ -78,3 +78,7 @@ end
 for file in (ls $cwd/_aliases/*.fish)
   . $file
 end
+
+function Cat
+  bat $argv
+end
