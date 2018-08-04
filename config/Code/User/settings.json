@@ -18,7 +18,7 @@
   "html.format.endWithNewline": true,
   "extensions.autoUpdate": true,
   "workbench.editor.showTabs": false,
-  "workbench.colorTheme": "One Dark Pro Vivid",
+  "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
   "window.menuBarVisibility": "toggle",
   "material-icon-theme.showUpdateMessage": false,
@@ -43,5 +43,6 @@
   },
   "prettier.singleQuote": true,
   "workbench.statusBar.feedback.visible": false,
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "materialTheme.fixIconsRunning": false
 }
