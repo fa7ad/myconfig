@@ -8,11 +8,21 @@ end
 
 # set pic (node -p "require('path').resolve(process.argv.slice(-1)[0])" $argv)
 # set pic (python -c $resPath $argv)
-set pic (realpath $argv)
 
+set walld $HOME/.cache/wallpapers
 
-feh --bg-scale $pic
-gsettings set org.gnome.desktop.screensaver picture-uri "file://"$pic
-gsettings set org.gnome.desktop.background picture-uri "file://"$pic
+rm -rf $walld
+mkdir -p $walld
+
+set pic $argv[1]
+
+cp $argv $walld
+
+# feh --bg-scale $pic
+# gsettings set org.gnome.desktop.screensaver picture-uri "file://"$pic
+# gsettings set org.gnome.desktop.background picture-uri "file://"$pic
+
+betterlockscreen -u $walld
+betterlockscreen -w $argv[2]
 
 echo Wallpaper set to \'$pic\'
