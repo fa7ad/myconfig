@@ -78,7 +78,7 @@
   "ImportReactPropType": {
     "prefix": "repr",
     "body": [
-      "import PrTy from 'prop-types'$1"
+      "import PropTypes from 'prop-types'$1"
     ],
     "description": "Import react prop-types"
   },

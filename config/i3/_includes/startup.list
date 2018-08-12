@@ -16,7 +16,7 @@ compton -b --config ~/.compton.conf
 mopidy &
 dunst &
 mpDris2 &
-gnome-screensaver &
+# gnome-screensaver &
 xset dpms 600 600 0
 xss-lock ~/.bin/lock.sh &
 
