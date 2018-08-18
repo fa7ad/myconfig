@@ -44,5 +44,6 @@
   "prettier.singleQuote": true,
   "workbench.statusBar.feedback.visible": false,
   "git.confirmSync": false,
-  "materialTheme.fixIconsRunning": false
+  "materialTheme.fixIconsRunning": false,
+  "breadcrumbs.enabled": true
 }
