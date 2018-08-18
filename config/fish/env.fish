@@ -24,4 +24,4 @@ set -U fish_user_paths $PATH
 set -gx VIRTUALFISH_HOME /ldata/.virtualfish
 
 # android
-set -U ANDROID_HOME /ldata/ANDROID_SDK
+set -gx ANDROID_HOME /ldata/ANDROID_SDK
