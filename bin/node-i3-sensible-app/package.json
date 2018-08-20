@@ -1,0 +1,12 @@
+{
+  "name": "i3-sensible-app",
+  "version": "1.0.0",
+  "description": "Open the default app on active workspace",
+  "main": "main.js",
+  "bin": {
+    "i3-sensible-app": "main.js"
+  },
+  "author": "Fahad Hossain <8bit.demoncoder@gmail.com> (https://fa7ad.github.io/)",
+  "license": "MIT",
+  "private": true
+}
