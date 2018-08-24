@@ -2,7 +2,6 @@
 set cwd (dirname (status -f))
 
 # MPV
-alias mpv mpvh
 alias mpa 'mpv --no-vid'
 
 # ncmpcpp
