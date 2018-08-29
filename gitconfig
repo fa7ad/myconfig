@@ -1,5 +1,4 @@
 [alias]
-	bb = repo bb
 	lab = repo lab
 	hub = repo hub
 [user]

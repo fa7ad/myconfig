@@ -45,5 +45,6 @@
   "workbench.statusBar.feedback.visible": false,
   "git.confirmSync": false,
   "materialTheme.fixIconsRunning": false,
-  "breadcrumbs.enabled": true
+  "breadcrumbs.enabled": true,
+  "explorer.confirmDragAndDrop": false
 }
