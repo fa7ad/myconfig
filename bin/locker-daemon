@@ -2,6 +2,9 @@
 
 set notifier "notify-send -u low -t 5000 -- 'System info' 'Locking screen in 30 seconds'"
 
+pidof xautolock;or xautolock -detectsleep -time 5 -locker ~/.bin/lock.sh -notify 30 -notifier $notifier &
+disown %xautolock
+
 while sleep 99
   pidof xautolock;or xautolock -detectsleep -time 5 -locker ~/.bin/lock.sh -notify 30 -notifier $notifier &
   disown %xautolock
