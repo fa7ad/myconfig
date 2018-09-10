@@ -1,12 +1,16 @@
-#!/usr/bin/env fish
+#!/usr/bin/env bash
 
-set notifier "notify-send -u low -t 5000 -- 'System info' 'Locking screen in 30 seconds'"
+notifier="notify-send -u low -t 5000 -- 'System info' 'Locking screen in 30 seconds'"
 
-pidof xautolock;or xautolock -detectsleep -time 5 -locker ~/.bin/lock.sh -notify 30 -notifier $notifier &
-disown %xautolock
+run () {
+  if [ -z "$(pidof xautolock)" ]; then
+    xautolock -detectsleep -time 5 -locker ~/.bin/lock.sh -notify 30 -notifier "$notifier" &
+    disown %xautolock
+  fi
+}
 
-while sleep 99
-  pidof xautolock;or xautolock -detectsleep -time 5 -locker ~/.bin/lock.sh -notify 30 -notifier $notifier &
-  disown %xautolock
-end
+run
+while sleep 99;do
+  run
+done
 
