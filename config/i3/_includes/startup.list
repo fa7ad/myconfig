@@ -17,9 +17,9 @@ mopidy &
 dunst &
 mpDris2 &
 # gnome-screensaver &
-xset dpms 600 600 0
+xset dpms 300 300 0
 xss-lock ~/.bin/lock.sh &
-~/.bin/locker-daemon &
+# ~/.bin/locker-daemon &
 
 # Visible stuff, actual GUI apps
 ibus-daemon -rd

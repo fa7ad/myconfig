@@ -37,7 +37,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes!' 'i3-msg exit'"
 
 # Lock using Mod+l
-bindsym --release $mod+l exec xautolock -locknow
+bindsym --release $mod+l exec xset s activate
 
 # Open File Manager
 bindsym $mod+$alt+e exec $file_man
