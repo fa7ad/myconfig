@@ -36,7 +36,7 @@ assign [class="jetbrains-studio"] $ws4
 assign [class="Pcmanfm"] $ws5
 assign [class="Nautilus"] $ws5
 
-assign [class="Gimp-2.8"] $ws6
+assign [class="Gimp-2.10"] $ws6
 
 assign [class="[eE]vince"] $ws7
 
