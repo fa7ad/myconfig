@@ -42,5 +42,9 @@
   "prettier.trailingComma": "none",
   "prettier.useTabs": false,
   "prettier.singleQuote": true,
-  "javascript.updateImportsOnFileMove.enabled": "always"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "emmet.includeLanguages": {
+    "babeljavascript": "javascriptreact",
+    "javascript": "javascriptreact"
+  }
 }
