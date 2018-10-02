@@ -8,30 +8,53 @@
   "editor.insertSpaces": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
+
   "files.eol": "\n",
   "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "node_modules": true,
+    ".cache": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/.cache/**": true
+  },
+
   "html.format.endWithNewline": true,
+
   "python.pythonPath": "/usr/bin/python3",
   "python.linting.pep8Enabled": false,
   "python.linting.flake8Enabled": true,
+
   "terminal.external.linuxExec": "termite",
   "terminal.integrated.shell.linux": "fish",
+
   "extensions.autoUpdate": true,
+
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+
   "breadcrumbs.enabled": true,
-  "workbench.colorTheme": "One Dark Pro",
+
+  "workbench.colorTheme": "One Dark Pro Vivid",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.showTabs": false,
   "workbench.statusBar.feedback.visible": false,
+
   "window.zoomLevel": 0,
   "window.menuBarVisibility": "toggle",
-  "C_Cpp.intelliSenseEngine": "Default",
-  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
-  "C_Cpp.clang_format_style": "Google",
+
   "git.autofetch": true,
   "git.confirmSync": false,
+
   "prettier.eslintIntegration": true,
   "prettier.bracketSpacing": true,
   "prettier.arrowParens": "avoid",
@@ -42,7 +65,9 @@
   "prettier.trailingComma": "none",
   "prettier.useTabs": false,
   "prettier.singleQuote": true,
+
   "javascript.updateImportsOnFileMove.enabled": "always",
+
   "emmet.includeLanguages": {
     "babeljavascript": "javascriptreact",
     "javascript": "javascriptreact"

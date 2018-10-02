@@ -45,7 +45,7 @@ fundle init
 . $cwd/alias.fish
 
 # virtualfish
-eval (python -m virtualfish compat_aliases)
+# eval (python -m virtualfish compat_aliases)
 
 # THEME PURE #
 set fish_function_path /home/fahad/.config/fish/functions/theme-pure $fish_function_path

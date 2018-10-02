@@ -83,12 +83,21 @@
     "description": "Import react prop-types"
   },
   "ReactES7PropTypes": {
-    "prefix": "prty",
+    "prefix": "prtyc",
     "body": [
       "static propTypes = {",
       "  $1",
       "}"
     ],
     "description": "Define react proptypes using es7 class properties"
+  },
+  "ReactFunctionalPropTypes": {
+    "prefix": "prtyf",
+    "body": [
+      "$1.propTypes = {",
+      "  $2",
+      "}"
+    ],
+    "description": "Define react proptypes for functional component"
   }
 }
