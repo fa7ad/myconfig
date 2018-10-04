@@ -13,7 +13,6 @@ fundle plugin 'edc/bass'
 fundle plugin 'tuvistavie/oh-my-fish-core'
 fundle plugin 'tuvistavie/fish-fastdir'
 fundle plugin 'tuvistavie/fish-completion-helpers'
-fundle plugin 'oh-my-fish/plugin-balias'
 fundle plugin 'oh-my-fish/plugin-sudope'
 fundle plugin 'oh-my-fish/plugin-bang-bang'
 fundle plugin 'oh-my-fish/plugin-archlinux'
@@ -49,3 +48,5 @@ fundle init
 
 # THEME PURE #
 set fish_function_path /home/fahad/.config/fish/functions/theme-pure $fish_function_path
+# THEME PURE #
+set fish_function_path /home/fahad/.config/fish/functions/theme-pure/functions/ $fish_function_path
