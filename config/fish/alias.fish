@@ -78,6 +78,6 @@ for file in (ls $cwd/_aliases/*.fish)
   . $file
 end
 
-function Cat
+function catcat
   bat $argv
 end
