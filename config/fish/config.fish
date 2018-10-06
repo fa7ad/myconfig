@@ -5,26 +5,13 @@ end
 
 set cwd (dirname (status -f))
 
-### LOAD fundle
-if not functions -q fundle; eval (curl -sfL https://git.io/fundle-install); end
-
-# Plugins
-fundle plugin 'edc/bass'
-fundle plugin 'tuvistavie/oh-my-fish-core'
-fundle plugin 'tuvistavie/fish-fastdir'
-fundle plugin 'tuvistavie/fish-completion-helpers'
-fundle plugin 'oh-my-fish/plugin-sudope'
-fundle plugin 'oh-my-fish/plugin-bang-bang'
-fundle plugin 'oh-my-fish/plugin-archlinux'
-fundle plugin 'oh-my-fish/plugin-python'
-
-
-# Stuff from fisherman
-fundle plugin 'fisherman/last_job_id'
-fundle plugin 'fisherman/humanize_duration'
-fundle plugin 'fisherman/pwd_is_home'
-fundle plugin 'fisherman/pwd_info'
-fundle plugin 'fisherman/fish-vte'
+# Install Fisher
+if not functions -q fisher
+    echo "Installing fisher for the first time..." >&2
+    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+    fisher
+end
 
 # Theme
 # fundle plugin 'hauleth/agnoster'
@@ -34,14 +21,8 @@ fundle plugin 'fisherman/fish-vte'
 # -- fundle plugin 'rafaelrinaldi/pure' --
 # Installed using the built-in installer, check on gh
 
-# Start Fundle
-fundle init
-
 # Load env files
 . $cwd/env.fish
 
 # load aliases
 . $cwd/alias.fish
-
-# THEME PURE #
-set fish_function_path /home/fahad/.config/fish/functions/theme-pure/functions/ $fish_function_path
