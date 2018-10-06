@@ -1,171 +1,266 @@
-# Pure
-# by Rafael Rinaldi
-# https://github.com/rafaelrinaldi/pure
-# MIT License
+# Set these options in your config.fish (if you want to :])
+#
+#     set -g theme_display_user yes
+#     set -g theme_hostname never
+#     set -g theme_hostname always
+#     set -g default_user your_normal_user
 
-# Whether or not is a fresh session
-set -g __pure_fresh_session 1
 
-# Deactivate the default virtualenv prompt so that we can add our own
-set -gx VIRTUAL_ENV_DISABLE_PROMPT 1
 
-# Symbols
-
-__pure_set_default pure_symbol_prompt "❯"
-__pure_set_default pure_symbol_git_down_arrow "⇣"
-__pure_set_default pure_symbol_git_up_arrow "⇡"
-__pure_set_default pure_symbol_git_dirty "*"
-__pure_set_default pure_symbol_horizontal_bar "—"
-
-# Colors
-
-__pure_set_default pure_color_red (set_color red)
-__pure_set_default pure_color_green (set_color green)
-__pure_set_default pure_color_blue (set_color blue)
-__pure_set_default pure_color_yellow (set_color yellow)
-__pure_set_default pure_color_cyan (set_color cyan)
-__pure_set_default pure_color_gray (set_color 93A1A1)
-__pure_set_default pure_color_normal (set_color normal)
-
-__pure_set_default pure_username_color $pure_color_gray
-__pure_set_default pure_host_color $pure_color_gray
-__pure_set_default pure_root_color $pure_color_normal
-
-# Determines whether the username and host are shown at the begining or end
-# 0 - end of prompt, default
-# 1 - start of prompt
-# Any other value defaults to the default behaviour
-__pure_set_default pure_user_host_location 0
-
-# Show exit code of last command as a separate prompt character. As described here: https://github.com/sindresorhus/pure/wiki#show-exit-code-of-last-command-as-a-separate-prompt-character
-# 0 - single prompt character, default
-# 1 - separate prompt character
-# Any other value defaults to the default behaviour
-__pure_set_default pure_separate_prompt_on_error 0
-
-# Max execution time of a process before its run time is shown when it exits
-__pure_set_default pure_command_max_exec_time 5
-
-function pre_prompt --on-event fish_prompt
-  # Template
-  set -l user_and_host ""
-  set -l current_folder (__parse_current_folder)
-  set -l git_branch_name ""
-  set -l git_dirty ""
-  set -l git_arrows ""
-  set -l command_duration ""
-  set -l pre_prompt ""
-
-  # Do not add a line break to a brand new session
-  if test $__pure_fresh_session -eq 0
-    set pre_prompt $pre_prompt "\n"
-  end
-
-  # Check if user is in an SSH session
-  if [ "$SSH_CONNECTION" != "" ]
-    set -l host (hostname -s)
-    set -l user (whoami)
-
-    if [ "$user" = "root" ]
-      set user "$pure_root_color$user"
-    else
-      set user "$pure_username_color$user"
+# Backward compatibility
+#
+# Note: Do not depend on these behavior. These can be removed in anytime by the
+# author in the name of code readability.
+if set -q theme_hide_hostname
+  # Existing $theme_hostname will always override $theme_hide_hostname
+  if not set -q theme_hostname
+    if [ "theme_hide_hostname" = "yes" ]
+      set -g theme_hostname never
     end
-
-    # Format user and host part of prompt
-    set user_and_host "$user$pure_color_gray@$pure_host_color$host$pure_color_normal "
-  end
-
-  if test $pure_user_host_location -eq 1
-    set pre_prompt $pre_prompt $user_and_host
-  end
-
-  # Format current folder on prompt output
-  set pre_prompt $pre_prompt "$pure_color_blue$current_folder$pure_color_normal "
-
-  # Exit with code 1 if git is not available
-  if not type -fq git
-    return 1
-  end
-
-  # Check if is on a Git repository
-  set -l is_git_repository (command git rev-parse --is-inside-work-tree ^/dev/null)
-
-  if test -n "$is_git_repository"
-    set git_branch_name (__parse_git_branch)
-
-    # Check if there are files to commit
-    set -l is_git_dirty (command git status --porcelain --ignore-submodules ^/dev/null)
-
-    if test -n "$is_git_dirty"
-      set git_dirty $pure_symbol_git_dirty
+    if [ "theme_hide_hostname" = "no" ]
+      set -g theme_hostname always
     end
-
-    # Check if there is an upstream configured
-    command git rev-parse --abbrev-ref '@{upstream}' >/dev/null ^&1; and set -l has_upstream
-    if set -q has_upstream
-      command git rev-list --left-right --count 'HEAD...@{upstream}' | read -la git_status
-
-      set -l git_arrow_left $git_status[1]
-      set -l git_arrow_right $git_status[2] 
-
-      # If arrow is not "0", it means it's dirty
-      if test $git_arrow_left != 0
-        set git_arrows " $pure_symbol_git_up_arrow"
-      end
-
-      if test $git_arrow_right != 0
-        set git_arrows " $git_arrows$pure_symbol_git_down_arrow"
-      end
-    end
-
-    # Format Git prompt output
-    set pre_prompt $pre_prompt "$pure_color_gray$git_branch_name$git_dirty$pure_color_normal$pure_color_cyan$git_arrows$pure_color_normal "
   end
-
-  if test $pure_user_host_location -ne 1
-    set pre_prompt $pre_prompt $user_and_host
-  end
-
-  # Prompt command execution duration
-  if test -n "$CMD_DURATION"
-    set command_duration (__format_time $CMD_DURATION $pure_command_max_exec_time)
-  end
-
-  set pre_prompt $pre_prompt "$pure_color_yellow$command_duration$pure_color_normal"
-
-  echo -e -s $pre_prompt
 end
 
-function fish_prompt
-  set -l prompt ""
 
-  # Save previous exit code
-  set -l exit_code $status
+#
+# Segments functions
+#
+set -g current_bg NONE
+set -g segment_separator \uE0B0
 
-  # Set default color symbol to green meaning it's all good!
-  set -l color_symbol $pure_color_green
+function prompt_segment -d "Function to draw a segment"
+  set -l bg
+  set -l fg
+  if [ -n "$argv[1]" ]
+    set bg $argv[1]
+  else
+    set bg normal
+  end
+  if [ -n "$argv[2]" ]
+    set fg $argv[2]
+  else
+    set fg normal
+  end
+  if [ "$current_bg" != 'NONE' -a "$argv[1]" != "$current_bg" ]
+    set_color -b $bg
+    set_color $current_bg
+    echo -n "$segment_separator "
+    set_color -b $bg
+    set_color $fg
+  else
+    set_color -b $bg
+    set_color $fg
+    echo -n " "
+  end
+  set current_bg $argv[1]
+  if [ -n "$argv[3]" ]
+    echo -n -s $argv[3] " "
+  end
+end
 
-  # Handle previous failed command
-  if test $exit_code -ne 0
-    # Symbol color is red when previous command fails
-    set color_symbol $pure_color_red
-    if test $pure_separate_prompt_on_error -eq 1
-      set color_symbol $pure_color_red$pure_symbol_prompt$pure_color_green
+function prompt_finish -d "Close open segments"
+  if [ -n $current_bg ]
+    set_color -b normal
+    set_color $current_bg
+    echo -n "$segment_separator "
+  end
+  set_color normal
+  set -g current_bg NONE
+end
+
+
+#
+# Components
+#
+function prompt_virtual_env -d "Display Python virtual environment"
+  if test "$VIRTUAL_ENV"
+    prompt_segment white black (basename $VIRTUAL_ENV)
+  end
+end
+
+
+function prompt_user -d "Display current user if different from $default_user"
+  set -l BG 444444
+  set -l FG BCBCBC
+
+  if [ "$theme_display_user" = "yes" ]
+    if [ "$USER" != "$default_user" -o -n "$SSH_CLIENT" ]
+      set USER (whoami)
+      get_hostname
+      if [ $HOSTNAME_PROMPT ]
+        set USER_PROMPT $USER@$HOSTNAME_PROMPT
+      else
+        set USER_PROMPT $USER
+      end
+      prompt_segment $BG $FG $USER_PROMPT
+    end
+  else
+    get_hostname
+    if [ $HOSTNAME_PROMPT ]
+      prompt_segment $BG $FG $HOSTNAME_PROMPT
     end
   end
+end
 
-  # Show python virtualenv name (if activated)
-  if test -n "$VIRTUAL_ENV"
-    set prompt $prompt $pure_color_gray(basename "$VIRTUAL_ENV")"$pure_color_normal "
+function get_hostname -d "Set current hostname to prompt variable $HOSTNAME_PROMPT if connected via SSH"
+  set -g HOSTNAME_PROMPT ""
+  if [ "$theme_hostname" = "always" -o \( "$theme_hostname" != "never" -a -n "$SSH_CLIENT" \) ]
+    set -g HOSTNAME_PROMPT (hostname)
   end
+end
 
-  # vi-mode indicator
-  set mode_indicator (fish_default_mode_prompt)
 
-  set prompt $prompt "$mode_indicator$color_symbol$pure_symbol_prompt$pure_color_normal "
+function prompt_dir -d "Display the current directory"
+  prompt_segment 1C1C1C FFFFFF (prompt_pwd)
+end
 
-  echo -e -s $prompt
 
-  set __pure_fresh_session 0
+function prompt_hg -d "Display mercurial state"
+  set -l branch
+  set -l state
+  if command hg id >/dev/null 2>&1
+    if command hg prompt >/dev/null 2>&1
+      set branch (command hg prompt "{branch}")
+      set state (command hg prompt "{status}")
+      set branch_symbol \uE0A0
+      if [ "$state" = "!" ]
+        prompt_segment red white "$branch_symbol $branch ±"
+      else if [ "$state" = "?" ]
+          prompt_segment yellow black "$branch_symbol $branch ±"
+        else
+          prompt_segment green black "$branch_symbol $branch"
+      end
+    end
+  end
+end
+
+
+function prompt_git -d "Display the current git state"
+  set -l ref
+  if command git rev-parse --is-inside-work-tree >/dev/null 2>&1
+    set ref (command git symbolic-ref HEAD 2> /dev/null)
+    if [ $status -gt 0 ]
+      set -l branch (command git show-ref --head -s --abbrev |head -n1 2> /dev/null)
+      set ref "➦ $branch "
+    end
+    set branch_symbol \uE0A0
+    set -l branch (echo $ref | sed  "s-refs/heads/-$branch_symbol -")
+
+    set -l BG PROMPT
+    set -l dirty (command git status --porcelain --ignore-submodules=dirty 2> /dev/null)
+    if [ "$dirty" = "" ]
+      set BG green
+      set PROMPT "$branch"
+    else
+      set BG yellow
+      set dirty ''
+
+      # Check if there's any commit in the repo
+      set -l empty 0
+      git rev-parse --quiet --verify HEAD > /dev/null ^&1; or set empty 1
+
+      set -l target
+      if [ $empty = 1 ]
+        # The repo is empty
+        set target '4b825dc642cb6eb9a060e54bf8d69288fbee4904'
+      else
+        # The repo is not emtpy
+        set target 'HEAD'
+
+        # Check for unstaged change only when the repo is not empty
+        set -l unstaged 0
+        git diff --no-ext-diff --ignore-submodules=dirty --quiet --exit-code; or set unstaged 1
+        if [ $unstaged = 1 ]; set dirty $dirty'●'; end
+      end
+
+      # Check for staged change
+      set -l staged 0
+      git diff-index --cached --quiet --exit-code --ignore-submodules=dirty $target; or set staged 1
+      if [ $staged = 1 ]; set dirty $dirty'✚'; end
+
+      # Check for dirty
+      if [ "$dirty" = "" ]
+        set PROMPT "$branch"
+      else
+        set PROMPT "$branch $dirty"
+      end
+    end
+    prompt_segment $BG black $PROMPT
+  end
+end
+
+
+function prompt_svn -d "Display the current svn state"
+  set -l ref
+  if command svn ls . >/dev/null 2>&1
+    set branch (svn_get_branch)
+    set branch_symbol \uE0A0
+    set revision (svn_get_revision)
+    prompt_segment green black "$branch_symbol $branch:$revision"
+  end
+end
+
+function svn_get_branch -d "get the current branch name"
+  svn info 2> /dev/null | awk -F/ \
+      '/^URL:/ { \
+        for (i=0; i<=NF; i++) { \
+          if ($i == "branches" || $i == "tags" ) { \
+            print $(i+1); \
+            break;\
+          }; \
+          if ($i == "trunk") { print $i; break; } \
+        } \
+      }'
+end
+
+function svn_get_revision -d "get the current revision number"
+  svn info 2> /dev/null | sed -n 's/Revision:\ //p'
+end
+
+
+function prompt_status -d "the symbols for a non zero exit status, root and background jobs"
+    if [ $RETVAL -ne 0 ]
+      prompt_segment black red "✘"
+    end
+
+    # if superuser (uid == 0)
+    set -l uid (id -u $USER)
+    if [ $uid -eq 0 ]
+      prompt_segment black yellow "⚡"
+    end
+
+    # Jobs display
+    if [ (jobs -l | wc -l) -gt 0 ]
+      prompt_segment black cyan "⚙"
+    end
+end
+
+if printf '%s\n' '2.2.0' $FISH_VERSION | sort --check=silent --version-sort
+  # Current version ≥ 2.2.0
+  function __exists -a name -d "Check if a function or program does exist."
+    command -v "$name" ^/dev/null >&2
+  end
+else
+  # Current version < 2.2.0
+  function __exists -a name -d "Check if a function or program does exist."
+    type "$name" ^/dev/null >&2
+  end
+end
+
+
+#
+# Prompt
+#
+function fish_prompt
+  set -g RETVAL $status
+  prompt_status
+  prompt_virtual_env
+  prompt_user
+  prompt_dir
+  __exists hg;  and prompt_hg
+  __exists git; and prompt_git
+  __exists svn; and prompt_svn
+  prompt_finish
 end
