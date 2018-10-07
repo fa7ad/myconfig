@@ -1,7 +1,6 @@
-# name: clearance
+# name: clear
 # ---------------
 # Based on idan. Display the following bits on the left:
-# - Virtualenv name (if applicable, see https://github.com/adambrenecki/virtualfish)
 # - Current directory name
 # - Git branch and dirty state (if inside a git repo)
 
@@ -11,6 +10,10 @@ end
 
 function _git_is_dirty
   echo (command git status -s --ignore-submodules=dirty ^/dev/null)
+end
+
+function _git_has_upstream
+  git rev-parse --abbrev-ref '@{upstream}' ^/dev/null
 end
 
 function fish_prompt
@@ -30,23 +33,37 @@ function fish_prompt
   # Add a newline before new prompts
   echo -e ''
 
-  # Display [venvname] if in a virtualenv
-  if set -q VIRTUAL_ENV
-      echo -n -s (set_color -b cyan black) '[' (basename "$VIRTUAL_ENV") ']' $normal ' '
-  end
-
   # Print pwd or full path
   echo -n -s $cwd $normal
 
   # Show git branch and status
   if [ (_git_branch_name) ]
     set -l git_branch (_git_branch_name)
+    set git_info '('
 
     if [ (_git_is_dirty) ]
-      set git_info '(' $yellow $git_branch "±" $normal ')'
+      set git_info $git_info $yellow $git_branch "*" $normal
     else
-      set git_info '(' $green $git_branch $normal ')'
+      set git_info $git_info $green $git_branch $normal
     end
+
+    if test -n (_git_has_upstream)
+      git rev-list --left-right --count 'HEAD...@{upstream}' | read -la git_status
+
+      set -l left $git_status[1]
+      set -l right $git_status[2] 
+
+      if test $left != 0
+        set git_arrows "⇡"
+      end
+
+      if test $right != 0
+        set git_arrows "$git_arrows⇣"
+      end
+      set git_info $git_info $yellow $git_arrows $normal
+    end
+    set git_info $git_info ')'
+
     echo -n -s ' · ' $git_info $normal
   end
 
