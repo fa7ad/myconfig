@@ -13,14 +13,6 @@ if not functions -q fisher
     fisher
 end
 
-# Theme
-# fundle plugin 'hauleth/agnoster'
-# fundle plugin 'fisherman/flash'
-# fundle plugin 'fisherman/sol'
-
-# -- fundle plugin 'rafaelrinaldi/pure' --
-# Installed using the built-in installer, check on gh
-
 # Load env files
 . $cwd/env.fish
 
