@@ -1,0 +1,70 @@
+#!/bin/bash
+# == Define functions ==
+getres () {
+  source <(xdotool getwindowgeometry --shell "$@")
+  echo $HEIGHT $WIDTH
+}
+ctrl_c () {
+  echo -e "\e[?25h"
+  rm -f "$thumb"
+  clear
+  exit
+}
+download () {
+  lurl=$art
+  [[ "$lurl" =~ "ytimg" ]] && lurl=${lurl//\/default/\/hqdefault}
+  curl --location "$lurl" --output "$thumb" --silent
+}
+show_img () {
+  clear
+  w=$(( $2 - 5 ))
+  h=$(( $3 - 5 ))
+  w3m_bin=/usr/lib/w3m/w3mimgdisplay
+  sleep 0.5 && echo -e "0;1;0;0;$w;$h;;;;;${1}\n4;\n3;" | $w3m_bin
+}
+show_curr_img () {
+  height=${res/\ *}
+  width=${res/*\ }
+  show_img "$thumb" $width $height
+}
+
+# == Set Variables ==
+
+curw=$(xdotool getactivewindow)
+art=$(playerctl metadata mpris:artUrl)
+title=$(playerctl metadata title)
+artist=$(playerctl metadata artist)
+res=$( (getres $curw) )
+thumb=$(mktemp)".jpg"
+
+# == Bind SIGINT -- Ctrl-C to exit function
+trap ctrl_c INT TERM
+
+# == Show the initial art ==
+echo -e "\e[?25l"
+download && show_curr_img
+read -n 1 -rst 0.5 char
+[ "$char" = "q" ] && ctrl_c
+[ -n "$char" ] && show_curr_img && char=''
+
+# == poll for change in art ==
+while sleep 1; do
+  t2=$( (getres $curw) )
+  aa2=$(playerctl metadata mpris:artUrl)
+  ti2=$(playerctl metadata title)
+  ar2=$(playerctl metadata artist)
+
+  if [ "$art" != "$aa2" -o "$title" != "$ti2" -o \
+      "$artist" != "$ar2" -o "$res" != "$t2" ]; then
+    art=$aa2
+    title=$ti2
+    artist=$ar2
+    res=$( (getres $curw) )
+    download && show_curr_img
+  else
+    read -n 1 -rst 0.5 char
+    [ "$char" = "q" ] && ctrl_c
+    [ -n "$char" ] && show_curr_img && char=''
+  fi
+done
+

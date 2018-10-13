@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+notifier="notify-send -u low -t 5000 -- 'System info' 'Locking screen in 30 seconds'"
+
+run () {
+  if [ -z "$(pidof xautolock)" ]; then
+    xautolock -detectsleep -time 5 -locker ~/.bin/lock.sh -notify 30 -notifier "$notifier" &
+    disown %xautolock
+  fi
+}
+
+run
+while sleep 99;do
+  run
+done
+

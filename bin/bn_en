@@ -1,0 +1,10 @@
+#!/usr/bin/env fish
+
+set bn 'ibus-avro'
+set en 'xkb:us::eng'
+
+if string match -e $en (ibus engine) > /dev/null
+  ibus engine $bn
+else if string match -e $bn (ibus engine) > /dev/null
+  ibus engine $en
+end

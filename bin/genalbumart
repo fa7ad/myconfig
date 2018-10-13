@@ -1,0 +1,26 @@
+#!/usr/bin/env fish
+
+set force '-n'
+set wd (realpath .)
+
+if contains -- -f $argv
+  set force '-y'
+  set id (contains -i -- -f $argv)
+  if [ (count $argv) -eq 2 ]
+    if [ $id -eq 1 ]
+      set wd (realpath $argv[-1])
+    end
+    if [ $id -eq 2 ]
+      set wd (realpath $argv[1])
+    end
+  end
+else
+  if [ (count $argv) -eq 1 ]
+    set wd (realpath $argv)
+  end
+end
+
+for f in $wd/{,**/}01*
+  ffmpeg -loglevel 16 -i $f -codec:v mjpeg (dirname $f)/folder.jpg $force
+  and echo (dirname $f | sed 's/^\.\///g')
+end

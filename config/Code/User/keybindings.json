@@ -1,0 +1,39 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "ctrl+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+/",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+'",
+    "command": "extension.swapQuotes",
+    "when": "editorTextFocus"
+  },
+
+  {
+    "key": "ctrl+e",
+    "command": "editor.emmet.action.expandAbbreviation",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+t r",
+    "command": "typescript.restartTsServer",
+    "when": "editorTextFocus"
+  }
+]

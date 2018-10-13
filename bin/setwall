@@ -1,0 +1,28 @@
+#!/usr/bin/env fish
+
+if set -q $argv
+  exit 1
+end
+
+# set resPath 'import sys;import os;print(os.path.abspath(sys.argv[-1]))'
+
+# set pic (node -p "require('path').resolve(process.argv.slice(-1)[0])" $argv)
+# set pic (python -c $resPath $argv)
+
+set walld $HOME/.cache/wallpapers
+
+rm -rf $walld
+mkdir -p $walld
+
+set pic $argv[1]
+
+cp $argv $walld
+
+# feh --bg-scale $pic
+# gsettings set org.gnome.desktop.screensaver picture-uri "file://"$pic
+# gsettings set org.gnome.desktop.background picture-uri "file://"$pic
+
+betterlockscreen -u $walld
+betterlockscreen -w $argv[2]
+
+echo Wallpaper set to \'$pic\'

@@ -1,0 +1,211 @@
+; vim: ft=dosini
+[colors]
+black = #18262F
+red = #ef5253
+green = #7cc844
+yellow = #e4b51c
+blue = #33b5e1
+magenta = #a363d5
+cyan = #52cbb0
+white = #f5f7fa
+primary = #33b5e1
+secondary = #52cbb0
+danger = #ef5253
+background = #0a18262f
+foreground = #a6afb8
+
+[bar/top]
+monitor = ${env:MONITOR:eDP-1}
+width = 100%
+height = 24
+separator = " "
+background = ${colors.background}
+foreground = ${colors.foreground}
+underline-size = 0
+overline-size = 0
+font-0 = "Overpass:pixelsize=10:antialias=true;1"
+font-1 = "FontAwesome:pixelsize=10:antialias=true;1"
+font-2 = Symbola:pixelsize=10;1
+font-3 = MaterialIcons:size=10;1
+font-4 = "Droid Sans:pixelsize=10;1"
+
+modules-left = wm plctl playing
+modules-center = title
+modules-right = kbd ram cpu volume battery time
+
+padding-right = 0
+tray-position = right
+tray-transparent = true
+
+[module/plctl]
+type = custom/menu
+format-padding = 2
+
+label-open = ""
+label-close = "  "
+label-separator = "  "
+
+menu-0-0 = 
+menu-0-0-exec = playerctl previous
+menu-0-1 = 
+menu-0-1-exec = playerctl stop
+menu-0-2 = 
+menu-0-2-exec = playerctl next
+
+[module/playing]
+type = custom/script
+exec = nowplay
+interval = 1
+click-left = playerctl play-pause
+
+[module/kbd]
+type = internal/xkeyboard
+format = <label-indicator>
+format-spacing = 0
+
+label-indicator = %name%
+label-indicator-padding = 1
+label-indicator-background = ${colors.background}
+
+[module/volume]
+type = internal/volume
+format-volume = <ramp-volume> <label-volume>
+label-volume-padding = 1
+
+label-muted = 🔇 MUTED
+label-muted-padding = 1
+label-muted-foreground = ${colors.danger}
+
+ramp-volume-foreground = ${colors.primary}
+ramp-volume-0 = 🔈
+ramp-volume-1 = 🔉
+ramp-volume-2 = 🔊
+
+[module/title]
+type = internal/xwindow
+label = %title%
+label-maxlen = 70
+
+[module/ram]
+type = internal/memory
+interval = 3
+
+label = %gb_free%
+label-padding = 1
+label-foreground = ${colors.foreground}
+format-prefix = ""
+format-prefix-foreground = ${colors.primary}
+
+[module/cpu]
+type = internal/cpu
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+interval = 1
+format = <ramp-coreload>
+format-padding = 1
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+ramp-coreload-0-foreground = ${colors.white}
+ramp-coreload-1-foreground = ${colors.white}
+ramp-coreload-2-foreground = ${colors.cyan}
+ramp-coreload-3-foreground = ${colors.cyan}
+ramp-coreload-4-foreground = ${colors.green}
+ramp-coreload-5-foreground = ${colors.blue}
+ramp-coreload-6-foreground = ${colors.blue}
+ramp-coreload-7-foreground = ${colors.magenta}
+
+[module/wm]
+type = internal/i3
+enable-click = true
+enable-scroll = true
+wrapping-scroll = false
+
+strip-wsnumbers = true
+label-mode = %mode%
+label-mode-padding = 2
+
+label-urgent-foreground = ${colors.danger}
+label-focused-foreground = ${colors.primary}
+
+label-urgent-padding = 1
+label-visible-padding = 1
+label-focused-padding = 1
+label-unfocused-padding = 1
+
+[module/time]
+type = internal/date
+interval = 30
+
+format =  <label>
+format-padding = 1
+format-foreground = ${colors.primary}
+
+label = %date%
+label-padding = 1
+label-foreground = ${colors.foreground}
+
+date = %H:%M
+date-alt = %d %b %Y
+
+[module/mpd]
+type = internal/mpd
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+format-online-padding = 4
+icon-play = 
+icon-pause = 
+icon-stop = 
+icon-prev = 
+icon-next = 
+icon-random = 
+icon-repeat = 
+
+toggle-on-foreground = ${colors.foreground}
+toggle-off-foreground = #55b6b6b6
+
+bar-progress-width = 24
+bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
+bar-progress-indicator = ·
+bar-progress-indicator-foreground = ${colors.primary}
+bar-progress-fill = ─
+bar-progress-fill-foreground = ${colors.primary}
+bar-progress-empty = ─
+bar-progress-empty-foreground = ${colors.foreground}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC0
+full-at = 92
+label-discharging-padding = 1
+label-charging-padding = 1
+label-full-padding = 1
+
+format-charging = <animation-charging> <label-charging>
+format-charging-foreground = ${colors.primary}
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-foreground = ${colors.secondary}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.primary}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.primary}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.primary}
+animation-charging-framerate = 500

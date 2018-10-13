@@ -1,0 +1,102 @@
+! XFT
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintfull
+
+
+! Looks
+URxvt*termName:             xterm
+URxvt*iso14755:             False
+URxvt*geometry:             80x24
+URxvt*depth:                32
+URxvt*loginShell:           false
+URxvt*foreground:           #e5e9f0
+URxvt*background:           #2e3440
+URxvt*scrollColor:          #333333
+URxvt*scrollStyle:          xterm
+URxvt*scrollTtyKeypress:    true
+URxvt*scrollBar:            false
+URxvt*scrollBar_right:      true
+URxvt*scrollBar_floating:   false
+URxvt*fading:               10
+URxvt*letterSpace:          0
+URxvt*cursorBlink:          true
+URxvt*cursorColor:          #e5e9f0
+URxvt*cursorUnderline:      false
+
+! open URL in browser
+URxvt.urlLauncher:          google-chrome-stable
+URxvt.matcher.button:       1
+URxvt.perl-ext-common:      matcher
+
+! Transparency
+URxvt.transparent:          false
+URxvt.tintColor:            white
+URxvt.shading:              10
+
+! Fonts
+URxvt*font:            xft:FuraMono Nerd Font:regular:size=12
+URxvt*imFont:          xft:FuraMono Nerd Font:regular:size=12
+URxvt*boldFont:        xft:FuraMono Nerd Font:bold:size=12
+URxvt*italicFont:      xft:FuraMono Nerd Font:italic:size=12
+URxvt*boldItalicFont:  xft:FuraMono Nerd Font:bold:italic:size=12
+
+
+!! Colors
+*fadeColor: #002b36
+*pointerColorBackground: #586e75
+*pointerColorForeground: #93a1a1
+
+! special
+*.foreground:   #e5e9f0
+*.background:   #2e3440
+*.cursorColor:  #e5e9f0
+
+! black
+*.color0:       #2e3440
+*.color8:       #4c566a
+
+! red
+*.color1:       #88c0d0
+*.color9:       #88c0d0
+
+! green
+*.color2:       #bf616a
+*.color10:      #bf616a
+
+! yellow
+*.color3:       #5e81ac
+*.color11:      #5e81ac
+
+! blue
+*.color4:       #ebcb8b
+*.color12:      #ebcb8b
+
+! magenta
+*.color5:       #a3be8c
+*.color13:      #a3be8c
+
+! cyan
+*.color6:       #d08770
+*.color14:      #d08770
+
+! white
+*.color7:       #e5e9f0
+*.color15:      #8fbcbb
+
+! xterm
+*font:            Fira Mono
+*faceName:        Fira Mono
+*faceSize:        14
+
+*borderWidth:           0
+*letterSpace:           0
+Xterm*utf8Fonts:        always
+xterm*loginShell:       false
+xterm*vt100*geometry:   80x24
+xterm*saveLines:        3000
+xterm*charClass:        33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName:         xterm-256color
+xterm*eightBitInput:    false
