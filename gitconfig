@@ -5,8 +5,6 @@
 	email = evilinfinite7@gmail.com
 	name = Fahad Hossain
 	signingkey = 1A900DF688634FA0
-[core]
-	autocrlf = input
 [commit]
 	gpgsign = true
 [filter "gitignore"]
@@ -15,4 +13,4 @@
 [include]
 	path = /home/fahad/.gitconfig-repos
 [push]
-	default = current
+	default = "current"
