@@ -5,15 +5,19 @@
 # - Git branch and dirty state (if inside a git repo)
 
 function _git_branch_name
-  echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+  echo (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
 end
 
 function _git_is_dirty
-  echo (command git status -s --ignore-submodules=dirty ^/dev/null)
+  echo (git status -s --ignore-submodules=dirty ^/dev/null)
 end
 
 function _git_has_upstream
-  git rev-parse --abbrev-ref '@{upstream}' ^/dev/null
+  echo (git rev-parse --abbrev-ref '@{upstream}' ^/dev/null)
+end
+
+function _git_rev_list
+  echo (git rev-list --left-right --count 'HEAD...@{upstream}' ^/dev/null)
 end
 
 function fish_prompt
@@ -37,21 +41,21 @@ function fish_prompt
   echo -n -s $cwd $normal
 
   # Show git branch and status
-  if [ (_git_branch_name) ]
+  if test (_git_branch_name)
     set -l git_branch (_git_branch_name)
     set git_info '('
 
-    if [ (_git_is_dirty) ]
+    if test (_git_is_dirty)
       set git_info $git_info $yellow $git_branch "*" $normal
     else
       set git_info $git_info $green $git_branch $normal
     end
 
-    if test -n (_git_has_upstream)
-      git rev-list --left-right --count 'HEAD...@{upstream}' | read -la git_status
+    if test (_git_has_upstream)
+      _git_rev_list | read -la git_status
 
       set -l left $git_status[1]
-      set -l right $git_status[2] 
+      set -l right $git_status[2]
 
       if test $left != 0
         set git_arrows "⇡"
