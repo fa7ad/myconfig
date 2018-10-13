@@ -366,8 +366,8 @@
   colorscheme OceanicNext
   let g:airline_theme='flatlandia'
 
-  set background=light
-  hi Normal guibg=none
+  set background=dark
+  " hi Normal guibg=none
 " }}}
 
 " Airline --- {{{
