@@ -1,14 +1,14 @@
 #!/usr/bin/env fish
 
-if [ (playerctl status) = "Stopped" ]
+if [ (playerctl status ^/dev/null) = "Stopped" ]
   echo " "
   exit
 end
 
-set title (playerctl metadata title)
-set artist (playerctl metadata artist)
+set title (playerctl metadata title ^/dev/null)
+set artist (playerctl metadata artist ^/dev/null)
 
-if [ (playerctl status) = "Playing" ]
+if [ (playerctl status ^/dev/null) = "Playing" ]
   set ic 
 else
   set ic 

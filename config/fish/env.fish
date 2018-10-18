@@ -22,6 +22,6 @@ set -gx ANDROID_HOME /ldata/ANDROID_SDK
 
 # Add to PATH
 # set -gx PATH $PATH /usr/local/sbin /usr/local/bin /usr/bin /usr/sbin
-set -gx PATH $PATH $HOME/.bin $HOME/.local/bin (string split \  $HOME/.gem/ruby/*/bin) $N_PREFIX/bin $GOPATH/bin $ANDROID_HOME/platform-tools $ANDROID_HOME/tools/bin
+set -gx PATH $PATH $HOME/.bin $HOME/.local/bin (string split \  $HOME/.gem/ruby/*/bin) $N_PREFIX/bin $GOPATH/bin $ANDROID_HOME/platform-tools $ANDROID_HOME/tools/bin /snap/bin
 
 set -U fish_user_paths $PATH
