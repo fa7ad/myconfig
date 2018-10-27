@@ -21,7 +21,13 @@ set -gx VIRTUALFISH_HOME /ldata/.virtualfish
 set -gx ANDROID_HOME /ldata/ANDROID_SDK
 
 # Add to PATH
-# set -gx PATH $PATH /usr/local/sbin /usr/local/bin /usr/bin /usr/sbin
-set -gx PATH $PATH $HOME/.bin $HOME/.local/bin (string split \  $HOME/.gem/ruby/*/bin) $N_PREFIX/bin $GOPATH/bin $ANDROID_HOME/platform-tools $ANDROID_HOME/tools/bin /snap/bin $HOME/.yarn/bin $HOME/.config/yarn/global/node_modules/.bin
+set -l ruby_paths (string split \  $HOME/.gem/ruby/*/bin)
+set -l user_paths $HOME/.bin $HOME/.local/bin
+set -l android_paths $ANDROID_HOME/platform-tools $ANDROID_HOME/tools/bin
+set -l node_paths $N_PREFIX/bin $HOME/.yarn/bin $HOME/.config/yarn/global/node_modules/.bin
+set -l snap_paths /snap/bin /var/lib/snapd/snap/bin
+
+
+set -gx PATH $PATH $user_paths $ruby_paths $android_paths $node_paths $GOPATH/bin $snap_paths
 
 set -U fish_user_paths $PATH
