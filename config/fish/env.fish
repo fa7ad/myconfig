@@ -23,7 +23,7 @@ set -gx ANDROID_HOME /ldata/ANDROID_SDK
 # Add to PATH
 set -l ruby_paths (string split \  $HOME/.gem/ruby/*/bin)
 set -l user_paths $HOME/.bin $HOME/.local/bin
-set -l android_paths $ANDROID_HOME/platform-tools $ANDROID_HOME/tools/bin
+set -l android_paths $ANDROID_HOME/platform-tools $ANDROID_HOME/tools/bin $ANDROID_HOME/emulator 
 set -l node_paths $N_PREFIX/bin $HOME/.yarn/bin $HOME/.config/yarn/global/node_modules/.bin
 set -l snap_paths /snap/bin /var/lib/snapd/snap/bin
 

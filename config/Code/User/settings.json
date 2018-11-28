@@ -71,5 +71,8 @@
   "emmet.includeLanguages": {
     "babeljavascript": "javascriptreact",
     "javascript": "javascriptreact"
+  },
+  "files.associations": {
+    "TODO": "markdown"
   }
 }
