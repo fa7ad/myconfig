@@ -1,0 +1,2 @@
+#!/usr/bin/env fish
+tar vczf - --exclude='**node_modules*' $argv[1] -P | pv -s (du -sb $argv[1] | awk '{print $1}') | gzip > $argv[2]

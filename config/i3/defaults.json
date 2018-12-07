@@ -1,12 +1,12 @@
 {
-  "1: ": ["albert", ["toggle"]],
+  "1: ": ["albert", "toggle"],
   "2: ": ["google-chrome-stable"],
   "3: ": ["i3-sensible-terminal"],
   "4: ": ["code"],
   "5: ": ["nautilus"],
-  "6: ?": ["albert", ["toggle"]],
+  "6: ?": ["albert", "toggle"],
   "7: ": ["evince"],
-  "8: ?": ["albert", ["toggle"]],
-  "9: ": ["fish", ["-c", "\"open http://localhost:6680/iris\""]],
-  "10: ": ["mpv --idle"]
+  "8: ?": ["albert", "toggle"],
+  "9: ": ["xdg-open", "http://localhost:6680/iris"],
+  "10: ": ["mpv", "--idle"]
 }

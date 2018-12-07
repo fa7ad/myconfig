@@ -14,5 +14,6 @@ cp.execFile('i3-msg', ['-t', 'get_workspaces'], (err, stdout, stderr) => {
 
   const output = JSON.parse(stdout)
   const [active] = output.filter(x => x.focused)
-  cp.execFileSync(...defaults[active.name])
+  const [cmd, ...args] = defaults[active.name]
+  cp.execFileSync(cmd, args)
 })
