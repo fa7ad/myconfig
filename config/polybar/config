@@ -68,7 +68,8 @@ label-indicator-padding = 1
 label-indicator-background = ${colors.background}
 
 [module/volume]
-type = internal/volume
+type = internal/pulseaudio
+use-ui-max = true
 format-volume = <ramp-volume> <label-volume>
 label-volume-padding = 1
 

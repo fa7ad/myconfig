@@ -22,7 +22,7 @@ set $alt Mod1
 set $locker ~/.bin/lock.sh
 
 # set file manager
-set $file_man dolphin
+set $file_man nautilus
 
 # Used for moving floating windows around
 floating_modifier $mod

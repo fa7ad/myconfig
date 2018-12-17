@@ -3,14 +3,14 @@ numlockx on
 setxkbmap -layout us -option compose:menu
 
 # nautilus fuckery
-# gsettings set org.gnome.desktop.background show-desktop-icons false
+gsettings set org.gnome.desktop.background show-desktop-icons false
 
 # background and compositor
 compton -b --config ~/.compton.conf
 ~/.fehbg
 
 # Authentication agent
-/usr/lib/polkit-kde-authentication-agent-1 &
+/usr/lib/xfce-polkit/xfce-polkit &
 
 # Related to locking and suspend mechanism and MPD
 mopidy &
@@ -27,9 +27,4 @@ i3-sensible-terminal
 gtk-launch clipit
 albert &
 transmission-gtk -m &
-
-# kwallet
-kuiserver5 &
-kwalletd5 &
-kwalletmanager5 &
 
