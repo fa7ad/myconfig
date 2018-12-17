@@ -56,7 +56,7 @@ for_window [workspace=$wss9] floating enable
 
 # floating windows
 for_window [class="[mM]pv"] floating enable
-for_window [class="[gG]alculator"] floating enable
+for_window [class="[gG]nome-calculator"] floating enable
 for_window [class="^[vV](lc|LC).*"] floating enable
 
 # borderless window
