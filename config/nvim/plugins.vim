@@ -26,26 +26,23 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/denite.nvim'
   Plug 'neomake/neomake'
+  Plug 'lambdalisue/suda.vim'
 " }}}
 
 " Autocomplete {{{
   Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
   Plug 'Shougo/neoinclude.vim'
-  Plug 'zchee/deoplete-jedi', {'on_ft': 'python'}
-  Plug 'davidhalter/jedi-vim', {'on_ft': 'python'}
   Plug 'Shougo/neosnippet.vim' | Plug 'Shougo/neosnippet-snippets' | Plug 'honza/vim-snippets'
 " }}}
 
 " Looks --- {{{
   Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
   Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-  Plug 'ujihisa/unite-colorscheme'
-  Plug 'jordwalke/flatlandia'
-  Plug 'trevordmiller/nova-vim'
-  Plug 'mhartington/oceanic-next'
+  Plug 'liuchengxu/space-vim-dark'
 " }}}
 
 " Git --- {{{

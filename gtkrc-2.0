@@ -1,15 +1,15 @@
 # File created by KDE Gtk Config
 # Configs for GTK2 programs 
 
-include "/usr/share/themes/Adapta-Nokto-Eta/gtk-2.0/gtkrc"
+include "/usr/share/themes/Sweet-Dark/gtk-2.0/gtkrc"
 style "user-font" 
 {
 	font_name="Roboto Regular"
 }
 widget_class "*" style "user-font"
 gtk-font-name="Roboto Regular 10"
-gtk-theme-name="Adapta-Nokto-Eta"
-gtk-icon-theme-name="Papirus"
+gtk-theme-name="Sweet-Dark"
+gtk-icon-theme-name="Boston"
 gtk-fallback-icon-theme="Adwaita"
 gtk-cursor-theme-name="Numix-Cursor"
 gtk-toolbar-style=GTK_TOOLBAR_ICONS

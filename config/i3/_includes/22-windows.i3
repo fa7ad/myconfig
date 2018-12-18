@@ -32,7 +32,7 @@ assign [class="[eE]clipse"] $ws4
 assign [class="[qQ]t[cC]reator"] $ws4
 assign [class="jetbrains-studio"] $ws4
 
-assign [class="nautilus"] $ws5
+assign [class="[nN]autilus"] $ws5
 
 assign [class="Gimp-2.10"] $ws6
 

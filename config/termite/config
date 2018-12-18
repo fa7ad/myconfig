@@ -36,49 +36,50 @@ filter_unmatched_urls = true
 [colors]
 
 # special
-foreground      = #e9e9f4
-foreground_bold = #e9e9f4
-cursor          = #e9e9f4
-background      = #282936
+foreground      = #b4e1fd
+foreground_bold = #b4e1fd
+cursor          = #b4e1fd
+background      = #161925
 
 # black
-color0  = #282936
-color8  = #626483
+color0  = #363636
+color8  = #424242
 
 # red
-color1  = #ea51b2
-color9  = #ea51b2
+color1  = #ff0883
+color9  = #ff1e8e
 
 # green
-color2  = #ebff87
-color10 = #ebff87
+color2  = #83ff08
+color10 = #8eff1e
 
 # yellow
-color3  = #00f769
-color11 = #00f769
+color3  = #ff8308
+color11 = #ff8e1e
 
 # blue
-color4  = #62d6e8
-color12 = #62d6e8
+color4  = #0883ff
+color12 = #1e8eff
 
 # magenta
-color5  = #b45bcf
-color13 = #b45bcf
+color5  = #8308ff
+color13 = #8e1eff
 
 # cyan
-color6  = #a1efe4
-color14 = #a1efe4
+color6  = #08ff83
+color14 = #1eff8e
 
 # white
-color7  = #e9e9f4
-color15 = #f7f7fb
+color7  = #b6b6b6
+color15 = #c2c2c2
+
 
 [hints]
 font = FuraMono Nerd Font Mono 12
-background = #e9e9f4
-foreground = #282936
-active_foreground = #e9e9f4
-active_background = #282936
+foreground = #b4e1fd
+background = #161925
+active_background = #b4e1fd
+active_foreground = #161925
 #padding = 2
 #border = #3f3f3f
 #border_width = 0.5

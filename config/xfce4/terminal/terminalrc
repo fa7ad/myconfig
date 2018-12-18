@@ -25,12 +25,14 @@ MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 BackgroundDarkness=0.850000
-ColorForeground=#e9e9f4
-ColorBackground=#282936
+ColorForeground=#b4e1fd
 ColorCursor=x
-ColorPalette=#282936;#ea51b2;#ebff87;#00f769;#62d6e8;#b45bcf;#a1efe4;#e9e9f4;#626483;#ea51b2;#ebff87;#00f769;#62d6e8;#b45bcf;#a1efe4;#f7f7fb
+ColorPalette=#363636;#ff0883;#83ff08;#ff8308;#0883ff;#8308ff;#08ff83;#b6b6b6;#424242;#ff1e8e;#8eff1e;#ff8e1e;#1e8eff;#8e1eff;#1eff8e;#c2c2c2
 FontUseSystem=TRUE
 ScrollingUnlimited=TRUE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ScrollingOnOutput=FALSE
+MiscShowRelaunchDialog=TRUE
+MiscNewTabAdjacent=FALSE
+ColorBackground=#161619192525
 

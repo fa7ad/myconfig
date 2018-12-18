@@ -26,7 +26,7 @@
   nmap <leader>q :q<cr>
 
   " :SW sudo saves the file (useful for handling the permission-denied error)
-  command SW w !sudo tee % > /dev/null
+  command SW w suda://%
 
   " I make this mistake way too often
   command W w
@@ -363,11 +363,19 @@
 " }}}
 
 " Color Scheme --- {{{
-  colorscheme OceanicNext
-  let g:airline_theme='flatlandia'
+  colorscheme space-vim-dark
+  let g:airline_theme='base16_spacemacs'
 
-  set background=dark
-  " hi Normal guibg=none
+  " set background=dark
+  hi Normal guibg=none ctermbg=none
+  hi Comment guifg=#5C6370 ctermfg=59 cterm=italic
+" }}}
+
+" IndentLine {{{
+  let g:indentLine_char='▏'
+  let g:indentLine_first_char='▏'
+  " let g:indentLine_showFirstIndentLevel = 1
+  " let g:indentLine_setColors = 0
 " }}}
 
 " Airline --- {{{
