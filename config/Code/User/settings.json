@@ -74,5 +74,6 @@
   },
   "files.associations": {
     "TODO": "markdown"
-  }
+  },
+  "window.titleBarStyle": "native"
 }
