@@ -28,6 +28,6 @@ set -l node_paths $N_PREFIX/bin $HOME/.yarn/bin $HOME/.config/yarn/global/node_m
 set -l snap_paths /snap/bin /var/lib/snapd/snap/bin
 
 
-set -gx PATH $PATH $user_paths $ruby_paths $android_paths $node_paths $GOPATH/bin $snap_paths
-
+set -gx PATH $PATH $user_paths $ruby_paths $android_paths $node_paths $GOPATH/bin $snap_path
+vardedupe PATH
 set -U fish_user_paths $PATH
