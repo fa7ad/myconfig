@@ -75,5 +75,6 @@
   "files.associations": {
     "TODO": "markdown"
   },
-  "window.titleBarStyle": "native"
+  "window.titleBarStyle": "native",
+  "emmet.triggerExpansionOnTab": true
 }

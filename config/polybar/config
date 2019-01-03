@@ -23,7 +23,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 underline-size = 0
 overline-size = 0
-font-0 = "Overpass:pixelsize=10:antialias=true;1"
+font-0 = "Google Sans Medium:pixelsize=9:antialias=true;1"
 font-1 = "FontAwesome:pixelsize=10:antialias=true;1"
 font-2 = Symbola:pixelsize=10;1
 font-3 = MaterialIcons:size=10;1

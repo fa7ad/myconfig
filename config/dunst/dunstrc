@@ -67,7 +67,7 @@
     idle_threshold = 120
 
     ### Text ###
-    font = Overpass Regular 12
+    font = Google Sans Medium 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -141,7 +141,7 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/Papirus/32x32/apps/:/usr/share/icons/Papirus/32x32/status/:/usr/share/icons/Papirus/32x32/devices/:/usr/share/icons/gnome/32x32/status/:/usr/share/icons/gnome/32x32/devices/
+    icon_path = /usr/share/icons/Papirus/32x32/apps/:/usr/share/icons/Papirus/32x32/status/:/usr/share/icons/Papirus/32x32/devices/:/usr/share/icons/gnome/32x32/status/:/usr/share/icons/gnome/32x32/devices/
 
     ### History ###
 
@@ -195,24 +195,24 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#232323"
-    foreground = "#dbdad4"
+    background = "#161925"
+    foreground = "#C50ED2"
     timeout = 3
     # Icon for notifications with low urgency, uncomment to enable
     # icon = mail-unread
 
 
 [urgency_normal]
-    background = "#232323"
-    foreground = "#dbdad4"
+    background = "#161925"
+    foreground = "#F3E9FD"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     icon = mail-unread
 
 
 [urgency_critical]
-    background = "#dbdad4"
-    foreground = "#232323"
+    background = "#161925"
+    foreground = "#F25056"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     # icon = error
