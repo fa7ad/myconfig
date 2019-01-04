@@ -2,8 +2,10 @@ swipe:
   3: 
     left: 
       command: 'i3-msg workspace prev'
+      interval: 1
     right: 
       command: 'i3-msg workspace next'
+      interval: 1
     up: 
       command: 'xdotool key ctrl+plus'
     down: 
