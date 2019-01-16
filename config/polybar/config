@@ -43,7 +43,7 @@ font-4 = "Font Awesome 5 Free:size=10;3"
 
 modules-left = wm pdl plctl playing volume 
 modules-center = title
-modules-right = pdl kbd ram cpu battery pdl time
+modules-right = pdl kbd ram cpu pdl time battery
 
 fixed-center = true
 
@@ -92,7 +92,7 @@ format = <label-indicator>
 label-indicator = %name:0:4:%
 label-indicator-padding = 2
 label-indicator-foreground = ${sweet.fg}
-label-indicator-background = ${sweet.bg}
+label-indicator-background = ${sweet.bg2}
 
 [module/volume]
 type = internal/pulseaudio
