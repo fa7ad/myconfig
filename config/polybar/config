@@ -127,18 +127,18 @@ type = internal/memory
 interval = 3
 
 label = %gb_free%
-label-padding = 2
+label-padding = 1
 label-foreground = ${sweet.fg}
 label-background = ${sweet.bg}
 format-prefix = 
-format-prefix-padding = 1
+format-prefix-padding = 2
 format-prefix-foreground = ${sweet.fg}
 format-prefix-background = ${sweet.bg}
 
 [module/cpu]
 type = internal/cpu
-format-prefix = " "
-format-prefix-padding = 1
+format-prefix = 
+format-prefix-padding = 2
 format-prefix-foreground = ${sweet.fg}
 format-prefix-background = ${sweet.bg}
 format-background = ${sweet.bg}
