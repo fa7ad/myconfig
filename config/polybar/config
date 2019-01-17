@@ -213,7 +213,7 @@ date-alt = %d %b %Y
 type = internal/battery
 battery = BAT0
 adapter = AC0
-full-at = 0
+full-at = 100
 
 format-charging-padding = 2
 format-discharging-padding = 2
