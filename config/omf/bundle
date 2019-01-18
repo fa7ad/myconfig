@@ -2,6 +2,5 @@ package archlinux
 package bang-bang
 package bass
 package hub
-package sudope
 theme default
 theme https://github.com/fa7ad/fish-clear
