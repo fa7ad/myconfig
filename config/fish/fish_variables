@@ -185,4 +185,3 @@ SETUVAR fish_user_abbreviations:axl\x20axel\x20\x2dan\x204\x1esystop\x20sudo\x20
 SETUVAR fish_user_paths:/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/home/fahad/go/bin\x1e/opt/android\x2dsdk/tools\x1e/opt/android\x2dsdk/tools/bin\x1e/opt/flutter/bin\x1e/usr/lib/jvm/default/bin\x1e/usr/local/n/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/fahad/\x2ebin\x1e/home/fahad/\x2elocal/bin\x1e/home/fahad/\x2egem/ruby/2\x2e4\x2e0/bin\x1e/home/fahad/\x2egem/ruby/2\x2e5\x2e0/bin
 SETUVAR git_aliases_set:\x1d
 SETUVAR pikaur_aliases:\x1d
-SETUVAR trizen_aliases:\x1d
