@@ -2,6 +2,7 @@
 # VERSION: 3.0
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
+SETUVAR __fish_init_3_x:\x1d
 SETUVAR _fish_abbr_Gcr:git\x20create
 SETUVAR _fish_abbr_axl:axel\x20\x2dan\x204
 SETUVAR _fish_abbr_g:git

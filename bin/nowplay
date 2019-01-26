@@ -1,17 +1,18 @@
-#!/usr/bin/env fish
+#!/usr/bin/bash
+exec 2> /dev/null
 
-if [ (playerctl status ^/dev/null) = "Stopped" ]
-  echo " "
+if [ "$(playerctl status)" = "Stopped"  -o -z "$(playerctl status)" ]; then
+  echo ""
   exit
-end
+fi
 
-set title (playerctl metadata title ^/dev/null)
-set artist (playerctl metadata artist ^/dev/null)
+title=$(playerctl metadata title)
+artist=$(playerctl metadata artist)
 
-if [ (playerctl status ^/dev/null) = "Playing" ]
-  set ic 
+if [ "$(playerctl status)" = "Playing" ]; then
+  ic=
 else
-  set ic 
-end
+  ic=
+fi
 
-printf "%s %s - %s" $ic $artist (string sub -l 55 $title)
+printf "%s %s - %s" $ic $artist ${title:0:49}
