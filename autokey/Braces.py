@@ -1,7 +1,7 @@
 choices = ['<shift>+{', '<shift>+}']
 
 if not store.has_key("bswitch"):
-    store.set_value("bswitch", False)
+    store.set_value("bswitch", True)
 
 switch = store.get_value("bswitch")
 

@@ -1,7 +1,7 @@
 choices = ['(', ')']
 
 if not store.has_key("pswitch"):
-    store.set_value("pswitch", False)
+    store.set_value("pswitch", True)
 
 switch = store.get_value("pswitch")
 
