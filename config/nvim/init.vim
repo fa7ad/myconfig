@@ -365,6 +365,7 @@
 " Color Scheme --- {{{
   colorscheme space-vim-dark
   let g:airline_theme='base16_spacemacs'
+  let g:colorizer_auto_color = 1
 
   " set background=dark
   hi Normal guibg=none ctermbg=none

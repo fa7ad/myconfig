@@ -7,6 +7,7 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
   Plug 'sgur/vim-editorconfig'
   Plug 'valloric/MatchTagAlways', {'on_ft': 'html'}
   Plug 'dag/vim-fish'
+  Plug 'chrisbra/Colorizer'
 " }}}
 
 " Coding Style --- {{{

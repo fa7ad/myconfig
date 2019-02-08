@@ -195,8 +195,8 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#161925"
-    foreground = "#C50ED2"
+    background = "#00F7D0"
+    foreground = "#161925"
     timeout = 3
     # Icon for notifications with low urgency, uncomment to enable
     # icon = mail-unread
