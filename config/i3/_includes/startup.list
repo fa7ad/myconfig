@@ -28,4 +28,3 @@ i3-sensible-terminal
 gtk-launch clipit
 albert &
 transmission-gtk -m &
-autokey-gtk &
