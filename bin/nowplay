@@ -1,7 +1,9 @@
 #!/usr/bin/bash
 exec 2> /dev/null
 
-if [ "$(playerctl status)" = "Stopped"  -o -z "$(playerctl status)" ]; then
+status=$(playerctl status)
+
+if [ "$status" = "Stopped"  -o -z "$status" ]; then
   echo ""
   exit
 fi
@@ -9,10 +11,10 @@ fi
 title=$(playerctl metadata title)
 artist=$(playerctl metadata artist)
 
-if [ "$(playerctl status)" = "Playing" ]; then
+ic=
+
+if [ "$status" = "Playing" ]; then
   ic=
-else
-  ic=
 fi
 
-printf "%s %s - %s" $ic $artist ${title:0:49}
+echo -n "$ic $artist - ${title:0:49}"
