@@ -1,6 +1,6 @@
 #keyboard stuff
 numlockx on
-setxkbmap -layout us -option compose:menu
+# setxkbmap -layout us -option compose:menu
 fusuma -d
 
 # nautilus fuckery
@@ -28,3 +28,4 @@ i3-sensible-terminal
 gtk-launch clipit
 albert &
 transmission-gtk -m &
+xdg-open about:newtab
