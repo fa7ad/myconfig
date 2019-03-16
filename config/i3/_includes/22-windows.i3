@@ -16,6 +16,7 @@ assign [class="[cC]hromium"] $ws2
 assign [class="[fF]irefox"] $ws2
 assign [class="[gG]oogle-chrome.*?"] $ws2
 assign [class="[Vv]ivaldi.*?"] $ws2
+assign [class="[oO]pera.*?"] $ws2
 
 assign [class="[xX]fce4-terminal"] $ws3
 assign [class="[gG]nome-terminal"] $ws3
