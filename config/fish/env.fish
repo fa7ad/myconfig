@@ -26,6 +26,6 @@ set -l user_paths $HOME/.bin $HOME/.local/bin
 set -l node_paths $N_PREFIX/bin
 set -l yarn_paths $HOME/.yarn/bin $HOME/.config/yarn/global/node_modules/.bin
 
-set -gx PATH $PATH $user_paths $ruby_paths $node_paths $GOPATH/bin $snap_path
+set -gx PATH $PATH $user_paths $ruby_paths $node_paths $GOPATH/bin $snap_path $yarn_paths
 vardedupe PATH
 set -U fish_user_paths $PATH
