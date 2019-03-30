@@ -32,6 +32,7 @@ assign [class="Subl3"] $ws4
 assign [class="[eE]clipse"] $ws4
 assign [class="[qQ]t[cC]reator"] $ws4
 assign [class="jetbrains-studio"] $ws4
+assign [class="Apache NetBeans.*"] $ws4
 
 assign [class="[nN]autilus"] $ws5
 

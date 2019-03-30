@@ -1,6 +1,6 @@
 #keyboard stuff
 numlockx on
-# setxkbmap -layout us -option compose:menu
+setxkbmap -layout us -option compose:menu
 fusuma -d
 
 # nautilus fuckery
