@@ -3,26 +3,34 @@
 if set -q $argv
   exit 1
 end
-
-# set resPath 'import sys;import os;print(os.path.abspath(sys.argv[-1]))'
-
-# set pic (node -p "require('path').resolve(process.argv.slice(-1)[0])" $argv)
-# set pic (python -c $resPath $argv)
-
 set walld $HOME/.cache/wallpapers
-
 rm -rf $walld
 mkdir -p $walld
-
 set pic $argv[1]
-
-cp $argv $walld
-
-# feh --bg-scale $pic
-# gsettings set org.gnome.desktop.screensaver picture-uri "file://"$pic
-# gsettings set org.gnome.desktop.background picture-uri "file://"$pic
-
+cp $argv[1] $walld
 betterlockscreen -u $walld
-betterlockscreen -w $argv[2]
 
+rm -f /usr/share/locker/*
+cp $walld/* /usr/share/locker/
+chmod 755 /usr/share/locker/ -R
+
+wal -i $pic -g
+/opt/oomox/plugins/theme_arc/arc-theme/change_color.sh --autogen-opts '--disable-gnome-shell --disable-cinnamon' -o wal $HOME/.cache/wal/colors-oomox
+
+set colors $HOME/.cache/wal/colors.Xresources
+sed -i '/!!##/q' $HOME/.Xresources
+cat $colors | tee -a $HOME/.Xresources > /dev/null
+xrdb -merge $HOME/.Xresources
+echo Copied Pywal colors to Xresources
+
+set file "$HOME/.local/share/xfce4/terminal/colorschemes/wal.theme"
+set xfce (termcolors -i xresources -o xfce < $HOME/.Xresources)
+rm -f $file
+echo $xfce | sed 's/\s/\n/g' | tee $file > /dev/null
+sed -i 's|^\[Conf.*\]$|[Scheme]\nName=0WAL|' $file
+echo Xresources converted to XFCE Terminal
+
+xfce4-color-switch wal
+
+betterlockscreen -w $argv[2]
 echo Wallpaper set to \'$pic\'

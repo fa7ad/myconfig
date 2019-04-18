@@ -24,14 +24,24 @@ fg1 = #F3E9FD
 fg2 = #ffffff
 primary = #C50ED2
 
+[wal]
+bg = ${xrdb:color0:#222}
+bg2 = ${xrdb:color0:#222}
+fg = ${xrdb:color7:#222}
+fg2 = ${xrdb:color7:#222}
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color3:#222}
+
+
 [bar/top]
 monitor = ${env:MONITOR:eDP-1}
 width = 100%
 height = 30
 offset-x = 0
 offset-y = 0
-background = #00f0f0f
-foreground = ${sweet.fg}
+background = ${wal.bg}
+foreground = ${wal.fg}
 
 underline-size = 0
 overline-size = 0
@@ -41,22 +51,22 @@ font-2 = "Font Awesome 5 Brands:size=10;3"
 font-3 = "Font Awesome 5 Free Solid:size=10;3"
 font-4 = "Font Awesome 5 Free:size=10;3"
 
-modules-left = wm pdl plctl playing volume 
+modules-left = wm pdl plctl playing volume
 modules-center = title
 modules-right = pdl kbd ram cpu pdl time battery
 
 fixed-center = true
 
 tray-position = right
-tray-background = ${sweet.bg}
+tray-background = ${wal.bg}
 tray-padding = 5
 ; tray-transparent = true
 
 [module/pdl]
 type               = custom/text
 content            = |
-content-foreground = #000f0f0f
-content-background = #000f0f0f
+content-foreground = ${wal.bg}
+content-background = ${wal.bg}
 content-padding = 24
 
 [module/plctl]
@@ -66,8 +76,8 @@ format-padding = 2
 label-open = ""
 label-close = "  "
 label-separator = "  "
-format-foreground = ${sweet.fg}
-format-background = ${sweet.bg}
+format-foreground = ${wal.fg}
+format-background = ${wal.bg}
 
 menu-0-0 = 
 menu-0-0-exec = playerctl previous
@@ -81,8 +91,8 @@ type = custom/script
 exec = nowplay
 interval = 1
 click-left = playerctl play-pause
-format-background = ${sweet.bg}
-format-foreground = ${sweet.fg}
+format-background = ${wal.bg}
+format-foreground = ${wal.fg}
 format-padding = 2
 
 [module/kbd]
@@ -91,26 +101,26 @@ format = <label-indicator>
 
 label-indicator = %name:0:4:%
 label-indicator-padding = 2
-label-indicator-foreground = ${sweet.fg}
-label-indicator-background = ${sweet.bg2}
+label-indicator-foreground = ${wal.fg}
+label-indicator-background = ${wal.bg}
 
 [module/volume]
 type = internal/pulseaudio
 use-ui-max = true
 format-volume = <ramp-volume> <label-volume>
 
-format-volume-background = ${sweet.bg3}
-format-volume-foreground = ${sweet.fg2}
+format-volume-background = ${wal.bg}
+format-volume-foreground = ${wal.fg2}
 format-volume-padding = 3
 
-label-volume-foreground = ${sweet.fg2}
+label-volume-foreground = ${wal.fg2}
 
 label-muted =  OFF
-label-muted-foreground = ${sweet.fg2}
-label-muted-background = ${sweet.primary}
+label-muted-foreground = ${wal.fg2}
+label-muted-background = ${wal.primary}
 label-muted-padding = 3
 
-ramp-volume-foreground = ${sweet.fg2}
+ramp-volume-foreground = ${wal.fg2}
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
@@ -119,7 +129,7 @@ ramp-volume-2 = 
 type = internal/xwindow
 label = %title:0:45:%
 label-maxlen = 45
-label-background = ${sweet.bg}
+label-background = ${wal.bg}
 label-padding = 3
 
 [module/ram]
@@ -128,20 +138,20 @@ interval = 3
 
 label = %gb_free%
 label-padding = 1
-label-foreground = ${sweet.fg}
-label-background = ${sweet.bg}
+label-foreground = ${wal.fg}
+label-background = ${wal.bg}
 format-prefix = 
 format-prefix-padding = 2
-format-prefix-foreground = ${sweet.fg}
-format-prefix-background = ${sweet.bg}
+format-prefix-foreground = ${wal.fg}
+format-prefix-background = ${wal.bg}
 
 [module/cpu]
 type = internal/cpu
 format-prefix = 
 format-prefix-padding = 2
-format-prefix-foreground = ${sweet.fg}
-format-prefix-background = ${sweet.bg}
-format-background = ${sweet.bg}
+format-prefix-foreground = ${wal.fg}
+format-prefix-background = ${wal.bg}
+format-background = ${wal.bg}
 interval = 1
 format = <ramp-coreload>
 format-padding = 2
@@ -153,14 +163,14 @@ ramp-coreload-4 = ▅
 ramp-coreload-5 = ▆
 ramp-coreload-6 = ▇
 ramp-coreload-7 = █
-ramp-coreload-0-foreground = ${sweet.fg}
-ramp-coreload-1-foreground = ${sweet.fg}
-ramp-coreload-2-foreground = ${sweet.fg}
-ramp-coreload-3-foreground = ${sweet.fg1}
-ramp-coreload-4-foreground = ${sweet.fg1}
-ramp-coreload-5-foreground = ${sweet.fg2}
-ramp-coreload-6-foreground = ${sweet.fg2}
-ramp-coreload-7-foreground = ${sweet.primary}
+ramp-coreload-0-foreground = ${wal.fg}
+ramp-coreload-1-foreground = ${wal.fg}
+ramp-coreload-2-foreground = ${wal.fg}
+ramp-coreload-3-foreground = ${wal.fg}
+ramp-coreload-4-foreground = ${wal.fg}
+ramp-coreload-5-foreground = ${wal.fg2}
+ramp-coreload-6-foreground = ${wal.fg2}
+ramp-coreload-7-foreground = ${wal.primary}
 
 [module/wm]
 type = internal/i3
@@ -169,28 +179,28 @@ enable-scroll = true
 wrapping-scroll = false
 strip-wsnumbers = true
 
-label-mode-background = ${sweet.bg}
-label-mode-foreground = ${sweet.fg}
+label-mode-background = ${wal.bg}
+label-mode-foreground = ${wal.fg}
 label-mode-padding    = 3
 
 label-focused            = %name%
-label-focused-background = ${sweet.primary}
-label-focused-foreground = ${sweet.fg}
+label-focused-background = ${wal.primary}
+label-focused-foreground = ${wal.fg}
 label-focused-padding    = 3
 
 label-unfocused            = %name%
-label-unfocused-background = ${sweet.bg}
-label-unfocused-foreground = ${sweet.fg}
+label-unfocused-background = ${wal.bg}
+label-unfocused-foreground = ${wal.fg}
 label-unfocused-padding    = 3
 
 label-visible            = %name%
-label-visible-background = ${sweet.bg}
-label-visible-foreground = ${sweet.fg}
+label-visible-background = ${wal.bg}
+label-visible-foreground = ${wal.fg}
 label-visible-padding    = 3
 
 label-urgent            = %name%
-label-urgent-background = ${sweet.bg}
-label-urgent-foreground = ${sweet.primary}
+label-urgent-background = ${wal.bg}
+label-urgent-foreground = ${wal.primary}
 label-urgent-padding    = 3
 
 [module/time]
@@ -199,12 +209,12 @@ interval = 30
 
 format =  <label>
 format-padding = 2
-format-foreground = ${sweet.fg}
-format-background = ${sweet.bg2}
+format-foreground = ${wal.fg}
+format-background = ${wal.bg2}
 
 label = %date%
 label-padding = 1
-label-foreground = ${sweet.fg}
+label-foreground = ${wal.fg}
 
 date = %H:%M
 date-alt = %d %b %Y
@@ -220,25 +230,25 @@ format-discharging-padding = 2
 format-full-padding = 2
 
 format-charging = <animation-charging><label-charging>
-format-charging-foreground = ${sweet.fg}
-format-charging-background = ${sweet.bg}
+format-charging-foreground = ${wal.fg}
+format-charging-background = ${wal.bg}
 
 format-discharging = <ramp-capacity><label-discharging>
-format-discharging-foreground = ${sweet.fg}
-format-discharging-background = ${sweet.bg}
+format-discharging-foreground = ${wal.fg}
+format-discharging-background = ${wal.bg}
 
 format-full-prefix = 
 format-full-prefix-padding = 1
-format-full-foreground = ${sweet.fg}
-format-full-background = ${sweet.bg}
+format-full-foreground = ${wal.fg}
+format-full-background = ${wal.bg}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-foreground = ${sweet.fg}
-ramp-capacity-background = ${sweet.bg}
+ramp-capacity-foreground = ${wal.fg}
+ramp-capacity-background = ${wal.bg}
 ramp-capacity-padding = 1
 
 animation-charging-0 = 
