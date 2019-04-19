@@ -33,6 +33,19 @@ filter_unmatched_urls = true
 # emit escape sequences for extra modified keys
 #modify_other_keys = false
 
+[hints]
+font = FuraMono Nerd Font Mono 12
+foreground = #b4e1fd
+background = #161925
+active_background = #b4e1fd
+active_foreground = #161925
+#padding = 2
+#border = #3f3f3f
+#border_width = 0.5
+#roundness = 2.0
+
+
+##!!
 [colors]
 
 # special
@@ -74,13 +87,3 @@ color7  = #b6b6b6
 color15 = #c2c2c2
 
 
-[hints]
-font = FuraMono Nerd Font Mono 12
-foreground = #b4e1fd
-background = #161925
-active_background = #b4e1fd
-active_foreground = #161925
-#padding = 2
-#border = #3f3f3f
-#border_width = 0.5
-#roundness = 2.0

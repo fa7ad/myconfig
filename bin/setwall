@@ -4,6 +4,10 @@ if set -q $argv
   exit 1
 end
 set walld $HOME/.cache/wallpapers
+set colors $HOME/.cache/wal/colors.Xresources
+set xfce_theme_file "$HOME/.local/share/xfce4/terminal/colorschemes/wal.theme"
+set termite_conf "$HOME/.config/termite/config"
+
 rm -rf $walld
 mkdir -p $walld
 set pic $argv[1]
@@ -17,20 +21,22 @@ chmod 755 /usr/share/locker/ -R
 wal -i $pic -g
 /opt/oomox/plugins/theme_arc/arc-theme/change_color.sh --autogen-opts '--disable-gnome-shell --disable-cinnamon' -o wal $HOME/.cache/wal/colors-oomox
 
-set colors $HOME/.cache/wal/colors.Xresources
 sed -i '/!!##/q' $HOME/.Xresources
 cat $colors | tee -a $HOME/.Xresources > /dev/null
 xrdb -merge $HOME/.Xresources
 echo Copied Pywal colors to Xresources
 
-set file "$HOME/.local/share/xfce4/terminal/colorschemes/wal.theme"
 set xfce (termcolors -i xresources -o xfce < $HOME/.Xresources)
-rm -f $file
-echo $xfce | sed 's/\s/\n/g' | tee $file > /dev/null
-sed -i 's|^\[Conf.*\]$|[Scheme]\nName=0WAL|' $file
+set termite (termcolors -i xresources -o termite < $HOME/.Xresources)
+
+printf "%s\n" $xfce | tee $file > /dev/null
+sed -i 's|^\[Conf.*\]$|[Scheme]\nName=0WAL|' $xfce_theme_file
+xfce4-color-switch wal
 echo Xresources converted to XFCE Terminal
 
-xfce4-color-switch wal
+sed -i '/##!!/q' $termite_conf
+printf "%s\n" $termite | tee -a $termite_conf > /dev/null
+echo Added theme to Termite
 
 betterlockscreen -w $argv[2]
 echo Wallpaper set to \'$pic\'
