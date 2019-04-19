@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/ldata/fromDesktop/beeeper-react'
 let g:netrw_dirhist_2='/ldata/my-projects/react-parcel-project'
 let g:netrw_dirhist_3='/home/fahad/Downloads/LabTask 02/Contact'
+let g:netrw_dirhist_4='/home/fahad/.config/fontconfig/conf.d'
