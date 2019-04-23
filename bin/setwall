@@ -18,7 +18,7 @@ rm -f /usr/share/locker/*
 cp $walld/* /usr/share/locker/
 chmod 755 /usr/share/locker/ -R
 
-wal -i $pic -g
+wal -i $pic -n
 /opt/oomox/plugins/theme_arc/arc-theme/change_color.sh --autogen-opts '--disable-gnome-shell --disable-cinnamon' -o wal $HOME/.cache/wal/colors-oomox
 
 sed -i '/!!##/q' $HOME/.Xresources
@@ -29,7 +29,7 @@ echo Copied Pywal colors to Xresources
 set xfce (termcolors -i xresources -o xfce < $HOME/.Xresources)
 set termite (termcolors -i xresources -o termite < $HOME/.Xresources)
 
-printf "%s\n" $xfce | tee $file > /dev/null
+printf "%s\n" $xfce | tee $xfce_theme_file > /dev/null
 sed -i 's|^\[Conf.*\]$|[Scheme]\nName=0WAL|' $xfce_theme_file
 xfce4-color-switch wal
 echo Xresources converted to XFCE Terminal
