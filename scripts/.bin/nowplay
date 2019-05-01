@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+exec 2> /dev/null
+
+player=$(playerctl -l | head -n1)
+status=$(playerctl status)
+
+if [ "$status" = "Stopped"  -o -z "$status" ]; then
+  echo ""
+  exit
+fi
+
+title=$(playerctl -p $player metadata title)
+artist=$(playerctl -p $player metadata artist)
+
+ic=
+
+if [ "$status" = "Playing" ]; then
+  ic=
+fi
+
+echo -n "$ic $artist - ${title:0:49}"

@@ -1,0 +1,88 @@
+# vim: ft=dosini cms=#%s
+
+[options]
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+font = FuraMono Nerd Font Mono 12
+scrollback_lines = 10000
+search_wrap = true
+icon_name = termite
+#geometry = 640x480
+
+# "system", "on" or "off"
+cursor_blink = on
+
+# "block", "underline" or "ibeam"
+cursor_shape = block
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+browser = google-chrome-stable
+
+# set size hints for the window
+size_hints = true
+
+# Hide links that are no longer valid in url select overlay mode
+filter_unmatched_urls = true
+
+# emit escape sequences for extra modified keys
+#modify_other_keys = false
+
+[hints]
+font = FuraMono Nerd Font Mono 12
+foreground = #b4e1fd
+background = #161925
+active_background = #b4e1fd
+active_foreground = #161925
+#padding = 2
+#border = #3f3f3f
+#border_width = 0.5
+#roundness = 2.0
+
+
+##!!
+[colors]
+
+# special
+foreground      = #ea9cb1
+foreground_bold = #ea9cb1
+cursor          = #ea9cb1
+background      = #040c13
+
+# black
+color0  = #040c13
+color8  = #a36d7b
+
+# red
+color1  = #0f485b
+color9  = #0f485b
+
+# green
+color2  = #2a495f
+color10 = #2a495f
+
+# yellow
+color3  = #5a4761
+color11 = #5a4761
+
+# blue
+color4  = #ac2951
+color12 = #ac2951
+
+# magenta
+color5  = #d13360
+color13 = #d13360
+
+# cyan
+color6  = #a34767
+color14 = #a34767
+
+# white
+color7  = #ea9cb1
+color15 = #ea9cb1
+

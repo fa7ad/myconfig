@@ -1,0 +1,123 @@
+#!/bin/bash
+
+###########
+#####
+##       Dummypkg v0.1
+#####
+###########
+
+## Script to install dummy packages in pacman
+
+## Use at own risk!
+
+function install(){
+    if [ -d ~/.dummybuild-tmp/$PACKAGE ]; then
+       rm -r ~/.dummybuild-tmp/$PACKAGE 
+    fi
+    
+    mkdir -p ~/.dummybuild-tmp/$PACKAGE
+    pkgbld="
+pkgname=$PACKAGE
+pkgver=$PKGVER
+pkgrel=1
+pkgdesc=\"Dummy package created by dummypkg\"
+arch=('i686' 'x86_64')
+url=\"\"
+license=('GPL')
+depends=()
+source=()
+build() {
+  cd \$srcdir
+  mkdir -p etc/dummy
+  touch etc/dummy/$PACKAGE-$PKGVER
+  echo Installed by dummypkg >> etc/dummy/$PACKAGE-$PKGVER
+}
+package() {
+  echo \\'$PACKAGE\\' is a dummy
+}
+    "
+
+    echo "$pkgbld" >> ~/.dummybuild-tmp/$PACKAGE/PKGBUILD
+    
+    cd ~/.dummybuild-tmp/$PACKAGE/
+    makepkg || exit 1
+    sudo pacman -U ~/.dummybuild-tmp/$PACKAGE/$PACKAGE-$PKGVER-1-x86_64.pkg.tar && cd ~ && rm -rf ~/.dummybuild-tmp/
+    exit 0
+}
+
+function remove(){
+   if [ -e /etc/dummy/$RPACKAGE* ]; then
+     sudo pacman -R $RPACKAGE
+   else
+     echo "This package is not installed by dummypkg ... Exiting"
+     exit 1
+   fi
+   exit 0
+}
+
+function list(){
+    for file in `ls /etc/dummy -1`; do
+        echo ">>  $file"
+    done
+    exit 0
+}
+
+function usage(){
+    echo "usage: info [[--install] [--list] [--help] [--remove] [--version]]"
+    exit 0
+}
+
+
+INSTALL=0
+REMOVE=0
+LIST=0
+
+
+
+if [ "$1" = "" ]; then
+    usage ; exit 1
+fi 
+while [ "$1" != "" ]; do
+    case $1 in
+        -S | --install )    
+            INSTALL=1 
+            PACKAGE="$2"
+            PKGVER="$3"
+            if [ "$2" = "" ]; then
+                echo "--install requires a package name"
+                exit 1
+            fi
+            if [ "$3" = "" ]; then
+                echo "--install requires a package version"
+                exit 1
+            fi
+            shift
+            shift
+            ;;
+        -R | --remove )    
+                REMOVE=1 
+                RPACKAGE="$2"
+                if [ "$2" = "" ]; then
+                    echo "--remove requires a package name"
+                    exit 1
+                fi
+                shift 
+                ;;
+        -h | --help  )    usage; exit 0 ;;
+        -l | --list   )    LIST=1 ;;
+        * )               usage ; exit 1 
+    esac
+    shift
+done
+
+
+
+if [ $INSTALL = 1 ]; then
+  install
+fi
+if [ $REMOVE = 1 ]; then
+   remove
+fi
+if [ $LIST = 1 ]; then
+   list
+fi

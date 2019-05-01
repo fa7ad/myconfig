@@ -1,3 +1,3 @@
-[submodule "bin/i3-sensible-app"]
-	path = bin/i3-sensible-app
+[submodule "scripts/.bin/i3-sensible-app"]
+	path = scripts/.bin/i3-sensible-app
 	url = https://github.com/fa7ad/i3-sensible-app
