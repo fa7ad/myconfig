@@ -19,7 +19,8 @@ cp $walld/* /usr/share/locker/
 chmod 755 /usr/share/locker/ -R
 
 wal -i $pic -n
-/opt/oomox/plugins/theme_arc/arc-theme/change_color.sh --autogen-opts '--disable-gnome-shell --disable-cinnamon' -o wal $HOME/.cache/wal/colors-oomox
+echo Generating GTK theme...
+/opt/oomox/plugins/theme_arc/arc-theme/change_color.sh --autogen-opts '--disable-gnome-shell --disable-cinnamon' -o wal $HOME/.cache/wal/colors-oomox > /dev/null
 
 sed -i '/!!##/q' $HOME/.Xresources
 cat $colors | tee -a $HOME/.Xresources > /dev/null
@@ -37,6 +38,9 @@ echo Xresources converted to XFCE Terminal
 sed -i '/##!!/q' $termite_conf
 printf "%s\n" $termite | tee -a $termite_conf > /dev/null
 echo Added theme to Termite
+
+cat $HOME/.cache/wal/colors-dunst | tee $HOME/.config/dunst/dunstrc > /dev/null
+echo Created dunstrc
 
 betterlockscreen -w $argv[2]
 echo Wallpaper set to \'$pic\'

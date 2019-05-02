@@ -49,40 +49,40 @@ active_foreground = #161925
 [colors]
 
 # special
-foreground      = #ea9cb1
-foreground_bold = #ea9cb1
-cursor          = #ea9cb1
-background      = #040c13
+foreground      = #deeaeb
+foreground_bold = #deeaeb
+cursor          = #deeaeb
+background      = #000821
 
 # black
-color0  = #040c13
-color8  = #a36d7b
+color0  = #000821
+color8  = #9ba3a4
 
 # red
-color1  = #0f485b
-color9  = #0f485b
+color1  = #54b5d4
+color9  = #54b5d4
 
 # green
-color2  = #2a495f
-color10 = #2a495f
+color2  = #74cbd0
+color10 = #74cbd0
 
 # yellow
-color3  = #5a4761
-color11 = #5a4761
+color3  = #92b0b8
+color11 = #92b0b8
 
 # blue
-color4  = #ac2951
-color12 = #ac2951
+color4  = #9fdbd8
+color12 = #9fdbd8
 
 # magenta
-color5  = #d13360
-color13 = #d13360
+color5  = #b0d5d9
+color13 = #b0d5d9
 
 # cyan
-color6  = #a34767
-color14 = #a34767
+color6  = #bcdee1
+color14 = #bcdee1
 
 # white
-color7  = #ea9cb1
-color15 = #ea9cb1
+color7  = #deeaeb
+color15 = #deeaeb
 

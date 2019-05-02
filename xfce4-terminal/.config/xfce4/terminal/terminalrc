@@ -86,8 +86,16 @@ ColorCursor=#c6c6c9c9c1c1
 ColorForeground=#c6c6c9c9c1c1
 ColorBackground=#0a0a0a0a0d0d
 ColorPalette=#0a0a0a0a0d0d;#58585b5b6666;#797984847979;#8e8e90907979;#434348489494;#5e5e5f5f9595;#83837b7b8d8d;#c6c6c9c9c1c1;#8a8a8c8c8787;#58585b5b6666;#797984847979;#8e8e90907979;#434348489494;#5e5e5f5f9595;#83837b7b8d8d;#c6c6c9c9c1c1
+ColorCursor=#9d9da4a4caca
+ColorForeground=#9d9da4a4caca
+ColorBackground=#010119193232
+ColorPalette=#010119193232;#66664e4e6c6c;#8a8a32325555;#a5a537375656;#bbbb44445757;#050538388787;#151554549999;#9d9da4a4caca;#6d6d72728d8d;#66664e4e6c6c;#8a8a32325555;#a5a537375656;#bbbb44445757;#050538388787;#151554549999;#9d9da4a4caca
 ColorCursor=#eaea9c9cb1b1
 ColorForeground=#eaea9c9cb1b1
 ColorBackground=#04040c0c1313
 ColorPalette=#04040c0c1313;#0f0f48485b5b;#2a2a49495f5f;#5a5a47476161;#acac29295151;#d1d133336060;#a3a347476767;#eaea9c9cb1b1;#a3a36d6d7b7b;#0f0f48485b5b;#2a2a49495f5f;#5a5a47476161;#acac29295151;#d1d133336060;#a3a347476767;#eaea9c9cb1b1
+ColorCursor=#dedeeaeaebeb
+ColorForeground=#dedeeaeaebeb
+ColorBackground=#000008082121
+ColorPalette=#000008082121;#5454b5b5d4d4;#7474cbcbd0d0;#9292b0b0b8b8;#9f9fdbdbd8d8;#b0b0d5d5d9d9;#bcbcdedee1e1;#dedeeaeaebeb;#9b9ba3a3a4a4;#5454b5b5d4d4;#7474cbcbd0d0;#9292b0b0b8b8;#9f9fdbdbd8d8;#b0b0d5d5d9d9;#bcbcdedee1e1;#dedeeaeaebeb
 
