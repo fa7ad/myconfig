@@ -5,9 +5,10 @@ These are the dotfiles/configurations for most of my CLI apps and WM related stu
 ![Preview](https://i.imgur.com/9xGyfdg.png)
 
 
-## Requirements
-For terminal:
-
+## Important Requirements
+* **GNU stow**
+* i3wm
+* polybar
 * fish
 * fontconfig
 * python3
