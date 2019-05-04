@@ -1,8 +1,9 @@
 # My configuration files
 
-These are the dotfiles/configurations for most of my CLI apps
+These are the dotfiles/configurations for most of my CLI apps and WM related stuff
 
----
+![Preview](https://i.imgur.com/9xGyfdg.png)
+
 
 ## Requirements
 For terminal:
@@ -11,8 +12,7 @@ For terminal:
 * fontconfig
 * python3
 * neovim
-
-...
+* ...
 
 ## Put it together
 In bash:
