@@ -27,7 +27,7 @@ mv Fura\ Mono\ Regular\ Nerd\ Font\ Complete\ Mono.otf ~/.fonts/
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 fc-cache -vf
 
-git clone git@github.com:fa7ad/myconfig --branch arch --recursive
+git clone git@github.com:fa7ad/myconfig --recursive
 cd myconfig
 fish INSTALL.fish
 sleep 10 && chsh -s $(which fish)
