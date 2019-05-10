@@ -2,6 +2,7 @@
     "telemetry.machineId": "9e42f38182d0f7f0a95298e70ce2a83e7b9981fe700b56d019b38a71825dce3d",
     "openedPathsList": {
         "workspaces3": [
+            "file:///ldata/my-projects/fu-remote-app",
             "file:///ldata/apps/aiub-notes-dl",
             "file:///home/fahad/.eclipse-workspace/io.github.fa7ad.dumbplayer.DumbPlayer",
             "file:///home/fahad/.eclipse-workspace/io.github.fa7ad.dumbplayer.DumbPlayer-0.0.1-SNAPSHOT",
@@ -17,7 +18,6 @@
             "file:///ldata/my-projects/chomoks-app",
             "file:///ldata/my-projects/tatka-web",
             "file:///home/fahad/.config/mpv",
-            "file:///ldata/my-projects/fu-remote-app",
             "file:///ldata/my-projects/vivaldi-codecs-ffmpeg-extra-bin",
             "file:///ldata/my-apps/hooks-rn",
             "file:///home/fahad/myconfig/bin/i3-default-app",
@@ -93,8 +93,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///ldata/apps/aiub-notes-dl",
-            "backupPath": "/home/fahad/.config/Code/Backups/e1904f257ea30014f6e1874d86dc8f2a",
+            "folder": "file:///ldata/my-projects/fu-remote-app",
+            "backupPath": "/home/fahad/.config/Code/Backups/3f8237482b0a68b424ccb88177ed8bff",
             "uiState": {
                 "mode": 1,
                 "x": 4,
@@ -151,7 +151,18 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/ldata/apps/aiub-notes-dl",
+                                        "fsPath": "/ldata/my-projects/fu-remote-app",
+                                        "external": "file:///ldata/my-projects/fu-remote-app",
+                                        "path": "/ldata/my-projects/fu-remote-app",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/fu-remote-app"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///ldata/apps/aiub-notes-dl",
                                         "path": "/ldata/apps/aiub-notes-dl",
                                         "scheme": "file"
@@ -246,17 +257,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/ldata/tutorial-works/ud811/1-12-skeleton"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/venue-fix",
-                                        "path": "/ldata/my-projects/venue-fix",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/venue-fix"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -823,7 +823,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1095,7 +1096,8 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal"
+                        "label": "&&Split Terminal",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"

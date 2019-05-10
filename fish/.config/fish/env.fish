@@ -18,7 +18,7 @@ set -gx N_PREFIX /usr/local/n
 set -gx VIRTUALFISH_HOME /ldata/.virtualfish
 
 # android
-set -gx ANDROID_HOME /ldata/ANDROID_SDK
+set -gx ANDROID_HOME /opt/android-sdk
 
 # Add to PATH
 set -l ruby_paths (string split \  $HOME/.gem/ruby/*/bin)
