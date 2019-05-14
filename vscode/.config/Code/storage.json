@@ -2,6 +2,9 @@
     "telemetry.machineId": "9e42f38182d0f7f0a95298e70ce2a83e7b9981fe700b56d019b38a71825dce3d",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/fahad/go/src/github.com/fa7ad/fu-remote",
+            "file:///ldata/my-projects/fu-remote-flutter/fu_remote",
+            "file:///ldata/my-projects/fu-remote-flutter",
             "file:///ldata/my-projects/fu-remote-app",
             "file:///ldata/apps/aiub-notes-dl",
             "file:///home/fahad/.eclipse-workspace/io.github.fa7ad.dumbplayer.DumbPlayer",
@@ -25,7 +28,6 @@
             "file:///ldata/my-projects/remakes",
             "file:///ldata/my-apps/venue-fix",
             "file:///ldata/my-projects/init-preact-app",
-            "file:///home/fahad/go/src/github.com/fa7ad/fu-remote",
             "file:///tmp/chomok-client",
             "file:///ldata/my-projects/chomok-server/client",
             "file:///ldata/my-projects/fish-clear",
@@ -93,8 +95,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///ldata/my-projects/fu-remote-app",
-            "backupPath": "/home/fahad/.config/Code/Backups/3f8237482b0a68b424ccb88177ed8bff",
+            "folder": "file:///home/fahad/go/src/github.com/fa7ad/fu-remote",
+            "backupPath": "/home/fahad/.config/Code/Backups/bd6eeef3c8aeab4d54f66de9f221528c",
             "uiState": {
                 "mode": 1,
                 "x": 4,
@@ -151,7 +153,40 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/ldata/my-projects/fu-remote-app",
+                                        "fsPath": "/home/fahad/go/src/github.com/fa7ad/fu-remote",
+                                        "external": "file:///home/fahad/go/src/github.com/fa7ad/fu-remote",
+                                        "path": "/home/fahad/go/src/github.com/fa7ad/fu-remote",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/go/src/github.com/fa7ad/fu-remote"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/fu-remote-flutter/fu_remote",
+                                        "path": "/ldata/my-projects/fu-remote-flutter/fu_remote",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/fu-remote-flutter/fu_remote"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/fu-remote-flutter",
+                                        "path": "/ldata/my-projects/fu-remote-flutter",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/fu-remote-flutter"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///ldata/my-projects/fu-remote-app",
                                         "path": "/ldata/my-projects/fu-remote-app",
                                         "scheme": "file"
@@ -224,39 +259,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/tmp/org.useless.app"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/js-ai-code",
-                                        "path": "/ldata/my-projects/js-ai-code",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/js-ai-code"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/tutorial-works/your-first-pwapp-master/work",
-                                        "path": "/ldata/tutorial-works/your-first-pwapp-master/work",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/tutorial-works/your-first-pwapp-master/work"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/tutorial-works/ud811/1-12-skeleton",
-                                        "path": "/ldata/tutorial-works/ud811/1-12-skeleton",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/tutorial-works/ud811/1-12-skeleton"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -823,8 +825,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1296,8 +1297,8 @@
                 "userSettingsLabel": "ctrl+k f"
             },
             "workbench.action.closeWindow": {
-                "label": "Ctrl+Shift+W",
-                "userSettingsLabel": "ctrl+shift+w"
+                "label": "Ctrl+W",
+                "userSettingsLabel": "ctrl+w"
             },
             "workbench.action.quit": {
                 "label": "Ctrl+Q",
