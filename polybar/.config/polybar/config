@@ -53,7 +53,7 @@ font-4 = "Font Awesome 5 Free:size=10;3"
 
 modules-left = wm pdl plctl playing volume
 modules-center = title
-modules-right = pdl kbd ram cpu pdl time battery
+modules-right = pdl kbd ram cpu pdl time battery onion
 
 fixed-center = true
 
@@ -85,6 +85,14 @@ menu-0-1 = 
 menu-0-1-exec = playerctl stop
 menu-0-2 = 
 menu-0-2-exec = playerctl next
+
+[module/onion]
+type = custom/script
+exec = "echo onion"
+interval = 5
+format = ""
+click-left = reloadtor
+format-padding = 2
 
 [module/playing]
 type = custom/script
@@ -127,7 +135,7 @@ ramp-volume-2 = 
 
 [module/title]
 type = internal/xwindow
-label = %title:0:45:%
+label = %title:0:40:%
 label-maxlen = 45
 label-background = ${wal.bg}
 label-padding = 3

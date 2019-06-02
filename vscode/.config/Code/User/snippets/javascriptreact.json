@@ -1,9 +1,4 @@
 {
-  // Possible variables are:
-  // $1, $2 for tab stops,
-  // ${id} and ${id:label} and ${1:label} for variables.
-  // Variables with the same id are connected.
-  // Example:
   "ConsoleLog": {
     "prefix": "log",
     "body": [

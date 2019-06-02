@@ -18,6 +18,7 @@ mopidy &
 dunst &
 mpDris2 &
 # gnome-screensaver &
+kdeconnect-indicator &
 xset dpms 120 300 0
 xss-lock ~/.bin/lock.sh &
 # ~/.bin/locker-daemon &

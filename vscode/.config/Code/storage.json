@@ -2,6 +2,8 @@
     "telemetry.machineId": "9e42f38182d0f7f0a95298e70ce2a83e7b9981fe700b56d019b38a71825dce3d",
     "openedPathsList": {
         "workspaces3": [
+            "file:///ldata/my-projects/weather-app",
+            "file:///ldata/my-projects/TuringTask/turing-frontend",
             "file:///home/fahad/go/src/github.com/fa7ad/fu-remote",
             "file:///ldata/my-projects/fu-remote-flutter/fu_remote",
             "file:///ldata/my-projects/fu-remote-flutter",
@@ -95,8 +97,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/fahad/go/src/github.com/fa7ad/fu-remote",
-            "backupPath": "/home/fahad/.config/Code/Backups/bd6eeef3c8aeab4d54f66de9f221528c",
+            "folder": "file:///ldata/my-projects/weather-app",
+            "backupPath": "/home/fahad/.config/Code/Backups/8e0004789f6e7f090e728b9dd5e2e9d1",
             "uiState": {
                 "mode": 1,
                 "x": 4,
@@ -153,7 +155,29 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/home/fahad/go/src/github.com/fa7ad/fu-remote",
+                                        "fsPath": "/ldata/my-projects/weather-app",
+                                        "external": "file:///ldata/my-projects/weather-app",
+                                        "path": "/ldata/my-projects/weather-app",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/weather-app"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/TuringTask/turing-frontend",
+                                        "path": "/ldata/my-projects/TuringTask/turing-frontend",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/TuringTask/turing-frontend"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/fahad/go/src/github.com/fa7ad/fu-remote",
                                         "path": "/home/fahad/go/src/github.com/fa7ad/fu-remote",
                                         "scheme": "file"
@@ -237,28 +261,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/ldata/my-projects/tatka-server"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/tatka-server/test",
-                                        "path": "/ldata/my-projects/tatka-server/test",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/tatka-server/test"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///tmp/org.useless.app",
-                                        "path": "/tmp/org.useless.app",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/tmp/org.useless.app"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -803,7 +805,8 @@
                     },
                     {
                         "id": "editor.action.toggleRenderControlCharacter",
-                        "label": "Toggle &&Control Characters"
+                        "label": "Toggle &&Control Characters",
+                        "checked": true
                     },
                     {
                         "id": "breadcrumbs.toggle",

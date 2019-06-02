@@ -40,19 +40,20 @@ assign [class="Gimp-2.10"] $ws6
 
 assign [class="evince"] $ws7
 
-assign [title="^ncmpcpp.*"] $ws9
+assign [title=".*?ncmpcpp.*"] $ws9
 assign [class="juk"] $ws9
 assign [class="[gG]mpc"] $ws9
 assign [class="[lL]ollypop"] $ws9
 assign [class="[sS]ayonara"] $ws9
 assign [class="[sS]potify"] $ws9
 
-assign [class="[mM]pv"] $ws0
+assign [class="[mM]pv"] $ws10
 
 # float all popups
 for_window [window_role="pop-up"] floating enable
 
 # floating workspaces
+for_window [workspace=$ws0] floating enable
 for_window [workspace=$ws1] floating enable
 for_window [workspace=$wss9] floating enable
 

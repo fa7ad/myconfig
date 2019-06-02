@@ -33,4 +33,14 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="sftp://Foyez@192.168.0.10/" added="2019-05-16T12:14:51Z" modified="2019-05-16T12:14:51Z" visited="2019-05-16T12:14:51Z">
+    <title>/ on 192.168.0.10</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2019-05-16T12:14:51Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>
