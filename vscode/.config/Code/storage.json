@@ -2,6 +2,7 @@
     "telemetry.machineId": "9e42f38182d0f7f0a95298e70ce2a83e7b9981fe700b56d019b38a71825dce3d",
     "openedPathsList": {
         "workspaces3": [
+            "file:///ldata/my-projects/inferior-text-expansion",
             "file:///ldata/my-projects/weather-app",
             "file:///ldata/my-projects/TuringTask/turing-frontend",
             "file:///home/fahad/go/src/github.com/fa7ad/fu-remote",
@@ -155,7 +156,18 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/ldata/my-projects/weather-app",
+                                        "fsPath": "/ldata/my-projects/inferior-text-expansion",
+                                        "external": "file:///ldata/my-projects/inferior-text-expansion",
+                                        "path": "/ldata/my-projects/inferior-text-expansion",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/inferior-text-expansion"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///ldata/my-projects/weather-app",
                                         "path": "/ldata/my-projects/weather-app",
                                         "scheme": "file"
@@ -250,17 +262,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/.eclipse-workspace/io.github.fa7ad.dumbplayer.DumbPlayer-0.0.1-SNAPSHOT"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/tatka-server",
-                                        "path": "/ldata/my-projects/tatka-server",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/tatka-server"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"

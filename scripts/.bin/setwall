@@ -21,7 +21,9 @@ chmod 755 /usr/share/locker/ -R
 wal -i $pic -n
 echo Generating GTK theme...
 /opt/oomox/plugins/theme_arc/arc-theme/change_color.sh --autogen-opts '--disable-gnome-shell --disable-cinnamon' -o wal $HOME/.cache/wal/colors-oomox > /dev/null
-sudo rsync /home/fahad/.themes/wal /usr/share/themes/ -ah
+/opt/oomox/plugins/icons_papirus/change_color.sh -o wal $HOME/.cache/wal/colors-oomox > /dev/null
+sudo rsync $HOME/.themes/wal /usr/share/themes/ -ah
+sudo rsync $HOME/.icons/wal /usr/share/icons/ -ah
 
 sed -i '/!!##/q' $HOME/.Xresources
 cat $colors | tee -a $HOME/.Xresources > /dev/null
