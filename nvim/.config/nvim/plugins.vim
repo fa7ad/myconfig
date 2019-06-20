@@ -22,9 +22,6 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
 " System --- {{{
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
   Plug 'mhinz/vim-sayonara'
-  Plug 'mattn/webapi-vim'
-  Plug 'mattn/gist-vim'
-  Plug 'Shougo/unite.vim'
   Plug 'Shougo/denite.nvim'
   Plug 'neomake/neomake'
   Plug 'lambdalisue/suda.vim'

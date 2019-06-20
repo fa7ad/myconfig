@@ -392,6 +392,7 @@
 
 " Neomake --- {{{
   let g:neomake_javascript_enabled_makers = ['eslint']
+  let g:neomake_python_enabled_makers = ['pylama']
   " auto run neomake once the file is saved
   autocmd BufWritePost,BufEnter * Neomake
 " }}}
