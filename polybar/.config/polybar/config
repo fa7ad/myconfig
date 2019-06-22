@@ -50,7 +50,7 @@ font-1 = "Symbola:size=10;3"
 font-2 = "Font Awesome 5 Brands:size=10;3"
 font-3 = "Font Awesome 5 Free Solid:size=10;3"
 font-4 = "Font Awesome 5 Free:size=10;3"
-font-5 = "Ekushey Lohit:size=10;3"
+font-5 = "Siyam Rupali:size=10;3"
 
 modules-left = wm pdl plctl playing volume
 modules-center = title
