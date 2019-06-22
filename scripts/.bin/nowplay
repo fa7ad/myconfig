@@ -9,7 +9,7 @@ if [ "$status" = "Stopped"  -o -z "$status" ]; then
   exit
 fi
 
-title=$(playerctl -p $player metadata title)
+title=$(playerctl -p $player metadata title | tr -s ' ' | awk 'length > 40{$0=substr($0,0,41)"..."}1')
 artist=$(playerctl -p $player metadata artist)
 
 ic=
@@ -18,4 +18,8 @@ if [ "$status" = "Playing" ]; then
   ic=
 fi
 
-echo -n "$ic $artist - ${title:0:49}"
+if [ "$artist" != "" ]; then
+  echo -n "$ic $artist - "
+fi
+
+echo -n "$title"
