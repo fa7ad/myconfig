@@ -1,10 +1,19 @@
 #!/usr/bin/bash
 exec 2> /dev/null
 
-player=$(playerctl -l | head -n1)
-status=$(playerctl status)
+players=$(playerctl -l)
+player=$(echo $players | head -n1)
+pstatus=$(playerctl -p $player status)
 
-if [ "$status" = "Stopped"  -o -z "$status" ]; then
+for pl in $players; do
+  st=$(playerctl -p $pl status)
+  if [[ "$st" = "Playing" ]]; then
+    player=$pl
+    pstatus=$st
+  fi
+done
+
+if [ "$pstatus" = "Stopped"  -o -z "$pstatus" ]; then
   echo ""
   exit
 fi
