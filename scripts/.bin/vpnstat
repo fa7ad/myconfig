@@ -1,0 +1,22 @@
+#!/usr/bin/env fish
+set stat (nordvpn status | sed 's/.*:\ //g' | head -n1)
+
+if [ "$stat" = "Disconnected" ]
+  echo -n ""
+end
+
+if [ "$stat" = "Connected" ]
+  echo -n ""
+  set ln2 (nordvpn status | sed 's/.*:\ //g;2q;d')
+  set server (echo $ln2 | sed  's/.//3g')
+  echo -n " $server"
+end
+
+if [ "$argv" = 'toggle' ]
+  if [ "$stat" = "Connected" ]
+    nordvpn d
+  end
+  if [ "$stat" = "Disconnected" ]
+    nordvpn c
+  end
+end
