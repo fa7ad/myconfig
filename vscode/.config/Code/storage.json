@@ -2,6 +2,7 @@
     "telemetry.machineId": "9e42f38182d0f7f0a95298e70ce2a83e7b9981fe700b56d019b38a71825dce3d",
     "openedPathsList": {
         "workspaces3": [
+            "file:///ldata/my-projects/ActiveJobs/aj-web",
             "file:///ldata/my-projects/roar-backend",
             "file:///ldata/my-projects/roar-client",
             "file:///ldata/my-projects/inferior-text-expansion",
@@ -158,7 +159,18 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/ldata/my-projects/roar-backend",
+                                        "fsPath": "/ldata/my-projects/ActiveJobs/aj-web",
+                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-web",
+                                        "path": "/ldata/my-projects/ActiveJobs/aj-web",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/ActiveJobs/aj-web"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///ldata/my-projects/roar-backend",
                                         "path": "/ldata/my-projects/roar-backend",
                                         "scheme": "file"
@@ -253,17 +265,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/ldata/my-projects/fu-remote-app"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/apps/aiub-notes-dl",
-                                        "path": "/ldata/apps/aiub-notes-dl",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/apps/aiub-notes-dl"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -831,7 +832,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"

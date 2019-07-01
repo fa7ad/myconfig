@@ -25,6 +25,7 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
   Plug 'Shougo/denite.nvim'
   Plug 'neomake/neomake'
   Plug 'lambdalisue/suda.vim'
+  Plug 'junegunn/goyo.vim'
 " }}}
 
 " Autocomplete {{{

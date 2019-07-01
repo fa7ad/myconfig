@@ -34,4 +34,8 @@ ColorForeground=#afafc3c3dada
 ColorBackground=#121212121212
 ColorCursor=#afafc3c3dada
 ColorPalette=#121212121212;#444455556868;#2d2d60609595;#4a4a7676a7a7;#3e3e7777c1c1;#3f3f8181abab;#5f5f8989b8b8;#afafc3c3dada;#7a7a88889898;#444455556868;#2d2d60609595;#4a4a7676a7a7;#3e3e7777c1c1;#3f3f8181abab;#5f5f8989b8b8;#afafc3c3dada
+ColorCursor=#f6f6eaeadbdb
+ColorForeground=#f6f6eaeadbdb
+ColorBackground=#0c0c09090a0a
+ColorPalette=#0c0c09090a0a;#b2b259593f3f;#5a5a6f6f8c8c;#93938c8c8f8f;#a4a4a8a8bcbc;#fefeddddacac;#f9f9d7d7d3d3;#f6f6eaeadbdb;#acaca3a39999;#b2b259593f3f;#5a5a6f6f8c8c;#93938c8c8f8f;#a4a4a8a8bcbc;#fefeddddacac;#f9f9d7d7d3d3;#f6f6eaeadbdb
 
