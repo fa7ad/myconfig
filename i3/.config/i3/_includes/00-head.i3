@@ -28,5 +28,5 @@ set $file_man nautilus
 floating_modifier $mod
 
 # focus behaviour
-focus_follows_mouse yes
+focus_follows_mouse no
 mouse_warping none

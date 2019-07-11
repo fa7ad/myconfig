@@ -30,3 +30,5 @@ set -l poetry $HOME/.poetry/bin
 set -gx PATH $PATH $user_paths $ruby_paths $node_paths $GOPATH/bin $snap_path $yarn_paths $poetry
 vardedupe PATH
 set -U fish_user_paths $PATH
+
+set -U TERMINAL xfce4-terminal

@@ -12,6 +12,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # fix windows to workspace
+assign [class="figma-linux"] $ws0
+
 assign [class="[cC]hromium"] $ws2
 assign [class="[fF]irefox"] $ws2
 assign [class="[gG]oogle-chrome.*?"] $ws2
@@ -52,8 +54,10 @@ assign [class="[mM]pv"] $ws10
 # float all popups
 for_window [window_role="pop-up"] floating enable
 
+# center albert
+# for_window [class="albert"] move position center
+
 # floating workspaces
-for_window [workspace=$ws0] floating enable
 for_window [workspace=$ws1] floating enable
 for_window [workspace=$wss9] floating enable
 

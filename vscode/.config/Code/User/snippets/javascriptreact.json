@@ -24,7 +24,7 @@
   "ImportReactES2015": {
     "prefix": "rees",
     "body": [
-      "import React, {Component} from 'react'",
+      "import React from 'react'",
       "$1"
     ],
     "description": "Import react using es2015 syntax"

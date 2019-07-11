@@ -37,7 +37,7 @@ alert = ${xrdb:color3:#222}
 [bar/top]
 monitor = ${env:MONITOR:eDP-1}
 width = 100%
-height = 30
+height = 24
 offset-x = 0
 offset-y = 0
 background = ${wal.bg}
@@ -45,16 +45,16 @@ foreground = ${wal.fg}
 
 underline-size = 0
 overline-size = 0
-font-0 = "Google Sans Medium:size=10;3"
-font-1 = "Symbola:size=10;3"
-font-2 = "Font Awesome 5 Brands:size=10;3"
-font-3 = "Font Awesome 5 Free Solid:size=10;3"
-font-4 = "Font Awesome 5 Free:size=10;3"
-font-5 = "Siyam Rupali:size=10;3"
+font-0 = "Google Sans Medium:size=8;3"
+font-1 = "Symbola:size=8;3"
+font-2 = "Font Awesome 5 Brands:size=8;3"
+font-3 = "Font Awesome 5 Free Solid:size=8;3"
+font-4 = "Font Awesome 5 Free:size=8;3"
+font-5 = "Noto Sans Bengali:size=8;3"
 
 modules-left = wm pdl plctl playing volume
 modules-center = title
-modules-right = pdl kbd ram cpu time battery vpn
+modules-right = pdl kbd ram time battery
 
 fixed-center = true
 
@@ -68,7 +68,7 @@ type               = custom/text
 content            = |
 content-foreground = ${wal.bg}
 content-background = ${wal.bg}
-content-padding = 24
+content-padding = 10
 
 [module/plctl]
 type = custom/menu
@@ -113,7 +113,7 @@ label-indicator-foreground = ${wal.fg}
 label-indicator-background = ${wal.bg}
 
 [module/volume]
-type = internal/pulseaudio
+type = internal/alsa
 use-ui-max = true
 format-volume = <ramp-volume> <label-volume>
 
@@ -133,6 +133,7 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
+mapped = true
 [module/title]
 type = internal/xwindow
 label = %title:0:40:%

@@ -55,7 +55,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 0
+    frame_width = 1
 
     # Sort messages by urgency.
     sort = yes
@@ -194,24 +194,24 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#0c090a"
-    foreground = "#5A6F8C"
+    background = "#0c1c23"
+    foreground = "#3E9DA8"
     timeout = 3
     # Icon for notifications with low urgency, uncomment to enable
     # icon = mail-unread
 
 
 [urgency_normal]
-    background = "#0c090a"
-    foreground = "#f6eadb"
+    background = "#0c1c23"
+    foreground = "#e7e6e6"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     icon = mail-unread
 
 
 [urgency_critical]
-    background = "#0c090a"
-    foreground = "#938C8F"
+    background = "#0c1c23"
+    foreground = "#A6A8A3"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     # icon = error

@@ -2,8 +2,10 @@
     "telemetry.machineId": "9e42f38182d0f7f0a95298e70ce2a83e7b9981fe700b56d019b38a71825dce3d",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/fahad/Desktop/aj-web",
+            "file:///home/fahad/Desktop/github-starsql",
+            "file:///home/fahad/Desktop/aj-web/src/components/Cards",
             "file:///ldata/my-projects/ActiveJobs/aj-web",
-            "file:///ldata/my-projects/roar-backend",
             "file:///ldata/my-projects/roar-client",
             "file:///ldata/my-projects/inferior-text-expansion",
             "file:///ldata/my-projects/weather-app",
@@ -101,14 +103,14 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///ldata/my-projects/roar-backend",
-            "backupPath": "/home/fahad/.config/Code/Backups/75596d7f94a358c773e7ef0e983b4f0f",
+            "folder": "file:///home/fahad/Desktop/aj-web",
+            "backupPath": "/home/fahad/.config/Code/Backups/b0f8756692798183d6eb4c7a373a2585",
             "uiState": {
                 "mode": 1,
                 "x": 4,
-                "y": 34,
-                "width": 1912,
-                "height": 1042
+                "y": 28,
+                "width": 1358,
+                "height": 736
             }
         },
         "openedWindows": []
@@ -159,24 +161,46 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/ldata/my-projects/ActiveJobs/aj-web",
+                                        "fsPath": "/home/fahad/Desktop/aj-web",
+                                        "external": "file:///home/fahad/Desktop/aj-web",
+                                        "path": "/home/fahad/Desktop/aj-web",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Desktop/aj-web"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/fahad/Desktop/github-starsql",
+                                        "path": "/home/fahad/Desktop/github-starsql",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Desktop/github-starsql"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/fahad/Desktop/aj-web/src/components/Cards",
+                                        "path": "/home/fahad/Desktop/aj-web/src/components/Cards",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Desktop/aj-web/src/components/Cards"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///ldata/my-projects/ActiveJobs/aj-web",
                                         "path": "/ldata/my-projects/ActiveJobs/aj-web",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
                                     "label": "/ldata/my-projects/ActiveJobs/aj-web"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/roar-backend",
-                                        "path": "/ldata/my-projects/roar-backend",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/roar-backend"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -243,28 +267,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/ldata/my-projects/fu-remote-flutter/fu_remote"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/fu-remote-flutter",
-                                        "path": "/ldata/my-projects/fu-remote-flutter",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/fu-remote-flutter"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/fu-remote-app",
-                                        "path": "/ldata/my-projects/fu-remote-app",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/fu-remote-app"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -405,6 +407,10 @@
                                 {
                                     "id": "workbench.action.openSettings",
                                     "label": "&&Settings"
+                                },
+                                {
+                                    "id": "settings.filterByOnline",
+                                    "label": "&&Online Services Settings"
                                 },
                                 {
                                     "id": "workbench.view.extensions",
@@ -624,46 +630,52 @@
                             "items": [
                                 {
                                     "id": "workbench.action.toggleFullScreen",
-                                    "label": "Toggle &&Full Screen"
+                                    "label": "&&Full Screen"
                                 },
                                 {
                                     "id": "workbench.action.toggleZenMode",
-                                    "label": "Toggle Zen Mode"
+                                    "label": "Zen Mode"
                                 },
                                 {
                                     "id": "workbench.action.toggleCenteredLayout",
-                                    "label": "Toggle Centered Layout"
-                                },
-                                {
-                                    "id": "workbench.action.toggleMenuBar",
-                                    "label": "Toggle Menu &&Bar"
+                                    "label": "Centered Layout"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
+                                    "id": "workbench.action.toggleMenuBar",
+                                    "label": "Show Menu &&Bar"
+                                },
+                                {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Toggle Side Bar"
+                                    "label": "Show &&Side Bar",
+                                    "checked": true
+                                },
+                                {
+                                    "id": "workbench.action.toggleStatusbarVisibility",
+                                    "label": "Show S&&tatus Bar",
+                                    "checked": true
+                                },
+                                {
+                                    "id": "workbench.action.toggleActivityBarVisibility",
+                                    "label": "Show &&Activity Bar",
+                                    "checked": true
+                                },
+                                {
+                                    "id": "workbench.action.togglePanel",
+                                    "label": "Show &&Panel"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarPosition",
                                     "label": "&&Move Side Bar Right"
                                 },
                                 {
-                                    "id": "workbench.action.toggleStatusbarVisibility",
-                                    "label": "&&Hide Status Bar"
-                                },
-                                {
                                     "id": "workbench.action.togglePanelPosition",
-                                    "label": "Toggle Panel Position"
-                                },
-                                {
-                                    "id": "workbench.action.toggleActivityBarVisibility",
-                                    "label": "Hide &&Activity Bar"
-                                },
-                                {
-                                    "id": "workbench.action.togglePanel",
-                                    "label": "Toggle &&Panel"
+                                    "label": "Move Panel Right"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -800,21 +812,21 @@
                     },
                     {
                         "id": "editor.action.toggleMinimap",
-                        "label": "Toggle &&Minimap"
+                        "label": "Show &&Minimap"
+                    },
+                    {
+                        "id": "breadcrumbs.toggle",
+                        "label": "Show &&Breadcrumbs",
+                        "checked": true
                     },
                     {
                         "id": "editor.action.toggleRenderWhitespace",
-                        "label": "Toggle &&Render Whitespace",
+                        "label": "&&Render Whitespace",
                         "checked": true
                     },
                     {
                         "id": "editor.action.toggleRenderControlCharacter",
-                        "label": "Toggle &&Control Characters",
-                        "checked": true
-                    },
-                    {
-                        "id": "breadcrumbs.toggle",
-                        "label": "Toggle &&Breadcrumbs",
+                        "label": "Render &&Control Characters",
                         "checked": true
                     }
                 ]
@@ -832,8 +844,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1305,8 +1316,8 @@
                 "userSettingsLabel": "ctrl+k f"
             },
             "workbench.action.closeWindow": {
-                "label": "Ctrl+Shift+W",
-                "userSettingsLabel": "ctrl+shift+w"
+                "label": "Ctrl+W",
+                "userSettingsLabel": "ctrl+w"
             },
             "workbench.action.quit": {
                 "label": "Ctrl+Q",
@@ -1637,8 +1648,8 @@
                 "userSettingsLabel": "ctrl+shift+`"
             },
             "workbench.action.terminal.split": {
-                "label": "Ctrl+\\",
-                "userSettingsLabel": "ctrl+\\"
+                "label": "Ctrl+Shift+5",
+                "userSettingsLabel": "ctrl+shift+5"
             },
             "workbench.action.tasks.build": {
                 "label": "Ctrl+Shift+B",
