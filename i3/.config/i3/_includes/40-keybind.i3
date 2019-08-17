@@ -29,6 +29,10 @@ bindsym $mod+space focus mode_toggle
 # # focus the child container
 # bindsym $mod+d focus child
 
+# move focused workspace between monitors
+bindsym $mod+Ctrl+Shift+Right move workspace to output right
+bindsym $mod+Ctrl+Shift+Left move workspace to output left
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3
