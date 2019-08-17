@@ -101,8 +101,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///ldata/my-projects/roar-backend",
-            "backupPath": "/home/fahad/.config/Code/Backups/75596d7f94a358c773e7ef0e983b4f0f",
+            "folder": "file:///ldata/my-projects/ActiveJobs/aj-web",
+            "backupPath": "/home/fahad/.config/Code/Backups/6c60026d254003d4d838b7b6b8dd5a0d",
             "uiState": {
                 "mode": 1,
                 "x": 4,
@@ -407,6 +407,10 @@
                                     "label": "&&Settings"
                                 },
                                 {
+                                    "id": "settings.filterByOnline",
+                                    "label": "&&Online Services Settings"
+                                },
+                                {
                                     "id": "workbench.view.extensions",
                                     "label": "&&Extensions"
                                 },
@@ -624,46 +628,52 @@
                             "items": [
                                 {
                                     "id": "workbench.action.toggleFullScreen",
-                                    "label": "Toggle &&Full Screen"
+                                    "label": "&&Full Screen"
                                 },
                                 {
                                     "id": "workbench.action.toggleZenMode",
-                                    "label": "Toggle Zen Mode"
+                                    "label": "Zen Mode"
                                 },
                                 {
                                     "id": "workbench.action.toggleCenteredLayout",
-                                    "label": "Toggle Centered Layout"
-                                },
-                                {
-                                    "id": "workbench.action.toggleMenuBar",
-                                    "label": "Toggle Menu &&Bar"
+                                    "label": "Centered Layout"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
+                                    "id": "workbench.action.toggleMenuBar",
+                                    "label": "Show Menu &&Bar"
+                                },
+                                {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Toggle Side Bar"
+                                    "label": "Show &&Side Bar",
+                                    "checked": true
+                                },
+                                {
+                                    "id": "workbench.action.toggleStatusbarVisibility",
+                                    "label": "Show S&&tatus Bar",
+                                    "checked": true
+                                },
+                                {
+                                    "id": "workbench.action.toggleActivityBarVisibility",
+                                    "label": "Show &&Activity Bar",
+                                    "checked": true
+                                },
+                                {
+                                    "id": "workbench.action.togglePanel",
+                                    "label": "Show &&Panel"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarPosition",
                                     "label": "&&Move Side Bar Right"
                                 },
                                 {
-                                    "id": "workbench.action.toggleStatusbarVisibility",
-                                    "label": "&&Hide Status Bar"
-                                },
-                                {
                                     "id": "workbench.action.togglePanelPosition",
-                                    "label": "Toggle Panel Position"
-                                },
-                                {
-                                    "id": "workbench.action.toggleActivityBarVisibility",
-                                    "label": "Hide &&Activity Bar"
-                                },
-                                {
-                                    "id": "workbench.action.togglePanel",
-                                    "label": "Toggle &&Panel"
+                                    "label": "Move Panel Right"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -800,21 +810,21 @@
                     },
                     {
                         "id": "editor.action.toggleMinimap",
-                        "label": "Toggle &&Minimap"
+                        "label": "Show &&Minimap"
+                    },
+                    {
+                        "id": "breadcrumbs.toggle",
+                        "label": "Show &&Breadcrumbs",
+                        "checked": true
                     },
                     {
                         "id": "editor.action.toggleRenderWhitespace",
-                        "label": "Toggle &&Render Whitespace",
+                        "label": "&&Render Whitespace",
                         "checked": true
                     },
                     {
                         "id": "editor.action.toggleRenderControlCharacter",
-                        "label": "Toggle &&Control Characters",
-                        "checked": true
-                    },
-                    {
-                        "id": "breadcrumbs.toggle",
-                        "label": "Toggle &&Breadcrumbs",
+                        "label": "Render &&Control Characters",
                         "checked": true
                     }
                 ]
@@ -1637,8 +1647,8 @@
                 "userSettingsLabel": "ctrl+shift+`"
             },
             "workbench.action.terminal.split": {
-                "label": "Ctrl+\\",
-                "userSettingsLabel": "ctrl+\\"
+                "label": "Ctrl+Shift+5",
+                "userSettingsLabel": "ctrl+shift+5"
             },
             "workbench.action.tasks.build": {
                 "label": "Ctrl+Shift+B",

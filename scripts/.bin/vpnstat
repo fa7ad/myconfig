@@ -5,6 +5,10 @@ if [ "$stat" = "Disconnected" ]
   echo -n ""
 end
 
+if [ "$stat" = "Connecting" ]
+  echo -n "..."
+end
+
 if [ "$stat" = "Connected" ]
   echo -n ""
   set ln2 (nordvpn status | sed 's/.*:\ //g;2q;d')

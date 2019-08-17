@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR ANDROID_SDK_ROOT:/opt/android\x2dsdk
 SETUVAR QT_STYLE_OVERRIDE:QtCurve
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
