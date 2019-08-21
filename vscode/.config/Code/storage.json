@@ -90,6 +90,7 @@
             "file:///home/fahad/Documents/Pl2/02-25-18"
         ],
         "files2": [
+            "file:///ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js",
             "file:///etc/profile.pacnew",
             "file:///etc/profile",
             "file:///home/fahad/myconfig/bin/node-i3-sensible-app/main.js",
@@ -107,8 +108,8 @@
                 "mode": 1,
                 "x": 1924,
                 "y": 34,
-                "width": 1352,
-                "height": 730
+                "width": 1912,
+                "height": 1042
             }
         },
         "openedWindows": []
@@ -268,6 +269,17 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js",
+                                        "path": "/ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -842,8 +854,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"

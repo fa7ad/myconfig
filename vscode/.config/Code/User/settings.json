@@ -49,7 +49,7 @@
   "workbench.editor.showTabs": false,
   "workbench.statusBar.feedback.visible": false,
 
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "window.menuBarVisibility": "toggle",
 
   "git.autofetch": true,

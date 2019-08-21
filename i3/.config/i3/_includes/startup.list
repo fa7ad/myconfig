@@ -1,3 +1,6 @@
+# auto detect displays
+autorandr -c
+
 #keyboard stuff
 numlockx on
 setxkbmap -layout us -option compose:menu
@@ -8,7 +11,8 @@ gsettings set org.gnome.desktop.background show-desktop-icons false
 
 # background and compositor
 compton -b --config ~/.compton.conf
-~/.fehbg
+betterlockscreen -w
+# ~/.fehbg
 
 # Authentication agent
 /usr/lib/xfce-polkit/xfce-polkit &
@@ -18,8 +22,9 @@ mopidy &
 dunst &
 mpDris2 &
 # gnome-screensaver &
+indicator-kdeconnect &
 kdeconnect-indicator &
-xset dpms 120 300 0
+xset dpms 240 300 0
 xss-lock ~/.bin/lock.sh &
 # ~/.bin/locker-daemon &
 
