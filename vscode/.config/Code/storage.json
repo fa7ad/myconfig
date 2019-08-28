@@ -1326,8 +1326,8 @@
                 "userSettingsLabel": "ctrl+k f"
             },
             "workbench.action.closeWindow": {
-                "label": "Ctrl+Shift+W",
-                "userSettingsLabel": "ctrl+shift+w"
+                "label": "Ctrl+W",
+                "userSettingsLabel": "ctrl+w"
             },
             "workbench.action.quit": {
                 "label": "Ctrl+Q",
