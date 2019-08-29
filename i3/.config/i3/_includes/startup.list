@@ -1,5 +1,5 @@
 # auto detect displays
-autorandr -c
+autorandr horizontal
 
 #keyboard stuff
 numlockx on
@@ -21,6 +21,7 @@ betterlockscreen -w
 mopidy &
 dunst &
 mpDris2 &
+play-with-mpv &
 # gnome-screensaver &
 indicator-kdeconnect &
 kdeconnect-indicator &

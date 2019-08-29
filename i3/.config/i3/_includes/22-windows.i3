@@ -37,6 +37,7 @@ assign [class="Apache NetBeans.*"] $ws4
 assign [class="[nN]autilus"] $ws5
 
 assign [class="Gimp-2.10"] $ws6
+assign [class="[iI]nkscape"] $ws6
 
 assign [class="evince"] $ws7
 
