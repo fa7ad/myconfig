@@ -7,13 +7,23 @@ pstatus=$(playerctl -p $player status)
 
 for pl in $players; do
   st=$(playerctl -p $pl status)
-  if [[ "$st" = "Playing" ]]; then
+  if [[ $st = "Playing" ]]; then
     player=$pl
     pstatus=$st
   fi
 done
 
-if [ "$pstatus" = "Stopped"  -o -z "$pstatus" ]; then
+if [[ $pstatus = "Stopped" || -z "$pstatus" ]]; then
+  for pl in $players; do
+    st=$(playerctl -p $pl status)
+    if [[ "$st" = "Paused" ]]; then
+      player=$pl
+      pstatus=$st
+    fi
+  done
+fi
+
+if [[ $pstatus = "Stopped"  || -z "$pstatus" ]]; then
   echo ""
   exit
 fi
@@ -23,12 +33,14 @@ artist=$(playerctl -p $player metadata artist)
 
 ic=
 
-if [ "$status" = "Playing" ]; then
+if [ $pstatus = "Playing" ]; then
   ic=
 fi
 
-if [ "$artist" != "" ]; then
-  echo -n "$ic $artist - "
+echo -n "$ic "
+
+if [[ ! -z $artist && ! $player =~ ^chrome ]]; then
+  echo -n "$artist - "
 fi
 
 echo -n "$title"
