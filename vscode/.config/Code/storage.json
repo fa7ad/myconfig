@@ -3,6 +3,7 @@
     "openedPathsList": {
         "workspaces3": [
             "file:///ldata/my-projects/ActiveJobs/aj-web",
+            "file:///ldata/my-projects/ActiveJobs/aj-backend",
             "file:///ldata/my-projects/roar-backend",
             "file:///ldata/my-projects/roar-client",
             "file:///ldata/my-projects/inferior-text-expansion",
@@ -172,6 +173,17 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-backend",
+                                        "path": "/ldata/my-projects/ActiveJobs/aj-backend",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/ActiveJobs/aj-backend"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///ldata/my-projects/roar-backend",
                                         "path": "/ldata/my-projects/roar-backend",
                                         "scheme": "file"
@@ -255,17 +267,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/ldata/my-projects/fu-remote-flutter"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/fu-remote-app",
-                                        "path": "/ldata/my-projects/fu-remote-app",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/fu-remote-app"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
