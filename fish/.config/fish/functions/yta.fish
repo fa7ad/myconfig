@@ -1,3 +1,3 @@
 function yta
-  mpv --no-video --ytdl-format=bestaudio $argv
+  mpv --no-vid --ytdl-format=bestaudio "ytdl://ytsearch:$argv"
 end

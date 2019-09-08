@@ -13,7 +13,7 @@ for pl in $players; do
   fi
 done
 
-if [[ $pstatus = "Stopped" || -z "$pstatus" ]]; then
+if [[ $pstatus != "Playing" ]]; then
   for pl in $players; do
     st=$(playerctl -p $pl status)
     if [[ "$st" = "Paused" ]]; then

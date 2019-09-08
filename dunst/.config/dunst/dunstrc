@@ -194,24 +194,24 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#12161b"
-    foreground = "#476D77"
+    background = "#191c1f"
+    foreground = "#B7C7D5"
     timeout = 3
     # Icon for notifications with low urgency, uncomment to enable
     # icon = mail-unread
 
 
 [urgency_normal]
-    background = "#12161b"
-    foreground = "#afbcc2"
+    background = "#191c1f"
+    foreground = "#e4e8eb"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     icon = mail-unread
 
 
 [urgency_critical]
-    background = "#12161b"
-    foreground = "#91875F"
+    background = "#191c1f"
+    foreground = "#B8CFE4"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     # icon = error

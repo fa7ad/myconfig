@@ -1,0 +1,214 @@
+[   0.005][v][cplayer] mpv 0.29.1 Copyright © 2000-2018 mpv/MPlayer/mplayer2 projects
+[   0.005][v][cplayer]  built on Sat Aug 17 13:00:12 +06 2019
+[   0.005][v][cplayer] ffmpeg library versions:
+[   0.005][v][cplayer]    libavutil       56.31.100
+[   0.005][v][cplayer]    libavcodec      58.54.100
+[   0.005][v][cplayer]    libavformat     58.29.100
+[   0.005][v][cplayer]    libswscale      5.5.100
+[   0.005][v][cplayer]    libavfilter     7.57.100
+[   0.005][v][cplayer]    libswresample   3.5.100
+[   0.005][v][cplayer] ffmpeg version: n4.2
+[   0.005][v][cplayer] 
+[   0.005][v][cplayer] Configuration: ./waf configure --color=yes --prefix=/usr --progress --confdir=/etc/mpv --disable-lgpl --enable-libmpv-shared --disable-libmpv-static --disable-static-build --disable-debug-build --enable-manpage-build --disable-html-build --disable-pdf-build --enable-cplugins --enable-zsh-comp --disable-test --disable-clang-database --disable-android --disable-swift --disable-uwp --disable-win32-internal-pthreads --enable-iconv --enable-libsmbclient --enable-lua --enable-javascript --enable-libass --enable-libass-osd --enable-zlib --enable-libbluray --enable-dvdread --enable-dvdnav --enable-cdda --enable-uchardet --enable-rubberband --enable-lcms2 --enable-vapoursynth --enable-vapoursynth-lazy --enable-libarchive --enable-libavdevice --lua=52arch --enable-sdl2 --enable-oss-audio --enable-rsound --enable-sndio --enable-pulse --enable-jack --enable-openal --disable-opensles --enable-alsa --disable-coreaudio --disable-audiounit --disable-wasapi --disable-cocoa --enable-drm --enable-drmprime --enable-gbm --enable-wayland-scanner --enable-wayland-protocols --enable-wayland --enable-x11 --enable-xv --disable-gl-cocoa --enable-gl-x11 --enable-egl-x11 --enable-egl-drm --enable-gl-wayland --disable-gl-win32 --disable-gl-dxinterop --disable-egl-angle --disable-egl-angle-lib --disable-egl-angle-win32 --enable-vdpau --enable-vdpau-gl-x11 --enable-vaapi --enable-vaapi-x11 --enable-vaapi-wayland --enable-vaapi-drm --enable-vaapi-glx --enable-vaapi-x-egl --enable-caca --enable-jpeg --disable-direct3d --enable-shaderc --enable-crossc --disable-d3d11 --disable-rpi --disable-ios-gl --enable-plain-gl --disable-mali-fbdev --enable-gl --enable-vulkan --disable-videotoolbox-gl --disable-d3d-hwaccel --disable-d3d9-hwaccel --disable-gl-dxinterop-d3d9 --enable-cuda-hwaccel --enable-tv --enable-tv-v4l2 --enable-libv4l2 --enable-audio-input --enable-dvbin --disable-apple-remote --disable-macos-touchbar --disable-macos-cocoa-cb
+[   0.005][v][cplayer] List of enabled features: 52arch alsa asm atomics audio-input build-date caca cdda cplayer cplugins crossc cuda-hwaccel drm drmprime dvbin dvdnav dvdread dvdread-common egl-drm egl-helpers egl-x11 fchmod ffmpeg ffnvcodec gbm gbm.h gl gl-wayland gl-x11 glibc-thread-name glob glob-posix gnuc gpl iconv jack javascript jpeg lcms2 libaf libarchive libass libass-osd libav-any libavcodec libavdevice libbluray libdl libm libmpv-shared librt libsmbclient libv4l2 linux-fstatfs lua openal optimize oss-audio plain-gl posix posix-or-mingw posix-spawn posix-spawn-native pthreads pulse rsound rubberband sdl2 shaderc shaderc-shared sndio stdatomic tv tv-v4l2 uchardet vaapi vaapi-drm vaapi-egl vaapi-glx vaapi-wayland vaapi-x-egl vaapi-x11 vapoursynth vapoursynth-core vapoursynth-lazy vdpau vdpau-gl-x11 videodev vt.h vulkan wayland wayland-protocols x11 xv zlib zsh-comp
+[   0.005][d][osc] Loading lua script @osc.lua...
+[   0.005][d][ytdl_hook] Loading lua script @ytdl_hook.lua...
+[   0.005][d][stats] Loading lua script @stats.lua...
+[   0.005][d][stats2] Loading lua script /home/fahad/.config/mpv/scripts/stats.lua...
+[   0.005][d][ytdl_hook] loading mp.defaults
+[   0.005][d][osc] loading mp.defaults
+[   0.005][d][autosub] Loading lua script /home/fahad/.config/mpv/scripts/autosub.lua...
+[   0.005][d][stats] loading mp.defaults
+[   0.006][d][mpris] Loading SO plugin /home/fahad/.config/mpv/scripts/mpris.so...
+[   0.006][v][input_file] Client connected
+[   0.006][d][autocrop] Loading lua script /home/fahad/.config/mpv/scripts/autocrop.lua...
+[   0.006][d][history] Loading javascript /home/fahad/.config/mpv/scripts/history.js...
+[   0.006][v][cplayer] Waiting for scripts...
+[   0.006][d][autosub] loading mp.defaults
+[   0.007][d][autocrop] loading mp.defaults
+[   0.007][d][stats2] loading mp.defaults
+[   0.008][d][stats] loading @stats.lua
+[   0.008][d][osc] loading @osc.lua
+[   0.008][d][ytdl_hook] loading @ytdl_hook.lua
+[   0.008][d][autosub] loading file /home/fahad/.config/mpv/scripts/autosub.lua
+[   0.008][d][cplayer] Run command: define-section, flags=0, args=[input_autosub, b script-binding autosub/auto_load_subs
+[   0.009][d][cplayer] , default]
+[   0.009][d][cplayer] Run command: enable-section, flags=0, args=[input_autosub, allow-hide-cursor+allow-vo-dragging]
+[   0.009][d][cplayer] Run command: define-section, flags=0, args=[input_forced_autosub, , force]
+[   0.009][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_autosub, allow-hide-cursor+allow-vo-dragging]
+[   0.009][d][stats2] loading file /home/fahad/.config/mpv/scripts/stats.lua
+[   0.010][d][ytdl_hook] reading options for ytdl_hook 
+[   0.010][v][ytdl_hook] script-opts/ytdl_hook.conf not found. 
+[   0.010][v][ytdl_hook] lua-settings/ytdl_hook.conf not found. 
+[   0.010][v][history] Loading file @/defaults.js
+[   0.010][v][history] Reading file '@/defaults.js'
+[   0.010][d][stats] reading options for stats 
+[   0.010][v][stats] script-opts/stats.conf not found. 
+[   0.010][v][stats] lua-settings/stats.conf not found. 
+[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_stats, i script-binding stats/display-stats
+[   0.012][d][cplayer] , default]
+[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats, , force]
+[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_stats, i script-binding stats/display-stats
+[   0.012][d][cplayer] I script-binding stats/display-stats-toggle
+[   0.012][d][cplayer] , default]
+[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats, , force]
+[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_stats, i script-binding stats/display-stats
+[   0.012][d][cplayer] I script-binding stats/display-stats-toggle
+[   0.012][d][cplayer] , default]
+[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats, , force]
+[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_stats, i script-binding stats/display-stats
+[   0.012][d][cplayer] I script-binding stats/display-stats-toggle
+[   0.012][d][cplayer] , default]
+[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats, , force]
+[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.012][d][autocrop] loading file /home/fahad/.config/mpv/scripts/autocrop.lua
+[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_autocrop, C script-binding autocrop/auto_crop
+[   0.012][d][cplayer] , default]
+[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_autocrop, allow-hide-cursor+allow-vo-dragging]
+[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_forced_autocrop, , force]
+[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_autocrop, allow-hide-cursor+allow-vo-dragging]
+[   0.012][d][osc] reading options for osc 
+[   0.013][v][osc] script-opts/osc.conf not found. 
+[   0.013][v][osc] lua-settings/osc.conf not found. 
+[   0.013][v][history] Loading file /home/fahad/.config/mpv/scripts/history.js
+[   0.013][v][history] Reading file '/home/fahad/.config/mpv/scripts/history.js'
+[   0.013][d][cplayer] Run command: define-section, flags=0, args=[showhide, mouse_move script-binding osc/__keybinding1
+[   0.013][d][cplayer] mouse_leave script-binding osc/__keybinding2
+[   0.013][d][cplayer] , force]
+[   0.013][v][history] Reading file '/home/fahad/.config/mpv/scripts/lib/ramda.js'
+[   0.013][d][cplayer] Run command: enable-section, flags=0, args=[showhide, allow-hide-cursor+allow-vo-dragging]
+[   0.013][d][cplayer] Run command: define-section, flags=0, args=[input, mbtn_left script-binding osc/__keybinding3
+[   0.013][d][cplayer] shift+mbtn_left script-binding osc/__keybinding4
+[   0.013][d][cplayer] mbtn_right script-binding osc/__keybinding5
+[   0.013][d][cplayer] wheel_up script-binding osc/__keybinding6
+[   0.013][d][cplayer] wheel_down script-binding osc/__keybinding7
+[   0.013][d][cplayer] mbtn_left_dbl ignore
+[   0.013][d][cplayer] shift+mbtn_left_dbl ignore
+[   0.013][d][cplayer] mbtn_right_dbl ignore
+[   0.013][d][cplayer] , force]
+[   0.013][d][cplayer] Run command: enable-section, flags=0, args=[input, ]
+[   0.013][d][cplayer] Run command: define-section, flags=0, args=[input_osc, , default]
+[   0.013][d][cplayer] Run command: enable-section, flags=0, args=[input_osc, allow-hide-cursor+allow-vo-dragging]
+[   0.013][d][cplayer] Run command: define-section, flags=0, args=[input_forced_osc, , force]
+[   0.013][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_osc, allow-hide-cursor+allow-vo-dragging]
+[   0.013][d][osc] osc_init 
+[   0.014][d][cplayer] Run command: disable-section, flags=0, args=[input]
+[   0.014][v][osd/libass] Shaper: FriBidi 0.19.7 (SIMPLE) HarfBuzz-ng 2.5.3 (COMPLEX)
+[   0.014][v][osd/libass] Setting up fonts...
+[   0.015][d][stats2] reading options for stats2 
+[   0.015][v][stats2] script-opts/stats2.conf not found. 
+[   0.015][v][stats2] lua-settings/stats2.conf not found. 
+[   0.015][d][cplayer] Run command: define-section, flags=0, args=[input_stats2, i script-binding stats2/stats2
+[   0.015][d][cplayer] , default]
+[   0.015][d][cplayer] Run command: enable-section, flags=0, args=[input_stats2, allow-hide-cursor+allow-vo-dragging]
+[   0.015][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats2, , force]
+[   0.015][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats2, allow-hide-cursor+allow-vo-dragging]
+[   0.024][v][osd/libass] Using font provider fontconfig
+[   0.024][v][osd/libass] Done.
+[   0.029][v][history] Reading file '/home/fahad/.cache/mpv/filter.js'
+[   0.029][i][history] Loaded: /home/fahad/.cache/mpv/history.json
+[   0.029][v][cplayer] Done loading scripts.
+[   0.029][i][cplayer] Playing: ytdl://ytsearch:xo tour lif3
+[   0.029][v][cplayer] Running hook: ytdl_hook/on_load
+[   0.029][v][ytdl_hook] ytdl:// hook 
+[   0.030][d][ytdl_hook] Running: youtube-dl --no-warnings -J --flat-playlist --sub-format ass/srt/best --format bestaudio --all-subs --no-playlist -- ytsearch:xo tour lif3 
+[   1.835][v][ytdl_hook] youtube-dl succeeded! 
+[   1.835][d][ytdl_hook] ytdl parsing took 0.005173 seconds 
+[   1.835][v][cplayer] Set property: stream-open-filename="memory://#EXTM3U\u000a#EXTINF:0,Lil Uzi Vert - XO Tour Llif3 (Official Music Video)\u000ahttps://youtu.be/WrsFXgQk5UI" -> 1
+[   1.835][d][ytdl_hook] script running time: 0.005215 seconds 
+[   1.836][v][memory] Opening memory://#EXTM3U
+[   1.836][v][memory] #EXTINF:0,Lil Uzi Vert - XO Tour Llif3 (Official Music Video)
+[   1.836][v][memory] https://youtu.be/WrsFXgQk5UI
+[   1.836][d][memory] Stream opened successfully.
+[   1.836][v][demux] Trying demuxers for level=normal.
+[   1.836][d][demux] Trying demuxer: disc (force-level: normal)
+[   1.836][d][demux] Trying demuxer: edl (force-level: normal)
+[   1.836][d][demux] Trying demuxer: cue (force-level: normal)
+[   1.836][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[   1.837][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[   1.837][d][demux] Trying demuxer: tv (force-level: normal)
+[   1.837][d][demux] Trying demuxer: mkv (force-level: normal)
+[   1.837][d][demux] Trying demuxer: libarchive (force-level: normal)
+[   1.837][d][demux] Trying demuxer: rar (force-level: normal)
+[   1.838][d][demux] Trying demuxer: lavf (force-level: normal)
+[   1.839][v][lavf] No format found, try lowering probescore or forcing the format.
+[   1.839][d][demux] Trying demuxer: mf (force-level: normal)
+[   1.839][d][demux] Trying demuxer: playlist (force-level: normal)
+[   1.839][v][demux] Detected file format: m3u (Playlist file)
+[   1.839][v][playlist] assuming demuxer read all data; closing stream
+[   1.840][v][cplayer] Opening done: memory://#EXTM3U
+[   1.840][v][cplayer] #EXTINF:0,Lil Uzi Vert - XO Tour Llif3 (Official Music Video)
+[   1.840][v][cplayer] https://youtu.be/WrsFXgQk5UI
+[   1.840][v][cplayer] finished playback, success (reason 5)
+[   1.840][i][cplayer] 
+[   1.840][i][cplayer] Playing: https://youtu.be/WrsFXgQk5UI
+[   1.840][v][cplayer] Running hook: ytdl_hook/on_load
+[   1.840][v][ytdl_hook] ytdl:// hook 
+[   1.840][v][ytdl_hook] not a ytdl:// url 
+[   1.841][v][ffmpeg] Opening https://youtu.be/WrsFXgQk5UI
+[   1.891][d][ffmpeg] tcp: Starting connection attempt to 172.217.194.93 port 443
+[   1.946][d][ffmpeg] tcp: Successfully connected to 172.217.194.93 port 443
+[   2.428][d][ffmpeg] tcp: Starting connection attempt to 172.217.163.46 port 443
+[   2.470][d][ffmpeg] tcp: Successfully connected to 172.217.163.46 port 443
+[   2.721][v][ffmpeg] Mime-type: 'text/html; charset=utf-8'
+[   2.721][d][ffmpeg] Stream opened successfully.
+[   2.725][v][cache] Cache size set to 20000 KiB (10000 KiB backbuffer)
+[   2.725][v][demux] Trying demuxers for level=normal.
+[   2.726][d][demux] Trying demuxer: disc (force-level: normal)
+[   2.726][d][demux] Trying demuxer: edl (force-level: normal)
+[   2.727][d][demux] Trying demuxer: cue (force-level: normal)
+[   2.727][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[   2.728][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[   2.729][d][demux] Trying demuxer: tv (force-level: normal)
+[   2.730][d][demux] Trying demuxer: mkv (force-level: normal)
+[   2.730][d][demux] Trying demuxer: libarchive (force-level: normal)
+[   2.731][d][demux] Trying demuxer: rar (force-level: normal)
+[   2.732][d][demux] Trying demuxer: lavf (force-level: normal)
+[   3.766][v][cache] EOF reached.
+[   3.832][v][lavf] No format found, try lowering probescore or forcing the format.
+[   3.833][d][demux] Trying demuxer: mf (force-level: normal)
+[   3.833][d][demux] Trying demuxer: playlist (force-level: normal)
+[   3.833][d][demux] Trying demuxer: null (force-level: normal)
+[   3.833][v][demux] Trying demuxers for level=unsafe.
+[   3.833][d][demux] Trying demuxer: disc (force-level: unsafe)
+[   3.833][d][demux] Trying demuxer: edl (force-level: unsafe)
+[   3.834][d][demux] Trying demuxer: cue (force-level: unsafe)
+[   3.834][d][demux] Trying demuxer: rawaudio (force-level: unsafe)
+[   3.834][d][demux] Trying demuxer: rawvideo (force-level: unsafe)
+[   3.834][d][demux] Trying demuxer: tv (force-level: unsafe)
+[   3.835][d][demux] Trying demuxer: mkv (force-level: unsafe)
+[   3.835][d][demux] Trying demuxer: libarchive (force-level: unsafe)
+[   3.835][d][demux] Trying demuxer: rar (force-level: unsafe)
+[   3.835][d][demux] Trying demuxer: lavf (force-level: unsafe)
+[   3.869][v][lavf] No format found, try lowering probescore or forcing the format.
+[   3.870][d][demux] Trying demuxer: mf (force-level: unsafe)
+[   3.870][d][demux] Trying demuxer: playlist (force-level: unsafe)
+[   3.870][d][demux] Trying demuxer: null (force-level: unsafe)
+[   3.870][v][cache] Terminating cache...
+[   3.870][v][cache] Cache exiting...
+[   3.870][d][ffmpeg] AVIOContext: Statistics: 310203 bytes read, 0 seeks
+[   3.870][v][cplayer] Opening failed or was aborted: https://youtu.be/WrsFXgQk5UI
+[   3.870][v][cplayer] Running hook: ytdl_hook/on_load_fail
+[   3.870][v][ytdl_hook] full hook 
+[   3.870][d][ytdl_hook] Running: youtube-dl --no-warnings -J --flat-playlist --sub-format ass/srt/best --format bestaudio --all-subs --no-playlist -- https://youtu.be/WrsFXgQk5UI 
+[   5.882][d][cplayer] Run command: quit, flags=9, args=[0]
+[   5.886][v][cplayer] finished playback, success (reason 3)
+[   5.886][i][cplayer] 
+[   5.886][i][cplayer] 
+[   5.886][i][cplayer] Exiting... (Quit)
+[   5.886][v][autocrop] Exiting...
+[   5.886][v][stats] Exiting...
+[   5.886][v][input_file] Exiting...
+[   5.886][v][osc] Exiting...
+[   5.886][v][stats2] Exiting...
+[   5.887][v][autosub] Exiting...
+[   5.888][v][history] Exiting...
+[   5.888][v][ytdl_hook] Exiting...
+[   5.891][v][mpris] Exiting...
