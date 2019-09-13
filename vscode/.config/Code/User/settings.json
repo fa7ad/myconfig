@@ -6,7 +6,7 @@
   "editor.fontFamily": "'Fira Code', 'PragmataPro', 'Operator Mono Lig Book', PowerlineSymbols, monospace",
   "editor.rulers": [80, 120],
   "editor.insertSpaces": true,
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
   "editor.renderWhitespace": "all",
 
   "files.eol": "\n",
@@ -49,7 +49,7 @@
   "workbench.editor.showTabs": false,
   "workbench.statusBar.feedback.visible": false,
 
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "window.menuBarVisibility": "toggle",
 
   "git.autofetch": true,
@@ -96,6 +96,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

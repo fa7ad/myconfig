@@ -2,8 +2,8 @@
     "telemetry.machineId": "9e42f38182d0f7f0a95298e70ce2a83e7b9981fe700b56d019b38a71825dce3d",
     "openedPathsList": {
         "workspaces3": [
-            "file:///ldata/my-projects/ActiveJobs/aj-backend",
             "file:///ldata/my-projects/ActiveJobs/aj-web",
+            "file:///ldata/my-projects/ActiveJobs/aj-backend",
             "file:///ldata/my-projects/roar-backend",
             "file:///ldata/my-projects/roar-client",
             "file:///ldata/my-projects/inferior-text-expansion",
@@ -107,10 +107,10 @@
             "backupPath": "/home/fahad/.config/Code/Backups/6c60026d254003d4d838b7b6b8dd5a0d",
             "uiState": {
                 "mode": 1,
-                "x": 1924,
-                "y": 34,
-                "width": 1912,
-                "height": 1042
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1080
             }
         },
         "openedWindows": []
@@ -823,7 +823,8 @@
                     },
                     {
                         "id": "editor.action.toggleMinimap",
-                        "label": "Show &&Minimap"
+                        "label": "Show &&Minimap",
+                        "checked": true
                     },
                     {
                         "id": "breadcrumbs.toggle",
@@ -855,7 +856,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
