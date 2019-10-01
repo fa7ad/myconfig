@@ -68,7 +68,7 @@ type               = custom/text
 content            = |
 content-foreground = ${wal.bg}
 content-background = ${wal.bg}
-content-padding = 24
+content-padding = 8
 
 [module/plctl]
 type = custom/menu
