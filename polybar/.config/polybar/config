@@ -54,7 +54,7 @@ font-5 = "Siyam Rupali:size=10;3"
 
 modules-left = wm pdl plctl playing volume
 modules-center = title
-modules-right = pdl kbd ram cpu time battery vpn
+modules-right = pdl kbd ram time battery vpn
 
 fixed-center = true
 
