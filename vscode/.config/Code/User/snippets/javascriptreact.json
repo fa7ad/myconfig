@@ -56,9 +56,11 @@
   "ReactFuncionalComponent": {
     "prefix": "rfcom",
     "body": [
-      "const $1 = ({...props}) => (",
-      "  $2",
-      ")",
+      "const $1 = ({...props}) => {",
+      "  return (",
+      "    $2",
+      "  )",
+      "}",
       "",
       "export default $1",
       ""

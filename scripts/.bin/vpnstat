@@ -1,9 +1,11 @@
 #!/usr/bin/env fish
+set whitelist sg uk us hk
+
 set stat (nordvpn status | grep Status | sed 's/.*:\ //g' | head -n1)
 
-function confirm
-  zenity --question --text=$argv[1]
-  return $status
+function _confirm
+  zenity --question --text $argv
+  echo -n "$status"
 end
 
 if [ "$stat" = "Disconnected" ]
@@ -21,17 +23,19 @@ if [ "$stat" = "Connected" ]
   echo -n " $server"
 end
 
-set country (nordvpn countries | sed -E 's/\t+/\n/g' | shuf | head -n1)
-
-if [ "$argv" = 'switch' ]
-  confirm "Do you want to try another country?";and nordvpn d;and nordvpn c $country
-end
-
-if [ "$argv" = 'toggle' ]
+if [ "$argv" = "toggle" ]
   if [ "$stat" = "Connected" ]
-    confirm "Do you want to disconnect NordVPN?";and nordvpn d
+    set ret (_confirm "Do you want to disconnect NordVPN?")
+    if [ $ret -eq 0 ]
+      nordvpn d
+    end
   end
   if [ "$stat" = "Disconnected" ]
-    confirm "Do you want to connect to NordVPN?";and nordvpn c $country
+    set i (random 1 4)
+    set ret (_confirm "Do you want to connect to NordVPN ("$whitelist[$i]")?")
+    if [ $ret -eq 0 ]
+      nordvpn c $whitelist[$i] > ~/.vpnstat.log &
+      disown
+    end
   end
 end

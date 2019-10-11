@@ -28,6 +28,11 @@ if [[ $pstatus = "Stopped"  || -z "$pstatus" ]]; then
   exit
 fi
 
+if [[ $1 = "player" ]];then
+  echo -n $player
+  exit
+fi
+
 title=$(playerctl -p $player metadata title | tr -s ' ' | awk 'length > 40{$0=substr($0,0,41)"..."}1')
 artist=$(playerctl -p $player metadata artist)
 
@@ -44,3 +49,4 @@ if [[ ! -z $artist && ! $player =~ ^chrome ]]; then
 fi
 
 echo -n "$title"
+

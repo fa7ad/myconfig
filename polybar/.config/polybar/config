@@ -92,14 +92,13 @@ type = custom/script
 exec = vpnstat
 interval = 1
 click-left = vpnstat toggle
-click-right = vpnstat switch
 format-padding = 2
 
 [module/playing]
 type = custom/script
 exec = nowplay
 interval = 1
-click-left = playerctl play-pause
+click-left = playerctl -p $(nowplay player) play-pause
 format-background = ${wal.bg}
 format-foreground = ${wal.fg}
 format-padding = 2
