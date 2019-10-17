@@ -15,10 +15,9 @@ mkdir -p /tmp/xkb/symbols
 # definition.
 cat >/tmp/xkb/symbols/custom <<\EOF
 xkb_symbols "remote" {
-  key <HOME> { [ Prior ] };
-  key <END> { [ Next ] };
   key <PGUP>  { [ Home ] };
-  key <PGDN> { [ End ] };
+  key <PGDN> { [ Prior ] };
+  key <HOME> { [ Next ] };
 };
 EOF
 

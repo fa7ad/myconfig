@@ -2,9 +2,10 @@
 autorandr horizontal
 
 #keyboard stuff
-xmodmap ~/.Xmodmap
+# xmodmap ~/.Xmodmap
 numlockx on
 setxkbmap -layout us -option compose:menu
+~/.bin/xkbremap
 fusuma -d
 
 # nautilus fuckery
