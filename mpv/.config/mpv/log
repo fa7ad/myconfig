@@ -1,214 +1,1505 @@
-[   0.005][v][cplayer] mpv 0.29.1 Copyright © 2000-2018 mpv/MPlayer/mplayer2 projects
-[   0.005][v][cplayer]  built on Sat Aug 17 13:00:12 +06 2019
-[   0.005][v][cplayer] ffmpeg library versions:
-[   0.005][v][cplayer]    libavutil       56.31.100
-[   0.005][v][cplayer]    libavcodec      58.54.100
-[   0.005][v][cplayer]    libavformat     58.29.100
-[   0.005][v][cplayer]    libswscale      5.5.100
-[   0.005][v][cplayer]    libavfilter     7.57.100
-[   0.005][v][cplayer]    libswresample   3.5.100
-[   0.005][v][cplayer] ffmpeg version: n4.2
-[   0.005][v][cplayer] 
-[   0.005][v][cplayer] Configuration: ./waf configure --color=yes --prefix=/usr --progress --confdir=/etc/mpv --disable-lgpl --enable-libmpv-shared --disable-libmpv-static --disable-static-build --disable-debug-build --enable-manpage-build --disable-html-build --disable-pdf-build --enable-cplugins --enable-zsh-comp --disable-test --disable-clang-database --disable-android --disable-swift --disable-uwp --disable-win32-internal-pthreads --enable-iconv --enable-libsmbclient --enable-lua --enable-javascript --enable-libass --enable-libass-osd --enable-zlib --enable-libbluray --enable-dvdread --enable-dvdnav --enable-cdda --enable-uchardet --enable-rubberband --enable-lcms2 --enable-vapoursynth --enable-vapoursynth-lazy --enable-libarchive --enable-libavdevice --lua=52arch --enable-sdl2 --enable-oss-audio --enable-rsound --enable-sndio --enable-pulse --enable-jack --enable-openal --disable-opensles --enable-alsa --disable-coreaudio --disable-audiounit --disable-wasapi --disable-cocoa --enable-drm --enable-drmprime --enable-gbm --enable-wayland-scanner --enable-wayland-protocols --enable-wayland --enable-x11 --enable-xv --disable-gl-cocoa --enable-gl-x11 --enable-egl-x11 --enable-egl-drm --enable-gl-wayland --disable-gl-win32 --disable-gl-dxinterop --disable-egl-angle --disable-egl-angle-lib --disable-egl-angle-win32 --enable-vdpau --enable-vdpau-gl-x11 --enable-vaapi --enable-vaapi-x11 --enable-vaapi-wayland --enable-vaapi-drm --enable-vaapi-glx --enable-vaapi-x-egl --enable-caca --enable-jpeg --disable-direct3d --enable-shaderc --enable-crossc --disable-d3d11 --disable-rpi --disable-ios-gl --enable-plain-gl --disable-mali-fbdev --enable-gl --enable-vulkan --disable-videotoolbox-gl --disable-d3d-hwaccel --disable-d3d9-hwaccel --disable-gl-dxinterop-d3d9 --enable-cuda-hwaccel --enable-tv --enable-tv-v4l2 --enable-libv4l2 --enable-audio-input --enable-dvbin --disable-apple-remote --disable-macos-touchbar --disable-macos-cocoa-cb
-[   0.005][v][cplayer] List of enabled features: 52arch alsa asm atomics audio-input build-date caca cdda cplayer cplugins crossc cuda-hwaccel drm drmprime dvbin dvdnav dvdread dvdread-common egl-drm egl-helpers egl-x11 fchmod ffmpeg ffnvcodec gbm gbm.h gl gl-wayland gl-x11 glibc-thread-name glob glob-posix gnuc gpl iconv jack javascript jpeg lcms2 libaf libarchive libass libass-osd libav-any libavcodec libavdevice libbluray libdl libm libmpv-shared librt libsmbclient libv4l2 linux-fstatfs lua openal optimize oss-audio plain-gl posix posix-or-mingw posix-spawn posix-spawn-native pthreads pulse rsound rubberband sdl2 shaderc shaderc-shared sndio stdatomic tv tv-v4l2 uchardet vaapi vaapi-drm vaapi-egl vaapi-glx vaapi-wayland vaapi-x-egl vaapi-x11 vapoursynth vapoursynth-core vapoursynth-lazy vdpau vdpau-gl-x11 videodev vt.h vulkan wayland wayland-protocols x11 xv zlib zsh-comp
-[   0.005][d][osc] Loading lua script @osc.lua...
-[   0.005][d][ytdl_hook] Loading lua script @ytdl_hook.lua...
-[   0.005][d][stats] Loading lua script @stats.lua...
-[   0.005][d][stats2] Loading lua script /home/fahad/.config/mpv/scripts/stats.lua...
-[   0.005][d][ytdl_hook] loading mp.defaults
-[   0.005][d][osc] loading mp.defaults
-[   0.005][d][autosub] Loading lua script /home/fahad/.config/mpv/scripts/autosub.lua...
-[   0.005][d][stats] loading mp.defaults
-[   0.006][d][mpris] Loading SO plugin /home/fahad/.config/mpv/scripts/mpris.so...
-[   0.006][v][input_file] Client connected
+[   0.006][v][cplayer] mpv 0.29.1 Copyright © 2000-2018 mpv/MPlayer/mplayer2 projects
+[   0.006][v][cplayer]  built on Sun Oct  6 20:48:14 UTC 2019
+[   0.006][v][cplayer] ffmpeg library versions:
+[   0.006][v][cplayer]    libavutil       56.31.100
+[   0.006][v][cplayer]    libavcodec      58.54.100
+[   0.006][v][cplayer]    libavformat     58.29.100
+[   0.006][v][cplayer]    libswscale      5.5.100
+[   0.006][v][cplayer]    libavfilter     7.57.100
+[   0.006][v][cplayer]    libswresample   3.5.100
+[   0.006][v][cplayer] ffmpeg version: n4.2.1
+[   0.006][v][cplayer] 
+[   0.006][v][cplayer] Configuration: ./waf configure --prefix=/usr --confdir=/etc/mpv --enable-cdda --enable-dvb --enable-dvdnav --enable-libarchive --enable-libmpv-shared --enable-libsmbclient --enable-tv --enable-zsh-comp
+[   0.006][v][cplayer] List of enabled features: 52arch alsa asm atomics audio-input build-date caca cdda cplayer cplugins cuda-hwaccel debug-build drm drmprime dvbin dvdnav dvdread-common egl-drm egl-helpers egl-x11 fchmod ffmpeg ffnvcodec gbm gbm.h gl gl-wayland gl-x11 glibc-thread-name glob glob-posix gnuc gpl iconv jack javascript jpeg lcms2 libaf libarchive libass libass-osd libav-any libavcodec libavdevice libbluray libdl libm libmpv-shared librt libsmbclient libv4l2 linux-fstatfs lua optimize oss-audio plain-gl posix posix-or-mingw posix-spawn posix-spawn-native pthreads pulse rubberband shaderc shaderc-shared stdatomic tv tv-v4l2 uchardet vaapi vaapi-drm vaapi-egl vaapi-glx vaapi-wayland vaapi-x-egl vaapi-x11 vdpau vdpau-gl-x11 videodev vt.h vulkan wayland wayland-protocols x11 xv zlib zsh-comp
+[   0.006][d][osc] Loading lua script @osc.lua...
+[   0.006][d][ytdl_hook] Loading lua script @ytdl_hook.lua...
+[   0.006][d][stats] Loading lua script @stats.lua...
+[   0.006][e][ipc] Could not open '/home/fahad/.config/mpv/fifo'
 [   0.006][d][autocrop] Loading lua script /home/fahad/.config/mpv/scripts/autocrop.lua...
-[   0.006][d][history] Loading javascript /home/fahad/.config/mpv/scripts/history.js...
-[   0.006][v][cplayer] Waiting for scripts...
-[   0.006][d][autosub] loading mp.defaults
-[   0.007][d][autocrop] loading mp.defaults
-[   0.007][d][stats2] loading mp.defaults
+[   0.006][d][osc] loading mp.defaults
+[   0.006][d][autosub] Loading lua script /home/fahad/.config/mpv/scripts/autosub.lua...
+[   0.006][d][stats] loading mp.defaults
+[   0.007][d][history] Loading javascript /home/fahad/.config/mpv/scripts/history.js...
+[   0.007][d][mpris] Loading SO plugin /home/fahad/.config/mpv/scripts/mpris.so...
+[   0.007][d][ytdl_hook] loading mp.defaults
+[   0.007][d][autosub] loading mp.defaults
+[   0.008][d][stats2] Loading lua script /home/fahad/.config/mpv/scripts/stats.lua...
+[   0.008][v][cplayer] Waiting for scripts...
+[   0.008][d][autocrop] loading mp.defaults
 [   0.008][d][stats] loading @stats.lua
 [   0.008][d][osc] loading @osc.lua
-[   0.008][d][ytdl_hook] loading @ytdl_hook.lua
-[   0.008][d][autosub] loading file /home/fahad/.config/mpv/scripts/autosub.lua
-[   0.008][d][cplayer] Run command: define-section, flags=0, args=[input_autosub, b script-binding autosub/auto_load_subs
-[   0.009][d][cplayer] , default]
-[   0.009][d][cplayer] Run command: enable-section, flags=0, args=[input_autosub, allow-hide-cursor+allow-vo-dragging]
-[   0.009][d][cplayer] Run command: define-section, flags=0, args=[input_forced_autosub, , force]
-[   0.009][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_autosub, allow-hide-cursor+allow-vo-dragging]
-[   0.009][d][stats2] loading file /home/fahad/.config/mpv/scripts/stats.lua
-[   0.010][d][ytdl_hook] reading options for ytdl_hook 
-[   0.010][v][ytdl_hook] script-opts/ytdl_hook.conf not found. 
-[   0.010][v][ytdl_hook] lua-settings/ytdl_hook.conf not found. 
-[   0.010][v][history] Loading file @/defaults.js
-[   0.010][v][history] Reading file '@/defaults.js'
-[   0.010][d][stats] reading options for stats 
-[   0.010][v][stats] script-opts/stats.conf not found. 
-[   0.010][v][stats] lua-settings/stats.conf not found. 
-[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_stats, i script-binding stats/display-stats
-[   0.012][d][cplayer] , default]
-[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_stats, allow-hide-cursor+allow-vo-dragging]
-[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats, , force]
-[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats, allow-hide-cursor+allow-vo-dragging]
-[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_stats, i script-binding stats/display-stats
-[   0.012][d][cplayer] I script-binding stats/display-stats-toggle
-[   0.012][d][cplayer] , default]
-[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_stats, allow-hide-cursor+allow-vo-dragging]
-[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats, , force]
-[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats, allow-hide-cursor+allow-vo-dragging]
-[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_stats, i script-binding stats/display-stats
-[   0.012][d][cplayer] I script-binding stats/display-stats-toggle
-[   0.012][d][cplayer] , default]
-[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_stats, allow-hide-cursor+allow-vo-dragging]
-[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats, , force]
-[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats, allow-hide-cursor+allow-vo-dragging]
-[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_stats, i script-binding stats/display-stats
-[   0.012][d][cplayer] I script-binding stats/display-stats-toggle
-[   0.012][d][cplayer] , default]
-[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_stats, allow-hide-cursor+allow-vo-dragging]
-[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats, , force]
-[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats, allow-hide-cursor+allow-vo-dragging]
-[   0.012][d][autocrop] loading file /home/fahad/.config/mpv/scripts/autocrop.lua
-[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_autocrop, C script-binding autocrop/auto_crop
-[   0.012][d][cplayer] , default]
-[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_autocrop, allow-hide-cursor+allow-vo-dragging]
-[   0.012][d][cplayer] Run command: define-section, flags=0, args=[input_forced_autocrop, , force]
-[   0.012][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_autocrop, allow-hide-cursor+allow-vo-dragging]
-[   0.012][d][osc] reading options for osc 
-[   0.013][v][osc] script-opts/osc.conf not found. 
-[   0.013][v][osc] lua-settings/osc.conf not found. 
-[   0.013][v][history] Loading file /home/fahad/.config/mpv/scripts/history.js
-[   0.013][v][history] Reading file '/home/fahad/.config/mpv/scripts/history.js'
-[   0.013][d][cplayer] Run command: define-section, flags=0, args=[showhide, mouse_move script-binding osc/__keybinding1
-[   0.013][d][cplayer] mouse_leave script-binding osc/__keybinding2
-[   0.013][d][cplayer] , force]
-[   0.013][v][history] Reading file '/home/fahad/.config/mpv/scripts/lib/ramda.js'
-[   0.013][d][cplayer] Run command: enable-section, flags=0, args=[showhide, allow-hide-cursor+allow-vo-dragging]
-[   0.013][d][cplayer] Run command: define-section, flags=0, args=[input, mbtn_left script-binding osc/__keybinding3
-[   0.013][d][cplayer] shift+mbtn_left script-binding osc/__keybinding4
-[   0.013][d][cplayer] mbtn_right script-binding osc/__keybinding5
-[   0.013][d][cplayer] wheel_up script-binding osc/__keybinding6
-[   0.013][d][cplayer] wheel_down script-binding osc/__keybinding7
-[   0.013][d][cplayer] mbtn_left_dbl ignore
-[   0.013][d][cplayer] shift+mbtn_left_dbl ignore
-[   0.013][d][cplayer] mbtn_right_dbl ignore
-[   0.013][d][cplayer] , force]
-[   0.013][d][cplayer] Run command: enable-section, flags=0, args=[input, ]
-[   0.013][d][cplayer] Run command: define-section, flags=0, args=[input_osc, , default]
-[   0.013][d][cplayer] Run command: enable-section, flags=0, args=[input_osc, allow-hide-cursor+allow-vo-dragging]
-[   0.013][d][cplayer] Run command: define-section, flags=0, args=[input_forced_osc, , force]
-[   0.013][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_osc, allow-hide-cursor+allow-vo-dragging]
-[   0.013][d][osc] osc_init 
-[   0.014][d][cplayer] Run command: disable-section, flags=0, args=[input]
-[   0.014][v][osd/libass] Shaper: FriBidi 0.19.7 (SIMPLE) HarfBuzz-ng 2.5.3 (COMPLEX)
-[   0.014][v][osd/libass] Setting up fonts...
-[   0.015][d][stats2] reading options for stats2 
-[   0.015][v][stats2] script-opts/stats2.conf not found. 
-[   0.015][v][stats2] lua-settings/stats2.conf not found. 
-[   0.015][d][cplayer] Run command: define-section, flags=0, args=[input_stats2, i script-binding stats2/stats2
-[   0.015][d][cplayer] , default]
-[   0.015][d][cplayer] Run command: enable-section, flags=0, args=[input_stats2, allow-hide-cursor+allow-vo-dragging]
-[   0.015][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats2, , force]
-[   0.015][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats2, allow-hide-cursor+allow-vo-dragging]
-[   0.024][v][osd/libass] Using font provider fontconfig
-[   0.024][v][osd/libass] Done.
-[   0.029][v][history] Reading file '/home/fahad/.cache/mpv/filter.js'
-[   0.029][i][history] Loaded: /home/fahad/.cache/mpv/history.json
-[   0.029][v][cplayer] Done loading scripts.
-[   0.029][i][cplayer] Playing: ytdl://ytsearch:xo tour lif3
-[   0.029][v][cplayer] Running hook: ytdl_hook/on_load
-[   0.029][v][ytdl_hook] ytdl:// hook 
-[   0.030][d][ytdl_hook] Running: youtube-dl --no-warnings -J --flat-playlist --sub-format ass/srt/best --format bestaudio --all-subs --no-playlist -- ytsearch:xo tour lif3 
-[   1.835][v][ytdl_hook] youtube-dl succeeded! 
-[   1.835][d][ytdl_hook] ytdl parsing took 0.005173 seconds 
-[   1.835][v][cplayer] Set property: stream-open-filename="memory://#EXTM3U\u000a#EXTINF:0,Lil Uzi Vert - XO Tour Llif3 (Official Music Video)\u000ahttps://youtu.be/WrsFXgQk5UI" -> 1
-[   1.835][d][ytdl_hook] script running time: 0.005215 seconds 
-[   1.836][v][memory] Opening memory://#EXTM3U
-[   1.836][v][memory] #EXTINF:0,Lil Uzi Vert - XO Tour Llif3 (Official Music Video)
-[   1.836][v][memory] https://youtu.be/WrsFXgQk5UI
-[   1.836][d][memory] Stream opened successfully.
-[   1.836][v][demux] Trying demuxers for level=normal.
-[   1.836][d][demux] Trying demuxer: disc (force-level: normal)
-[   1.836][d][demux] Trying demuxer: edl (force-level: normal)
-[   1.836][d][demux] Trying demuxer: cue (force-level: normal)
-[   1.836][d][demux] Trying demuxer: rawaudio (force-level: normal)
-[   1.837][d][demux] Trying demuxer: rawvideo (force-level: normal)
-[   1.837][d][demux] Trying demuxer: tv (force-level: normal)
-[   1.837][d][demux] Trying demuxer: mkv (force-level: normal)
-[   1.837][d][demux] Trying demuxer: libarchive (force-level: normal)
-[   1.837][d][demux] Trying demuxer: rar (force-level: normal)
-[   1.838][d][demux] Trying demuxer: lavf (force-level: normal)
-[   1.839][v][lavf] No format found, try lowering probescore or forcing the format.
-[   1.839][d][demux] Trying demuxer: mf (force-level: normal)
-[   1.839][d][demux] Trying demuxer: playlist (force-level: normal)
-[   1.839][v][demux] Detected file format: m3u (Playlist file)
-[   1.839][v][playlist] assuming demuxer read all data; closing stream
-[   1.840][v][cplayer] Opening done: memory://#EXTM3U
-[   1.840][v][cplayer] #EXTINF:0,Lil Uzi Vert - XO Tour Llif3 (Official Music Video)
-[   1.840][v][cplayer] https://youtu.be/WrsFXgQk5UI
-[   1.840][v][cplayer] finished playback, success (reason 5)
-[   1.840][i][cplayer] 
-[   1.840][i][cplayer] Playing: https://youtu.be/WrsFXgQk5UI
-[   1.840][v][cplayer] Running hook: ytdl_hook/on_load
-[   1.840][v][ytdl_hook] ytdl:// hook 
-[   1.840][v][ytdl_hook] not a ytdl:// url 
-[   1.841][v][ffmpeg] Opening https://youtu.be/WrsFXgQk5UI
-[   1.891][d][ffmpeg] tcp: Starting connection attempt to 172.217.194.93 port 443
-[   1.946][d][ffmpeg] tcp: Successfully connected to 172.217.194.93 port 443
-[   2.428][d][ffmpeg] tcp: Starting connection attempt to 172.217.163.46 port 443
-[   2.470][d][ffmpeg] tcp: Successfully connected to 172.217.163.46 port 443
-[   2.721][v][ffmpeg] Mime-type: 'text/html; charset=utf-8'
-[   2.721][d][ffmpeg] Stream opened successfully.
-[   2.725][v][cache] Cache size set to 20000 KiB (10000 KiB backbuffer)
-[   2.725][v][demux] Trying demuxers for level=normal.
-[   2.726][d][demux] Trying demuxer: disc (force-level: normal)
-[   2.726][d][demux] Trying demuxer: edl (force-level: normal)
-[   2.727][d][demux] Trying demuxer: cue (force-level: normal)
-[   2.727][d][demux] Trying demuxer: rawaudio (force-level: normal)
-[   2.728][d][demux] Trying demuxer: rawvideo (force-level: normal)
-[   2.729][d][demux] Trying demuxer: tv (force-level: normal)
-[   2.730][d][demux] Trying demuxer: mkv (force-level: normal)
-[   2.730][d][demux] Trying demuxer: libarchive (force-level: normal)
-[   2.731][d][demux] Trying demuxer: rar (force-level: normal)
-[   2.732][d][demux] Trying demuxer: lavf (force-level: normal)
-[   3.766][v][cache] EOF reached.
-[   3.832][v][lavf] No format found, try lowering probescore or forcing the format.
-[   3.833][d][demux] Trying demuxer: mf (force-level: normal)
-[   3.833][d][demux] Trying demuxer: playlist (force-level: normal)
-[   3.833][d][demux] Trying demuxer: null (force-level: normal)
-[   3.833][v][demux] Trying demuxers for level=unsafe.
-[   3.833][d][demux] Trying demuxer: disc (force-level: unsafe)
-[   3.833][d][demux] Trying demuxer: edl (force-level: unsafe)
-[   3.834][d][demux] Trying demuxer: cue (force-level: unsafe)
-[   3.834][d][demux] Trying demuxer: rawaudio (force-level: unsafe)
-[   3.834][d][demux] Trying demuxer: rawvideo (force-level: unsafe)
-[   3.834][d][demux] Trying demuxer: tv (force-level: unsafe)
-[   3.835][d][demux] Trying demuxer: mkv (force-level: unsafe)
-[   3.835][d][demux] Trying demuxer: libarchive (force-level: unsafe)
-[   3.835][d][demux] Trying demuxer: rar (force-level: unsafe)
-[   3.835][d][demux] Trying demuxer: lavf (force-level: unsafe)
-[   3.869][v][lavf] No format found, try lowering probescore or forcing the format.
-[   3.870][d][demux] Trying demuxer: mf (force-level: unsafe)
-[   3.870][d][demux] Trying demuxer: playlist (force-level: unsafe)
-[   3.870][d][demux] Trying demuxer: null (force-level: unsafe)
-[   3.870][v][cache] Terminating cache...
-[   3.870][v][cache] Cache exiting...
-[   3.870][d][ffmpeg] AVIOContext: Statistics: 310203 bytes read, 0 seeks
-[   3.870][v][cplayer] Opening failed or was aborted: https://youtu.be/WrsFXgQk5UI
-[   3.870][v][cplayer] Running hook: ytdl_hook/on_load_fail
-[   3.870][v][ytdl_hook] full hook 
-[   3.870][d][ytdl_hook] Running: youtube-dl --no-warnings -J --flat-playlist --sub-format ass/srt/best --format bestaudio --all-subs --no-playlist -- https://youtu.be/WrsFXgQk5UI 
-[   5.882][d][cplayer] Run command: quit, flags=9, args=[0]
-[   5.886][v][cplayer] finished playback, success (reason 3)
-[   5.886][i][cplayer] 
-[   5.886][i][cplayer] 
-[   5.886][i][cplayer] Exiting... (Quit)
-[   5.886][v][autocrop] Exiting...
-[   5.886][v][stats] Exiting...
-[   5.886][v][input_file] Exiting...
-[   5.886][v][osc] Exiting...
-[   5.886][v][stats2] Exiting...
-[   5.887][v][autosub] Exiting...
-[   5.888][v][history] Exiting...
-[   5.888][v][ytdl_hook] Exiting...
-[   5.891][v][mpris] Exiting...
+[   0.009][d][ytdl_hook] loading @ytdl_hook.lua
+[   0.010][d][autosub] loading file /home/fahad/.config/mpv/scripts/autosub.lua
+[   0.010][d][stats2] loading mp.defaults
+[   0.010][d][cplayer] Run command: define-section, flags=0, args=[input_autosub, b script-binding autosub/auto_load_subs
+[   0.010][d][cplayer] , default]
+[   0.010][d][cplayer] Run command: enable-section, flags=0, args=[input_autosub, allow-hide-cursor+allow-vo-dragging]
+[   0.011][d][cplayer] Run command: define-section, flags=0, args=[input_forced_autosub, , force]
+[   0.011][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_autosub, allow-hide-cursor+allow-vo-dragging]
+[   0.014][v][history] Loading file @/defaults.js
+[   0.014][d][ytdl_hook] reading options for ytdl_hook 
+[   0.014][v][history] Reading file '@/defaults.js'
+[   0.014][v][ytdl_hook] script-opts/ytdl_hook.conf not found. 
+[   0.014][v][ytdl_hook] lua-settings/ytdl_hook.conf not found. 
+[   0.014][d][autocrop] loading file /home/fahad/.config/mpv/scripts/autocrop.lua
+[   0.015][d][stats] reading options for stats 
+[   0.015][v][stats] script-opts/stats.conf not found. 
+[   0.015][v][stats] lua-settings/stats.conf not found. 
+[   0.015][d][stats2] loading file /home/fahad/.config/mpv/scripts/stats.lua
+[   0.016][d][stats2] reading options for stats2 
+[   0.016][v][stats2] script-opts/stats2.conf not found. 
+[   0.016][v][stats2] lua-settings/stats2.conf not found. 
+[   0.016][d][cplayer] Run command: define-section, flags=0, args=[input_stats2, i script-binding stats2/stats2
+[   0.016][d][cplayer] , default]
+[   0.016][d][cplayer] Run command: enable-section, flags=0, args=[input_stats2, allow-hide-cursor+allow-vo-dragging]
+[   0.016][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats2, , force]
+[   0.016][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats2, allow-hide-cursor+allow-vo-dragging]
+[   0.016][d][cplayer] Run command: define-section, flags=0, args=[input_autocrop, C script-binding autocrop/auto_crop
+[   0.016][d][cplayer] , default]
+[   0.016][d][cplayer] Run command: enable-section, flags=0, args=[input_autocrop, allow-hide-cursor+allow-vo-dragging]
+[   0.016][d][cplayer] Run command: define-section, flags=0, args=[input_forced_autocrop, , force]
+[   0.016][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_autocrop, allow-hide-cursor+allow-vo-dragging]
+[   0.016][d][cplayer] Run command: define-section, flags=0, args=[input_stats, i script-binding stats/display-stats
+[   0.017][d][cplayer] , default]
+[   0.017][d][cplayer] Run command: enable-section, flags=0, args=[input_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.017][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats, , force]
+[   0.017][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.017][d][cplayer] Run command: define-section, flags=0, args=[input_stats, I script-binding stats/display-stats-toggle
+[   0.017][d][cplayer] i script-binding stats/display-stats
+[   0.017][d][cplayer] , default]
+[   0.017][d][cplayer] Run command: enable-section, flags=0, args=[input_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.017][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats, , force]
+[   0.017][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.017][d][cplayer] Run command: define-section, flags=0, args=[input_stats, i script-binding stats/display-stats
+[   0.017][d][cplayer] I script-binding stats/display-stats-toggle
+[   0.017][d][cplayer] , default]
+[   0.017][d][cplayer] Run command: enable-section, flags=0, args=[input_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.017][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats, , force]
+[   0.017][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.017][d][cplayer] Run command: define-section, flags=0, args=[input_stats, i script-binding stats/display-stats
+[   0.017][d][cplayer] I script-binding stats/display-stats-toggle
+[   0.017][d][cplayer] , default]
+[   0.017][d][cplayer] Run command: enable-section, flags=0, args=[input_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.017][d][cplayer] Run command: define-section, flags=0, args=[input_forced_stats, , force]
+[   0.017][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_stats, allow-hide-cursor+allow-vo-dragging]
+[   0.018][v][history] Loading file /home/fahad/.config/mpv/scripts/history.js
+[   0.018][v][history] Reading file '/home/fahad/.config/mpv/scripts/history.js'
+[   0.018][v][history] Reading file '/home/fahad/.config/mpv/scripts/lib/ramda.js'
+[   0.019][d][osc] reading options for osc 
+[   0.019][v][osc] script-opts/osc.conf not found. 
+[   0.019][v][osc] lua-settings/osc.conf not found. 
+[   0.020][d][cplayer] Run command: define-section, flags=0, args=[showhide, mouse_move script-binding osc/__keybinding1
+[   0.020][d][cplayer] mouse_leave script-binding osc/__keybinding2
+[   0.020][d][cplayer] , force]
+[   0.020][d][cplayer] Run command: enable-section, flags=0, args=[showhide, allow-hide-cursor+allow-vo-dragging]
+[   0.020][d][cplayer] Run command: define-section, flags=0, args=[input, mbtn_left script-binding osc/__keybinding3
+[   0.020][d][cplayer] shift+mbtn_left script-binding osc/__keybinding4
+[   0.020][d][cplayer] mbtn_right script-binding osc/__keybinding5
+[   0.020][d][cplayer] wheel_up script-binding osc/__keybinding6
+[   0.020][d][cplayer] wheel_down script-binding osc/__keybinding7
+[   0.020][d][cplayer] mbtn_left_dbl ignore
+[   0.020][d][cplayer] shift+mbtn_left_dbl ignore
+[   0.020][d][cplayer] mbtn_right_dbl ignore
+[   0.020][d][cplayer] , force]
+[   0.020][d][cplayer] Run command: enable-section, flags=0, args=[input, ]
+[   0.020][d][cplayer] Run command: define-section, flags=0, args=[input_osc, , default]
+[   0.020][d][cplayer] Run command: enable-section, flags=0, args=[input_osc, allow-hide-cursor+allow-vo-dragging]
+[   0.020][d][cplayer] Run command: define-section, flags=0, args=[input_forced_osc, , force]
+[   0.020][d][cplayer] Run command: enable-section, flags=0, args=[input_forced_osc, allow-hide-cursor+allow-vo-dragging]
+[   0.020][d][osc] osc_init 
+[   0.021][d][cplayer] Run command: disable-section, flags=0, args=[input]
+[   0.022][v][osd/libass] Shaper: FriBidi 0.19.7 (SIMPLE) HarfBuzz-ng 2.6.2 (COMPLEX)
+[   0.022][v][osd/libass] Setting up fonts...
+[   0.032][v][osd/libass] Using font provider fontconfig
+[   0.032][v][osd/libass] Done.
+[   0.039][v][history] Reading file '/home/fahad/.cache/mpv/filter.js'
+[   0.039][i][history] Loaded: /home/fahad/.cache/mpv/history.json
+[   0.039][v][cplayer] Done loading scripts.
+[   0.039][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/
+[   0.039][v][cplayer] Running hook: ytdl_hook/on_load
+[   0.039][v][ytdl_hook] ytdl:// hook 
+[   0.039][v][ytdl_hook] not a ytdl:// url 
+[   0.040][v][ifo] Opening /home/fahad/Music/Arnob/Adheko Ghume/
+[   0.042][v][ifo_dvdnav] Opening /home/fahad/Music/Arnob/Adheko Ghume/
+[   0.043][v][bdmv/bluray] Opening /home/fahad/Music/Arnob/Adheko Ghume/
+[   0.043][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/
+[   0.044][i][file] This is a directory - adding to playlist.
+[   0.044][d][file] Stream opened successfully.
+[   0.044][v][demux] Trying demuxers for level=normal.
+[   0.044][d][demux] Trying demuxer: disc (force-level: normal)
+[   0.045][d][demux] Trying demuxer: edl (force-level: normal)
+[   0.045][d][demux] Trying demuxer: cue (force-level: normal)
+[   0.045][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[   0.046][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[   0.047][d][demux] Trying demuxer: tv (force-level: normal)
+[   0.048][d][demux] Trying demuxer: mkv (force-level: normal)
+[   0.048][d][demux] Trying demuxer: libarchive (force-level: normal)
+[   0.049][d][demux] Trying demuxer: rar (force-level: normal)
+[   0.049][d][demux] Trying demuxer: lavf (force-level: normal)
+[   0.052][v][lavf] No format found, try lowering probescore or forcing the format.
+[   0.052][d][demux] Trying demuxer: mf (force-level: normal)
+[   0.053][d][demux] Trying demuxer: playlist (force-level: normal)
+[   0.053][v][demux] Detected file format: directory (Playlist file)
+[   0.053][v][playlist] assuming demuxer read all data; closing stream
+[   0.053][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/
+[   0.054][v][cplayer] finished playback, success (reason 5)
+[   0.054][i][cplayer] 
+[   0.054][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/01 - Phagun Haway Haway.mp3
+[   0.055][v][cplayer] Running hook: ytdl_hook/on_load
+[   0.055][v][ytdl_hook] ytdl:// hook 
+[   0.055][v][ytdl_hook] not a ytdl:// url 
+[   0.057][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/01 - Phagun Haway Haway.mp3
+[   0.057][d][file] Stream opened successfully.
+[   0.057][v][demux] Trying demuxers for level=normal.
+[   0.058][d][demux] Trying demuxer: disc (force-level: normal)
+[   0.058][d][demux] Trying demuxer: edl (force-level: normal)
+[   0.059][d][demux] Trying demuxer: cue (force-level: normal)
+[   0.059][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[   0.060][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[   0.060][d][demux] Trying demuxer: tv (force-level: normal)
+[   0.060][d][demux] Trying demuxer: mkv (force-level: normal)
+[   0.061][d][demux] Trying demuxer: libarchive (force-level: normal)
+[   0.062][d][demux] Trying demuxer: rar (force-level: normal)
+[   0.062][d][demux] Trying demuxer: lavf (force-level: normal)
+[   0.063][v][lavf] Found 'mp3' at score=24 size=2048.
+[   0.063][v][lavf] Found 'mp3' at score=24 size=4096.
+[   0.063][v][lavf] Found 'mp3' at score=24 size=8192.
+[   0.064][v][lavf] Found 'mp3' at score=24 size=16384.
+[   0.065][v][lavf] Found 'mp3' at score=24 size=32768.
+[   0.067][v][lavf] Found 'mp3' at score=24 size=65536.
+[   0.070][v][lavf] Found 'mp3' at score=24 size=131072.
+[   0.073][v][lavf] Found 'mp3' at score=51 size=262144.
+[   0.073][d][ffmpeg/demuxer] mp3: Skipping 0 bytes of junk at 181382.
+[   0.076][v][lavf] avformat_find_stream_info() finished after 245948 bytes.
+[   0.076][v][demux] Detected file format: mp3 (libavformat)
+[   0.076][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/01 - Phagun Haway Haway.mp3
+[   0.077][v][find_files] Loading external files in /home/fahad/Music/Arnob/Adheko Ghume/
+[   0.077][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[   0.077][v][lavf] select track 0
+[   0.077][i][cplayer]      Video --vid=1 [P] (mjpeg 1400x1400)
+[   0.077][i][cplayer]  (+) Audio --aid=1 (mp3 2ch 48000Hz)
+[   0.077][i][display-tags] File tags:
+[   0.077][i][display-tags]  Artist: Arnob
+[   0.077][i][display-tags]  Album: Adheko Ghume
+[   0.077][i][display-tags]  Album_Artist: Arnob
+[   0.077][i][display-tags]  Date: 2017-01-08
+[   0.077][i][display-tags]  Genre: Asian Music
+[   0.077][i][display-tags]  Title: Phagun Haway Haway
+[   0.077][i][display-tags]  Track: 1
+[   0.078][v][ad] Codec list:
+[   0.078][v][ad]     mp3float (mp3) - MP3 (MPEG audio layer 3)
+[   0.078][v][ad]     mp3 - MP3 (MPEG audio layer 3)
+[   0.078][v][ad] Opening decoder mp3float
+[   0.078][v][ad] Requesting 1 threads for decoding.
+[   0.078][v][ad] Selected codec: mp3float (MP3 (MPEG audio layer 3))
+[   0.078][d][user_filter_wrapper] Setting option 'graph' = 'dynaudnorm=g=25:r=1.0' (flags = 0)
+[   0.079][v][af] User filter list:
+[   0.079][v][af]   lavfi (lavfi.00)
+[   0.079][v][cplayer] Starting playback...
+[   0.079][v][history] Reading file '/home/fahad/.cache/mpv/history.json'
+[   0.079][i][history] /home/fahad/Music/Arnob/Adheko Ghume/01 - Phagun Haway Haway.mp3
+[   0.079][v][history] Writing file '/home/fahad/.cache/mpv/history.json'
+[   0.079][v][af] [in] 48000Hz stereo 2ch floatp
+[   0.079][v][af] [lavfi] 48000Hz stereo 2ch floatp
+[   0.079][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[   0.080][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[   0.080][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[   0.080][d][lavfi] Filter graph:
+[   0.080][d][lavfi]                                                         +---------------------+
+[   0.080][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[   0.080][d][lavfi]                                                         |    (dynaudnorm)     |
+[   0.080][d][lavfi]                                                         +---------------------+
+[   0.080][d][lavfi] 
+[   0.080][d][lavfi]                                                            +---------------+
+[   0.080][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[   0.080][d][lavfi]                                                            | (abuffersink) |
+[   0.080][d][lavfi]                                                            +---------------+
+[   0.080][d][lavfi] 
+[   0.080][d][lavfi] +-------------+
+[   0.080][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[   0.080][d][lavfi] |  (abuffer)  |
+[   0.080][d][lavfi] +-------------+
+[   0.080][d][lavfi] 
+[   0.080][d][lavfi]                                                    +------------------+
+[   0.080][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[   0.080][d][lavfi]                                                    |   (aresample)    |
+[   0.080][d][lavfi]                                                    +------------------+
+[   0.080][d][lavfi] 
+[   0.080][d][lavfi] 
+[   0.122][v][af] [userspeed] 48000Hz stereo 2ch doublep
+[   0.122][v][af] [userspeed] (disabled)
+[   0.122][v][af] [convert] 48000Hz stereo 2ch doublep
+[   0.122][v][ao] Trying audio driver 'pulse'
+[   0.122][v][ao/pulse] requested format: 48000 Hz, stereo channels, doublep
+[   0.123][v][ao/pulse] Library version: 13.0.0
+[   0.123][v][ao/pulse] Proto: 33
+[   0.123][v][ao/pulse] Server proto: 4294967295
+[   0.124][v][ao/pulse] Unsupported format, using default
+[   0.124][v][ao/pulse] Channel layouts:
+[   0.124][v][ao/pulse]  - #fl
+[   0.124][v][ao/pulse]  - #fr
+[   0.124][v][ao/pulse]  - #fc
+[   0.124][v][ao/pulse]  - #lfe
+[   0.124][v][ao/pulse]  - #bl
+[   0.124][v][ao/pulse]  - #br
+[   0.124][v][ao/pulse]  - #flc
+[   0.124][v][ao/pulse]  - #frc
+[   0.124][v][ao/pulse]  - #bc
+[   0.124][v][ao/pulse]  - #sl
+[   0.124][v][ao/pulse]  - #sr
+[   0.124][v][ao/pulse]  - #tc
+[   0.124][v][ao/pulse]  - #tfl
+[   0.124][v][ao/pulse]  - #tfc
+[   0.124][v][ao/pulse]  - #tfr
+[   0.124][v][ao/pulse]  - #tbl
+[   0.124][v][ao/pulse]  - #tbc
+[   0.124][v][ao/pulse]  - #tbr
+[   0.124][v][ao/pulse] result: stereo
+[   0.126][v][ao/pulse] device buffer: 4800 samples.
+[   0.126][v][ao/pulse] using soft-buffer of 9600 samples.
+[   0.126][i][cplayer] AO: [pulse] 48000Hz stereo 2ch float
+[   0.126][v][cplayer] AO: Description: PulseAudio audio output
+[   0.126][v][autoconvert] inserting resampler
+[   0.127][v][swresample] format change, reinitializing resampler
+[   0.127][v][swresample] 48000Hz stereo doublep -> 48000Hz stereo float
+[   0.127][v][af] [out] 48000Hz stereo 2ch float
+[   0.128][v][cplayer] starting audio playback
+[   0.129][v][cplayer] playback restart complete
+[   1.509][d][cplayer] Run command: seek, flags=9, args=[5.000000, relative, unused]
+[   1.510][v][lavf] queuing seek to 6.342225
+[   1.510][v][lavf] execute seek (to 6.365246 flags 4)
+[   1.510][v][lavf] seek done
+[   1.516][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[   1.517][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[   1.517][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[   1.518][d][lavfi] Filter graph:
+[   1.518][d][lavfi]                                                         +---------------------+
+[   1.518][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[   1.518][d][lavfi]                                                         |    (dynaudnorm)     |
+[   1.518][d][lavfi]                                                         +---------------------+
+[   1.518][d][lavfi] 
+[   1.518][d][lavfi]                                                            +---------------+
+[   1.518][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[   1.518][d][lavfi]                                                            | (abuffersink) |
+[   1.518][d][lavfi]                                                            +---------------+
+[   1.518][d][lavfi] 
+[   1.518][d][lavfi] +-------------+
+[   1.518][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[   1.518][d][lavfi] |  (abuffer)  |
+[   1.518][d][lavfi] +-------------+
+[   1.518][d][lavfi] 
+[   1.518][d][lavfi]                                                    +------------------+
+[   1.519][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[   1.519][d][lavfi]                                                    |   (aresample)    |
+[   1.519][d][lavfi]                                                    +------------------+
+[   1.519][d][lavfi] 
+[   1.519][d][lavfi] 
+[   1.635][v][cplayer] starting audio playback
+[   1.635][v][cplayer] playback restart complete
+[ 163.386][v][lavf] EOF reached.
+[ 164.381][v][af] filter input EOF
+[ 177.212][v][af] filter output EOF
+[ 177.212][v][cplayer] audio EOF reached
+[ 177.212][v][cplayer] EOF code: 1  
+[ 177.213][v][ad] Uninit decoder.
+[ 177.216][v][cplayer] finished playback, success (reason 0)
+[ 177.216][i][cplayer] 
+[ 177.216][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/02 - Adhek Ghume.mp3
+[ 177.216][v][cplayer] Running hook: ytdl_hook/on_load
+[ 177.216][v][ytdl_hook] ytdl:// hook 
+[ 177.216][v][ytdl_hook] not a ytdl:// url 
+[ 177.218][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/02 - Adhek Ghume.mp3
+[ 177.218][d][file] Stream opened successfully.
+[ 177.218][v][demux] Trying demuxers for level=normal.
+[ 177.218][d][demux] Trying demuxer: disc (force-level: normal)
+[ 177.218][d][demux] Trying demuxer: edl (force-level: normal)
+[ 177.218][d][demux] Trying demuxer: cue (force-level: normal)
+[ 177.218][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[ 177.219][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[ 177.219][d][demux] Trying demuxer: tv (force-level: normal)
+[ 177.219][d][demux] Trying demuxer: mkv (force-level: normal)
+[ 177.219][d][demux] Trying demuxer: libarchive (force-level: normal)
+[ 177.220][d][demux] Trying demuxer: rar (force-level: normal)
+[ 177.220][d][demux] Trying demuxer: lavf (force-level: normal)
+[ 177.220][v][lavf] Found 'mp3' at score=24 size=2048.
+[ 177.220][v][lavf] Found 'mp3' at score=24 size=4096.
+[ 177.221][v][lavf] Found 'mp3' at score=24 size=8192.
+[ 177.221][v][lavf] Found 'mp3' at score=24 size=16384.
+[ 177.222][v][lavf] Found 'mp3' at score=24 size=32768.
+[ 177.224][v][lavf] Found 'mp3' at score=24 size=65536.
+[ 177.227][v][lavf] Found 'mp3' at score=24 size=131072.
+[ 177.229][v][lavf] Found 'mp3' at score=51 size=262144.
+[ 177.229][d][ffmpeg/demuxer] mp3: Skipping 0 bytes of junk at 181375.
+[ 177.230][v][lavf] avformat_find_stream_info() finished after 245941 bytes.
+[ 177.230][v][demux] Detected file format: mp3 (libavformat)
+[ 177.230][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/02 - Adhek Ghume.mp3
+[ 177.230][v][find_files] Loading external files in /home/fahad/Music/Arnob/Adheko Ghume/
+[ 177.230][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[ 177.230][v][lavf] select track 0
+[ 177.230][i][cplayer]      Video --vid=1 [P] (mjpeg 1400x1400)
+[ 177.230][i][cplayer]  (+) Audio --aid=1 (mp3 2ch 48000Hz)
+[ 177.230][i][display-tags] File tags:
+[ 177.230][i][display-tags]  Artist: Arnob
+[ 177.230][i][display-tags]  Album: Adheko Ghume
+[ 177.230][i][display-tags]  Album_Artist: Arnob
+[ 177.230][i][display-tags]  Date: 2017-01-08
+[ 177.230][i][display-tags]  Genre: Asian Music
+[ 177.230][i][display-tags]  Title: Adhek Ghume
+[ 177.230][i][display-tags]  Track: 2
+[ 177.231][v][ad] Codec list:
+[ 177.231][v][ad]     mp3float (mp3) - MP3 (MPEG audio layer 3)
+[ 177.231][v][ad]     mp3 - MP3 (MPEG audio layer 3)
+[ 177.231][v][ad] Opening decoder mp3float
+[ 177.231][v][ad] Requesting 1 threads for decoding.
+[ 177.231][v][ad] Selected codec: mp3float (MP3 (MPEG audio layer 3))
+[ 177.231][d][user_filter_wrapper] Setting option 'graph' = 'dynaudnorm=g=25:r=1.0' (flags = 0)
+[ 177.231][v][af] User filter list:
+[ 177.231][v][af]   lavfi (lavfi.00)
+[ 177.231][v][cplayer] Starting playback...
+[ 177.231][v][history] Reading file '/home/fahad/.cache/mpv/history.json'
+[ 177.231][i][history] /home/fahad/Music/Arnob/Adheko Ghume/02 - Adhek Ghume.mp3
+[ 177.231][v][history] Writing file '/home/fahad/.cache/mpv/history.json'
+[ 177.231][v][af] [in] 48000Hz stereo 2ch floatp
+[ 177.231][v][af] [lavfi] 48000Hz stereo 2ch floatp
+[ 177.231][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[ 177.231][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[ 177.231][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[ 177.232][d][lavfi] Filter graph:
+[ 177.232][d][lavfi]                                                         +---------------------+
+[ 177.232][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[ 177.232][d][lavfi]                                                         |    (dynaudnorm)     |
+[ 177.232][d][lavfi]                                                         +---------------------+
+[ 177.232][d][lavfi] 
+[ 177.232][d][lavfi]                                                            +---------------+
+[ 177.232][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[ 177.232][d][lavfi]                                                            | (abuffersink) |
+[ 177.232][d][lavfi]                                                            +---------------+
+[ 177.232][d][lavfi] 
+[ 177.232][d][lavfi] +-------------+
+[ 177.232][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[ 177.232][d][lavfi] |  (abuffer)  |
+[ 177.232][d][lavfi] +-------------+
+[ 177.232][d][lavfi] 
+[ 177.232][d][lavfi]                                                    +------------------+
+[ 177.232][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[ 177.232][d][lavfi]                                                    |   (aresample)    |
+[ 177.232][d][lavfi]                                                    +------------------+
+[ 177.232][d][lavfi] 
+[ 177.232][d][lavfi] 
+[ 177.269][v][af] [userspeed] 48000Hz stereo 2ch doublep
+[ 177.269][v][af] [userspeed] (disabled)
+[ 177.269][v][af] [convert] 48000Hz stereo 2ch doublep
+[ 177.270][v][autoconvert] inserting resampler
+[ 177.270][v][swresample] format change, reinitializing resampler
+[ 177.270][v][swresample] 48000Hz stereo doublep -> 48000Hz stereo float
+[ 177.270][v][af] [out] 48000Hz stereo 2ch float
+[ 177.270][v][cplayer] starting audio playback
+[ 177.270][v][cplayer] playback restart complete
+[ 384.193][v][lavf] EOF reached.
+[ 385.184][v][af] filter input EOF
+[ 398.024][v][af] filter output EOF
+[ 398.024][v][cplayer] audio EOF reached
+[ 398.024][v][cplayer] EOF code: 1  
+[ 398.024][v][ad] Uninit decoder.
+[ 398.030][v][cplayer] finished playback, success (reason 0)
+[ 398.030][i][cplayer] 
+[ 398.031][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/03 - Shaon Gagane.mp3
+[ 398.031][v][cplayer] Running hook: ytdl_hook/on_load
+[ 398.031][v][ytdl_hook] ytdl:// hook 
+[ 398.031][v][ytdl_hook] not a ytdl:// url 
+[ 398.035][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/03 - Shaon Gagane.mp3
+[ 398.035][d][file] Stream opened successfully.
+[ 398.036][v][demux] Trying demuxers for level=normal.
+[ 398.037][d][demux] Trying demuxer: disc (force-level: normal)
+[ 398.038][d][demux] Trying demuxer: edl (force-level: normal)
+[ 398.039][d][demux] Trying demuxer: cue (force-level: normal)
+[ 398.039][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[ 398.041][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[ 398.043][d][demux] Trying demuxer: tv (force-level: normal)
+[ 398.043][d][demux] Trying demuxer: mkv (force-level: normal)
+[ 398.044][d][demux] Trying demuxer: libarchive (force-level: normal)
+[ 398.046][d][demux] Trying demuxer: rar (force-level: normal)
+[ 398.046][d][demux] Trying demuxer: lavf (force-level: normal)
+[ 398.048][v][lavf] Found 'mp3' at score=24 size=2048.
+[ 398.049][v][lavf] Found 'mp3' at score=24 size=4096.
+[ 398.050][v][lavf] Found 'mp3' at score=24 size=8192.
+[ 398.053][v][lavf] Found 'mp3' at score=24 size=16384.
+[ 398.058][v][lavf] Found 'mp3' at score=24 size=32768.
+[ 398.068][v][lavf] Found 'mp3' at score=24 size=65536.
+[ 398.080][v][lavf] Found 'mp3' at score=24 size=131072.
+[ 398.085][v][lavf] Found 'mp3' at score=51 size=262144.
+[ 398.085][d][ffmpeg/demuxer] mp3: Skipping 0 bytes of junk at 181376.
+[ 398.086][v][lavf] avformat_find_stream_info() finished after 245942 bytes.
+[ 398.086][v][demux] Detected file format: mp3 (libavformat)
+[ 398.086][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/03 - Shaon Gagane.mp3
+[ 398.086][v][find_files] Loading external files in /home/fahad/Music/Arnob/Adheko Ghume/
+[ 398.086][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[ 398.086][v][lavf] select track 0
+[ 398.086][i][cplayer]      Video --vid=1 [P] (mjpeg 1400x1400)
+[ 398.086][i][cplayer]  (+) Audio --aid=1 (mp3 2ch 48000Hz)
+[ 398.086][i][display-tags] File tags:
+[ 398.086][i][display-tags]  Artist: Arnob
+[ 398.086][i][display-tags]  Album: Adheko Ghume
+[ 398.086][i][display-tags]  Album_Artist: Arnob
+[ 398.086][i][display-tags]  Date: 2017-01-08
+[ 398.086][i][display-tags]  Genre: Asian Music
+[ 398.086][i][display-tags]  Title: Shaon Gagane
+[ 398.086][i][display-tags]  Track: 3
+[ 398.087][v][ad] Codec list:
+[ 398.087][v][ad]     mp3float (mp3) - MP3 (MPEG audio layer 3)
+[ 398.087][v][ad]     mp3 - MP3 (MPEG audio layer 3)
+[ 398.087][v][ad] Opening decoder mp3float
+[ 398.087][v][ad] Requesting 1 threads for decoding.
+[ 398.087][v][ad] Selected codec: mp3float (MP3 (MPEG audio layer 3))
+[ 398.087][d][user_filter_wrapper] Setting option 'graph' = 'dynaudnorm=g=25:r=1.0' (flags = 0)
+[ 398.087][v][af] User filter list:
+[ 398.087][v][af]   lavfi (lavfi.00)
+[ 398.087][v][cplayer] Starting playback...
+[ 398.087][v][history] Reading file '/home/fahad/.cache/mpv/history.json'
+[ 398.088][i][history] /home/fahad/Music/Arnob/Adheko Ghume/03 - Shaon Gagane.mp3
+[ 398.088][v][history] Writing file '/home/fahad/.cache/mpv/history.json'
+[ 398.088][v][af] [in] 48000Hz stereo 2ch floatp
+[ 398.088][v][af] [lavfi] 48000Hz stereo 2ch floatp
+[ 398.088][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[ 398.088][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[ 398.088][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[ 398.088][d][lavfi] Filter graph:
+[ 398.089][d][lavfi]                                                         +---------------------+
+[ 398.089][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[ 398.089][d][lavfi]                                                         |    (dynaudnorm)     |
+[ 398.089][d][lavfi]                                                         +---------------------+
+[ 398.089][d][lavfi] 
+[ 398.089][d][lavfi]                                                            +---------------+
+[ 398.089][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[ 398.089][d][lavfi]                                                            | (abuffersink) |
+[ 398.089][d][lavfi]                                                            +---------------+
+[ 398.089][d][lavfi] 
+[ 398.089][d][lavfi] +-------------+
+[ 398.089][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[ 398.089][d][lavfi] |  (abuffer)  |
+[ 398.089][d][lavfi] +-------------+
+[ 398.089][d][lavfi] 
+[ 398.089][d][lavfi]                                                    +------------------+
+[ 398.089][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[ 398.089][d][lavfi]                                                    |   (aresample)    |
+[ 398.089][d][lavfi]                                                    +------------------+
+[ 398.089][d][lavfi] 
+[ 398.089][d][lavfi] 
+[ 398.122][v][af] [userspeed] 48000Hz stereo 2ch doublep
+[ 398.122][v][af] [userspeed] (disabled)
+[ 398.122][v][af] [convert] 48000Hz stereo 2ch doublep
+[ 398.122][v][autoconvert] inserting resampler
+[ 398.122][v][swresample] format change, reinitializing resampler
+[ 398.122][v][swresample] 48000Hz stereo doublep -> 48000Hz stereo float
+[ 398.122][v][af] [out] 48000Hz stereo 2ch float
+[ 398.122][v][cplayer] starting audio playback
+[ 398.122][v][cplayer] playback restart complete
+[ 593.020][v][lavf] EOF reached.
+[ 594.037][v][af] filter input EOF
+[ 606.687][v][af] filter output EOF
+[ 606.687][v][cplayer] audio EOF reached
+[ 606.687][v][cplayer] EOF code: 1  
+[ 606.687][v][ad] Uninit decoder.
+[ 606.690][v][cplayer] finished playback, success (reason 0)
+[ 606.690][i][cplayer] 
+[ 606.691][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/04 - Ganer Surer.mp3
+[ 606.691][v][cplayer] Running hook: ytdl_hook/on_load
+[ 606.691][v][ytdl_hook] ytdl:// hook 
+[ 606.691][v][ytdl_hook] not a ytdl:// url 
+[ 606.693][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/04 - Ganer Surer.mp3
+[ 606.693][d][file] Stream opened successfully.
+[ 606.693][v][demux] Trying demuxers for level=normal.
+[ 606.694][d][demux] Trying demuxer: disc (force-level: normal)
+[ 606.695][d][demux] Trying demuxer: edl (force-level: normal)
+[ 606.695][d][demux] Trying demuxer: cue (force-level: normal)
+[ 606.696][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[ 606.697][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[ 606.697][d][demux] Trying demuxer: tv (force-level: normal)
+[ 606.698][d][demux] Trying demuxer: mkv (force-level: normal)
+[ 606.698][d][demux] Trying demuxer: libarchive (force-level: normal)
+[ 606.698][d][demux] Trying demuxer: rar (force-level: normal)
+[ 606.699][d][demux] Trying demuxer: lavf (force-level: normal)
+[ 606.699][v][lavf] Found 'mp3' at score=24 size=2048.
+[ 606.699][v][lavf] Found 'mp3' at score=24 size=4096.
+[ 606.699][v][lavf] Found 'mp3' at score=24 size=8192.
+[ 606.700][v][lavf] Found 'mp3' at score=24 size=16384.
+[ 606.701][v][lavf] Found 'mp3' at score=24 size=32768.
+[ 606.702][v][lavf] Found 'mp3' at score=24 size=65536.
+[ 606.706][v][lavf] Found 'mp3' at score=24 size=131072.
+[ 606.708][v][lavf] Found 'mp3' at score=51 size=262144.
+[ 606.708][d][ffmpeg/demuxer] mp3: Skipping 0 bytes of junk at 181375.
+[ 606.708][v][lavf] avformat_find_stream_info() finished after 245941 bytes.
+[ 606.708][v][demux] Detected file format: mp3 (libavformat)
+[ 606.708][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/04 - Ganer Surer.mp3
+[ 606.709][v][find_files] Loading external files in /home/fahad/Music/Arnob/Adheko Ghume/
+[ 606.709][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[ 606.709][v][lavf] select track 0
+[ 606.709][i][cplayer]      Video --vid=1 [P] (mjpeg 1400x1400)
+[ 606.709][i][cplayer]  (+) Audio --aid=1 (mp3 2ch 48000Hz)
+[ 606.709][i][display-tags] File tags:
+[ 606.709][i][display-tags]  Artist: Arnob
+[ 606.709][i][display-tags]  Album: Adheko Ghume
+[ 606.709][i][display-tags]  Album_Artist: Arnob
+[ 606.709][i][display-tags]  Date: 2017-01-08
+[ 606.709][i][display-tags]  Genre: Asian Music
+[ 606.709][i][display-tags]  Title: Ganer Surer
+[ 606.709][i][display-tags]  Track: 4
+[ 606.709][v][ad] Codec list:
+[ 606.709][v][ad]     mp3float (mp3) - MP3 (MPEG audio layer 3)
+[ 606.709][v][ad]     mp3 - MP3 (MPEG audio layer 3)
+[ 606.709][v][ad] Opening decoder mp3float
+[ 606.709][v][ad] Requesting 1 threads for decoding.
+[ 606.709][v][ad] Selected codec: mp3float (MP3 (MPEG audio layer 3))
+[ 606.709][d][user_filter_wrapper] Setting option 'graph' = 'dynaudnorm=g=25:r=1.0' (flags = 0)
+[ 606.709][v][af] User filter list:
+[ 606.709][v][af]   lavfi (lavfi.00)
+[ 606.709][v][cplayer] Starting playback...
+[ 606.709][v][history] Reading file '/home/fahad/.cache/mpv/history.json'
+[ 606.710][i][history] /home/fahad/Music/Arnob/Adheko Ghume/04 - Ganer Surer.mp3
+[ 606.710][v][history] Writing file '/home/fahad/.cache/mpv/history.json'
+[ 606.710][v][af] [in] 48000Hz stereo 2ch floatp
+[ 606.710][v][af] [lavfi] 48000Hz stereo 2ch floatp
+[ 606.710][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[ 606.710][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[ 606.710][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[ 606.710][d][lavfi] Filter graph:
+[ 606.710][d][lavfi]                                                         +---------------------+
+[ 606.710][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[ 606.710][d][lavfi]                                                         |    (dynaudnorm)     |
+[ 606.710][d][lavfi]                                                         +---------------------+
+[ 606.710][d][lavfi] 
+[ 606.710][d][lavfi]                                                            +---------------+
+[ 606.710][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[ 606.710][d][lavfi]                                                            | (abuffersink) |
+[ 606.710][d][lavfi]                                                            +---------------+
+[ 606.710][d][lavfi] 
+[ 606.710][d][lavfi] +-------------+
+[ 606.710][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[ 606.710][d][lavfi] |  (abuffer)  |
+[ 606.710][d][lavfi] +-------------+
+[ 606.710][d][lavfi] 
+[ 606.710][d][lavfi]                                                    +------------------+
+[ 606.710][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[ 606.710][d][lavfi]                                                    |   (aresample)    |
+[ 606.710][d][lavfi]                                                    +------------------+
+[ 606.710][d][lavfi] 
+[ 606.710][d][lavfi] 
+[ 606.745][v][af] [userspeed] 48000Hz stereo 2ch doublep
+[ 606.745][v][af] [userspeed] (disabled)
+[ 606.745][v][af] [convert] 48000Hz stereo 2ch doublep
+[ 606.746][v][autoconvert] inserting resampler
+[ 606.746][v][swresample] format change, reinitializing resampler
+[ 606.746][v][swresample] 48000Hz stereo doublep -> 48000Hz stereo float
+[ 606.746][v][af] [out] 48000Hz stereo 2ch float
+[ 606.746][v][cplayer] starting audio playback
+[ 606.746][v][cplayer] playback restart complete
+[ 888.208][v][lavf] EOF reached.
+[ 889.203][v][af] filter input EOF
+[ 901.919][v][af] filter output EOF
+[ 901.920][v][cplayer] audio EOF reached
+[ 901.920][v][cplayer] EOF code: 1  
+[ 901.920][v][ad] Uninit decoder.
+[ 901.921][v][cplayer] finished playback, success (reason 0)
+[ 901.921][i][cplayer] 
+[ 901.921][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/05 - Ami Kan Pete Roi.mp3
+[ 901.921][v][cplayer] Running hook: ytdl_hook/on_load
+[ 901.922][v][ytdl_hook] ytdl:// hook 
+[ 901.922][v][ytdl_hook] not a ytdl:// url 
+[ 901.922][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/05 - Ami Kan Pete Roi.mp3
+[ 901.922][d][file] Stream opened successfully.
+[ 901.922][v][demux] Trying demuxers for level=normal.
+[ 901.923][d][demux] Trying demuxer: disc (force-level: normal)
+[ 901.923][d][demux] Trying demuxer: edl (force-level: normal)
+[ 901.923][d][demux] Trying demuxer: cue (force-level: normal)
+[ 901.923][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[ 901.924][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[ 901.924][d][demux] Trying demuxer: tv (force-level: normal)
+[ 901.924][d][demux] Trying demuxer: mkv (force-level: normal)
+[ 901.925][d][demux] Trying demuxer: libarchive (force-level: normal)
+[ 901.925][d][demux] Trying demuxer: rar (force-level: normal)
+[ 901.925][d][demux] Trying demuxer: lavf (force-level: normal)
+[ 901.926][v][lavf] Found 'mp3' at score=24 size=2048.
+[ 901.926][v][lavf] Found 'mp3' at score=24 size=4096.
+[ 901.926][v][lavf] Found 'mp3' at score=24 size=8192.
+[ 901.927][v][lavf] Found 'mp3' at score=24 size=16384.
+[ 901.929][v][lavf] Found 'mp3' at score=24 size=32768.
+[ 901.937][v][lavf] Found 'mp3' at score=24 size=65536.
+[ 901.944][v][lavf] Found 'mp3' at score=24 size=131072.
+[ 901.947][v][lavf] Found 'mp3' at score=51 size=262144.
+[ 901.947][d][ffmpeg/demuxer] mp3: Skipping 0 bytes of junk at 181403.
+[ 901.947][v][lavf] avformat_find_stream_info() finished after 245969 bytes.
+[ 901.948][v][demux] Detected file format: mp3 (libavformat)
+[ 901.948][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/05 - Ami Kan Pete Roi.mp3
+[ 901.948][v][find_files] Loading external files in /home/fahad/Music/Arnob/Adheko Ghume/
+[ 901.948][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[ 901.948][v][lavf] select track 0
+[ 901.948][i][cplayer]      Video --vid=1 [P] (mjpeg 1400x1400)
+[ 901.948][i][cplayer]  (+) Audio --aid=1 (mp3 2ch 48000Hz)
+[ 901.948][i][display-tags] File tags:
+[ 901.948][i][display-tags]  Artist: Arnob
+[ 901.948][i][display-tags]  Album: Adheko Ghume
+[ 901.948][i][display-tags]  Album_Artist: Arnob
+[ 901.948][i][display-tags]  Date: 2017-01-08
+[ 901.948][i][display-tags]  Genre: Asian Music
+[ 901.948][i][display-tags]  Title: Ami Kan Pete Roi
+[ 901.948][i][display-tags]  Track: 5
+[ 901.949][v][ad] Codec list:
+[ 901.949][v][ad]     mp3float (mp3) - MP3 (MPEG audio layer 3)
+[ 901.949][v][ad]     mp3 - MP3 (MPEG audio layer 3)
+[ 901.949][v][ad] Opening decoder mp3float
+[ 901.949][v][ad] Requesting 1 threads for decoding.
+[ 901.949][v][ad] Selected codec: mp3float (MP3 (MPEG audio layer 3))
+[ 901.949][d][user_filter_wrapper] Setting option 'graph' = 'dynaudnorm=g=25:r=1.0' (flags = 0)
+[ 901.954][v][af] User filter list:
+[ 901.954][v][af]   lavfi (lavfi.00)
+[ 901.954][v][cplayer] Starting playback...
+[ 901.954][v][history] Reading file '/home/fahad/.cache/mpv/history.json'
+[ 901.954][i][history] /home/fahad/Music/Arnob/Adheko Ghume/05 - Ami Kan Pete Roi.mp3
+[ 901.955][v][history] Writing file '/home/fahad/.cache/mpv/history.json'
+[ 901.955][v][af] [in] 48000Hz stereo 2ch floatp
+[ 901.955][v][af] [lavfi] 48000Hz stereo 2ch floatp
+[ 901.955][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[ 901.955][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[ 901.955][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[ 901.955][d][lavfi] Filter graph:
+[ 901.955][d][lavfi]                                                         +---------------------+
+[ 901.955][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[ 901.955][d][lavfi]                                                         |    (dynaudnorm)     |
+[ 901.955][d][lavfi]                                                         +---------------------+
+[ 901.955][d][lavfi] 
+[ 901.955][d][lavfi]                                                            +---------------+
+[ 901.955][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[ 901.955][d][lavfi]                                                            | (abuffersink) |
+[ 901.955][d][lavfi]                                                            +---------------+
+[ 901.955][d][lavfi] 
+[ 901.955][d][lavfi] +-------------+
+[ 901.955][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[ 901.955][d][lavfi] |  (abuffer)  |
+[ 901.955][d][lavfi] +-------------+
+[ 901.955][d][lavfi] 
+[ 901.955][d][lavfi]                                                    +------------------+
+[ 901.955][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[ 901.955][d][lavfi]                                                    |   (aresample)    |
+[ 901.955][d][lavfi]                                                    +------------------+
+[ 901.955][d][lavfi] 
+[ 901.955][d][lavfi] 
+[ 901.998][v][af] [userspeed] 48000Hz stereo 2ch doublep
+[ 901.998][v][af] [userspeed] (disabled)
+[ 901.998][v][af] [convert] 48000Hz stereo 2ch doublep
+[ 901.998][v][autoconvert] inserting resampler
+[ 901.998][v][swresample] format change, reinitializing resampler
+[ 901.998][v][swresample] 48000Hz stereo doublep -> 48000Hz stereo float
+[ 901.999][v][af] [out] 48000Hz stereo 2ch float
+[ 901.999][v][cplayer] starting audio playback
+[ 901.999][v][cplayer] playback restart complete
+[1125.905][v][lavf] EOF reached.
+[1126.901][v][af] filter input EOF
+[1139.784][v][af] filter output EOF
+[1139.785][v][cplayer] audio EOF reached
+[1139.785][v][cplayer] EOF code: 1  
+[1139.785][v][ad] Uninit decoder.
+[1139.788][v][cplayer] finished playback, success (reason 0)
+[1139.788][i][cplayer] 
+[1139.788][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/06 - Megh Bolechhe.mp3
+[1139.788][v][cplayer] Running hook: ytdl_hook/on_load
+[1139.788][v][ytdl_hook] ytdl:// hook 
+[1139.788][v][ytdl_hook] not a ytdl:// url 
+[1139.790][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/06 - Megh Bolechhe.mp3
+[1139.790][d][file] Stream opened successfully.
+[1139.791][v][demux] Trying demuxers for level=normal.
+[1139.792][d][demux] Trying demuxer: disc (force-level: normal)
+[1139.792][d][demux] Trying demuxer: edl (force-level: normal)
+[1139.793][d][demux] Trying demuxer: cue (force-level: normal)
+[1139.793][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[1139.795][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[1139.796][d][demux] Trying demuxer: tv (force-level: normal)
+[1139.796][d][demux] Trying demuxer: mkv (force-level: normal)
+[1139.797][d][demux] Trying demuxer: libarchive (force-level: normal)
+[1139.798][d][demux] Trying demuxer: rar (force-level: normal)
+[1139.798][d][demux] Trying demuxer: lavf (force-level: normal)
+[1139.799][v][lavf] Found 'mp3' at score=24 size=2048.
+[1139.800][v][lavf] Found 'mp3' at score=24 size=4096.
+[1139.801][v][lavf] Found 'mp3' at score=24 size=8192.
+[1139.803][v][lavf] Found 'mp3' at score=24 size=16384.
+[1139.806][v][lavf] Found 'mp3' at score=24 size=32768.
+[1139.812][v][lavf] Found 'mp3' at score=24 size=65536.
+[1139.824][v][lavf] Found 'mp3' at score=24 size=131072.
+[1139.831][v][lavf] Found 'mp3' at score=51 size=262144.
+[1139.831][d][ffmpeg/demuxer] mp3: Skipping 0 bytes of junk at 181377.
+[1139.833][v][lavf] avformat_find_stream_info() finished after 245943 bytes.
+[1139.833][v][demux] Detected file format: mp3 (libavformat)
+[1139.833][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/06 - Megh Bolechhe.mp3
+[1139.833][v][find_files] Loading external files in /home/fahad/Music/Arnob/Adheko Ghume/
+[1139.833][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[1139.834][v][lavf] select track 0
+[1139.834][i][cplayer]      Video --vid=1 [P] (mjpeg 1400x1400)
+[1139.834][i][cplayer]  (+) Audio --aid=1 (mp3 2ch 48000Hz)
+[1139.834][i][display-tags] File tags:
+[1139.834][i][display-tags]  Artist: Arnob
+[1139.834][i][display-tags]  Album: Adheko Ghume
+[1139.834][i][display-tags]  Album_Artist: Arnob
+[1139.834][i][display-tags]  Date: 2017-01-08
+[1139.834][i][display-tags]  Genre: Asian Music
+[1139.834][i][display-tags]  Title: Megh Bolechhe
+[1139.834][i][display-tags]  Track: 6
+[1139.835][v][ad] Codec list:
+[1139.835][v][ad]     mp3float (mp3) - MP3 (MPEG audio layer 3)
+[1139.835][v][ad]     mp3 - MP3 (MPEG audio layer 3)
+[1139.835][v][ad] Opening decoder mp3float
+[1139.835][v][ad] Requesting 1 threads for decoding.
+[1139.835][v][ad] Selected codec: mp3float (MP3 (MPEG audio layer 3))
+[1139.835][d][user_filter_wrapper] Setting option 'graph' = 'dynaudnorm=g=25:r=1.0' (flags = 0)
+[1139.836][v][af] User filter list:
+[1139.836][v][af]   lavfi (lavfi.00)
+[1139.836][v][cplayer] Starting playback...
+[1139.836][v][history] Reading file '/home/fahad/.cache/mpv/history.json'
+[1139.837][i][history] /home/fahad/Music/Arnob/Adheko Ghume/06 - Megh Bolechhe.mp3
+[1139.837][v][history] Writing file '/home/fahad/.cache/mpv/history.json'
+[1139.837][v][af] [in] 48000Hz stereo 2ch floatp
+[1139.837][v][af] [lavfi] 48000Hz stereo 2ch floatp
+[1139.838][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[1139.838][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[1139.838][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[1139.838][d][lavfi] Filter graph:
+[1139.838][d][lavfi]                                                         +---------------------+
+[1139.838][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[1139.838][d][lavfi]                                                         |    (dynaudnorm)     |
+[1139.838][d][lavfi]                                                         +---------------------+
+[1139.838][d][lavfi] 
+[1139.838][d][lavfi]                                                            +---------------+
+[1139.838][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[1139.838][d][lavfi]                                                            | (abuffersink) |
+[1139.838][d][lavfi]                                                            +---------------+
+[1139.838][d][lavfi] 
+[1139.838][d][lavfi] +-------------+
+[1139.838][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[1139.839][d][lavfi] |  (abuffer)  |
+[1139.839][d][lavfi] +-------------+
+[1139.839][d][lavfi] 
+[1139.839][d][lavfi]                                                    +------------------+
+[1139.839][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[1139.839][d][lavfi]                                                    |   (aresample)    |
+[1139.839][d][lavfi]                                                    +------------------+
+[1139.839][d][lavfi] 
+[1139.839][d][lavfi] 
+[1139.922][v][af] [userspeed] 48000Hz stereo 2ch doublep
+[1139.922][v][af] [userspeed] (disabled)
+[1139.922][v][af] [convert] 48000Hz stereo 2ch doublep
+[1139.923][v][autoconvert] inserting resampler
+[1139.923][v][swresample] format change, reinitializing resampler
+[1139.923][v][swresample] 48000Hz stereo doublep -> 48000Hz stereo float
+[1139.923][v][af] [out] 48000Hz stereo 2ch float
+[1139.923][v][cplayer] starting audio playback
+[1139.923][v][cplayer] playback restart complete
+[1334.286][v][lavf] EOF reached.
+[1335.279][v][af] filter input EOF
+[1347.787][v][af] filter output EOF
+[1347.788][v][cplayer] audio EOF reached
+[1347.788][v][cplayer] EOF code: 1  
+[1347.788][v][ad] Uninit decoder.
+[1347.790][v][cplayer] finished playback, success (reason 0)
+[1347.791][i][cplayer] 
+[1347.791][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/07 - Kotha Hotey Baje.mp3
+[1347.791][v][cplayer] Running hook: ytdl_hook/on_load
+[1347.791][v][ytdl_hook] ytdl:// hook 
+[1347.791][v][ytdl_hook] not a ytdl:// url 
+[1347.793][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/07 - Kotha Hotey Baje.mp3
+[1347.793][d][file] Stream opened successfully.
+[1347.794][v][demux] Trying demuxers for level=normal.
+[1347.794][d][demux] Trying demuxer: disc (force-level: normal)
+[1347.795][d][demux] Trying demuxer: edl (force-level: normal)
+[1347.795][d][demux] Trying demuxer: cue (force-level: normal)
+[1347.796][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[1347.797][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[1347.798][d][demux] Trying demuxer: tv (force-level: normal)
+[1347.798][d][demux] Trying demuxer: mkv (force-level: normal)
+[1347.799][d][demux] Trying demuxer: libarchive (force-level: normal)
+[1347.800][d][demux] Trying demuxer: rar (force-level: normal)
+[1347.800][d][demux] Trying demuxer: lavf (force-level: normal)
+[1347.802][v][lavf] Found 'mp3' at score=24 size=2048.
+[1347.802][v][lavf] Found 'mp3' at score=24 size=4096.
+[1347.803][v][lavf] Found 'mp3' at score=24 size=8192.
+[1347.805][v][lavf] Found 'mp3' at score=24 size=16384.
+[1347.809][v][lavf] Found 'mp3' at score=24 size=32768.
+[1347.816][v][lavf] Found 'mp3' at score=24 size=65536.
+[1347.830][v][lavf] Found 'mp3' at score=24 size=131072.
+[1347.838][v][lavf] Found 'mp3' at score=51 size=262144.
+[1347.839][d][ffmpeg/demuxer] mp3: Skipping 0 bytes of junk at 181380.
+[1347.841][v][lavf] avformat_find_stream_info() finished after 245946 bytes.
+[1347.841][v][demux] Detected file format: mp3 (libavformat)
+[1347.841][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/07 - Kotha Hotey Baje.mp3
+[1347.841][v][find_files] Loading external files in /home/fahad/Music/Arnob/Adheko Ghume/
+[1347.841][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[1347.842][v][lavf] select track 0
+[1347.842][i][cplayer]      Video --vid=1 [P] (mjpeg 1400x1400)
+[1347.842][i][cplayer]  (+) Audio --aid=1 (mp3 2ch 48000Hz)
+[1347.842][i][display-tags] File tags:
+[1347.842][i][display-tags]  Artist: Arnob
+[1347.842][i][display-tags]  Album: Adheko Ghume
+[1347.842][i][display-tags]  Album_Artist: Arnob
+[1347.842][i][display-tags]  Date: 2017-01-08
+[1347.842][i][display-tags]  Genre: Asian Music
+[1347.842][i][display-tags]  Title: Kotha Hotey Baje
+[1347.842][i][display-tags]  Track: 7
+[1347.843][v][ad] Codec list:
+[1347.843][v][ad]     mp3float (mp3) - MP3 (MPEG audio layer 3)
+[1347.843][v][ad]     mp3 - MP3 (MPEG audio layer 3)
+[1347.843][v][ad] Opening decoder mp3float
+[1347.843][v][ad] Requesting 1 threads for decoding.
+[1347.843][v][ad] Selected codec: mp3float (MP3 (MPEG audio layer 3))
+[1347.843][d][user_filter_wrapper] Setting option 'graph' = 'dynaudnorm=g=25:r=1.0' (flags = 0)
+[1347.844][v][af] User filter list:
+[1347.844][v][af]   lavfi (lavfi.00)
+[1347.844][v][cplayer] Starting playback...
+[1347.844][v][history] Reading file '/home/fahad/.cache/mpv/history.json'
+[1347.845][i][history] /home/fahad/Music/Arnob/Adheko Ghume/07 - Kotha Hotey Baje.mp3
+[1347.846][v][af] [in] 48000Hz stereo 2ch floatp
+[1347.846][v][history] Writing file '/home/fahad/.cache/mpv/history.json'
+[1347.846][v][af] [lavfi] 48000Hz stereo 2ch floatp
+[1347.846][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[1347.846][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[1347.846][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[1347.847][d][lavfi] Filter graph:
+[1347.847][d][lavfi]                                                         +---------------------+
+[1347.847][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[1347.847][d][lavfi]                                                         |    (dynaudnorm)     |
+[1347.847][d][lavfi]                                                         +---------------------+
+[1347.847][d][lavfi] 
+[1347.847][d][lavfi]                                                            +---------------+
+[1347.847][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[1347.847][d][lavfi]                                                            | (abuffersink) |
+[1347.847][d][lavfi]                                                            +---------------+
+[1347.847][d][lavfi] 
+[1347.847][d][lavfi] +-------------+
+[1347.847][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[1347.847][d][lavfi] |  (abuffer)  |
+[1347.847][d][lavfi] +-------------+
+[1347.847][d][lavfi] 
+[1347.847][d][lavfi]                                                    +------------------+
+[1347.847][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[1347.847][d][lavfi]                                                    |   (aresample)    |
+[1347.847][d][lavfi]                                                    +------------------+
+[1347.847][d][lavfi] 
+[1347.847][d][lavfi] 
+[1347.914][v][af] [userspeed] 48000Hz stereo 2ch doublep
+[1347.914][v][af] [userspeed] (disabled)
+[1347.914][v][af] [convert] 48000Hz stereo 2ch doublep
+[1347.914][v][autoconvert] inserting resampler
+[1347.914][v][swresample] format change, reinitializing resampler
+[1347.914][v][swresample] 48000Hz stereo doublep -> 48000Hz stereo float
+[1347.914][v][af] [out] 48000Hz stereo 2ch float
+[1347.915][v][cplayer] starting audio playback
+[1347.915][v][cplayer] playback restart complete
+[1511.787][v][lavf] EOF reached.
+[1512.781][v][af] filter input EOF
+[1525.613][v][af] filter output EOF
+[1525.613][v][cplayer] audio EOF reached
+[1525.613][v][cplayer] EOF code: 1  
+[1525.613][v][ad] Uninit decoder.
+[1525.616][v][cplayer] finished playback, success (reason 0)
+[1525.616][i][cplayer] 
+[1525.616][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/08 - Dhwanilo Ahabban.mp3
+[1525.616][v][cplayer] Running hook: ytdl_hook/on_load
+[1525.616][v][ytdl_hook] ytdl:// hook 
+[1525.616][v][ytdl_hook] not a ytdl:// url 
+[1525.619][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/08 - Dhwanilo Ahabban.mp3
+[1525.619][d][file] Stream opened successfully.
+[1525.619][v][demux] Trying demuxers for level=normal.
+[1525.620][d][demux] Trying demuxer: disc (force-level: normal)
+[1525.620][d][demux] Trying demuxer: edl (force-level: normal)
+[1525.621][d][demux] Trying demuxer: cue (force-level: normal)
+[1525.621][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[1525.622][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[1525.623][d][demux] Trying demuxer: tv (force-level: normal)
+[1525.623][d][demux] Trying demuxer: mkv (force-level: normal)
+[1525.623][d][demux] Trying demuxer: libarchive (force-level: normal)
+[1525.624][d][demux] Trying demuxer: rar (force-level: normal)
+[1525.625][d][demux] Trying demuxer: lavf (force-level: normal)
+[1525.626][v][lavf] Found 'mp3' at score=24 size=2048.
+[1525.626][v][lavf] Found 'mp3' at score=24 size=4096.
+[1525.627][v][lavf] Found 'mp3' at score=24 size=8192.
+[1525.629][v][lavf] Found 'mp3' at score=24 size=16384.
+[1525.632][v][lavf] Found 'mp3' at score=24 size=32768.
+[1525.638][v][lavf] Found 'mp3' at score=24 size=65536.
+[1525.650][v][lavf] Found 'mp3' at score=24 size=131072.
+[1525.654][v][lavf] Found 'mp3' at score=51 size=262144.
+[1525.655][d][ffmpeg/demuxer] mp3: Skipping 0 bytes of junk at 181380.
+[1525.655][v][lavf] avformat_find_stream_info() finished after 245946 bytes.
+[1525.655][v][demux] Detected file format: mp3 (libavformat)
+[1525.655][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/08 - Dhwanilo Ahabban.mp3
+[1525.656][v][find_files] Loading external files in /home/fahad/Music/Arnob/Adheko Ghume/
+[1525.656][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[1525.656][v][lavf] select track 0
+[1525.656][i][cplayer]      Video --vid=1 [P] (mjpeg 1400x1400)
+[1525.656][i][cplayer]  (+) Audio --aid=1 (mp3 2ch 48000Hz)
+[1525.656][i][display-tags] File tags:
+[1525.656][i][display-tags]  Artist: Arnob
+[1525.656][i][display-tags]  Album: Adheko Ghume
+[1525.656][i][display-tags]  Album_Artist: Arnob
+[1525.656][i][display-tags]  Date: 2017-01-08
+[1525.656][i][display-tags]  Genre: Asian Music
+[1525.656][i][display-tags]  Title: Dhwanilo Ahabban
+[1525.656][i][display-tags]  Track: 8
+[1525.657][v][ad] Codec list:
+[1525.657][v][ad]     mp3float (mp3) - MP3 (MPEG audio layer 3)
+[1525.657][v][ad]     mp3 - MP3 (MPEG audio layer 3)
+[1525.657][v][ad] Opening decoder mp3float
+[1525.657][v][ad] Requesting 1 threads for decoding.
+[1525.657][v][ad] Selected codec: mp3float (MP3 (MPEG audio layer 3))
+[1525.657][d][user_filter_wrapper] Setting option 'graph' = 'dynaudnorm=g=25:r=1.0' (flags = 0)
+[1525.657][v][af] User filter list:
+[1525.657][v][af]   lavfi (lavfi.00)
+[1525.657][v][cplayer] Starting playback...
+[1525.657][v][history] Reading file '/home/fahad/.cache/mpv/history.json'
+[1525.658][i][history] /home/fahad/Music/Arnob/Adheko Ghume/08 - Dhwanilo Ahabban.mp3
+[1525.658][v][history] Writing file '/home/fahad/.cache/mpv/history.json'
+[1525.658][v][af] [in] 48000Hz stereo 2ch floatp
+[1525.658][v][af] [lavfi] 48000Hz stereo 2ch floatp
+[1525.658][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[1525.658][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[1525.658][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[1525.659][d][lavfi] Filter graph:
+[1525.659][d][lavfi]                                                         +---------------------+
+[1525.659][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[1525.659][d][lavfi]                                                         |    (dynaudnorm)     |
+[1525.659][d][lavfi]                                                         +---------------------+
+[1525.659][d][lavfi] 
+[1525.659][d][lavfi]                                                            +---------------+
+[1525.659][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[1525.659][d][lavfi]                                                            | (abuffersink) |
+[1525.659][d][lavfi]                                                            +---------------+
+[1525.659][d][lavfi] 
+[1525.659][d][lavfi] +-------------+
+[1525.659][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[1525.659][d][lavfi] |  (abuffer)  |
+[1525.659][d][lavfi] +-------------+
+[1525.659][d][lavfi] 
+[1525.659][d][lavfi]                                                    +------------------+
+[1525.659][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[1525.659][d][lavfi]                                                    |   (aresample)    |
+[1525.659][d][lavfi]                                                    +------------------+
+[1525.659][d][lavfi] 
+[1525.659][d][lavfi] 
+[1525.689][v][af] [userspeed] 48000Hz stereo 2ch doublep
+[1525.690][v][af] [userspeed] (disabled)
+[1525.690][v][af] [convert] 48000Hz stereo 2ch doublep
+[1525.690][v][autoconvert] inserting resampler
+[1525.690][v][swresample] format change, reinitializing resampler
+[1525.690][v][swresample] 48000Hz stereo doublep -> 48000Hz stereo float
+[1525.690][v][af] [out] 48000Hz stereo 2ch float
+[1525.690][v][cplayer] starting audio playback
+[1525.690][v][cplayer] playback restart complete
+[1737.119][v][lavf] EOF reached.
+[1738.097][v][af] filter input EOF
+[1750.915][v][af] filter output EOF
+[1750.916][v][cplayer] audio EOF reached
+[1750.916][v][cplayer] EOF code: 1  
+[1750.916][v][ad] Uninit decoder.
+[1750.919][v][cplayer] finished playback, success (reason 0)
+[1750.919][i][cplayer] 
+[1750.919][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/09 - Prochondo Gorjone.mp3
+[1750.919][v][cplayer] Running hook: ytdl_hook/on_load
+[1750.919][v][ytdl_hook] ytdl:// hook 
+[1750.920][v][ytdl_hook] not a ytdl:// url 
+[1750.922][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/09 - Prochondo Gorjone.mp3
+[1750.922][d][file] Stream opened successfully.
+[1750.922][v][demux] Trying demuxers for level=normal.
+[1750.923][d][demux] Trying demuxer: disc (force-level: normal)
+[1750.923][d][demux] Trying demuxer: edl (force-level: normal)
+[1750.924][d][demux] Trying demuxer: cue (force-level: normal)
+[1750.924][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[1750.925][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[1750.926][d][demux] Trying demuxer: tv (force-level: normal)
+[1750.926][d][demux] Trying demuxer: mkv (force-level: normal)
+[1750.927][d][demux] Trying demuxer: libarchive (force-level: normal)
+[1750.927][d][demux] Trying demuxer: rar (force-level: normal)
+[1750.928][d][demux] Trying demuxer: lavf (force-level: normal)
+[1750.929][v][lavf] Found 'mp3' at score=24 size=2048.
+[1750.929][v][lavf] Found 'mp3' at score=24 size=4096.
+[1750.930][v][lavf] Found 'mp3' at score=24 size=8192.
+[1750.932][v][lavf] Found 'mp3' at score=24 size=16384.
+[1750.936][v][lavf] Found 'mp3' at score=24 size=32768.
+[1750.942][v][lavf] Found 'mp3' at score=24 size=65536.
+[1750.955][v][lavf] Found 'mp3' at score=24 size=131072.
+[1750.959][v][lavf] Found 'mp3' at score=51 size=262144.
+[1750.959][d][ffmpeg/demuxer] mp3: Skipping 0 bytes of junk at 181381.
+[1750.960][v][lavf] avformat_find_stream_info() finished after 245947 bytes.
+[1750.960][v][demux] Detected file format: mp3 (libavformat)
+[1750.960][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/09 - Prochondo Gorjone.mp3
+[1750.960][v][find_files] Loading external files in /home/fahad/Music/Arnob/Adheko Ghume/
+[1750.961][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[1750.961][v][lavf] select track 0
+[1750.961][i][cplayer]      Video --vid=1 [P] (mjpeg 1400x1400)
+[1750.961][i][cplayer]  (+) Audio --aid=1 (mp3 2ch 48000Hz)
+[1750.961][i][display-tags] File tags:
+[1750.961][i][display-tags]  Artist: Arnob
+[1750.961][i][display-tags]  Album: Adheko Ghume
+[1750.961][i][display-tags]  Album_Artist: Arnob
+[1750.961][i][display-tags]  Date: 2017-01-08
+[1750.961][i][display-tags]  Genre: Asian Music
+[1750.961][i][display-tags]  Title: Prochondo Gorjone
+[1750.961][i][display-tags]  Track: 9
+[1750.961][v][ad] Codec list:
+[1750.961][v][ad]     mp3float (mp3) - MP3 (MPEG audio layer 3)
+[1750.961][v][ad]     mp3 - MP3 (MPEG audio layer 3)
+[1750.961][v][ad] Opening decoder mp3float
+[1750.961][v][ad] Requesting 1 threads for decoding.
+[1750.961][v][ad] Selected codec: mp3float (MP3 (MPEG audio layer 3))
+[1750.961][d][user_filter_wrapper] Setting option 'graph' = 'dynaudnorm=g=25:r=1.0' (flags = 0)
+[1750.962][v][af] User filter list:
+[1750.962][v][af]   lavfi (lavfi.00)
+[1750.963][v][cplayer] Starting playback...
+[1750.963][v][history] Reading file '/home/fahad/.cache/mpv/history.json'
+[1750.963][i][history] /home/fahad/Music/Arnob/Adheko Ghume/09 - Prochondo Gorjone.mp3
+[1750.963][v][history] Writing file '/home/fahad/.cache/mpv/history.json'
+[1750.964][v][af] [in] 48000Hz stereo 2ch floatp
+[1750.964][v][af] [lavfi] 48000Hz stereo 2ch floatp
+[1750.964][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[1750.964][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[1750.964][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[1750.964][d][lavfi] Filter graph:
+[1750.964][d][lavfi]                                                         +---------------------+
+[1750.964][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[1750.964][d][lavfi]                                                         |    (dynaudnorm)     |
+[1750.964][d][lavfi]                                                         +---------------------+
+[1750.964][d][lavfi] 
+[1750.964][d][lavfi]                                                            +---------------+
+[1750.964][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[1750.964][d][lavfi]                                                            | (abuffersink) |
+[1750.964][d][lavfi]                                                            +---------------+
+[1750.964][d][lavfi] 
+[1750.964][d][lavfi] +-------------+
+[1750.964][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[1750.964][d][lavfi] |  (abuffer)  |
+[1750.964][d][lavfi] +-------------+
+[1750.964][d][lavfi] 
+[1750.964][d][lavfi]                                                    +------------------+
+[1750.964][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[1750.964][d][lavfi]                                                    |   (aresample)    |
+[1750.964][d][lavfi]                                                    +------------------+
+[1750.964][d][lavfi] 
+[1750.965][d][lavfi] 
+[1751.006][v][af] [userspeed] 48000Hz stereo 2ch doublep
+[1751.006][v][af] [userspeed] (disabled)
+[1751.006][v][af] [convert] 48000Hz stereo 2ch doublep
+[1751.007][v][autoconvert] inserting resampler
+[1751.007][v][swresample] format change, reinitializing resampler
+[1751.007][v][swresample] 48000Hz stereo doublep -> 48000Hz stereo float
+[1751.007][v][af] [out] 48000Hz stereo 2ch float
+[1751.007][v][cplayer] starting audio playback
+[1751.007][v][cplayer] playback restart complete
+[1920.422][v][lavf] EOF reached.
+[1921.414][v][af] filter input EOF
+[1934.379][v][af] filter output EOF
+[1934.379][v][cplayer] audio EOF reached
+[1934.379][v][cplayer] EOF code: 1  
+[1934.379][v][ad] Uninit decoder.
+[1934.381][v][cplayer] finished playback, success (reason 0)
+[1934.381][i][cplayer] 
+[1934.381][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/10 - Purano Sei.mp3
+[1934.381][v][cplayer] Running hook: ytdl_hook/on_load
+[1934.381][v][ytdl_hook] ytdl:// hook 
+[1934.381][v][ytdl_hook] not a ytdl:// url 
+[1934.381][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/10 - Purano Sei.mp3
+[1934.381][d][file] Stream opened successfully.
+[1934.382][v][demux] Trying demuxers for level=normal.
+[1934.382][d][demux] Trying demuxer: disc (force-level: normal)
+[1934.382][d][demux] Trying demuxer: edl (force-level: normal)
+[1934.382][d][demux] Trying demuxer: cue (force-level: normal)
+[1934.383][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[1934.383][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[1934.383][d][demux] Trying demuxer: tv (force-level: normal)
+[1934.384][d][demux] Trying demuxer: mkv (force-level: normal)
+[1934.384][d][demux] Trying demuxer: libarchive (force-level: normal)
+[1934.384][d][demux] Trying demuxer: rar (force-level: normal)
+[1934.384][d][demux] Trying demuxer: lavf (force-level: normal)
+[1934.385][v][lavf] Found 'mp3' at score=24 size=2048.
+[1934.385][v][lavf] Found 'mp3' at score=24 size=4096.
+[1934.386][v][lavf] Found 'mp3' at score=24 size=8192.
+[1934.387][v][lavf] Found 'mp3' at score=24 size=16384.
+[1934.388][v][lavf] Found 'mp3' at score=24 size=32768.
+[1934.391][v][lavf] Found 'mp3' at score=24 size=65536.
+[1934.397][v][lavf] Found 'mp3' at score=24 size=131072.
+[1934.401][v][lavf] Found 'mp3' at score=51 size=262144.
+[1934.401][d][ffmpeg/demuxer] mp3: Skipping 0 bytes of junk at 181375.
+[1934.401][v][lavf] avformat_find_stream_info() finished after 245941 bytes.
+[1934.401][v][demux] Detected file format: mp3 (libavformat)
+[1934.401][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/10 - Purano Sei.mp3
+[1934.402][v][find_files] Loading external files in /home/fahad/Music/Arnob/Adheko Ghume/
+[1934.402][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[1934.402][v][lavf] select track 0
+[1934.402][i][cplayer]      Video --vid=1 [P] (mjpeg 1400x1400)
+[1934.402][i][cplayer]  (+) Audio --aid=1 (mp3 2ch 48000Hz)
+[1934.402][i][display-tags] File tags:
+[1934.402][i][display-tags]  Artist: Arnob
+[1934.402][i][display-tags]  Album: Adheko Ghume
+[1934.402][i][display-tags]  Album_Artist: Arnob
+[1934.402][i][display-tags]  Date: 2017-01-08
+[1934.402][i][display-tags]  Genre: Asian Music
+[1934.402][i][display-tags]  Title: Purano Sei
+[1934.402][i][display-tags]  Track: 10
+[1934.402][v][ad] Codec list:
+[1934.402][v][ad]     mp3float (mp3) - MP3 (MPEG audio layer 3)
+[1934.402][v][ad]     mp3 - MP3 (MPEG audio layer 3)
+[1934.402][v][ad] Opening decoder mp3float
+[1934.402][v][ad] Requesting 1 threads for decoding.
+[1934.402][v][ad] Selected codec: mp3float (MP3 (MPEG audio layer 3))
+[1934.402][d][user_filter_wrapper] Setting option 'graph' = 'dynaudnorm=g=25:r=1.0' (flags = 0)
+[1934.404][v][af] User filter list:
+[1934.404][v][af]   lavfi (lavfi.00)
+[1934.404][v][cplayer] Starting playback...
+[1934.404][v][history] Reading file '/home/fahad/.cache/mpv/history.json'
+[1934.404][i][history] /home/fahad/Music/Arnob/Adheko Ghume/10 - Purano Sei.mp3
+[1934.404][v][history] Writing file '/home/fahad/.cache/mpv/history.json'
+[1934.404][v][af] [in] 48000Hz stereo 2ch floatp
+[1934.404][v][af] [lavfi] 48000Hz stereo 2ch floatp
+[1934.404][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[1934.405][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[1934.405][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[1934.405][d][lavfi] Filter graph:
+[1934.405][d][lavfi]                                                         +---------------------+
+[1934.405][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[1934.405][d][lavfi]                                                         |    (dynaudnorm)     |
+[1934.405][d][lavfi]                                                         +---------------------+
+[1934.405][d][lavfi] 
+[1934.405][d][lavfi]                                                            +---------------+
+[1934.405][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[1934.405][d][lavfi]                                                            | (abuffersink) |
+[1934.405][d][lavfi]                                                            +---------------+
+[1934.405][d][lavfi] 
+[1934.405][d][lavfi] +-------------+
+[1934.405][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[1934.405][d][lavfi] |  (abuffer)  |
+[1934.405][d][lavfi] +-------------+
+[1934.405][d][lavfi] 
+[1934.405][d][lavfi]                                                    +------------------+
+[1934.405][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[1934.405][d][lavfi]                                                    |   (aresample)    |
+[1934.405][d][lavfi]                                                    +------------------+
+[1934.405][d][lavfi] 
+[1934.405][d][lavfi] 
+[1934.447][v][af] [userspeed] 48000Hz stereo 2ch doublep
+[1934.447][v][af] [userspeed] (disabled)
+[1934.447][v][af] [convert] 48000Hz stereo 2ch doublep
+[1934.448][v][autoconvert] inserting resampler
+[1934.448][v][swresample] format change, reinitializing resampler
+[1934.448][v][swresample] 48000Hz stereo doublep -> 48000Hz stereo float
+[1934.448][v][af] [out] 48000Hz stereo 2ch float
+[1934.448][v][cplayer] starting audio playback
+[1934.448][v][cplayer] playback restart complete
+[2055.872][v][lavf] EOF reached.
+[2056.867][v][af] filter input EOF
+[2069.418][v][af] filter output EOF
+[2069.419][v][cplayer] audio EOF reached
+[2069.419][v][cplayer] EOF code: 1  
+[2069.419][v][ad] Uninit decoder.
+[2069.420][v][cplayer] finished playback, success (reason 0)
+[2069.420][i][cplayer] 
+[2069.421][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/11 - Rakho Rakhore.mp3
+[2069.421][v][cplayer] Running hook: ytdl_hook/on_load
+[2069.421][v][ytdl_hook] ytdl:// hook 
+[2069.421][v][ytdl_hook] not a ytdl:// url 
+[2069.423][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/11 - Rakho Rakhore.mp3
+[2069.423][d][file] Stream opened successfully.
+[2069.424][v][demux] Trying demuxers for level=normal.
+[2069.424][d][demux] Trying demuxer: disc (force-level: normal)
+[2069.425][d][demux] Trying demuxer: edl (force-level: normal)
+[2069.425][d][demux] Trying demuxer: cue (force-level: normal)
+[2069.425][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[2069.426][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[2069.427][d][demux] Trying demuxer: tv (force-level: normal)
+[2069.428][d][demux] Trying demuxer: mkv (force-level: normal)
+[2069.428][d][demux] Trying demuxer: libarchive (force-level: normal)
+[2069.429][d][demux] Trying demuxer: rar (force-level: normal)
+[2069.429][d][demux] Trying demuxer: lavf (force-level: normal)
+[2069.430][v][lavf] Found 'mp3' at score=24 size=2048.
+[2069.431][v][lavf] Found 'mp3' at score=24 size=4096.
+[2069.432][v][lavf] Found 'mp3' at score=24 size=8192.
+[2069.433][v][lavf] Found 'mp3' at score=24 size=16384.
+[2069.437][v][lavf] Found 'mp3' at score=24 size=32768.
+[2069.443][v][lavf] Found 'mp3' at score=24 size=65536.
+[2069.454][v][lavf] Found 'mp3' at score=24 size=131072.
+[2069.461][v][lavf] Found 'mp3' at score=51 size=262144.
+[2069.461][d][ffmpeg/demuxer] mp3: Skipping 0 bytes of junk at 181378.
+[2069.462][v][lavf] avformat_find_stream_info() finished after 245944 bytes.
+[2069.462][v][demux] Detected file format: mp3 (libavformat)
+[2069.462][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/11 - Rakho Rakhore.mp3
+[2069.463][v][find_files] Loading external files in /home/fahad/Music/Arnob/Adheko Ghume/
+[2069.463][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[2069.463][v][lavf] select track 0
+[2069.463][i][cplayer]      Video --vid=1 [P] (mjpeg 1400x1400)
+[2069.463][i][cplayer]  (+) Audio --aid=1 (mp3 2ch 48000Hz)
+[2069.463][i][display-tags] File tags:
+[2069.463][i][display-tags]  Artist: Arnob
+[2069.463][i][display-tags]  Album: Adheko Ghume
+[2069.463][i][display-tags]  Album_Artist: Arnob
+[2069.463][i][display-tags]  Date: 2017-01-08
+[2069.463][i][display-tags]  Genre: Asian Music
+[2069.463][i][display-tags]  Title: Rakho Rakhore
+[2069.464][i][display-tags]  Track: 11
+[2069.464][v][ad] Codec list:
+[2069.464][v][ad]     mp3float (mp3) - MP3 (MPEG audio layer 3)
+[2069.464][v][ad]     mp3 - MP3 (MPEG audio layer 3)
+[2069.464][v][ad] Opening decoder mp3float
+[2069.465][v][ad] Requesting 1 threads for decoding.
+[2069.465][v][ad] Selected codec: mp3float (MP3 (MPEG audio layer 3))
+[2069.465][d][user_filter_wrapper] Setting option 'graph' = 'dynaudnorm=g=25:r=1.0' (flags = 0)
+[2069.465][v][af] User filter list:
+[2069.465][v][af]   lavfi (lavfi.00)
+[2069.465][v][cplayer] Starting playback...
+[2069.465][v][history] Reading file '/home/fahad/.cache/mpv/history.json'
+[2069.466][i][history] /home/fahad/Music/Arnob/Adheko Ghume/11 - Rakho Rakhore.mp3
+[2069.466][v][history] Writing file '/home/fahad/.cache/mpv/history.json'
+[2069.467][v][af] [in] 48000Hz stereo 2ch floatp
+[2069.467][v][af] [lavfi] 48000Hz stereo 2ch floatp
+[2069.467][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[2069.467][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[2069.467][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[2069.467][d][lavfi] Filter graph:
+[2069.468][d][lavfi]                                                         +---------------------+
+[2069.468][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[2069.468][d][lavfi]                                                         |    (dynaudnorm)     |
+[2069.468][d][lavfi]                                                         +---------------------+
+[2069.468][d][lavfi] 
+[2069.468][d][lavfi]                                                            +---------------+
+[2069.468][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[2069.468][d][lavfi]                                                            | (abuffersink) |
+[2069.468][d][lavfi]                                                            +---------------+
+[2069.468][d][lavfi] 
+[2069.468][d][lavfi] +-------------+
+[2069.468][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[2069.468][d][lavfi] |  (abuffer)  |
+[2069.468][d][lavfi] +-------------+
+[2069.468][d][lavfi] 
+[2069.468][d][lavfi]                                                    +------------------+
+[2069.468][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[2069.468][d][lavfi]                                                    |   (aresample)    |
+[2069.468][d][lavfi]                                                    +------------------+
+[2069.468][d][lavfi] 
+[2069.468][d][lavfi] 
+[2069.529][v][af] [userspeed] 48000Hz stereo 2ch doublep
+[2069.529][v][af] [userspeed] (disabled)
+[2069.529][v][af] [convert] 48000Hz stereo 2ch doublep
+[2069.529][v][autoconvert] inserting resampler
+[2069.529][v][swresample] format change, reinitializing resampler
+[2069.529][v][swresample] 48000Hz stereo doublep -> 48000Hz stereo float
+[2069.529][v][af] [out] 48000Hz stereo 2ch float
+[2069.530][v][cplayer] starting audio playback
+[2069.530][v][cplayer] playback restart complete
+[2188.405][v][lavf] EOF reached.
+[2189.388][v][af] filter input EOF
+[2202.139][v][af] filter output EOF
+[2202.139][v][cplayer] audio EOF reached
+[2202.139][v][cplayer] EOF code: 1  
+[2202.139][v][ad] Uninit decoder.
+[2202.142][v][cplayer] finished playback, success (reason 0)
+[2202.143][i][cplayer] 
+[2202.143][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/12 - Amar Din Phuralo.mp3
+[2202.143][v][cplayer] Running hook: ytdl_hook/on_load
+[2202.143][v][ytdl_hook] ytdl:// hook 
+[2202.144][v][ytdl_hook] not a ytdl:// url 
+[2202.147][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/12 - Amar Din Phuralo.mp3
+[2202.147][d][file] Stream opened successfully.
+[2202.148][v][demux] Trying demuxers for level=normal.
+[2202.149][d][demux] Trying demuxer: disc (force-level: normal)
+[2202.150][d][demux] Trying demuxer: edl (force-level: normal)
+[2202.150][d][demux] Trying demuxer: cue (force-level: normal)
+[2202.151][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[2202.152][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[2202.154][d][demux] Trying demuxer: tv (force-level: normal)
+[2202.154][d][demux] Trying demuxer: mkv (force-level: normal)
+[2202.155][d][demux] Trying demuxer: libarchive (force-level: normal)
+[2202.156][d][demux] Trying demuxer: rar (force-level: normal)
+[2202.157][d][demux] Trying demuxer: lavf (force-level: normal)
+[2202.159][v][lavf] Found 'mp3' at score=24 size=2048.
+[2202.159][v][lavf] Found 'mp3' at score=24 size=4096.
+[2202.161][v][lavf] Found 'mp3' at score=24 size=8192.
+[2202.164][v][lavf] Found 'mp3' at score=24 size=16384.
+[2202.167][v][lavf] Found 'mp3' at score=24 size=32768.
+[2202.172][v][lavf] Found 'mp3' at score=24 size=65536.
+[2202.178][v][lavf] Found 'mp3' at score=24 size=131072.
+[2202.181][v][lavf] Found 'mp3' at score=51 size=262144.
+[2202.182][d][ffmpeg/demuxer] mp3: Skipping 0 bytes of junk at 181381.
+[2202.182][v][lavf] avformat_find_stream_info() finished after 245947 bytes.
+[2202.182][v][demux] Detected file format: mp3 (libavformat)
+[2202.182][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/12 - Amar Din Phuralo.mp3
+[2202.182][v][find_files] Loading external files in /home/fahad/Music/Arnob/Adheko Ghume/
+[2202.182][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[2202.183][v][lavf] select track 0
+[2202.183][i][cplayer]      Video --vid=1 [P] (mjpeg 1400x1400)
+[2202.183][i][cplayer]  (+) Audio --aid=1 (mp3 2ch 48000Hz)
+[2202.183][i][display-tags] File tags:
+[2202.183][i][display-tags]  Artist: Arnob
+[2202.183][i][display-tags]  Album: Adheko Ghume
+[2202.183][i][display-tags]  Album_Artist: Arnob
+[2202.183][i][display-tags]  Date: 2017-01-08
+[2202.183][i][display-tags]  Genre: Asian Music
+[2202.183][i][display-tags]  Title: Amar Din Phuralo
+[2202.183][i][display-tags]  Track: 12
+[2202.183][v][ad] Codec list:
+[2202.183][v][ad]     mp3float (mp3) - MP3 (MPEG audio layer 3)
+[2202.183][v][ad]     mp3 - MP3 (MPEG audio layer 3)
+[2202.183][v][ad] Opening decoder mp3float
+[2202.183][v][ad] Requesting 1 threads for decoding.
+[2202.183][v][ad] Selected codec: mp3float (MP3 (MPEG audio layer 3))
+[2202.183][d][user_filter_wrapper] Setting option 'graph' = 'dynaudnorm=g=25:r=1.0' (flags = 0)
+[2202.183][v][af] User filter list:
+[2202.183][v][af]   lavfi (lavfi.00)
+[2202.183][v][cplayer] Starting playback...
+[2202.183][v][history] Reading file '/home/fahad/.cache/mpv/history.json'
+[2202.184][i][history] /home/fahad/Music/Arnob/Adheko Ghume/12 - Amar Din Phuralo.mp3
+[2202.184][v][history] Writing file '/home/fahad/.cache/mpv/history.json'
+[2202.184][v][af] [in] 48000Hz stereo 2ch floatp
+[2202.184][v][af] [lavfi] 48000Hz stereo 2ch floatp
+[2202.184][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[2202.184][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[2202.184][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[2202.184][d][lavfi] Filter graph:
+[2202.184][d][lavfi]                                                         +---------------------+
+[2202.184][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[2202.184][d][lavfi]                                                         |    (dynaudnorm)     |
+[2202.184][d][lavfi]                                                         +---------------------+
+[2202.184][d][lavfi] 
+[2202.184][d][lavfi]                                                            +---------------+
+[2202.184][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[2202.184][d][lavfi]                                                            | (abuffersink) |
+[2202.184][d][lavfi]                                                            +---------------+
+[2202.184][d][lavfi] 
+[2202.184][d][lavfi] +-------------+
+[2202.184][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[2202.184][d][lavfi] |  (abuffer)  |
+[2202.184][d][lavfi] +-------------+
+[2202.184][d][lavfi] 
+[2202.184][d][lavfi]                                                    +------------------+
+[2202.184][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[2202.184][d][lavfi]                                                    |   (aresample)    |
+[2202.184][d][lavfi]                                                    +------------------+
+[2202.184][d][lavfi] 
+[2202.184][d][lavfi] 
+[2202.219][v][af] [userspeed] 48000Hz stereo 2ch doublep
+[2202.219][v][af] [userspeed] (disabled)
+[2202.219][v][af] [convert] 48000Hz stereo 2ch doublep
+[2202.219][v][autoconvert] inserting resampler
+[2202.219][v][swresample] format change, reinitializing resampler
+[2202.219][v][swresample] 48000Hz stereo doublep -> 48000Hz stereo float
+[2202.219][v][af] [out] 48000Hz stereo 2ch float
+[2202.219][v][cplayer] starting audio playback
+[2202.219][v][cplayer] playback restart complete
+[2541.623][v][lavf] EOF reached.
+[2542.615][v][af] filter input EOF
+[2555.326][v][af] filter output EOF
+[2555.327][v][cplayer] audio EOF reached
+[2555.327][v][cplayer] EOF code: 1  
+[2555.327][v][ad] Uninit decoder.
+[2555.330][v][cplayer] finished playback, success (reason 0)
+[2555.330][i][cplayer] 
+[2555.331][i][cplayer] Playing: /home/fahad/Music/Arnob/Adheko Ghume/13 - Robir Gan.mp3
+[2555.331][v][cplayer] Running hook: ytdl_hook/on_load
+[2555.331][v][ytdl_hook] ytdl:// hook 
+[2555.331][v][ytdl_hook] not a ytdl:// url 
+[2555.336][v][file] Opening /home/fahad/Music/Arnob/Adheko Ghume/13 - Robir Gan.mp3
+[2555.337][d][file] Stream opened successfully.
+[2555.339][v][demux] Trying demuxers for level=normal.
+[2555.340][d][demux] Trying demuxer: disc (force-level: normal)
+[2555.341][d][demux] Trying demuxer: edl (force-level: normal)
+[2555.342][d][demux] Trying demuxer: cue (force-level: normal)
+[2555.344][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[2555.345][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[2555.347][d][demux] Trying demuxer: tv (force-level: normal)
+[2555.347][d][demux] Trying demuxer: mkv (force-level: normal)
+[2555.348][d][demux] Trying demuxer: libarchive (force-level: normal)
+[2555.349][d][demux] Trying demuxer: rar (force-level: normal)
+[2555.350][d][demux] Trying demuxer: lavf (force-level: normal)
+[2555.351][v][lavf] Found 'mp3' at score=24 size=2048.
+[2555.352][v][lavf] Found 'mp3' at score=24 size=4096.
+[2555.354][v][lavf] Found 'mp3' at score=24 size=8192.
+[2555.357][v][lavf] Found 'mp3' at score=24 size=16384.
+[2555.362][v][lavf] Found 'mp3' at score=24 size=32768.
+[2555.372][v][lavf] Found 'mp3' at score=24 size=65536.
+[2555.389][v][lavf] Found 'mp3' at score=24 size=131072.
+[2555.397][v][lavf] Found 'mp3' at score=51 size=262144.
+[2555.398][d][ffmpeg/demuxer] mp3: Skipping 0 bytes of junk at 181374.
+[2555.400][v][lavf] avformat_find_stream_info() finished after 245940 bytes.
+[2555.400][v][demux] Detected file format: mp3 (libavformat)
+[2555.400][v][cplayer] Opening done: /home/fahad/Music/Arnob/Adheko Ghume/13 - Robir Gan.mp3
+[2555.401][v][find_files] Loading external files in /home/fahad/Music/Arnob/Adheko Ghume/
+[2555.402][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[2555.403][v][lavf] select track 0
+[2555.403][i][cplayer]      Video --vid=1 [P] (mjpeg 1400x1400)
+[2555.403][i][cplayer]  (+) Audio --aid=1 (mp3 2ch 48000Hz)
+[2555.403][i][display-tags] File tags:
+[2555.403][i][display-tags]  Artist: Arnob
+[2555.403][i][display-tags]  Album: Adheko Ghume
+[2555.403][i][display-tags]  Album_Artist: Arnob
+[2555.403][i][display-tags]  Date: 2017-01-08
+[2555.403][i][display-tags]  Genre: Asian Music
+[2555.403][i][display-tags]  Title: Robir Gan
+[2555.403][i][display-tags]  Track: 13
+[2555.405][v][ad] Codec list:
+[2555.405][v][ad]     mp3float (mp3) - MP3 (MPEG audio layer 3)
+[2555.405][v][ad]     mp3 - MP3 (MPEG audio layer 3)
+[2555.405][v][ad] Opening decoder mp3float
+[2555.405][v][ad] Requesting 1 threads for decoding.
+[2555.405][v][ad] Selected codec: mp3float (MP3 (MPEG audio layer 3))
+[2555.406][d][user_filter_wrapper] Setting option 'graph' = 'dynaudnorm=g=25:r=1.0' (flags = 0)
+[2555.406][v][af] User filter list:
+[2555.407][v][af]   lavfi (lavfi.00)
+[2555.407][v][cplayer] Starting playback...
+[2555.407][v][history] Reading file '/home/fahad/.cache/mpv/history.json'
+[2555.412][i][history] /home/fahad/Music/Arnob/Adheko Ghume/13 - Robir Gan.mp3
+[2555.414][v][history] Writing file '/home/fahad/.cache/mpv/history.json'
+[2555.415][v][af] [in] 48000Hz stereo 2ch floatp
+[2555.415][v][af] [lavfi] 48000Hz stereo 2ch floatp
+[2555.415][d][ffmpeg] mpv_src_in0: tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:(null)
+[2555.415][d][ffmpeg] Parsed_dynaudnorm_0: auto-inserting filter 'auto_resampler_0' between the filter 'mpv_src_in0' and the filter 'Parsed_dynaudnorm_0'
+[2555.415][d][ffmpeg] auto_resampler_0: ch:2 chl:stereo fmt:fltp r:48000Hz -> ch:2 chl:stereo fmt:dblp r:48000Hz
+[2555.416][d][lavfi] Filter graph:
+[2555.416][d][lavfi]                                                         +---------------------+
+[2555.416][d][lavfi] auto_resampler_0:default--[48000Hz dblp:stereo]--default| Parsed_dynaudnorm_0 |default--[48000Hz dblp:stereo]--mpv_sink_out0:default
+[2555.416][d][lavfi]                                                         |    (dynaudnorm)     |
+[2555.416][d][lavfi]                                                         +---------------------+
+[2555.417][d][lavfi] 
+[2555.417][d][lavfi]                                                            +---------------+
+[2555.417][d][lavfi] Parsed_dynaudnorm_0:default--[48000Hz dblp:stereo]--default| mpv_sink_out0 |
+[2555.417][d][lavfi]                                                            | (abuffersink) |
+[2555.417][d][lavfi]                                                            +---------------+
+[2555.417][d][lavfi] 
+[2555.417][d][lavfi] +-------------+
+[2555.417][d][lavfi] | mpv_src_in0 |default--[48000Hz fltp:stereo]--auto_resampler_0:default
+[2555.417][d][lavfi] |  (abuffer)  |
+[2555.417][d][lavfi] +-------------+
+[2555.417][d][lavfi] 
+[2555.417][d][lavfi]                                                    +------------------+
+[2555.417][d][lavfi] mpv_src_in0:default--[48000Hz fltp:stereo]--default| auto_resampler_0 |default--[48000Hz dblp:stereo]--Parsed_dynaudnorm_0:default
+[2555.417][d][lavfi]                                                    |   (aresample)    |
+[2555.417][d][lavfi]                                                    +------------------+
+[2555.417][d][lavfi] 
+[2555.417][d][lavfi] 
+[2555.520][v][af] [userspeed] 48000Hz stereo 2ch doublep
+[2555.520][v][af] [userspeed] (disabled)
+[2555.520][v][af] [convert] 48000Hz stereo 2ch doublep
+[2555.520][v][autoconvert] inserting resampler
+[2555.520][v][swresample] format change, reinitializing resampler
+[2555.520][v][swresample] 48000Hz stereo doublep -> 48000Hz stereo float
+[2555.521][v][af] [out] 48000Hz stereo 2ch float
+[2555.522][v][cplayer] starting audio playback
+[2555.522][v][cplayer] playback restart complete
+[2741.851][v][lavf] EOF reached.
+[2742.842][v][af] filter input EOF
+[2755.479][v][af] filter output EOF
+[2755.479][v][cplayer] audio EOF reached
+[2755.479][v][cplayer] EOF code: 1  
+[2755.479][v][ad] Uninit decoder.
+[2755.484][v][cplayer] finished playback, success (reason 0)
+[2755.484][i][cplayer] 
+[2755.484][i][cplayer] 
+[2755.484][i][cplayer] Exiting... (End of file)
+[2755.485][v][autocrop] Exiting...
+[2755.486][v][autosub] Exiting...
+[2755.486][v][ytdl_hook] Exiting...
+[2755.488][v][stats] Exiting...
+[2755.488][v][stats2] Exiting...
+[2755.489][v][osc] Exiting...
+[2755.495][v][history] Exiting...
+[2755.497][v][mpris] Exiting...
+[2755.498][v][ao/pulse] draining...

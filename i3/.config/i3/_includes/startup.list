@@ -2,7 +2,7 @@
 autorandr horizontal
 
 #keyboard stuff
-xmodmap
+xmodmap ~/.Xmodmap
 numlockx on
 setxkbmap -layout us -option compose:menu
 fusuma -d

@@ -43,4 +43,34 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="dav://admin@10.10.0.103:2112/storage" added="2019-10-16T06:24:51Z" modified="2019-10-16T06:24:51Z" visited="2019-10-16T06:24:51Z">
+    <title>storage</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2019-10-16T06:24:51Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="dav://admin@10.10.0.104:2112/storage" added="2019-10-17T04:47:07Z" modified="2019-10-17T04:47:07Z" visited="2019-10-17T04:47:07Z">
+    <title>storage</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2019-10-17T04:47:07Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="dav://admin@10.10.0.104:2112/Main%20Storage" added="2019-10-17T04:47:26Z" modified="2019-10-17T04:47:26Z" visited="2019-10-17T04:47:26Z">
+    <title>Main Storage</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2019-10-17T04:47:26Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>

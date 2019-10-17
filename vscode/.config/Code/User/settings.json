@@ -49,22 +49,11 @@
   "workbench.editor.showTabs": false,
   "workbench.statusBar.feedback.visible": false,
 
-  "window.zoomLevel": 1,
+  "window.zoomLevel": -1,
   "window.menuBarVisibility": "toggle",
 
   "git.autofetch": true,
   "git.confirmSync": false,
-
-  "prettier.eslintIntegration": true,
-  "prettier.bracketSpacing": true,
-  "prettier.arrowParens": "avoid",
-  "prettier.jsxBracketSameLine": true,
-  "prettier.printWidth": 80,
-  "prettier.semi": false,
-  "prettier.tabWidth": 2,
-  "prettier.trailingComma": "none",
-  "prettier.useTabs": false,
-  "prettier.singleQuote": true,
 
   "javascript.updateImportsOnFileMove.enabled": "always",
 
@@ -97,5 +86,10 @@
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.lintTask.enable": true,
+  "eslint.packageManager": "yarn"
 }

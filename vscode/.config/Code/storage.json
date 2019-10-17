@@ -2,6 +2,10 @@
     "telemetry.machineId": "9e42f38182d0f7f0a95298e70ce2a83e7b9981fe700b56d019b38a71825dce3d",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/fahad/Desktop/aj-web",
+            "file:///home/fahad/Desktop/aj-backend",
+            "file:///home/fahad/Desktop/aj-web/src/utils",
+            "file:///home/fahad/Desktop/css-only-spinners",
             "file:///ldata/my-projects/ActiveJobs/aj-backend",
             "file:///ldata/my-projects/ActiveJobs/aj-web",
             "file:///ldata/my-projects/roar-backend",
@@ -103,14 +107,14 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///ldata/my-projects/ActiveJobs/aj-web",
-            "backupPath": "/home/fahad/.config/Code/Backups/6c60026d254003d4d838b7b6b8dd5a0d",
+            "folder": "file:///home/fahad/Desktop/aj-web",
+            "backupPath": "/home/fahad/.config/Code/Backups/b0f8756692798183d6eb4c7a373a2585",
             "uiState": {
                 "mode": 1,
-                "x": 1924,
+                "x": 4,
                 "y": 34,
-                "width": 1912,
-                "height": 1042
+                "width": 1358,
+                "height": 730
             }
         },
         "openedWindows": []
@@ -161,13 +165,46 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/ldata/my-projects/ActiveJobs/aj-web",
-                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-web",
-                                        "path": "/ldata/my-projects/ActiveJobs/aj-web",
+                                        "fsPath": "/home/fahad/Desktop/aj-web",
+                                        "external": "file:///home/fahad/Desktop/aj-web",
+                                        "path": "/home/fahad/Desktop/aj-web",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/ldata/my-projects/ActiveJobs/aj-web"
+                                    "label": "~/Desktop/aj-web"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/fahad/Desktop/aj-backend",
+                                        "path": "/home/fahad/Desktop/aj-backend",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Desktop/aj-backend"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/fahad/Desktop/aj-web/src/utils",
+                                        "path": "/home/fahad/Desktop/aj-web/src/utils",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Desktop/aj-web/src/utils"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/fahad/Desktop/css-only-spinners",
+                                        "path": "/home/fahad/Desktop/css-only-spinners",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Desktop/css-only-spinners"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -179,6 +216,17 @@
                                     },
                                     "enabled": true,
                                     "label": "/ldata/my-projects/ActiveJobs/aj-backend"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-web",
+                                        "path": "/ldata/my-projects/ActiveJobs/aj-web",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/ActiveJobs/aj-web"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -223,50 +271,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/ldata/my-projects/weather-app"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/TuringTask/turing-frontend",
-                                        "path": "/ldata/my-projects/TuringTask/turing-frontend",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/TuringTask/turing-frontend"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/fahad/go/src/github.com/fa7ad/fu-remote",
-                                        "path": "/home/fahad/go/src/github.com/fa7ad/fu-remote",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/go/src/github.com/fa7ad/fu-remote"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/fu-remote-flutter/fu_remote",
-                                        "path": "/ldata/my-projects/fu-remote-flutter/fu_remote",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/fu-remote-flutter/fu_remote"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/fu-remote-flutter",
-                                        "path": "/ldata/my-projects/fu-remote-flutter",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/fu-remote-flutter"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -1327,8 +1331,8 @@
                 "userSettingsLabel": "ctrl+k f"
             },
             "workbench.action.closeWindow": {
-                "label": "Ctrl+Shift+W",
-                "userSettingsLabel": "ctrl+shift+w"
+                "label": "Ctrl+W",
+                "userSettingsLabel": "ctrl+w"
             },
             "workbench.action.quit": {
                 "label": "Ctrl+Q",
@@ -1477,8 +1481,9 @@
                 "userSettingsLabel": "ctrl+shift+f"
             },
             "workbench.view.scm": {
-                "label": "Ctrl+Shift+G",
-                "userSettingsLabel": "ctrl+shift+g"
+                "label": "Ctrl+Shift+G G",
+                "isNative": false,
+                "userSettingsLabel": "ctrl+shift+g g"
             },
             "workbench.view.debug": {
                 "label": "Ctrl+Shift+D",
