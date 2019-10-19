@@ -1,7 +1,7 @@
 [Scheme]
 Name=0WAL
-ColorCursor=#e7e7e6e6e6e6
-ColorForeground=#e7e7e6e6e6e6
-ColorBackground=#0c0c1c1c2323
-ColorPalette=#0c0c1c1c2323;#2a2a75758888;#3e3e9d9da8a8;#a6a6a8a8a3a3;#b4b4bdbdbebe;#acacc9c9cccc;#d5d5d6d6d6d6;#e7e7e6e6e6e6;#a1a1a1a1a1a1;#2a2a75758888;#3e3e9d9da8a8;#a6a6a8a8a3a3;#b4b4bdbdbebe;#acacc9c9cccc;#d5d5d6d6d6d6;#e7e7e6e6e6e6
+ColorCursor=#e4e4e8e8ebeb
+ColorForeground=#e4e4e8e8ebeb
+ColorBackground=#19191c1c1f1f
+ColorPalette=#19191c1c1f1f;#a9a9bbbbcccc;#b7b7c7c7d5d5;#b8b8cfcfe4e4;#d3d3d8d8dbdb;#e1e1e0e0dbdb;#d8d8dddde1e1;#e4e4e8e8ebeb;#9f9fa2a2a4a4;#a9a9bbbbcccc;#b7b7c7c7d5d5;#b8b8cfcfe4e4;#d3d3d8d8dbdb;#e1e1e0e0dbdb;#d8d8dddde1e1;#e4e4e8e8ebeb
 

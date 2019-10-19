@@ -2,10 +2,11 @@
     "telemetry.machineId": "9e42f38182d0f7f0a95298e70ce2a83e7b9981fe700b56d019b38a71825dce3d",
     "openedPathsList": {
         "workspaces3": [
-            "file:///home/fahad/Desktop/aj-web",
-            "file:///home/fahad/Desktop/github-starsql",
-            "file:///home/fahad/Desktop/aj-web/src/components/Cards",
+            "file:///ldata/my-projects/css-only-spinners",
             "file:///ldata/my-projects/ActiveJobs/aj-web",
+            "file:///ldata/my-projects/WebTech/registration-form",
+            "file:///ldata/my-projects/ActiveJobs/aj-backend",
+            "file:///ldata/my-projects/roar-backend",
             "file:///ldata/my-projects/roar-client",
             "file:///ldata/my-projects/inferior-text-expansion",
             "file:///ldata/my-projects/weather-app",
@@ -92,6 +93,9 @@
             "file:///home/fahad/Documents/Pl2/02-25-18"
         ],
         "files2": [
+            "file:///ldata/my-projects/ActiveJobs/aj-web/src/assets/icons/%24.svg",
+            "file:///ldata/my-projects/ActiveJobs/aj-web/src/pages/JobPost/ViewJob.js",
+            "file:///ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js",
             "file:///etc/profile.pacnew",
             "file:///etc/profile",
             "file:///home/fahad/myconfig/bin/node-i3-sensible-app/main.js",
@@ -103,8 +107,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/fahad/Desktop/aj-web",
-            "backupPath": "/home/fahad/.config/Code/Backups/b0f8756692798183d6eb4c7a373a2585",
+            "folder": "file:///ldata/my-projects/css-only-spinners",
+            "backupPath": "/home/fahad/.config/Code/Backups/3865252ab3600fe6c054a6236464d96f",
             "uiState": {
                 "mode": 1,
                 "x": 4,
@@ -161,9 +165,20 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/home/fahad/Desktop/aj-web",
-                                        "external": "file:///home/fahad/Desktop/aj-web",
-                                        "path": "/home/fahad/Desktop/aj-web",
+                                        "fsPath": "/ldata/my-projects/css-only-spinners",
+                                        "external": "file:///ldata/my-projects/css-only-spinners",
+                                        "path": "/ldata/my-projects/css-only-spinners",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/css-only-spinners"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-web",
+                                        "path": "/ldata/my-projects/ActiveJobs/aj-web",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
@@ -195,8 +210,30 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-web",
-                                        "path": "/ldata/my-projects/ActiveJobs/aj-web",
+                                        "external": "file:///ldata/my-projects/WebTech/registration-form",
+                                        "path": "/ldata/my-projects/WebTech/registration-form",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/WebTech/registration-form"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-backend",
+                                        "path": "/ldata/my-projects/ActiveJobs/aj-backend",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/ActiveJobs/aj-backend"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/roar-backend",
+                                        "path": "/ldata/my-projects/roar-backend",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
@@ -258,18 +295,40 @@
                                     "label": "~/go/src/github.com/fa7ad/fu-remote"
                                 },
                                 {
-                                    "id": "openRecentFolder",
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///ldata/my-projects/fu-remote-flutter/fu_remote",
-                                        "path": "/ldata/my-projects/fu-remote-flutter/fu_remote",
+                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-web/src/assets/icons/%24.svg",
+                                        "path": "/ldata/my-projects/ActiveJobs/aj-web/src/assets/icons/$.svg",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/ldata/my-projects/fu-remote-flutter/fu_remote"
+                                    "label": "/ldata/my-projects/ActiveJobs/aj-web/src/assets/icons/$.svg"
                                 },
                                 {
-                                    "id": "vscode.menubar.separator"
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-web/src/pages/JobPost/ViewJob.js",
+                                        "path": "/ldata/my-projects/ActiveJobs/aj-web/src/pages/JobPost/ViewJob.js",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/ActiveJobs/aj-web/src/pages/JobPost/ViewJob.js"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js",
+                                        "path": "/ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -812,7 +871,8 @@
                     },
                     {
                         "id": "editor.action.toggleMinimap",
-                        "label": "Show &&Minimap"
+                        "label": "Show &&Minimap",
+                        "checked": true
                     },
                     {
                         "id": "breadcrumbs.toggle",

@@ -7,28 +7,46 @@ pstatus=$(playerctl -p $player status)
 
 for pl in $players; do
   st=$(playerctl -p $pl status)
-  if [[ "$st" = "Playing" ]]; then
+  if [[ $st = "Playing" ]]; then
     player=$pl
     pstatus=$st
   fi
 done
 
-if [ "$pstatus" = "Stopped"  -o -z "$pstatus" ]; then
+if [[ $pstatus != "Playing" ]]; then
+  for pl in $players; do
+    st=$(playerctl -p $pl status)
+    if [[ "$st" = "Paused" ]]; then
+      player=$pl
+      pstatus=$st
+    fi
+  done
+fi
+
+if [[ $pstatus = "Stopped"  || -z "$pstatus" ]]; then
   echo ""
   exit
 fi
 
-title=$(playerctl -p $player metadata title | tr -s ' ' | awk 'length > 22{$0=substr($0,0,23)"..."}1')
+if [[ $1 = "player" ]];then
+  echo -n $player
+  exit
+fi
+
+title=$(playerctl -p $player metadata title | tr -s ' ' | awk 'length > 40{$0=substr($0,0,41)"..."}1')
 artist=$(playerctl -p $player metadata artist)
 
 ic=
 
-if [ "$status" = "Playing" ]; then
+if [ $pstatus = "Playing" ]; then
   ic=
 fi
 
-if [ "$artist" != "" ]; then
-  echo -n "$ic $artist - "
+echo -n "$ic "
+
+if [[ ! -z $artist && ! $player =~ ^chrome ]]; then
+  echo -n "$artist - "
 fi
 
 echo -n "$title"
+

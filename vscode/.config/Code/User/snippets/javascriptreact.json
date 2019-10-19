@@ -32,7 +32,7 @@
   "ImportReactComponentES2015": {
     "prefix": "rces",
     "body": [
-      "import { Component } from 'react'",
+      "import React, { Component } from 'react'",
       "$1"
     ],
     "description": "Import React.Component using es2015 syntax"
@@ -56,9 +56,11 @@
   "ReactFuncionalComponent": {
     "prefix": "rfcom",
     "body": [
-      "const $1 = (props) => (",
-      "  $2",
-      ")",
+      "const $1 = ({...props}) => {",
+      "  return (",
+      "    $2",
+      "  )",
+      "}",
       "",
       "export default $1",
       ""
@@ -94,13 +96,5 @@
       "}"
     ],
     "description": "Define react proptypes for functional component"
-  },
-  "FixLazy": {
-    "prefix": "fxlz",
-    "body": [
-      "import React from 'react'",
-      "import PropTypes from 'prop-types'",
-      "import styled from 'styled-components'"
-    ]
   }
 }

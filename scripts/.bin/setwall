@@ -11,11 +11,12 @@ set termite_conf "$HOME/.config/termite/config"
 rm -rf $walld
 mkdir -p $walld
 set pic $argv[1]
-cp $argv[1] $walld
+cp $pic $walld
 betterlockscreen -u $walld
 
 rm -f /usr/share/locker/*
 cp $walld/* /usr/share/locker/
+cp $pic /usr/share/locker/lockerImage
 chmod 755 /usr/share/locker/ -R
 
 wal -i $pic -n
