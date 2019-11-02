@@ -91,5 +91,13 @@
   "prettier.singleQuote": true,
   "eslint.autoFixOnSave": true,
   "eslint.lintTask.enable": true,
-  "eslint.packageManager": "yarn"
+  "eslint.packageManager": "yarn",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.semi": false,
+  "eslint.alwaysShowStatus": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

@@ -95,6 +95,7 @@
             "file:///home/fahad/Documents/Pl2/02-25-18"
         ],
         "files2": [
+            "file:///home/fahad/Desktop/aj-web/src/pages/Home.js",
             "file:///ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js",
             "file:///etc/profile.pacnew",
             "file:///etc/profile",
@@ -279,6 +280,17 @@
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///home/fahad/Desktop/aj-web/src/pages/Home.js",
+                                        "path": "/home/fahad/Desktop/aj-web/src/pages/Home.js",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Desktop/aj-web/src/pages/Home.js"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js",
                                         "path": "/ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js",
                                         "scheme": "file"
@@ -396,11 +408,13 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save"
+                        "label": "&&Save",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As..."
+                        "label": "Save &&As...",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.files.saveAll",
@@ -850,7 +864,8 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back"
+                        "label": "&&Back",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.navigateForward",
