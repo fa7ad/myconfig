@@ -43,7 +43,7 @@
 
   "breadcrumbs.enabled": true,
 
-  "workbench.colorTheme": "One Dark Pro Vivid",
+  "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.showTabs": false,
@@ -54,17 +54,6 @@
 
   "git.autofetch": true,
   "git.confirmSync": false,
-
-  "prettier.eslintIntegration": true,
-  "prettier.bracketSpacing": true,
-  "prettier.arrowParens": "avoid",
-  "prettier.jsxBracketSameLine": true,
-  "prettier.printWidth": 80,
-  "prettier.semi": false,
-  "prettier.tabWidth": 2,
-  "prettier.trailingComma": "none",
-  "prettier.useTabs": false,
-  "prettier.singleQuote": true,
 
   "javascript.updateImportsOnFileMove.enabled": "always",
 
@@ -101,5 +90,9 @@
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false,
+  "oneDarkPro.bold": true,
+  "oneDarkPro.vivid": true
 }

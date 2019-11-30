@@ -26,7 +26,8 @@ set -l user_paths $HOME/.bin $HOME/.local/bin
 set -l node_paths $N_PREFIX/bin
 set -l yarn_paths $HOME/.yarn/bin $HOME/.config/yarn/global/node_modules/.bin
 set -l poetry $HOME/.poetry/bin
+set -l ghcpaths $HOMe/.cabal/bin $HOME/.ghcup/bin
 
-set -gx PATH $PATH $user_paths $ruby_paths $node_paths $GOPATH/bin $snap_path $yarn_paths $poetry
+set -gx PATH $PATH $user_paths $ruby_paths $node_paths $GOPATH/bin $snap_path $yarn_paths $poetry $ghcpaths
 vardedupe PATH
 set -U fish_user_paths $PATH

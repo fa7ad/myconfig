@@ -33,6 +33,7 @@ xss-lock ~/.bin/lock.sh &
 ibus-daemon -rd
 i3-sensible-terminal
 gtk-launch clipit
+manjaroptimus-appindicator &
 albert &
 transmission-gtk -m &
 xdg-open about:newtab

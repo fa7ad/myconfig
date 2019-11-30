@@ -2,10 +2,12 @@
     "telemetry.machineId": "9e42f38182d0f7f0a95298e70ce2a83e7b9981fe700b56d019b38a71825dce3d",
     "openedPathsList": {
         "workspaces3": [
-            "file:///ldata/my-projects/css-only-spinners",
+            "file:///ldata/my-projects/learn-haskell/day-00",
             "file:///ldata/my-projects/ActiveJobs/aj-web",
-            "file:///ldata/my-projects/WebTech/registration-form",
             "file:///ldata/my-projects/ActiveJobs/aj-backend",
+            "file:///ldata/my-projects/emoji-country-code",
+            "file:///ldata/my-projects/css-only-spinners",
+            "file:///ldata/my-projects/WebTech/registration-form",
             "file:///ldata/my-projects/roar-backend",
             "file:///ldata/my-projects/roar-client",
             "file:///ldata/my-projects/inferior-text-expansion",
@@ -107,8 +109,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///ldata/my-projects/css-only-spinners",
-            "backupPath": "/home/fahad/.config/Code/Backups/3865252ab3600fe6c054a6236464d96f",
+            "folder": "file:///ldata/my-projects/learn-haskell/day-00",
+            "backupPath": "/home/fahad/.config/Code/Backups/2c66dae6b316ee3ed7b342e20f5a391f",
             "uiState": {
                 "mode": 1,
                 "x": 4,
@@ -165,13 +167,13 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/ldata/my-projects/css-only-spinners",
-                                        "external": "file:///ldata/my-projects/css-only-spinners",
-                                        "path": "/ldata/my-projects/css-only-spinners",
+                                        "fsPath": "/ldata/my-projects/learn-haskell/day-00",
+                                        "external": "file:///ldata/my-projects/learn-haskell/day-00",
+                                        "path": "/ldata/my-projects/learn-haskell/day-00",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/ldata/my-projects/css-only-spinners"
+                                    "label": "/ldata/my-projects/learn-haskell/day-00"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -188,23 +190,45 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///ldata/my-projects/WebTech/registration-form",
-                                        "path": "/ldata/my-projects/WebTech/registration-form",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/WebTech/registration-form"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
                                         "external": "file:///ldata/my-projects/ActiveJobs/aj-backend",
                                         "path": "/ldata/my-projects/ActiveJobs/aj-backend",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
                                     "label": "/ldata/my-projects/ActiveJobs/aj-backend"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/emoji-country-code",
+                                        "path": "/ldata/my-projects/emoji-country-code",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/emoji-country-code"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/css-only-spinners",
+                                        "path": "/ldata/my-projects/css-only-spinners",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/css-only-spinners"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/WebTech/registration-form",
+                                        "path": "/ldata/my-projects/WebTech/registration-form",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/WebTech/registration-form"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -249,28 +273,6 @@
                                     },
                                     "enabled": true,
                                     "label": "/ldata/my-projects/weather-app"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/TuringTask/turing-frontend",
-                                        "path": "/ldata/my-projects/TuringTask/turing-frontend",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/TuringTask/turing-frontend"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/fahad/go/src/github.com/fa7ad/fu-remote",
-                                        "path": "/home/fahad/go/src/github.com/fa7ad/fu-remote",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/go/src/github.com/fa7ad/fu-remote"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -418,11 +420,13 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save"
+                        "label": "&&Save",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As..."
+                        "label": "Save &&As...",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.files.saveAll",
@@ -615,6 +619,10 @@
                         "label": "Move &&Line Down"
                     },
                     {
+                        "id": "editor.action.duplicateSelection",
+                        "label": "&&Duplicate Selection"
+                    },
+                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -697,6 +705,11 @@
                                 {
                                     "id": "workbench.action.toggleActivityBarVisibility",
                                     "label": "Show &&Activity Bar",
+                                    "checked": true
+                                },
+                                {
+                                    "id": "workbench.action.toggleEditorVisibility",
+                                    "label": "Show &&Editor Area",
                                     "checked": true
                                 },
                                 {
@@ -882,7 +895,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1354,8 +1368,8 @@
                 "userSettingsLabel": "ctrl+k f"
             },
             "workbench.action.closeWindow": {
-                "label": "Ctrl+Shift+W",
-                "userSettingsLabel": "ctrl+shift+w"
+                "label": "Ctrl+W",
+                "userSettingsLabel": "ctrl+w"
             },
             "workbench.action.quit": {
                 "label": "Ctrl+Q",
