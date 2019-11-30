@@ -1,7 +1,6 @@
 // Place your settings in this file to overwrite the default settings
 {
   "editor.tabSize": 2,
-  "editor.fontSize": 18,
   "editor.fontLigatures": true,
   "editor.fontFamily": "'Fira Code', 'PragmataPro', 'Operator Mono Lig Book', PowerlineSymbols, monospace",
   "editor.rulers": [80, 120],

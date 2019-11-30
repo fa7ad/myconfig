@@ -31,3 +31,5 @@ set -l ghcpaths $HOMe/.cabal/bin $HOME/.ghcup/bin
 set -gx PATH $PATH $user_paths $ruby_paths $node_paths $GOPATH/bin $snap_path $yarn_paths $poetry $ghcpaths
 vardedupe PATH
 set -U fish_user_paths $PATH
+
+set -U TERMINAL xfce4-terminal

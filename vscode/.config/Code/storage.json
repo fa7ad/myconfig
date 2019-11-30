@@ -114,9 +114,9 @@
             "uiState": {
                 "mode": 1,
                 "x": 4,
-                "y": 34,
-                "width": 1912,
-                "height": 1042
+                "y": 28,
+                "width": 1358,
+                "height": 736
             }
         },
         "openedWindows": []
@@ -184,7 +184,29 @@
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/ldata/my-projects/ActiveJobs/aj-web"
+                                    "label": "~/Desktop/aj-web"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/fahad/Desktop/github-starsql",
+                                        "path": "/home/fahad/Desktop/github-starsql",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Desktop/github-starsql"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/fahad/Desktop/aj-web/src/components/Cards",
+                                        "path": "/home/fahad/Desktop/aj-web/src/components/Cards",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Desktop/aj-web/src/components/Cards"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -217,7 +239,11 @@
                                         "scheme": "file"
                                     },
                                     "enabled": true,
+<<<<<<< HEAD
                                     "label": "/ldata/my-projects/css-only-spinners"
+=======
+                                    "label": "/ldata/my-projects/ActiveJobs/aj-web"
+>>>>>>> 0c0d3942acb89a9deb35d280cb633697054d3db6
                                 },
                                 {
                                     "id": "openRecentFolder",
