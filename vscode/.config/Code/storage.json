@@ -1,129 +1,15 @@
 {
-    "telemetry.machineId": "9e42f38182d0f7f0a95298e70ce2a83e7b9981fe700b56d019b38a71825dce3d",
+    "telemetry.machineId": "4b7b555addbc3228cfe220ffca4aa9892cc19a5be5d374f13ac44f761a30b324",
     "openedPathsList": {
         "workspaces3": [
-            "file:///ldata/my-projects/learn-haskell/day-00",
-            "file:///ldata/my-projects/ActiveJobs/aj-web",
-            "file:///ldata/my-projects/ActiveJobs/aj-backend",
-            "file:///ldata/my-projects/emoji-country-code",
-            "file:///ldata/my-projects/css-only-spinners",
-            "file:///ldata/my-projects/WebTech/registration-form",
-            "file:///ldata/my-projects/roar-backend",
-            "file:///ldata/my-projects/roar-client",
-            "file:///ldata/my-projects/inferior-text-expansion",
-            "file:///ldata/my-projects/weather-app",
-            "file:///ldata/my-projects/TuringTask/turing-frontend",
-            "file:///home/fahad/go/src/github.com/fa7ad/fu-remote",
-            "file:///ldata/my-projects/fu-remote-flutter/fu_remote",
-            "file:///ldata/my-projects/fu-remote-flutter",
-            "file:///ldata/my-projects/fu-remote-app",
-            "file:///ldata/apps/aiub-notes-dl",
-            "file:///home/fahad/.eclipse-workspace/io.github.fa7ad.dumbplayer.DumbPlayer",
-            "file:///home/fahad/.eclipse-workspace/io.github.fa7ad.dumbplayer.DumbPlayer-0.0.1-SNAPSHOT",
-            "file:///ldata/my-projects/tatka-server",
-            "file:///ldata/my-projects/tatka-server/test",
-            "file:///tmp/org.useless.app",
-            "file:///ldata/my-projects/js-ai-code",
-            "file:///ldata/tutorial-works/your-first-pwapp-master/work",
-            "file:///ldata/tutorial-works/ud811/1-12-skeleton",
-            "file:///ldata/my-projects/venue-fix",
-            "file:///ldata/my-projects/chomok-client",
-            "file:///ldata/my-projects/chomok-app-2/chomokApp",
-            "file:///ldata/my-projects/chomoks-app",
-            "file:///ldata/my-projects/tatka-web",
-            "file:///home/fahad/.config/mpv",
-            "file:///ldata/my-projects/vivaldi-codecs-ffmpeg-extra-bin",
-            "file:///ldata/my-apps/hooks-rn",
-            "file:///home/fahad/myconfig/bin/i3-default-app",
-            "file:///ldata/my-projects/chomok-server",
-            "file:///ldata/my-projects/remakes",
-            "file:///ldata/my-apps/venue-fix",
-            "file:///ldata/my-projects/init-preact-app",
-            "file:///tmp/chomok-client",
-            "file:///ldata/my-projects/chomok-server/client",
-            "file:///ldata/my-projects/fish-clear",
-            "file:///ldata/my-projects/chomok",
-            "file:///ldata/my-projects/Chomok",
-            "file:///ldata/my-projects/chomok-server/test",
-            "file:///ldata/my-projects",
-            "file:///ldata/my-projects/venue-fix-app",
-            "file:///home/fahad/myconfig/bin/i3-sensible-app",
-            "file:///ldata/my-projects/cc-dyn-array",
-            "file:///ldata/main-uddin/health-fix",
-            "file:///ldata/my-projects/pemu",
-            "file:///ldata/my-projects/choose-data",
-            "file:///ldata/my-projects/practice-filter-obj",
-            "file:///ldata/my-projects/stars-for-all",
-            "file:///ldata/my-projects/CouchPotato-Browser-Extension",
-            "file:///ldata/my-projects/spotprox",
-            "file:///ldata/my-projects/learn-scala-basics/00-hello-world",
-            "file:///home/fahad/Documents/Pl2/04-15-18",
-            "file:///ldata/my-projects/stars-new/stars-for-all",
-            "file:///home/fahad/Documents/Pl2/04-01-18/assignment_friend",
-            "file:///home/fahad/Documents/Pl2/ullas-proj",
-            "file:///home/fahad/Documents/Pl2/04-01-18",
-            "file:///home/fahad/Desktop/pyext",
-            "file:///home/fahad/Desktop",
-            "file:///ldata/my-projects/experimental-pwa",
-            "file:///ldata/my-projects/prs",
-            "file:///home/fahad/Documents/Pl2/03-25-18",
-            "file:///home/fahad/Documents/Pl2/03-25-18/progpy1",
-            "file:///home/fahad/Documents/Pl2/03-25-18/prog1",
-            "file:///ldata/my-projects/caesar-cipher",
-            "file:///ldata/my-projects/fa7ad.github.io",
-            "file:///ldata/my-projects/hello-next",
-            "file:///ldata/my-projects/create-react-parcel-project",
-            "file:///home/fahad/Documents/Pl2/03-18-18",
-            "file:///home/fahad/Documents/Pl2/03-18-18/proj1",
-            "file:///ldata/my-projects/shophobe-task",
-            "file:///ldata/my-projects/new-native-app-1",
-            "file:///ldata/my-projects/newNativeNativeApp",
-            "file:///ldata/my-projects/noyon-denary/node-test",
-            "file:///ldata/my-projects/task-shophobe/tasktask%20%28copy%201%29",
-            "file:///home/fahad/Documents/Pl2/labmidotherproj",
-            "file:///home/fahad/Documents/Pl2",
-            "file:///ldata/my-projects/go-hello-world",
-            "file:///ldata/my-projects/footballapp",
-            "file:///home/fahad/Documents/Pl2/03-11-18",
-            "file:///ldata/my-projects/wallchanger",
-            "file:///ldata/my-projects/node-aiub-dl",
-            "file:///home/fahad/go/src/github.com/fa7ad/go-aiub-dl",
-            "file:///home/fahad/go/src/github.com/fa7ad/aiub-dl",
-            "file:///home/fahad/go/src/go-aiub-dl",
-            "file:///home/fahad/Documents/Pl2/lab-mid-project",
-            "file:///ldata/my-projects/complex-address-book",
-            "file:///home/fahad/Documents/Pl2/02-25-18"
+            "file:///ldata/my-projects/test-reason",
+            "file:///ldata/my-projects/library-management-system",
+            "file:///ldata/my-projects/ActiveJobs/aj-web"
         ],
-        "files2": [
-            "file:///ldata/my-projects/ActiveJobs/aj-web/src/assets/icons/%24.svg",
-            "file:///ldata/my-projects/ActiveJobs/aj-web/src/pages/JobPost/ViewJob.js",
-            "file:///ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js",
-            "file:///etc/profile.pacnew",
-            "file:///etc/profile",
-            "file:///home/fahad/myconfig/bin/node-i3-sensible-app/main.js",
-            "file:///ldata/my-projects/fu-remote-app/node_modules/react-native-scripts/build/bin/crna-entry.js",
-            "file:///home/fahad/myconfig/config/fish/env.fish",
-            "file:///home/fahad/Desktop/open-xfce4-terminal.py",
-            "file:///home/fahad/Documents/Pl2/03-25-18/%2C"
-        ]
-    },
-    "windowsState": {
-        "lastActiveWindow": {
-            "folder": "file:///ldata/my-projects/learn-haskell/day-00",
-            "backupPath": "/home/fahad/.config/Code/Backups/2c66dae6b316ee3ed7b342e20f5a391f",
-            "uiState": {
-                "mode": 1,
-                "x": 4,
-                "y": 28,
-                "width": 1358,
-                "height": 736
-            }
-        },
-        "openedWindows": []
+        "files2": []
     },
     "theme": "vs-dark",
     "themeBackground": "#282c34",
-    "pickerWorkingDir": "/ldata/my-projects/fu-remote-app/node_modules/react-native-scripts/build/bin",
     "lastKnownMenubarData": {
         "menus": {
             "File": {
@@ -167,13 +53,24 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/ldata/my-projects/learn-haskell/day-00",
-                                        "external": "file:///ldata/my-projects/learn-haskell/day-00",
-                                        "path": "/ldata/my-projects/learn-haskell/day-00",
+                                        "fsPath": "/ldata/my-projects/test-reason",
+                                        "external": "file:///ldata/my-projects/test-reason",
+                                        "path": "/ldata/my-projects/test-reason",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/ldata/my-projects/learn-haskell/day-00"
+                                    "label": "/ldata/my-projects/test-reason"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///ldata/my-projects/library-management-system",
+                                        "path": "/ldata/my-projects/library-management-system",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/ldata/my-projects/library-management-system"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -184,234 +81,7 @@
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Desktop/aj-web"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/fahad/Desktop/github-starsql",
-                                        "path": "/home/fahad/Desktop/github-starsql",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Desktop/github-starsql"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/fahad/Desktop/aj-web/src/components/Cards",
-                                        "path": "/home/fahad/Desktop/aj-web/src/components/Cards",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Desktop/aj-web/src/components/Cards"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-backend",
-                                        "path": "/ldata/my-projects/ActiveJobs/aj-backend",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/ActiveJobs/aj-backend"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/emoji-country-code",
-                                        "path": "/ldata/my-projects/emoji-country-code",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/emoji-country-code"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/css-only-spinners",
-                                        "path": "/ldata/my-projects/css-only-spinners",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-<<<<<<< HEAD
-                                    "label": "/ldata/my-projects/css-only-spinners"
-=======
                                     "label": "/ldata/my-projects/ActiveJobs/aj-web"
->>>>>>> 0c0d3942acb89a9deb35d280cb633697054d3db6
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/WebTech/registration-form",
-                                        "path": "/ldata/my-projects/WebTech/registration-form",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/WebTech/registration-form"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/roar-backend",
-                                        "path": "/ldata/my-projects/roar-backend",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/roar-backend"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/roar-client",
-                                        "path": "/ldata/my-projects/roar-client",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/roar-client"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/inferior-text-expansion",
-                                        "path": "/ldata/my-projects/inferior-text-expansion",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/inferior-text-expansion"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/weather-app",
-                                        "path": "/ldata/my-projects/weather-app",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/weather-app"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-web/src/assets/icons/%24.svg",
-                                        "path": "/ldata/my-projects/ActiveJobs/aj-web/src/assets/icons/$.svg",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/ActiveJobs/aj-web/src/assets/icons/$.svg"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-web/src/pages/JobPost/ViewJob.js",
-                                        "path": "/ldata/my-projects/ActiveJobs/aj-web/src/pages/JobPost/ViewJob.js",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/ActiveJobs/aj-web/src/pages/JobPost/ViewJob.js"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js",
-                                        "path": "/ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/ActiveJobs/aj-web/src/components/DatePicker/DatePicker.js"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///etc/profile.pacnew",
-                                        "path": "/etc/profile.pacnew",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/etc/profile.pacnew"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///etc/profile",
-                                        "path": "/etc/profile",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/etc/profile"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/fahad/myconfig/bin/node-i3-sensible-app/main.js",
-                                        "path": "/home/fahad/myconfig/bin/node-i3-sensible-app/main.js",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/myconfig/bin/node-i3-sensible-app/main.js"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///ldata/my-projects/fu-remote-app/node_modules/react-native-scripts/build/bin/crna-entry.js",
-                                        "path": "/ldata/my-projects/fu-remote-app/node_modules/react-native-scripts/build/bin/crna-entry.js",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/ldata/my-projects/fu-remote-app/node_modules/react-native-scripts/build/bin/crna-entry.js"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/fahad/myconfig/config/fish/env.fish",
-                                        "path": "/home/fahad/myconfig/config/fish/env.fish",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/myconfig/config/fish/env.fish"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/fahad/Desktop/open-xfce4-terminal.py",
-                                        "path": "/home/fahad/Desktop/open-xfce4-terminal.py",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Desktop/open-xfce4-terminal.py"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/fahad/Documents/Pl2/03-25-18/%2C",
-                                        "path": "/home/fahad/Documents/Pl2/03-25-18/,",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/Pl2/03-25-18/,"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -446,17 +116,16 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save",
-                        "enabled": false
+                        "label": "&&Save"
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As...",
-                        "enabled": false
+                        "label": "Save &&As..."
                     },
                     {
                         "id": "workbench.action.files.saveAll",
-                        "label": "Save A&&ll"
+                        "label": "Save A&&ll",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -921,8 +590,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1031,8 +699,12 @@
                         "label": "Go to &&Symbol in File..."
                     },
                     {
-                        "id": "editor.action.goToDeclaration",
+                        "id": "editor.action.revealDefinition",
                         "label": "Go to &&Definition"
+                    },
+                    {
+                        "id": "editor.action.revealDeclaration",
+                        "label": "Go to &&Declaration"
                     },
                     {
                         "id": "editor.action.goToTypeDefinition",
@@ -1040,7 +712,11 @@
                     },
                     {
                         "id": "editor.action.goToImplementation",
-                        "label": "Go to &&Implementation"
+                        "label": "Go to &&Implementations"
+                    },
+                    {
+                        "id": "editor.action.goToReferences",
+                        "label": "Go to &&References"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1085,7 +761,7 @@
                     },
                     {
                         "id": "workbench.action.debug.run",
-                        "label": "Start &&Without Debugging"
+                        "label": "Run &&Without Debugging"
                     },
                     {
                         "id": "workbench.action.debug.stop",
@@ -1653,9 +1329,17 @@
                 "label": "Ctrl+Shift+O",
                 "userSettingsLabel": "ctrl+shift+o"
             },
+            "editor.action.revealDefinition": {
+                "label": "F12",
+                "userSettingsLabel": "f12"
+            },
             "editor.action.goToImplementation": {
                 "label": "Ctrl+F12",
                 "userSettingsLabel": "ctrl+f12"
+            },
+            "editor.action.goToReferences": {
+                "label": "Shift+F12",
+                "userSettingsLabel": "shift+f12"
             },
             "workbench.action.gotoLine": {
                 "label": "Ctrl+G",
@@ -1743,5 +1427,19 @@
                 "userSettingsLabel": "ctrl+shift+i"
             }
         }
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///ldata/my-projects/library-management-system",
+            "backupPath": "/home/fahad/.config/Code/Backups/320b20d537b18fc14292f0485e40b2e4",
+            "uiState": {
+                "mode": 1,
+                "x": 4,
+                "y": 30,
+                "width": 1912,
+                "height": 1046
+            }
+        },
+        "openedWindows": []
     }
 }

@@ -93,5 +93,12 @@
   "typescript.validate.enable": false,
   "javascript.validate.enable": false,
   "oneDarkPro.bold": true,
-  "oneDarkPro.vivid": true
+  "oneDarkPro.vivid": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar"
 }

@@ -401,6 +401,11 @@
   let g:deoplete#enable_at_startup = 1
 " }}}
 
+" Merlin --- {{{
+  let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+  execute "set rtp+=" . g:opamshare . "/merlin/vim"
+" }}}
+
 " Plugin key-mappings.
 " Neosnippet --- {{{
   imap <C-k>     <Plug>(neosnippet_expand_or_jump)
