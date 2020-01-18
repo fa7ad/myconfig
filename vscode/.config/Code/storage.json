@@ -409,7 +409,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "Show &&Panel"
+                                    "label": "Show &&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -590,7 +591,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1430,8 +1432,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///ldata/my-projects/library-management-system",
-            "backupPath": "/home/fahad/.config/Code/Backups/320b20d537b18fc14292f0485e40b2e4",
+            "folder": "file:///ldata/my-projects/test-reason",
+            "backupPath": "/home/fahad/.config/Code/Backups/dc896e0f2e7c2019d538f5ccb5d651cb",
             "uiState": {
                 "mode": 1,
                 "x": 4,

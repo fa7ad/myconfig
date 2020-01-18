@@ -43,7 +43,7 @@
   "breadcrumbs.enabled": true,
 
   "workbench.colorTheme": "One Dark Pro",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.showTabs": false,
   "workbench.statusBar.feedback.visible": false,
@@ -89,9 +89,6 @@
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "eslint.autoFixOnSave": true,
-  "typescript.validate.enable": false,
-  "javascript.validate.enable": false,
   "oneDarkPro.bold": true,
   "oneDarkPro.vivid": true,
   "editor.codeActionsOnSave": {
@@ -100,5 +97,5 @@
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
-  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar"
+  "vsicons.dontShowNewVersionMessage": true
 }
