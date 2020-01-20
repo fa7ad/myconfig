@@ -15,9 +15,9 @@ cp $pic $walld
 betterlockscreen -u $walld
 
 rm -f /usr/share/locker/*
-cp $walld/* /usr/share/locker/
-cp $pic /usr/share/locker/lockerImage
-chmod 755 /usr/share/locker/ -R
+sudo cp $walld/* /usr/share/locker/
+sudo cp $pic /usr/share/locker/lockerImage
+sudo chmod 755 /usr/share/locker/ -R
 
 wal -i $pic -n
 echo Generating GTK theme...
