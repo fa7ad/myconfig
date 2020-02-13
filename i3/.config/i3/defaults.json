@@ -4,7 +4,7 @@
   "2: ": ["google-chrome-stable"],
   "3: ": ["i3-sensible-terminal"],
   "4: ": ["code"],
-  "5: ": ["nautilus"],
+  "5: ": ["pcmanfm"],
   "6: ": ["albert", "toggle"],
   "7: ": ["evince"],
   "8: ": ["albert", "toggle"],

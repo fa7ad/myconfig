@@ -54,7 +54,7 @@ font-5 = "Noto Sans Bengali:size=8;3"
 
 modules-left = wm pdl plctl playing volume
 modules-center = title
-modules-right = pdl kbd ram time battery vpn
+modules-right = pdl net kbd ram time battery vpn
 
 fixed-center = true
 
@@ -93,6 +93,11 @@ exec = vpnstat
 interval = 1
 click-left = vpnstat toggle
 format-padding = 2
+
+[module/net]
+type = custom/script
+exec = ~/.bin/network-traffic.sh
+tail = true
 
 [module/playing]
 type = custom/script

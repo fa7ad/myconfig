@@ -14,14 +14,16 @@ set pic $argv[1]
 cp $pic $walld
 betterlockscreen -u $walld
 
+sudo mkdir -p /usr/share/locker
+sudo chown $USER:$USER /usr/share/locker/ -R
 rm -f /usr/share/locker/*
-sudo cp $walld/* /usr/share/locker/
-sudo cp $pic /usr/share/locker/lockerImage
-sudo chmod 755 /usr/share/locker/ -R
+cp $walld/* /usr/share/locker/
+cp $pic /usr/share/locker/lockerImage
+chmod 755 /usr/share/locker/ -R
 
 wal -i $pic -n
 echo Generating GTK theme...
-/opt/oomox/plugins/theme_arc/arc-theme/change_color.sh --autogen-opts '--disable-gnome-shell --disable-cinnamon' -o wal $HOME/.cache/wal/colors-oomox > /dev/null
+/opt/oomox/plugins/theme_materia/materia-theme/change_color.sh -o wal $HOME/.cache/wal/colors-oomox > /dev/null
 /opt/oomox/plugins/icons_papirus/change_color.sh -o wal $HOME/.cache/wal/colors-oomox > /dev/null
 sudo rsync $HOME/.themes/wal /usr/share/themes/ -ah
 sudo rsync $HOME/.icons/wal /usr/share/icons/ -ah
