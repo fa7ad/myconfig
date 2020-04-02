@@ -4,7 +4,8 @@ autorandr horizontal
 #keyboard stuff
 numlockx on
 setxkbmap -layout us -option compose:menu
-fusuma -d
+# fusuma -d
+libinput-gestures-setup restart &
 
 # nautilus fuckery
 # gsettings set org.gnome.desktop.background show-desktop-icons false
