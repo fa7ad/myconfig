@@ -24,8 +24,8 @@ dunst &
 mpDris2 &
 play-with-mpv &
 # gnome-screensaver &
-# indicator-kdeconnect &
-kdeconnect-indicator &
+indicator-kdeconnect &
+# kdeconnect-indicator &
 xset dpms 240 300 0
 xss-lock ~/.bin/lock.sh &
 # ~/.bin/locker-daemon &
