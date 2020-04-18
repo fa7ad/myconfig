@@ -20,7 +20,8 @@ betterlockscreen -w
 
 # Related to locking and suspend mechanism and MPD
 mopidy &
-dunst &
+# dunst &
+systemctl --user start xfce4-notifyd &
 mpDris2 &
 play-with-mpv &
 # gnome-screensaver &
