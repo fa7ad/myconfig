@@ -19,9 +19,10 @@ betterlockscreen -w
 /usr/lib/xfce-polkit/xfce-polkit &
 
 # Related to locking and suspend mechanism and MPD
+snapserver &
 mopidy &
-# dunst &
-systemctl --user start xfce4-notifyd &
+dunst &
+# systemctl --user start xfce4-notifyd &
 mpDris2 &
 play-with-mpv &
 # gnome-screensaver &
