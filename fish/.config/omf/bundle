@@ -4,4 +4,3 @@ package bass
 package hub
 package z
 theme default
-theme https://github.com/fa7ad/fish-clear
