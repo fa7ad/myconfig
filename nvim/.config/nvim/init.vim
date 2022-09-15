@@ -47,8 +47,8 @@
   set undodir="$HOME/.local/share/nvim/site/undo"
 
   " Path to python3
-  let g:python_host_prog = '/usr/bin/python2'
-  let g:python3_host_prog = '/usr/bin/python3'
+  let g:python_host_prog = "/usr/bin/python3"
+  let g:python3_host_prog = "/usr/bin/python3"
 " }}}
 
 " vim-plug --- {{{
@@ -401,10 +401,6 @@
   let g:deoplete#enable_at_startup = 1
 " }}}
 
-" Merlin --- {{{
-  let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-  execute "set rtp+=" . g:opamshare . "/merlin/vim"
-" }}}
 
 " Plugin key-mappings.
 " Neosnippet --- {{{
