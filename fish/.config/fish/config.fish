@@ -2,7 +2,7 @@
 starship init fish | source
 
 function fish_greeting
-  fortune -as
+  fortune -s
 end
 
 function fish_right_prompt
@@ -27,3 +27,4 @@ bind \cl clear_prompt
 bind ß sudope
 
 thefuck --alias | source
+
