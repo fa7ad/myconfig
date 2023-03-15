@@ -1,2 +1,11 @@
 package sudope
-theme lambda
+theme default
+package bang-bang
+package brew
+package hub
+package sudope
+package z
+package bass
+package fish-spec
+package omf
+package virtualfish
