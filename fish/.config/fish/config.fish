@@ -5,6 +5,9 @@ function fish_greeting
   fortune -as
 end
 
+function fish_right_prompt
+end
+
 set cwd (dirname (status -f))
 
 # Load env files
@@ -19,3 +22,8 @@ function clear_prompt
 end
 
 bind \cl clear_prompt
+
+# set -gx sudope_sequence \e
+bind ß sudope
+
+thefuck --alias | source

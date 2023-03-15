@@ -1,0 +1,6 @@
+function upgrade_deps_yarn
+  echo Upgrading dependencies to the latest versions...
+  yarn outdated | gawk -F'\\\s+' '/dependen/ {print $1"@^"$4}' | xargs yarn add
+  echo Upgrading devDependencies to the latest versions...
+  yarn outdated | gawk -F'\\\s+' '/devDependen/ {print $1"@^"$4}' | xargs yarn add --dev
+end

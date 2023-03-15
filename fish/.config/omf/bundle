@@ -1,6 +1,2 @@
-package archlinux
-package bang-bang
-package bass
-package hub
-package z
-theme default
+package sudope
+theme lambda

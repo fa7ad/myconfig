@@ -1,3 +1,4 @@
+.DS_Store
 config/mpv/scripts/dbus.lua
 config/mpv/scripts/ldbus
 config/mpv/scripts/ldbus.so

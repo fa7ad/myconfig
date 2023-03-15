@@ -4,15 +4,6 @@ set cwd (dirname (status -f))
 # MPV
 alias mpa 'mpv --no-vid'
 
-# ncmpcpp
-function ncm
-  if not pgrep -f mopidy > /dev/null
-    command mopidy&
-    disown %mopidy
-  end
-  ncmpcpp
-end
-
 # download using axel
 abbr axl 'axel -an 4'
 
@@ -58,19 +49,19 @@ function mkcd
 end
 
 # pip
-alias pip3='sudo -H pip3'
+# alias pip3='python3 -m pip'
 
 # LS
+alias ls='gls --group-directories-first --color=auto'
 alias l='ls -lFh'
 alias la='ll -lAFh'
 alias ll='ls -lh'
-alias ls='ls --group-directories-first --color=auto'
 alias lsa='ls -lah'
 
 # Compile and run C++ programs
 function cpp_compile
   g++ -Wall -O3 -o $argv[2] $argv[1]
-  and eval ./$argv[2]
+  and exec ./$argv[2]
 end
 
 # Source the Yuuge alias files
@@ -80,4 +71,20 @@ end
 
 function catcat
   bat $argv
+end
+
+alias vim='nvim'
+
+alias python='python3'
+
+## cisco tomfoolery
+function load_cisco_vpn
+  sudo launchctl load /Library/LaunchDaemons/com.cisco.anyconnect.vpnagentd.plist
+  /Applications/Cisco/Cisco\ AnyConnect\ Socket\ Filter.app/Contents/MacOS/Cisco\ AnyConnect\ Socket\ Filter -activateExt
+  open /Applications/Cisco/Cisco\ AnyConnect\ Secure\ Mobility\ Client.app
+end
+
+function unload_cisco_vpn
+  sudo launchctl unload /Library/LaunchDaemons/com.cisco.anyconnect.vpnagentd.plist
+  /Applications/Cisco/Cisco\ AnyConnect\ Socket\ Filter.app/Contents/MacOS/Cisco\ AnyConnect\ Socket\ Filter -deactivateExt
 end

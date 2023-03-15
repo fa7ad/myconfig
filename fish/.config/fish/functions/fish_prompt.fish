@@ -1,1 +1,0 @@
-/home/fahad/.local/share/omf/themes/fish-clear/fish_prompt.fish
