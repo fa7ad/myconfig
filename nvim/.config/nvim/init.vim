@@ -1,5 +1,5 @@
 "   __    _    __
-"  /  \ _|_ _.  / _.  _| / _   ._     o ._ _  ._ _
+" /  \ _|_ _.  / _.  _| / _   ._     o ._ _  ._ _
 " | (|/  | (_| / (_| (_|  _>   | | \/ | | | | | (_
 "  \__
 
@@ -22,11 +22,12 @@
   nnoremap ; :
 
   " Fast saving
-  nmap <leader>w :w!<cr>
+  nmap <leader>w :w<cr>
   nmap <leader>q :q<cr>
 
   " :SW sudo saves the file (useful for handling the permission-denied error)
   command SW w suda://%
+  nmap <leader>W :SW<cr>
 
   " I make this mistake way too often
   command W w
@@ -47,10 +48,8 @@
   set undodir="$HOME/.local/share/nvim/site/undo"
 
   " Path to python3
-  let g:python_host_prog = '/usr/bin/python2'
-  let g:python3_host_prog = '/usr/bin/python3'
-" }}}
-
+  let g:python3_host_prog="/opt/homebrew/bin/python3"
+  " }}}
 " vim-plug --- {{{
   if (!filereadable(expand("$HOME/.local/share/nvim/site/autoload/plug.vim")) && executable("curl"))
     call system(expand("curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"))
@@ -63,12 +62,6 @@
   source ~/.config/nvim/plugins.vim
 " }}}
 
-" Get rid of fish --- {{{
-  if &shell =~# 'fish$'
-    set shell=bash
-  endif
-" }}}
-
 " VIM user interface --- {{{
   " Set 5 lines to the cursor - when moving vertically using j/k
   set so=5
@@ -79,6 +72,7 @@
 
   " Turn on the WiLd menu
   set wildmenu
+  set wildmode=list:longest,full
 
   " Ignore compiled files
   set wildignore=*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
@@ -87,7 +81,7 @@
   set ruler
 
   " Height of the command bar
-  set cmdheight=2
+  set cmdheight=1
 
   " A buffer becomes hidden when it is abandoned
   set hid
@@ -128,7 +122,7 @@
   set foldcolumn=0
 
   " show line numbers
-  " set relativenumber
+  set relativenumber
   set number
 
   " show whitespace
@@ -141,7 +135,9 @@
 
   " Enable 256 colors
   set t_Co=256
-  set termguicolors
+  if has('termguicolors')
+    set termguicolors
+  endif
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
   " Set utf8 as standard encoding and en_US as the standard language
@@ -151,7 +147,7 @@
   set ffs=unix,dos,mac
 
   " Show line at 80 columns
-  set colorcolumn=80
+  set colorcolumn=80,120
 " }}}
 
 " Text, tab and indent related --- {{{
@@ -172,6 +168,7 @@
   set ai
   set si
   " set wrap
+  set nowrap
 " }}}
 
 " Visual mode related --- {{{
@@ -244,11 +241,6 @@
   vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
   vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
-  nmap <C-UP> <M-k>
-  nmap <C-DOWN> <M-j>
-  vmap <C-UP> <M-k>
-  vmap <C-DOWN> <M-j>
-
   " Delete trailing white space on save, useful for Python and CoffeeScript ;)
   func! DeleteTrailingWS()
     exe "normal mz"
@@ -256,39 +248,11 @@
     exe "normal `z"
   endfunc
   autocmd BufWrite *.py :call DeleteTrailingWS()
-  autocmd BufWrite *.coffee :call DeleteTrailingWS()
+  autocmd BufWrite *.js :call DeleteTrailingWS()
 
   " Reselect after indent
   vnoremap > >gv
   vnoremap < <gv
-" }}}
-
-" Ag searching and cope displaying --- {{{
-  " Requires ag.vim - it's much better than vimgrep/grep
-  " When you press gv you Ag after the selected text
-  vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
-
-  " Open Ag and put the cursor in the right position
-  map <leader>g :Ag
-
-  " When you press <leader>r you can search and replace the selected text
-  vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
-
-  " Do :help cope if you are unsure what cope is. It's super useful!
-  "
-  " When you search with Ag, display your results in cope by doing:
-  "   <leader>cc
-  "
-  " To go to the next search result do:
-  "   <leader>n
-  "
-  " To go to the previous search results do:
-  "   <leader>p
-  "
-  map <leader>cc :botright cope<cr>
-  map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
-  map <leader>n :cn<cr>
-  map <leader>p :cp<cr>
 " }}}
 
 " Spell checking --- {{{
@@ -300,6 +264,10 @@
   map <leader>sp [s
   map <leader>sa zg
   map <leader>s? z=
+" }}}
+
+" Vim-Polyglot --- {{{
+  let g:javascript_plugin_jsdon = 1
 " }}}
 
 " Misc --- {{{
@@ -363,9 +331,13 @@
 " }}}
 
 " Color Scheme --- {{{
-  colorscheme space-vim-dark
-  let g:airline_theme='base16_spacemacs'
-  let g:colorizer_auto_color = 1
+  let g:edge_style = 'aura'
+  let g:edge_enable_italic = 1
+  let g:edge_disable_italic_comment = 1
+
+  colorscheme edge
+  let g:airline_theme='edge'
+  " let g:colorizer_auto_color = 1
 
   " set background=dark
   hi Normal guibg=none ctermbg=none
@@ -388,22 +360,15 @@
   let g:airline#extensions#tabline#buffer_idx_mode = 1
   let g:airline#extensions#branch#format = 2
   let g:airline#extensions#branch#enabled = 1
+  let g:airline#extensions#hunks#enabled = 0
+  let g:airline#extensions#ale#enabled = 1
+  let g:airline_highlighting_cache = 1
 " }}}
 
-" Neomake --- {{{
-  let g:neomake_javascript_enabled_makers = ['eslint']
-  let g:neomake_python_enabled_makers = ['pylama']
-  " auto run neomake once the file is saved
-  autocmd BufWritePost,BufEnter * Neomake
-" }}}
-
-" Deoplete --- {{{
-  let g:deoplete#enable_at_startup = 1
-" }}}
-
-" Merlin --- {{{
-  let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-  execute "set rtp+=" . g:opamshare . "/merlin/vim"
+" RLS --- {{{
+  let g:LanguageClient_serverCommands = {
+    \ 'reason': ['/usr/local/bin/reason-language-server'],
+    \ }
 " }}}
 
 " Plugin key-mappings.
@@ -411,6 +376,7 @@
   imap <C-k>     <Plug>(neosnippet_expand_or_jump)
   smap <C-k>     <Plug>(neosnippet_expand_or_jump)
   xmap <C-k>     <Plug>(neosnippet_expand_target)
+  nmap <C-k>     <Plug>(neosnippet_expand_target)
 
   " SuperTab like snippets behavior.
   imap <expr><TAB>
@@ -422,20 +388,6 @@
 " }}}
 
 " NERDTree --- {{{
-  " Show NERDTree if we open empty vim
-  function OpenNERD ()
-    if argc() == 0 && !exists("s:std_in")
-      NERDTree
-    elseif argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in")
-      exe 'NERDTree' argv()[0]
-      wincmd p
-      ene
-    endif
-  endfunction
-
-  autocmd StdinReadPre * let s:std_in=1
-  autocmd VimEnter * :call OpenNERD()
-
   " toggle NERDTree on <C-E>
   map <C-E> :NERDTreeToggle<cr>
 
@@ -444,12 +396,28 @@
 " }}}
 "
 " Unite --- {{{
-  nmap <c-P> :Unite<cr>
-  nmap <c-p> :Unite buffer<cr>
+  nmap <c-P> :Denite<cr>
+  nmap <c-p> :Denite buffer<cr>
+
+  autocmd FileType denite call s:denite_my_settings()
+  function! s:denite_my_settings() abort
+    nnoremap <silent><buffer><expr> <CR>
+    \ denite#do_map('do_action')
+    nnoremap <silent><buffer><expr> d
+    \ denite#do_map('do_action', 'delete')
+    nnoremap <silent><buffer><expr> p
+    \ denite#do_map('do_action', 'preview')
+    nnoremap <silent><buffer><expr> q
+    \ denite#do_map('quit')
+    nnoremap <silent><buffer><expr> i
+    \ denite#do_map('open_filter_buffer')
+    nnoremap <silent><buffer><expr> <Space>
+    \ denite#do_map('toggle_select').'j'
+  endfunction
 " }}}
 
 " Tabs --- {{{
-  nmap <C-W> :Bclose<cr>
+  nmap <C-W> :Sayonara<cr>
   nmap <leader>t :term<cr>
   nmap <leader>, :bnext<CR>
   tmap <leader>, <C-\><C-n>:bnext<cr>
@@ -473,4 +441,20 @@
   nmap <leader>7 <Plug>AirlineSelectTab7
   nmap <leader>8 <Plug>AirlineSelectTab8
   nmap <leader>9 <Plug>AirlineSelectTab9
+" }}}
+
+" LangaugeClient --- {{{
+  nnoremap <silent> gd :call LanguageClient#textDocument_definition()<cr>
+  nnoremap <silent> gf :call LanguageClient#textDocument_formatting()<cr>
+  nnoremap <silent> <cr> :call LanguageClient#textDocument_hover()<cr>
+" }}}
+"
+" ALE --- {{{
+  let g:ale_fixers = {
+  \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \   'rescript': ['refmt'],
+  \   'javascript': ['eslint', 'prettier'],
+  \}
+
+  let g:ale_disable_lsp = 1
 " }}}

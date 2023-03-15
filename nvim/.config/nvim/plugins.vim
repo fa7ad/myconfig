@@ -1,13 +1,13 @@
 call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
 
 " Syntax --- {{{
-  Plug 'moll/vim-node'
-  Plug 'othree/yajs.vim' | Plug 'othree/es.next.syntax.vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'sgur/vim-editorconfig'
   Plug 'valloric/MatchTagAlways', {'on_ft': 'html'}
-  Plug 'dag/vim-fish'
-  Plug 'chrisbra/Colorizer'
+  " Plug 'dag/vim-fish'
+  " Plug 'chrisbra/Colorizer'
+  Plug 'amiralies/vim-rescript'
+  " Plug 'GutenYe/json5.vim'
 " }}}
 
 " Coding Style --- {{{
@@ -20,18 +20,22 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
 " }}}
 
 " System --- {{{
-  Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-  Plug 'mhinz/vim-sayonara'
   Plug 'Shougo/denite.nvim'
-  Plug 'neomake/neomake'
+  Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+  Plug 'mhinz/vim-sayonara', {'on' : 'Sayonara'}
   Plug 'lambdalisue/suda.vim'
   Plug 'junegunn/goyo.vim'
+  Plug 'autozimu/LanguageClient-neovim', {
+  \ 'branch': 'next',
+  \ 'do': 'bash install.sh',
+  \ }
 " }}}
 
 " Autocomplete {{{
-  Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
   Plug 'Shougo/neoinclude.vim'
   Plug 'Shougo/neosnippet.vim' | Plug 'Shougo/neosnippet-snippets' | Plug 'honza/vim-snippets'
+  Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+  Plug 'dense-analysis/ale'
 " }}}
 
 " Looks --- {{{
@@ -41,11 +45,11 @@ call plug#begin(expand('$HOME/.local/share/nvim/site/plugged'))
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-  Plug 'liuchengxu/space-vim-dark'
+  " Plug 'joshdick/onedark.vim'
+  Plug 'sainnhe/edge'
 " }}}
 
 " Git --- {{{
-  Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
 " }}}
 
