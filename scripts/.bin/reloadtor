@@ -1,5 +1,0 @@
-#!/usr/bin/env fish
-
-set -l cookie (perl -e 'local $/; print unpack "H*", <>' /var/lib/tor/control_auth_cookie)
-
-echo -e 'AUTHENTICATE '$cookie'\r\nSIGNAL NEWNYM\r\nQUIT\r\n' | nc 127.0.0.1 9051

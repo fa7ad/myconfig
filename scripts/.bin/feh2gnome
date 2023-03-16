@@ -1,5 +1,0 @@
-#!/usr/bin/env zsh
-
-wallpaper=$(grep -o "'.*'" $HOME/.fehbg)
-gsettings set org.gnome.desktop.background picture-uri "file://${wallpaper:Q}"
-
