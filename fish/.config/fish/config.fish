@@ -8,13 +8,13 @@ end
 function fish_right_prompt
 end
 
-set cwd (dirname (status -f))
+set conf_dir $HOME/.config/fish # (dirname (status -f))
 
 # Load env files
-. $cwd/env.fish
+. $conf_dir/env.fish
 
 # load aliases
-. $cwd/alias.fish
+. $conf_dir/alias.fish
 
 function clear_prompt
   clear

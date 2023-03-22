@@ -2,7 +2,7 @@
 
 git filter-branch --env-filter '
 CORRECT_NAME="Fahad Hossain"
-CORRECT_EMAIL="evilinfinite7@gmail.com"
+CORRECT_EMAIL="set.name.fahad@gmail.com"
 export GIT_COMMITTER_NAME="$CORRECT_NAME"
 export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
 export GIT_AUTHOR_NAME="$CORRECT_NAME"
