@@ -14,7 +14,7 @@ function path_exists
 end
 
 function should_add_path
-  if path_not_in $argv[1] $argv[2]; and path_is_absolute $argv[1]; and path_exists $argv[1]
+  if path_exists $argv[1]; and path_is_absolute $argv[1]; and path_not_in $argv[1] $argv[2]
     return 0
   end
   return 1

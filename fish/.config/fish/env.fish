@@ -37,10 +37,10 @@ set -l py_paths /Users/fahad/Library/Python/*/bin
 set -l ruby_paths (brew --prefix ruby)/bin $HOMEBREW_PREFIX/lib/ruby/gems/*/bin
 set -l go_paths $HOME/go/bin
 
-set old_path (string split ' ' -- $PATH) $ruby_paths $local_paths $go_paths $node_paths $yarn_paths $py_paths # $gnu_bins
+set -l old_path $PATH $ruby_paths $local_paths $go_paths $node_paths $yarn_paths $py_paths # $gnu_bins
 
-set new_path $old_path[1]
-set fish_new_path
+set -l new_path $old_path[1]
+set -l fish_new_path
 
 . $conf_dir/_path_helpers.fish
 
