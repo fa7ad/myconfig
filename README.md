@@ -1,35 +1,25 @@
 # My configuration files
 
-These are the dotfiles/configurations for most of my CLI apps and WM related stuff
+Started out on Linux, but now I'm working on replacing this with the config for my macOS setup.
 
-![Preview](https://i.imgur.com/9xGyfdg.png)
+## Required software
+* [Homebrew](https://brew.sh/)
+  `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+* These homebrew formulae:
+  ```bash
+  brew install fish fortune-mod gawk gnu-sed gnu-tar go grep htop imagemagick jq neovim python@3.11 rsync thefuck wget ruby stow starship tree
+  ```
+* These casks from these taps:
+  ```bash
+  brew tap homebrew/cask-fonts
+  brew install daviderestivo/fortune-mod/fortune-mod
+  brew install --cask aldente font-fira-code-nerd-font font-fira-mono-nerd-font gimp inkscape aldente iterm2 visual-studio-code firefox google-chrome
+  ```
 
 
-## Important Requirements
-* **GNU stow**
-* i3wm
-* polybar
-* fish
-* fontconfig
-* python3
-* neovim
-* ...
-
-## Put it together
-In bash:
-
+## Set up
 ```bash
-mkdir -p ~/.fonts/ ~/.config/fontconfig/conf.d/
-wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
-wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
-wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraMono/Regular/complete/Fura%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.otf
-mv PowerlineSymbols.otf ~/.fonts/
-mv Fura\ Mono\ Regular\ Nerd\ Font\ Complete\ Mono.otf ~/.fonts/
-mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
-fc-cache -vf
-
-git clone git@github.com:fa7ad/myconfig --recursive
-cd myconfig
 fish INSTALL.fish
-sleep 10 && chsh -s $(which fish)
+which fish | sudo tee -a /etc/shells
+chsh -s $(which fish)
 ```
