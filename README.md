@@ -15,5 +15,5 @@ Started out on Linux, but now I'm working on replacing this with the config for 
 fish INSTALL.fish
 which fish | sudo tee -a /etc/shells
 chsh -s $(which fish)
-cd $HOME && brew bundle install
+brew bundle install --global
 ```
