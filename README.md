@@ -13,7 +13,7 @@ Started out on Linux, but now I'm working on replacing this with the config for 
 ## Set up
 ```bash
 fish INSTALL.fish
-which fish | sudo tee -a /etc/shells
+which fish | sudo tee -a /etc/shells # this step is necessary since fish is being installed from homebrew
 chsh -s $(which fish)
 brew bundle install --global
 ```

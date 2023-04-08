@@ -43,6 +43,8 @@ brew "artginzburg/tap/sudo-touchid"
 brew "daviderestivo/fortune-mod/fortune-mod", args: ["with-offensive"]
 brew "null-dev/firefox-profile-switcher/firefox-profile-switcher-connector"
 cask "aldente"
+cask "alfred"
+cask "calibre"
 cask "font-fira-code-nerd-font"
 cask "font-fira-mono-nerd-font"
 cask "gimp"
