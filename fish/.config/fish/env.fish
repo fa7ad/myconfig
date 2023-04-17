@@ -9,11 +9,11 @@ set -gx VISUAL nvim
 set -gx PAGER less
 
 function _uq
-  awk '!x[$0]++'
+  gawk '!x[$0]++'
 end
 
 function _prec
-  awk '{ print length()":"$0 | "sort -n" }' | awk -F : '{ print $2 }'
+  gawk '{ print length()":"$0 | "sort -n" }' | awk -F : '{ print $2 }'
 end
 
 # N
