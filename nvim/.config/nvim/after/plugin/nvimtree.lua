@@ -1,0 +1,16 @@
+local nvimTree = require("nvim-tree")
+local nvimTreeApi = require("nvim-tree.api")
+
+nvimTree.setup({
+  sort_by = "case_sensitive",
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
+
+vim.keymap.set("n", "<C-e>", nvimTreeApi.tree.toggle,
+  {silent = true, noremap = true}
+)
