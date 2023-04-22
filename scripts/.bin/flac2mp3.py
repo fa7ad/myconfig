@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Clones all the repos in a github organization.
+Convert all FLACs in a directory to MP3s
 """
 
 import argparse
