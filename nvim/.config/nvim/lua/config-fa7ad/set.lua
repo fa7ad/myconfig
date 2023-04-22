@@ -54,6 +54,9 @@ vim.opt.whichwrap:append("<,>,h,l")
 
 vim.opt.lazyredraw = true
 
+vim.opt.list = true
 vim.opt.listchars:append({
-    space = '·'
+    lead = '·',
+    trail = '·',
+    eol = '↴'
 })

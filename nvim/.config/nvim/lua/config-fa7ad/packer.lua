@@ -25,7 +25,7 @@ return require('packer').startup(function(use)
     config = function()
       require('onedark').setup {
         style = 'darker',
-        transparent = true
+        -- transparent = true
       }
       require('onedark').load()
     end
@@ -140,6 +140,45 @@ return require('packer').startup(function(use)
   }
 
   use 'johnfrankmorgan/whitespace.nvim'
+
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
+
+  use {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup()
+    end
+  }
+
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
+      vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombine]]
+      vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombine]]
+      vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine]]
+      vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
+      vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
+      require("indent_blankline").setup {
+        space_char_blankline = " ",
+        char_highlight_list = {
+          "IndentBlanklineIndent1",
+          "IndentBlanklineIndent2",
+          "IndentBlanklineIndent3",
+          "IndentBlanklineIndent4",
+          "IndentBlanklineIndent5",
+          "IndentBlanklineIndent6",
+        },
+        show_current_context = true,
+        show_current_context_start = true,
+      }
+    end
+  }
 
   if packer_bootstrap then
     require('packer').sync()
