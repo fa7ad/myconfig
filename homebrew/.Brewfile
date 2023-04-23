@@ -40,6 +40,7 @@ brew "rust", link: false
 brew "starship"
 brew "stow"
 brew "thefuck"
+brew "tmux"
 brew "tree"
 brew "wget"
 brew "yt-dlp"

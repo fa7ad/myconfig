@@ -90,7 +90,10 @@ return require('packer').startup(function(use)
     requires = {
       { 'ray-x/guihua.lua' },
       { 'nvim-treesitter/nvim-treesitter' }
-    }
+    },
+    config = function()
+      require('go').setup()
+    end
   }
 
   use {
@@ -124,7 +127,7 @@ return require('packer').startup(function(use)
   use 'romgrk/fzy-lua-native'
   use 'kyazdani42/nvim-web-devicons'
   use 'nixprime/cpsm'
-
+  use 'github/copilot.vim'
   use "lambdalisue/suda.vim"
 
   use {
