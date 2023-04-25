@@ -54,9 +54,17 @@ vim.opt.whichwrap:append("<,>,h,l")
 
 vim.opt.lazyredraw = true
 
+vim.scriptencoding = 'utf-8'
+vim.opt.encoding = 'utf-8'
+vim.opt.fileencoding = 'utf-8'
+
 vim.opt.list = true
-vim.opt.listchars:append({
+vim.opt.listchars = {
     lead = '·',
     trail = '·',
-    eol = '↴'
-})
+    eol = '↵',
+}
+vim.api.nvim_exec(
+  [[:set lcs+=tab:»—]],
+  true
+)

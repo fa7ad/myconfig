@@ -180,6 +180,14 @@ return require('packer').startup(function(use)
     end
   }
 
+  use({
+    "kylechui/nvim-surround",
+    tag = "*",
+    config = function()
+      require("nvim-surround").setup()
+    end
+  })
+
   use "lukas-reineke/indent-blankline.nvim"
 
   if packer_bootstrap then
