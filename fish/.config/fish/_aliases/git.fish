@@ -4,10 +4,10 @@ function git-branch-current
   echo (git branch|grep \* |sed s/\*\ //)
 end
 
-if not set -q hub_alias_set
-  set -U hub_alias_set
-  alias git hub
-end
+# if not set -q hub_alias_set
+#   set -U hub_alias_set
+alias git hub
+# end
 
 abbr g git
 # Branch (b)
