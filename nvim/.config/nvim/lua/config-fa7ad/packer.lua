@@ -44,7 +44,7 @@ return require('packer').startup(function(use)
   use {
     "nvim-treesitter/nvim-treesitter",
     run = function()
-      pcall(vim.cmd, 'TSUpdate')
+      pcall(function() vim.cmd [[TSUpdate]] end)
     end
   }
   use "nvim-treesitter/playground"
@@ -71,7 +71,7 @@ return require('packer').startup(function(use)
       {
         'williamboman/mason.nvim',
         run = function()
-          pcall(vim.cmd, 'MasonUpdate')
+          pcall(function() vim.cmd [[MasonUpdate]] end)
         end
       },
       { 'williamboman/mason-lspconfig.nvim' },
@@ -85,6 +85,20 @@ return require('packer').startup(function(use)
     }
   }
 
+  use "zbirenbaum/copilot.lua"
+
+  use {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require('copilot').setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+      })
+      require('copilot_cmp').setup()
+    end
+  }
+
   use {
     'ray-x/go.nvim',
     requires = {
@@ -95,6 +109,15 @@ return require('packer').startup(function(use)
       require('go').setup()
     end
   }
+
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {}
+    end
+  }
+
 
   use {
     "folke/zen-mode.nvim",
@@ -127,7 +150,6 @@ return require('packer').startup(function(use)
   use 'romgrk/fzy-lua-native'
   use 'kyazdani42/nvim-web-devicons'
   use 'nixprime/cpsm'
-  use 'github/copilot.vim'
   use "lambdalisue/suda.vim"
 
   use {
@@ -158,30 +180,7 @@ return require('packer').startup(function(use)
     end
   }
 
-  use {
-    "lukas-reineke/indent-blankline.nvim",
-    config = function()
-      vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
-      vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombine]]
-      vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombine]]
-      vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine]]
-      vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
-      vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
-      require("indent_blankline").setup {
-        space_char_blankline = " ",
-        char_highlight_list = {
-          "IndentBlanklineIndent1",
-          "IndentBlanklineIndent2",
-          "IndentBlanklineIndent3",
-          "IndentBlanklineIndent4",
-          "IndentBlanklineIndent5",
-          "IndentBlanklineIndent6",
-        },
-        show_current_context = true,
-        show_current_context_start = true,
-      }
-    end
-  }
+  use "lukas-reineke/indent-blankline.nvim"
 
   if packer_bootstrap then
     require('packer').sync()

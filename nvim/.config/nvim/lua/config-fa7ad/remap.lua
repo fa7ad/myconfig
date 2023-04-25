@@ -30,7 +30,10 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
-vim.keymap.set("n", ";", ":")
+-- WARN: Seems to break some plugins
+-- vim.keymap.set("n", ";", ":")
+vim.keymap.set({ "n", "v" }, "<leader>w", ":w<CR>")
+vim.keymap.set("n", "<leader>q", ":wq<CR>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
@@ -45,7 +48,9 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader><leader>", [[:so<CR>]])
 vim.keymap.set("n", "<leader><CR>", [[:noh<CR>]])
 
--- BROKEN FOR NOW, TODO: Figure out how to port over the vimscript function to Lua
+-- BROKEN FOR NOW,
+-- TODO: Figure out how to port over the vimscript function to Lua
+
 -- Visual mode pressing * or # searches for the current selection
 -- Super useful! From an idea by Michael Naumann
 -- vim.keymap.set("v", "*", ":<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>", {

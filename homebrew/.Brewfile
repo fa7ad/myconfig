@@ -22,6 +22,7 @@ brew "gh"
 brew "gnu-sed"
 brew "gnu-tar"
 brew "go"
+brew "golangci-lint"
 brew "grep"
 brew "hub", args: ["HEAD"]
 brew "jq"
