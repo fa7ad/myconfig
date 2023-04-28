@@ -5,7 +5,9 @@ lsp.ensure_installed {
   'eslint',
   'gopls',
   'lua_ls',
-  'remark_ls'
+  'html',
+  'docker_compose_language_service',
+  'dockerls'
 }
 
 local nvimLua = lsp.nvim_lua_ls()
