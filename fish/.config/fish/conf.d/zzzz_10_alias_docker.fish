@@ -38,7 +38,7 @@ abbr drmf 'docker stop (docker ps -a -q); and docker rm (docker ps -a -q)'
 # Remove all images
 abbr dri "docker rmi (docker images -q)"
 
-# Dockerfile build, e.g., $dbu tcnksm/test 
+# Dockerfile build, e.g., $dbu tcnksm/test
 abbr dbu "docker build -t=(basename $PWD) ."
 
 # Bash into running container
@@ -51,3 +51,5 @@ abbr dcd 'docker compose down'
 abbr dce 'docker compose exec'
 
 abbr dcl 'docker compose logs -f'
+
+abbr dc 'docker compose'

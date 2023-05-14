@@ -1,13 +1,9 @@
-#!/usr/bin/env fish
 # Git
 function git-branch-current
   echo (git branch|grep \* |sed s/\*\ //)
 end
 
-# if not set -q hub_alias_set
-#   set -U hub_alias_set
 alias git hub
-# end
 
 abbr g git
 # Branch (b)
@@ -175,3 +171,8 @@ abbr Gcr 'git create'
 abbr gaa 'git add -A'
 abbr gis 'git status'
 abbr gpv 'git push -v'
+
+# gitignore
+function gign
+  echo $argv | tee --append .gitignore
+end
