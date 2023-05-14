@@ -1,6 +1,4 @@
 #!/usr/bin/env fish
-set cwd (dirname (status -f))
-
 # MPV
 alias mpa 'mpv --no-vid'
 
@@ -21,20 +19,6 @@ alias tree='tree -I "node_modules|bower_components"'
 # gitignore
 function gign
   echo $argv | tee --append .gitignore
-end
-
-# update_config
-function update_config
-  set curr (pwd)
-  cd $HOME/myconfig
-  git pull -X theirs
-  rsync -ar config/ $HOME/.config/
-  cd $cur
-end
-
-# passwordless sudo
-function getsudo
-  echo $MYPASSWORD_CLEARTEXT | sudo -S echo 'Got SUDO!'
 end
 
 # vim
@@ -58,14 +42,8 @@ alias la='ll -lAFh'
 alias ll='ls -lh'
 alias lsa='ls -lah'
 
-# Compile and run C++ programs
-function cpp_compile
-  g++ -Wall -O3 -o $argv[2] $argv[1]
-  and exec ./$argv[2]
-end
-
 # Source the Yuuge alias files
-for file in (ls $cwd/_aliases/*.fish)
+for file in $fish_user_conf_dir/_aliases/*
   . $file
 end
 
@@ -76,15 +54,3 @@ end
 alias vim='nvim'
 
 alias python='python3'
-
-## cisco tomfoolery
-function load_cisco_vpn
-  sudo launchctl load /Library/LaunchDaemons/com.cisco.anyconnect.vpnagentd.plist
-  /Applications/Cisco/Cisco\ AnyConnect\ Socket\ Filter.app/Contents/MacOS/Cisco\ AnyConnect\ Socket\ Filter -activateExt
-  open /Applications/Cisco/Cisco\ AnyConnect\ Secure\ Mobility\ Client.app
-end
-
-function unload_cisco_vpn
-  sudo launchctl unload /Library/LaunchDaemons/com.cisco.anyconnect.vpnagentd.plist
-  /Applications/Cisco/Cisco\ AnyConnect\ Socket\ Filter.app/Contents/MacOS/Cisco\ AnyConnect\ Socket\ Filter -deactivateExt
-end

@@ -44,7 +44,7 @@ set -l old_path $PATH $ruby_paths $local_paths $go_paths $node_paths $yarn_paths
 set -l new_path $old_path[1]
 set -l fish_new_path
 
-. $conf_dir/_path_helpers.fish
+. $fish_user_conf_dir/_path_helpers.fish
 
 for seg in $old_path
   if should_add_path $seg $fish_new_path
