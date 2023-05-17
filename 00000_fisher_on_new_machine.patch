@@ -1,0 +1,49 @@
+From 546cdccc2e8bd3e960983e3b41e47a157a526d9f Mon Sep 17 00:00:00 2001
+From: Charles Gould <charles@gould.dev>
+Date: Sat, 29 Oct 2022 16:38:37 -0400
+Subject: [PATCH] Initialize _fisher_plugins using fish_plugins file (#741)
+
+This change is for users who commit fish_plugins and plugin sources but
+omit fish_variables. On a system where Fisher's universal variables are
+unset, most Fisher commands were not working out-of-the-box:
+
+* `fisher install <plugin>` - installs <plugin>, rewrites fish_plugins file with only <plugin>
+                            - if <plugin> is in fish_plugins, same behavior as `fisher update`
+* `fisher remove  <plugin>` - fails with error: Plugin not installed "<plugin>"
+* `fisher update  <plugin>` - fails with error: Plugin not installed "<plugin>"
+* `fisher update`           - fails with error about conflicting files, deletes fish_plugins file
+* `fisher list   [<regex>]` - returns nothing
+
+As of this commit all Fisher commands work except for `fisher remove`;
+Fisher still has no way of knowing which files to remove absent the
+universal variable that tracks the files associated to a plugin.
+
+It may make sense to reject calls like `fisher remove <plugin>` if the
+`_fisher_<plugin>_files` universal variable is missing. Fisher could
+suggest the user run `fisher update` and try again.
+---
+ fish/.config/fish/functions/fisher.fish | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/fish/.config/fish/functions/fisher.fish b/fish/.config/fish/functions/fisher.fish
+index c0a86fa4..ca678291 100644
+--- a/fish/.config/fish/functions/fisher.fish
++++ b/fish/.config/fish/functions/fisher.fish
+@@ -2,6 +2,8 @@ function fisher --argument-names cmd --description "A plugin manager for Fish"
+     set --query fisher_path || set --local fisher_path $__fish_config_dir
+     set --local fisher_version 4.4.3
+     set --local fish_plugins $__fish_config_dir/fish_plugins
++    test -e $fish_plugins && set --local file_plugins (string match --regex -- '^[^\s]+$' <$fish_plugins)
++    set --query _fisher_plugins || set --universal _fisher_plugins $file_plugins
+ 
+     switch "$cmd"
+         case -v --version
+@@ -29,8 +31,6 @@ function fisher --argument-names cmd --description "A plugin manager for Fish"
+             set --local old_plugins $_fisher_plugins
+             set --local new_plugins
+ 
+-            test -e $fish_plugins && set --local file_plugins (string match --regex -- '^[^\s]+$' <$fish_plugins)
+-
+             if ! set --query argv[2]
+                 if test "$cmd" != update
+                     echo "fisher: Not enough arguments for command: \"$cmd\"" >&2 && return 1
