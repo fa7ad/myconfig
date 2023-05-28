@@ -3,9 +3,7 @@ function git-branch-current
   echo (git branch|grep \* |sed s/\*\ //)
 end
 
-alias git hub
-
-abbr g git
+# abbr g git
 # Branch (b)
 abbr gb 'git branch'
 abbr gba 'git branch --all --verbose'

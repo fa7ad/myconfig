@@ -48,6 +48,17 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader><leader>", [[:so<CR>]])
 vim.keymap.set("n", "<leader><CR>", [[:noh<CR>]])
 
+vim.api.nvim_create_user_command('W', 'w', { bang = true })
+vim.api.nvim_create_user_command('Q', 'q', { bang = true })
+
+-- vim.keymap.set("n", ":W", [[:w<CR>]], {
+--   noremap = true,
+-- })
+--
+-- vim.keymap.set("n", ":Q", [[:q<CR>]], {
+--   noremap = true,
+-- })
+
 -- BROKEN FOR NOW,
 -- TODO: Figure out how to port over the vimscript function to Lua
 
