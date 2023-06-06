@@ -6,6 +6,4 @@ bind \cl clear_prompt
 # Option-S = prepend sudo
 bind ß sudope
 
-thefuck --alias | source
-
 starship init fish | source
