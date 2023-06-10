@@ -4,7 +4,8 @@ abbr catcat bat
 # tree
 alias tree='tree -I "node_modules|bower_components"'
 
-
+# pnpm
+abbr pn 'pnpm'
 
 # vim
 alias vim_clear_cache='rm -rf ~/.vim{backup,swap,undo,views}'
