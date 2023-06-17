@@ -1,3 +1,6 @@
+if vim.g.vscode then
+  return
+end
 local nvimTree = require("nvim-tree")
 local nvimTreeApi = require("nvim-tree.api")
 

@@ -1,3 +1,6 @@
+if vim.g.vscode then
+  return
+end
 local whitespace = require('whitespace-nvim')
 
 whitespace.setup({

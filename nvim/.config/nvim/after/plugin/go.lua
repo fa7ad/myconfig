@@ -1,3 +1,6 @@
+if vim.g.vscode then
+  return
+end
 local format_sync_grp = vim.api.nvim_create_augroup("GoImport", {})
 
 vim.api.nvim_create_autocmd("BufWritePre", {

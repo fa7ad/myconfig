@@ -1,3 +1,6 @@
+if vim.g.vscode then
+  return
+end
 vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
 
 local My_GitCfg = vim.api.nvim_create_augroup('My_GitCfg', {})

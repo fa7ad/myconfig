@@ -1,3 +1,6 @@
+if vim.g.vscode then
+  return
+end
 local lualine = require('lualine')
 local c = require('onedark.colors')
 

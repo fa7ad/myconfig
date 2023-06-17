@@ -1,3 +1,6 @@
+if vim.g.vscode then
+  return
+end
 local indentBlank = require("indent_blankline")
 
 vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
