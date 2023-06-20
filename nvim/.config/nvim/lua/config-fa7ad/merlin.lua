@@ -1,3 +1,9 @@
+local opam_loc = vim.fn.system { "which", "opam" }
+
+if not opam_loc then
+  return
+end
+
 local opam_share_dir = vim.fn.system { "opam", "var", "share" }
 opam_share_dir = opam_share_dir:sub(1, #opam_share_dir - 1)
 
