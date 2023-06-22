@@ -6,4 +6,7 @@ bind \cl clear_prompt
 # Option-S = prepend sudo
 bind ß sudope
 
+# ... -> ../..
+bind . 'expand-dot-to-parent-directory-path'
+
 starship init fish | source
