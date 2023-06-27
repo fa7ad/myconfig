@@ -2,5 +2,6 @@ function brew -d "Wrapper function around homebrew to update brewfile automatica
     command brew $argv
     if contains install $argv; or contains remove $argv
         command brew bundle dump --force --global
+        sed -i '' '/^vscode.*$/d' (realpath $HOME/.Brewfile) # remove vscode
     end
 end
