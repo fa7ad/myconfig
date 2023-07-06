@@ -1,10 +1,6 @@
-#!/bin/sh
-
-git filter-branch --env-filter '
-CORRECT_NAME="Fahad Hossain"
-CORRECT_EMAIL="set.name.fahad@gmail.com"
-export GIT_COMMITTER_NAME="$CORRECT_NAME"
-export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
-export GIT_AUTHOR_NAME="$CORRECT_NAME"
-export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
-' --tag-name-filter cat -- --branches --tags
+#!/bin/zsh
+git filter-repo --email-callback '
+  return b"set.name.fahad@gmail.com"
+' --name-callback '
+  return b"Fahad Hossain"
+'
