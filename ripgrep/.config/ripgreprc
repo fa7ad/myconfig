@@ -1,0 +1,7 @@
+# bypass the most braindead default
+--hidden
+
+# nice to have
+--glob=!.git
+--smart-case
+--follow

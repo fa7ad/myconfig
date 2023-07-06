@@ -10,6 +10,9 @@ set -gx PAGER less
 # N
 set -gx N_PREFIX /usr/local/n
 
+# ripgrep devs can be dumbasses with their defaults
+set -gx RIPGREP_CONFIG_PATH $HOME/.config/ripgreprc
+
 ### BREW
 set -gx HOMEBREW_PREFIX "/opt/homebrew";
 set -gx HOMEBREW_CELLAR "/opt/homebrew/Cellar";
@@ -21,7 +24,7 @@ set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/opt/homebrew/share/info"
 ### /BREW
 
 # bun
-set -x BUN_INSTALL "$HOME/.bun"
+set -x BUN_INSTALL $HOME/.bun
 
 set -l node_paths $N_PREFIX/bin
 set -l yarn_paths $HOME/.config/yarn/global/node_modules/.bin
