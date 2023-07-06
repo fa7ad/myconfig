@@ -1,0 +1,5 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[dotnet]
+detect_files = ['Directory.Build.props', 'Directory.Build.targets', 'Packages.props']
