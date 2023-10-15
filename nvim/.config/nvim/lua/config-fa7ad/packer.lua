@@ -93,20 +93,6 @@ return require('packer').startup(function(use)
     requires = { "nvim-lua/plenary.nvim" },
   }
 
-  use "zbirenbaum/copilot.lua"
-
-  use {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-    config = function()
-      require('copilot').setup({
-        suggestion = { enabled = false },
-        panel = { enabled = false },
-      })
-      require('copilot_cmp').setup()
-    end
-  }
-
   use {
     'ray-x/go.nvim',
     requires = {
@@ -196,7 +182,13 @@ return require('packer').startup(function(use)
     end
   })
 
-  use "lukas-reineke/indent-blankline.nvim"
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {}
+  }
+
+  use 'lbrayner/vim-rzip'
 
   if packer_bootstrap then
     require('packer').sync()

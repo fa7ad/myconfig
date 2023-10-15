@@ -3,5 +3,8 @@
 
 # nice to have
 --glob=!.git
+--glob=!.yarn/releases
+--glob=!.yarn/plugins
+--glob=!.yarn/cache
 --smart-case
 --follow

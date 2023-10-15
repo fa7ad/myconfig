@@ -2,11 +2,21 @@ function brew -d "Wrapper function around homebrew to update brewfile automatica
     command brew $argv
     if contains install $argv; or contains remove $argv; or contains upgrade $argv
         command brew bundle dump --force --global
-        set -l sorted (sed -i '' '/^vscode.*$/d' (realpath $HOME/.Brewfile) | sort) #sorted for easier diffing
+        set -l bf (realpath $HOME/.Brewfile)
+        set -l sorted (cat $bf | sort | grep -Ev '^vscode')
         set -l temp (mktemp)
-        grep ^tap (echo $sorted | psub -f) > $temp
-        grep -v ^tap (echo $sorted | psub -f) >> $temp
-        cat $temp > (realpath $HOME/.Brewfile)
+
+        for line in $sorted
+          if string match -r '^tap' $line > /dev/null
+            echo $line >> $temp
+          end
+        end
+        for line in $sorted
+          if not string match -r '^tap' $line > /dev/null
+            echo $line >> $temp
+          end
+        end
+        cat $temp > $bf
         unlink $temp
     end
 end

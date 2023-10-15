@@ -45,7 +45,7 @@ lsp.setup_nvim_cmp({
 
 cmp.setup({
   sources = {
-    {name = 'copilot'},
+    -- {name = 'copilot'},
     {name = 'nvim_lsp'},
   },
   mapping = {
