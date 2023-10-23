@@ -4,7 +4,8 @@
 # nice to have
 --glob=!.git
 --glob=!.yarn/releases
---glob=!.yarn/plugins
 --glob=!.yarn/cache
+--glob=!.yarn/plugins
+--glob=!**/yarn*.cjs
 --smart-case
 --follow
