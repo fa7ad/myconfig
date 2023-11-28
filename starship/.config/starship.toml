@@ -1,5 +1,16 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+command_timeout = 900
+
 [dotnet]
 detect_files = ['Directory.Build.props', 'Directory.Build.targets', 'Packages.props']
+
+[aws]
+format = 'on [$symbol$region]($style) '
+symbol = '☁️ '
+
+[gcloud]
+format = '[$symbol$region]($style) '
+symbol = '🅖 '
+
