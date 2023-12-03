@@ -1,11 +1,17 @@
 # not really an abbreviation xD
 abbr catcat bat
 
+# neither is this
+abbr rimraf 'rm -rf'
+
 # tree
 alias tree='tree -I "node_modules|bower_components"'
 
 # pnpm
 abbr pn 'pnpm'
+
+# terraform
+abbr tf terraform
 
 # vim
 alias vim_clear_cache='rm -rf ~/.vim{backup,swap,undo,views}'
