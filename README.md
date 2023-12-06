@@ -16,4 +16,10 @@ fish INSTALL.fish
 which fish | sudo tee -a /etc/shells # this step is necessary since fish is being installed from homebrew
 chsh -s $(which fish)
 brew bundle install --global
+
+# fisher hack needed when adopting new pc
+git apply 00000_*.patch
+fish
+fisher list
+fisher update
 ```
