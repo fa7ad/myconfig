@@ -26,7 +26,7 @@ function mkcd
 end
 
 # LS
-alias ls='gls --group-directories-first --color=auto'
+alias ls='ls --group-directories-first --color=auto'
 alias l='ls -lFh'
 alias la='ll -lAFh'
 alias ll='ls -lh'
