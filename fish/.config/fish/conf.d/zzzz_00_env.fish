@@ -26,16 +26,22 @@ set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/opt/homebrew/share/info"
 # bun
 set -x BUN_INSTALL $HOME/.bun
 
+# python
+set -l python_version 3.12
+
+set -l py_aliases (brew --prefix "python@$python_version")/libexec/bin
+
 set -l node_paths $N_PREFIX/bin
 set -l yarn_paths $HOME/.config/yarn/global/node_modules/.bin
 set -l local_paths $HOME/.local/bin $HOME/.bin
 set -l gnu_bins (brew --prefix coreutils)/libexec/gnubin
-set -l py_paths /Users/fahad/Library/Python/*/bin
+set -l py_paths /Users/fahad/Library/Python/*/bin $py_aliases
 set -l ruby_paths (brew --prefix ruby)/bin $HOMEBREW_PREFIX/lib/ruby/gems/*/bin
 set -l go_paths $HOME/go/bin
 set -l bun_path $BUN_INSTALL/bin
 set -l rd_path $HOME/.rd/bin
-set -l old_path $PATH $ruby_paths $local_paths $go_paths $node_paths $yarn_paths $py_paths $bun_path $rd_path# $gnu_bins
+set -l old_path $PATH $ruby_paths $local_paths $go_paths $node_paths $yarn_paths $py_paths $bun_path $rd_path
+# $gnu_bins
 
 set -l new_path $old_path[1]
 set -l fish_new_path
@@ -49,6 +55,10 @@ for seg in $old_path
     set new_path "$new_path:"(realpath $seg)
   end
 end
+
+# prefer homebrew python over system
+set new_path "$py_aliases:$new_path"
+set fish_new_path $py_aliases $fish_new_path
 
 set -U fish_user_paths $fish_new_path
 set -gx PATH $new_path
