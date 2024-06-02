@@ -11,8 +11,7 @@ lsp.ensure_installed {
   'html',
   'docker_compose_language_service',
   'dockerls',
-  'rust_analyzer',
-  'ocamllsp'
+  'rust_analyzer'
 }
 
 local nvimLua = lsp.nvim_lua_ls()

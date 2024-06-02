@@ -35,12 +35,11 @@ set -l node_paths $N_PREFIX/bin
 set -l yarn_paths $HOME/.config/yarn/global/node_modules/.bin
 set -l local_paths $HOME/.local/bin $HOME/.bin
 set -l gnu_bins (brew --prefix coreutils)/libexec/gnubin
-set -l py_paths /Users/fahad/Library/Python/*/bin $py_aliases
-set -l ruby_paths (brew --prefix ruby)/bin $HOMEBREW_PREFIX/lib/ruby/gems/*/bin
+set -l py_paths $HOME/Library/Python/*/bin $py_aliases
 set -l go_paths $HOME/go/bin
 set -l bun_path $BUN_INSTALL/bin
 set -l rd_path $HOME/.rd/bin
-set -l old_path $PATH $ruby_paths $local_paths $go_paths $node_paths $yarn_paths $py_paths $bun_path $rd_path
+set -l old_path $PATH $local_paths $go_paths $node_paths $yarn_paths $py_paths $bun_path $rd_path
 # $gnu_bins
 
 set -l new_path $old_path[1]
