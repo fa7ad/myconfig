@@ -39,7 +39,8 @@ set -l py_paths $HOME/Library/Python/*/bin $py_aliases
 set -l go_paths $HOME/go/bin
 set -l bun_path $BUN_INSTALL/bin
 set -l rd_path $HOME/.rd/bin
-set -l old_path $PATH $local_paths $go_paths $node_paths $yarn_paths $py_paths $bun_path $rd_path
+set -l cargo_path $HOME/.cargo/bin
+set -l old_path $PATH $local_paths $go_paths $node_paths $yarn_paths $py_paths $bun_path $rd_path $cargo_path
 # $gnu_bins
 
 set -l new_path $old_path[1]

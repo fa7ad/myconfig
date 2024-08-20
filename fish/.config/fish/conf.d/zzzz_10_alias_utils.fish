@@ -1,15 +1,16 @@
 # not really an abbreviation xD
 abbr catcat bat
 
+abbr batless 'bat --style plain -l '
+
 # neither is this
 abbr rimraf 'rm -rf'
 
 # tree
 alias tree='tree -I "node_modules|bower_components"'
 
-# pnpm
-abbr pn 'pnpm'
-
+# kubectl
+abbr kk kubectl
 # terraform
 abbr tf terraform
 

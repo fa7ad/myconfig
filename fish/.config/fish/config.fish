@@ -10,3 +10,6 @@ bind ß sudope
 bind . 'expand-dot-to-parent-directory-path'
 
 starship init fish | source
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
