@@ -1,7 +1,7 @@
 # not really an abbreviation xD
 abbr catcat bat
 
-abbr batless 'bat --style plain -l '
+abbr batless 'bat --style plain -l'
 
 # neither is this
 abbr rimraf 'rm -rf'

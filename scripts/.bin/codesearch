@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# 1. Search for text in files using Ripgrep
+# 2. Interactively restart Ripgrep with reload action
+# 3. Switch between Ripgrep and FZF search modes (^F, ^R)
+# 4. Open project in VS Code (^O) and go to the file+line
+# 5. Open file in Vim (^M) (with +lcd to set the CWD to project root for NERDTree)
+rm -f /tmp/rg-fzf-{r,f}
+RG_DIR="$HOME/ghorg"
+RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case --regexp"
+INITIAL_QUERY="${*:-}"
+project_dir_exp="\$(echo {1} | sed -nE 's#$RG_DIR/([^/]*)/([^/]*)/([^/]*)/.*#$RG_DIR/\1/\2/\3#p')"
+
+RG_PROMPT='rg> '
+FZF_PROMPT='fzf> '
+fzf --ansi --disabled --query "$INITIAL_QUERY" \
+  --bind "start:reload($RG_PREFIX {q} $RG_DIR)+unbind(ctrl-r)" \
+  --bind "change:reload:sleep 0.1; $RG_PREFIX {q} $RG_DIR || true" \
+  --bind "ctrl-f:unbind(change,ctrl-f)+change-prompt($FZF_PROMPT)+enable-search+rebind(ctrl-r)+transform-query(echo {q} > /tmp/rg-fzf-r; cat /tmp/rg-fzf-f)" \
+  --bind "ctrl-r:unbind(ctrl-r)+change-prompt($RG_PROMPT)+disable-search+reload($RG_PREFIX {q} || true)+rebind(change,ctrl-f)+transform-query(echo {q} > /tmp/rg-fzf-f; cat /tmp/rg-fzf-r)" \
+  --bind "enter:become(vim \"+lcd $project_dir_exp\" {1} +{2})" \
+  --bind "ctrl-o:become(code $project_dir_exp -g {1}:{2})" \
+  --bind "esc:become(echo ${0##*/} {q})"\
+  --color "hl:-1:underline,hl+:-1:underline:reverse" \
+  --prompt "$RG_PROMPT" \
+  --delimiter : \
+  --header '^R (ripgrep: content search) | ^F (fzf: path search) | ^O (vscode) | ^M (vim)' \
+  --preview 'bat --color=always {1} --highlight-line {2}' \
+  --preview-window 'up,60%,border-bottom,+{2}+3/3,~3'
