@@ -1,1 +1,4 @@
-return {"lambdalisue/suda.vim", 'lbrayner/vim-rzip'}
+return {
+  {"lambdalisue/suda.vim", lazy = true, opts = {}},
+  {'lbrayner/vim-rzip', lazy = true, opts = {}}
+}

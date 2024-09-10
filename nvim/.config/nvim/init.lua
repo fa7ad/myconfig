@@ -1,2 +1,2 @@
 vim.loader.enable()
-require("config-fa7ad")
+require("config")

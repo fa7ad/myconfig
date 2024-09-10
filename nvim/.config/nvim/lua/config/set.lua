@@ -43,7 +43,8 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.wildmenu = true
 vim.opt.wildmode = "list:longest,full"
-vim.opt.wildignore = '*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/node_modules/*'
+vim.opt.wildignore =
+    '*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/node_modules/*'
 
 vim.opt.ruler = true
 vim.opt.cmdheight = 1
@@ -59,12 +60,5 @@ vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
 vim.opt.list = true
-vim.opt.listchars = {
-    lead = '·',
-    trail = '·',
-    eol = '↵',
-}
-vim.api.nvim_exec(
-  [[:set lcs+=tab:»—]],
-  true
-)
+vim.opt.listchars = {lead = '·', trail = '·', eol = '↵'}
+vim.api.nvim_exec([[:set lcs+=tab:»—]], true)

@@ -1,7 +1,7 @@
 # not really an abbreviation xD
 abbr catcat bat
 
-abbr batless 'bat --style plain -l'
+abbr bll 'bat -pl json'
 
 # neither is this
 abbr rimraf 'rm -rf'
@@ -10,9 +10,17 @@ abbr rimraf 'rm -rf'
 alias tree='tree -I "node_modules|bower_components"'
 
 # kubectl
-abbr kk kubectl
+abbr k kubectl
+abbr kstg 'kubectl -n realtime-staging'
+abbr kprod 'kubectl -n realtime-production'
 # terraform
 abbr tf terraform
+# nerdctl
+abbr n nerdctl
+
+function kv
+  nerdctl run --rm -v ~/.kube:/.kube --name kubectl-$argv[1] bitnami/kubectl:$argv[1] $argv[2..-1]
+end
 
 # vim
 alias vim_clear_cache='rm -rf ~/.vim{backup,swap,undo,views}'
