@@ -31,11 +31,13 @@ set -l python_version 3.12
 
 set -l py_aliases (brew --prefix "python@$python_version")/libexec/bin
 
+set -l py_pep668 $HOME/.pep668
+
 set -l node_paths $N_PREFIX/bin
 set -l yarn_paths $HOME/.config/yarn/global/node_modules/.bin
 set -l local_paths $HOME/.local/bin $HOME/.bin
 set -l gnu_bins (brew --prefix coreutils)/libexec/gnubin
-set -l py_paths $HOME/Library/Python/*/bin $py_aliases
+set -l py_paths $HOME/Library/Python/*/bin $py_aliases $py_pep668/bin
 set -l go_paths $HOME/go/bin
 set -l bun_path $BUN_INSTALL/bin
 set -l rd_path $HOME/.rd/bin

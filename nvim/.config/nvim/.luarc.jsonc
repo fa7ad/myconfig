@@ -1,0 +1,7 @@
+{
+  "workspace.library": [
+    "/opt/homebrew/opt/neovim/share/nvim/runtime/",
+    "${3rd}/luv/library"
+  ],
+  "runtime.version": "LuaJIT"
+}

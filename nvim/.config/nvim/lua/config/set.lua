@@ -1,4 +1,5 @@
-vim.g.python3_host_prog = '/opt/homebrew/bin/python3'
+vim.g.python3_host_prog = vim.fn.expand("$HOME/.pep668/bin/python3")
+vim.opt.shell = "/bin/bash"
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -26,8 +27,8 @@ vim.opt.mat = 5
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.opt.clipboard = 'unnamed,unnamedplus'
-vim.opt.mouse = 'a'
+vim.opt.clipboard = "unnamed,unnamedplus"
+vim.opt.mouse = "a"
 vim.opt.mousefocus = true
 
 vim.opt.termguicolors = true
@@ -38,27 +39,25 @@ vim.opt.visualbell = false
 
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
-vim.opt.colorcolumn = {"80", "120"}
+vim.opt.colorcolumn = { "80", "120" }
 vim.opt.isfname:append("@-@")
 
 vim.opt.wildmenu = true
 vim.opt.wildmode = "list:longest,full"
-vim.opt.wildignore =
-    '*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/node_modules/*'
+vim.opt.wildignore = "*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/node_modules/*"
 
 vim.opt.ruler = true
 vim.opt.cmdheight = 1
 vim.opt.hid = true
 
-vim.opt.backspace = {'eol', 'start', 'indent'}
+vim.opt.backspace = { "eol", "start", "indent" }
 vim.opt.whichwrap:append("<,>,h,l")
 
 vim.opt.lazyredraw = true
 
-vim.scriptencoding = 'utf-8'
-vim.opt.encoding = 'utf-8'
-vim.opt.fileencoding = 'utf-8'
+vim.scriptencoding = "utf-8"
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
 
 vim.opt.list = true
-vim.opt.listchars = {lead = '·', trail = '·', eol = '↵'}
-vim.api.nvim_exec([[:set lcs+=tab:»—]], true)
+vim.opt.listchars = { lead = "·", trail = "·", eol = "↵", tab = "» " }

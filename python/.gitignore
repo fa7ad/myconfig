@@ -1,0 +1,4 @@
+*.pyc
+.pep668/bin
+.pep668/lib
+.pep668/include
