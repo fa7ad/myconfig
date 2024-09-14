@@ -6,7 +6,7 @@ return {
     keys = {
       {
         "<leader>xq",
-        "<cmd>TroubleToggle quickfix<cr>",
+        "<cmd>Trouble quickfix<cr>",
         silent = true,
         noremap = true,
         desc = "TroubleQF",

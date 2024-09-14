@@ -1,8 +1,24 @@
+local function setup_lsp_keybinds(_, bufnr)
+  local opts = { buffer = bufnr }
+
+  vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
+  vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
+  vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
+  vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
+  vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
+  vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
+  vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
+  vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
+  vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
+  vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+end
+
 return {
-  { "VonHeikemen/lsp-zero.nvim", branch = "v4.x", lazy = true, config = false },
+  -- Setup Mason
   { "williamboman/mason.nvim", lazy = false, config = true },
+
+  -- Autocompletion
   {
-    -- Autocompletion
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = { { "L3MON4D3/LuaSnip" } },
@@ -30,39 +46,29 @@ return {
         },
       })
     end,
-  }, -- LSP
+  },
+
+  -- Actual LSP Config
   {
     "neovim/nvim-lspconfig",
     cmd = { "LspInfo", "LspInstall", "LspStart" },
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       { "hrsh7th/cmp-nvim-lsp" },
+      { "nvimtools/none-ls.nvim" },
       { "williamboman/mason.nvim" },
+      { "jay-babu/mason-null-ls.nvim" },
+      { "nvimtools/none-ls-extras.nvim" },
+      { "VonHeikemen/lsp-zero.nvim", branch = "v4.x" },
       { "williamboman/mason-lspconfig.nvim", branch = "main" },
     },
     config = function()
       local lsp_zero = require("lsp-zero")
-
-      -- lsp_attach is where you enable features that only work
-      -- if there is a language server active in the file
-      local lsp_attach = function(_, bufnr)
-        local opts = { buffer = bufnr }
-
-        vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
-        vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
-        vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
-        vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
-        vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
-        vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
-        vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
-        vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-        vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
-        vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
-      end
+      local none_ls = require("null-ls")
 
       lsp_zero.extend_lspconfig({
         sign_text = { error = "✘", warn = "▲", hint = "⚑", info = "»" },
-        lsp_attach = lsp_attach,
+        lsp_attach = setup_lsp_keybinds,
         capabilities = require("cmp_nvim_lsp").default_capabilities(),
       })
 
@@ -84,7 +90,6 @@ return {
               settings = {
                 Lua = {
                   telemetry = { enable = false },
-                  diagnostics = { globals = { "vim" } },
                 },
               },
             })
@@ -100,17 +105,24 @@ return {
           end,
         },
       })
+
+      require("mason-null-ls").setup({
+        ensure_installed = { "stylua", "jq" },
+        handlers = {},
+      })
+
+      none_ls.setup({
+        sources = {
+          none_ls.builtins.code_actions.refactoring,
+          none_ls.builtins.code_actions.gomodifytag,
+          none_ls.builtins.code_actions.ts_node_action,
+          none_ls.builtins.completion.luasnip,
+          none_ls.builtins.diagnostics.editorconfig_checker,
+          none_ls.builtins.diagnostics.fish,
+          none_ls.builtins.diagnostics.fish,
+          none_ls.builtins.formatting.prettierd,
+        },
+      })
     end,
-  },
-  {
-    "jay-babu/mason-null-ls.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-      "williamboman/mason.nvim",
-      "nvimtools/none-ls.nvim",
-    },
-    opts = {
-      handlers = {},
-    },
   },
 }
