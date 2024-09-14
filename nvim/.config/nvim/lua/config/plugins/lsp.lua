@@ -114,11 +114,9 @@ return {
       none_ls.setup({
         sources = {
           none_ls.builtins.code_actions.refactoring,
-          none_ls.builtins.code_actions.gomodifytag,
           none_ls.builtins.code_actions.ts_node_action,
           none_ls.builtins.completion.luasnip,
           none_ls.builtins.diagnostics.editorconfig_checker,
-          none_ls.builtins.diagnostics.fish,
           none_ls.builtins.diagnostics.fish,
           none_ls.builtins.formatting.prettierd,
         },
