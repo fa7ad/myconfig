@@ -1,4 +1,3 @@
 function clear_prompt
-    clear
-    fish_prompt
+    clear ;and fish_prompt
 end

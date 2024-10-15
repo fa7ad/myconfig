@@ -19,7 +19,7 @@ abbr tf terraform
 abbr n nerdctl
 
 function kv
-  nerdctl run --rm -v ~/.kube:/.kube --name kubectl-$argv[1] bitnami/kubectl:$argv[1] $argv[2..-1]
+    nerdctl run --rm -v ~/.kube:/.kube --name kubectl-$argv[1] bitnami/kubectl:$argv[1] $argv[2..-1]
 end
 
 # vim

@@ -1,6 +1,6 @@
 # Git
 function git-branch-current
-  echo (git branch|grep \* |sed s/\*\ //)
+    echo (git branch|grep \* |sed s/\*\ //)
 end
 
 # abbr g git
@@ -37,7 +37,7 @@ abbr gcP 'git cherry-pick --no-commit'
 abbr gcr 'git revert'
 abbr gcR 'git reset "HEAD^"'
 abbr gcs 'git show'
-abbr gcl 'git-commit-lost'
+abbr gcl git-commit-lost
 
 # Conflict (C)
 abbr gCl 'git --no-pager diff --name-only --diff-filter=U'
@@ -105,8 +105,8 @@ abbr gpt 'git push --tags'
 abbr gpc 'git push --set-upstream origin (git-branch-current)'
 
 function gpp
-  git pull origin (git-branch-current)
-  git push origin (git-branch-current)
+    git pull origin (git-branch-current)
+    git push origin (git-branch-current)
 end
 
 # Rebase (r)
@@ -125,18 +125,18 @@ abbr gRm 'git remote rename'
 abbr gRu 'git remote update'
 abbr gRp 'git remote prune'
 abbr gRs 'git remote show'
-abbr gRb 'git-hub-browse'
+abbr gRb git-hub-browse
 
 # Stash (s)
 abbr gs 'git stash'
 abbr gsa 'git stash apply'
 abbr gsx 'git stash drop'
-abbr gsX 'git-stash-clear-interactive'
+abbr gsX git-stash-clear-interactive
 abbr gsl 'git stash list'
-abbr gsL 'git-stash-dropped'
+abbr gsL git-stash-dropped
 abbr gsd 'git stash show --patch --stat'
 abbr gsp 'git stash pop'
-abbr gsr 'git-stash-recover'
+abbr gsr git-stash-recover
 abbr gss 'git stash save --include-untracked'
 abbr gsS 'git stash save --patch --no-keep-index'
 abbr gsw 'git stash save --include-untracked --keep-index'
@@ -148,10 +148,10 @@ abbr gSf 'git submodule foreach'
 abbr gSi 'git submodule init'
 abbr gSI 'git submodule update --init --recursive'
 abbr gSl 'git submodule status'
-abbr gSm 'git-submodule-move'
+abbr gSm git-submodule-move
 abbr gSs 'git submodule sync'
 abbr gSu 'git submodule foreach git pull origin master'
-abbr gSx 'git-submodule-remove'
+abbr gSx git-submodule-remove
 
 # Working Copy (w)
 abbr gwd 'git diff --no-ext-diff'
@@ -172,5 +172,5 @@ abbr gpv 'git push -v'
 
 # gitignore
 function gign
-  echo $argv | tee --append .gitignore
+    echo $argv | tee --append .gitignore
 end

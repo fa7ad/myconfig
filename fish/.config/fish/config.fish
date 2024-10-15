@@ -3,8 +3,8 @@
 # Ctrl-L = Clear screen but bring back the prompt
 bind \cl clear_prompt
 
-# Option-S = prepend sudo
-bind ß sudope
+# Ctrl-S = prepend sudo
+bind \cs sudope
 
 # ... -> ../..
 bind . 'expand-dot-to-parent-directory-path'

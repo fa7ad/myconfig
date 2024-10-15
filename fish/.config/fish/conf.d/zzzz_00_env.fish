@@ -7,8 +7,6 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -gx PAGER less
 
-# N
-set -gx N_PREFIX /usr/local/n
 
 # ripgrep devs can be dumbasses with their defaults
 set -gx RIPGREP_CONFIG_PATH $HOME/.config/ripgreprc
@@ -33,8 +31,7 @@ set -l py_aliases (brew --prefix "python@$python_version")/libexec/bin
 
 set -l py_pep668 $HOME/.pep668
 
-set -l node_paths $N_PREFIX/bin
-set -l yarn_paths $HOME/.config/yarn/global/node_modules/.bin
+set -l yarn_paths $HOME/.yarn/bin $HOME/.config/yarn/global/node_modules/.bin
 set -l local_paths $HOME/.local/bin $HOME/.bin
 set -l gnu_bins (brew --prefix coreutils)/libexec/gnubin
 set -l py_paths $HOME/Library/Python/*/bin $py_aliases $py_pep668/bin
@@ -42,25 +39,26 @@ set -l go_paths $HOME/go/bin
 set -l bun_path $BUN_INSTALL/bin
 set -l rd_path $HOME/.rd/bin
 set -l cargo_path $HOME/.cargo/bin
-set -l old_path $PATH $local_paths $go_paths $node_paths $yarn_paths $py_paths $bun_path $rd_path $cargo_path
+set -l asdf_path $HOME/.asdf/shims
+set -l old_path $asdf_path $PATH $local_paths $go_paths $yarn_paths $py_paths $bun_path $rd_path $cargo_path
 # $gnu_bins
 
 set -l new_path $old_path[1]
 set -l fish_new_path
 
 for seg in $old_path
-  if __should_add_to_path $seg $fish_new_path
-    set fish_new_path $fish_new_path (realpath $seg)
-  end
-  set bash_path (string split ':' -- $new_path)
-  if __should_add_to_path $seg $bash_path
-    set new_path "$new_path:"(realpath $seg)
-  end
+    if __should_add_to_path $seg $fish_new_path
+        set -a fish_new_path (realpath $seg)
+    end
+    set bash_path (string split ':' -- $new_path)
+    if __should_add_to_path $seg $bash_path
+        set new_path "$new_path:"(realpath $seg)
+    end
 end
 
 # prefer homebrew python over system
 set new_path "$py_aliases:$new_path"
-set fish_new_path $py_aliases $fish_new_path
+set -p fish_new_path $py_aliases
 
 set -U fish_user_paths $fish_new_path
 set -gx PATH $new_path

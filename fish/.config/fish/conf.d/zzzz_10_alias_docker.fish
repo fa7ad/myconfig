@@ -1,55 +1,56 @@
+set dockercmd nerdctl
 # ------------------------------------
 # Docker abbr and function
 # ------------------------------------
 
 # Get latest container ID
-abbr dl "docker ps -l -q"
+abbr dl "$dockercmd ps -l -q"
 
 # Get container process
-abbr dps "docker ps"
+abbr dps "$dockercmd ps"
 
 # Get process included stop container
-abbr dpa "docker ps -a"
+abbr dpa "$dockercmd ps -a"
 
 # Get images
-abbr di "docker images"
+abbr di "$dockercmd images"
 
 # Get container IP
-abbr dip "docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+abbr dip "$dockercmd inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
 # Run deamonized container, e.g., $dkd base /bin/echo hello
-abbr dkd "docker run -d -P"
+abbr dkd "$dockercmd run -d -P"
 
 # Run interactive container, e.g., $dki base /bin/bash
-abbr dki "docker run -i -t -P"
+abbr dki "$dockercmd run -i -t -P"
 
 # Execute interactive container, e.g., $dex base /bin/bash
-abbr dex "docker exec -i -t"
+abbr dex "$dockercmd exec -i -t"
 
 # Stop all containers
-abbr dstop "docker stop (docker ps -a -q)"
+abbr dstop "$dockercmd stop ($dockercmd ps -a -q)"
 
 # Remove all containers
-abbr drm "docker rm (docker ps -a -q)"
+abbr drm "$dockercmd rm ($dockercmd ps -a -q)"
 
 # Stop and Remove all containers
-abbr drmf 'docker stop (docker ps -a -q); and docker rm (docker ps -a -q)'
+abbr drmf "$dockercmd stop ($dockercmd ps -a -q); and $dockercmd rm ($dockercmd ps -a -q)"
 
 # Remove all images
-abbr dri "docker rmi (docker images -q)"
+abbr dri "$dockercmd rmi ($dockercmd images -q)"
 
 # Dockerfile build, e.g., $dbu tcnksm/test
-abbr dbu "docker build -t=(basename $PWD) ."
+abbr dbu "$dockercmd build -t=(basename $PWD) ."
 
 # Bash into running container
-abbr dbash 'docker exec -it (docker ps -aqf "name "(basename $PWD)) bash'
+abbr dbash '$dockercmd exec -it ($dockercmd ps -aqf "name "(basename $PWD)) bash'
 
-abbr dcup 'docker compose up'
+abbr dcup "$dockercmd compose up"
 
-abbr dcd 'docker compose down'
+abbr dcd "$dockercmd compose down"
 
-abbr dce 'docker compose exec'
+abbr dce "$dockercmd compose exec"
 
-abbr dcl 'docker compose logs -f'
+abbr dcl "$dockercmd compose logs -f"
 
-abbr dc 'docker compose'
+abbr dc "$dockercmd compose"

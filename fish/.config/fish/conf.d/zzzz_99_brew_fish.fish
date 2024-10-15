@@ -1,6 +1,6 @@
 if ! set -q HOMEBREW_PREFIX
-  echo "HOMEBREW_PREFIX not set"
-  exit 1
+    echo "HOMEBREW_PREFIX not set"
+    exit 1
 end
 
 if test -d $HOMEBREW_PREFIX"/share/fish/completions"
