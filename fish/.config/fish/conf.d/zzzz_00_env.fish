@@ -24,7 +24,7 @@ set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/opt/homebrew/share/info"
 set -x BUN_INSTALL $HOME/.bun
 
 # python
-set -l python_version 3.12
+set -l python_version 3.13
 
 set -l py_aliases (brew --prefix "python@$python_version")/libexec/bin
 
