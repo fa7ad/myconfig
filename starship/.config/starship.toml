@@ -71,6 +71,7 @@ format = '\[[$symbol$region]($style)\]'
 symbol = '🅖 '
 
 [git_branch]
+symbol = ' '
 format = '\[[$symbol$branch]($style)\]'
 
 [git_status]
