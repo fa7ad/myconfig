@@ -27,11 +27,22 @@ return {
       },
     },
   },
-  { "lewis6991/gitsigns.nvim", config = true },
-  { "nvim-tree/nvim-web-devicons", lazy = true },
-  { "romgrk/fzy-lua-native", lazy = true, config = false },
+  {
+    "lewis6991/gitsigns.nvim",
+    config = true,
+    opts = {
+      signs = {
+        add = { text = '+' },
+        change = { text = '~' },
+        delete = { text = '_' },
+        topdelete = { text = '‾' },
+        changedelete = { text = '~' },
+      },
+    },
+  },
+  { "nvim-tree/nvim-web-devicons",  lazy = true },
+  { "romgrk/fzy-lua-native",        lazy = true, config = false },
   { "kyazdani42/nvim-web-devicons", lazy = true, config = false },
-  { "nixprime/cpsm", lazy = true, config = false },
   {
     "nvim-lualine/lualine.nvim",
     lazy = false,
@@ -117,36 +128,6 @@ return {
         })
       )
     end,
-  },
-  {
-    "folke/zen-mode.nvim",
-    opts = { plugins = { gitsigns = { enabled = true } } },
-    keys = {
-      {
-        "<leader>zz",
-        function()
-          local zenMode = require("zen-mode")
-          zenMode.setup({ window = { width = 90, options = {} } })
-          vim.wo.wrap = false
-          vim.wo.number = true
-          vim.wo.rnu = true
-          zenMode.toggle()
-        end,
-      },
-      {
-        "<leader>zx",
-        function()
-          local zenMode = require("zen-mode")
-
-          zenMode.setup({ window = { width = 80, options = {} } })
-          zenMode.toggle()
-          vim.wo.wrap = false
-          vim.wo.number = false
-          vim.wo.rnu = false
-          vim.opt.colorcolumn = "0"
-        end,
-      },
-    },
   },
   {
     "HiPhish/rainbow-delimiters.nvim",
