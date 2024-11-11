@@ -9,21 +9,27 @@ return {
     end,
   },
   {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
+    "nvim-neo-tree/neo-tree.nvim",
     lazy = false,
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {
-      sort_by = "case_sensitive",
-      renderer = { group_empty = true },
-      filters = { dotfiles = false, custom = { "^.git$" } },
-      actions = { open_file = { quit_on_open = true } },
+    version = "*",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+      "3rd/image.nvim",
     },
+    cmd = "Neotree",
     keys = {
-      {
-        "<C-e>",
-        "<cmd>NvimTreeToggle<cr>",
-        desc = "NvimTree",
+      { "\\", ":Neotree reveal<CR>", desc = "NeoTree reveal", silent = true },
+    },
+    opts = {
+      filesystem = {
+        window = {
+          mappings = {
+            ["\\"] = "close_window",
+          },
+        },
+        hijack_netrw_behavior = "open_current",
       },
     },
   },
@@ -32,11 +38,11 @@ return {
     config = true,
     opts = {
       signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
+        add = { text = "+" },
+        change = { text = "~" },
+        delete = { text = "_" },
+        topdelete = { text = "‾" },
+        changedelete = { text = "~" },
       },
     },
   },

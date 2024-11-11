@@ -1,59 +1,63 @@
+local nut = require "nvim-utils"
 -- exit
-vim.api.nvim_create_user_command("W", "w", { bang = true, desc = "Force Write" })
-vim.api.nvim_create_user_command("Q", "q", { bang = true, desc = "Force Quit" })
-vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save" })
-vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit" })
-vim.keymap.set("n", "<leader>Q", ":qa<CR>", { desc = "Quit all" })
+nut.create_cmd("W", "w", { bang = true, desc = "Force Write" })
+nut.create_cmd("Q", "q", { bang = true, desc = "Force Quit" })
+
+nut.kmap("<leader>w", ":w<CR>", "Save")
+nut.kmap("<leader>q", ":q<CR>", "Quit")
+nut.kmap("<leader>Q", ":qa<CR>", "Quit all")
 
 -- bad habits
-vim.keymap.set("i", "<C-c>", "<Esc>", { desc = "Exit insert mode" })
-vim.keymap.set("n", "Q", "<nop>", { desc = "Disable Q" })
+nut.kmap("Q", "<Nop>", "Disable Q")
+nut.kmap("<C-c>", "<Esc>", "Exit insert mode", 'i')
 
 -- search
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-  { desc = "Search and replace word under cursor" })
+nut.kmap("<Esc>", "<cmd>nohlsearch<CR>", "Clear search highlights")
+nut.kmap("<leader>s",
+  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+  "Search and replace word under cursor")
+
 -- unfold and keep cursor in the middle on find-next
-vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result" })
-vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result" })
+nut.kmap("n", "nzzzv", "Next search result")
+nut.kmap("N", "Nzzzv", "Previous search result")
 
 -- move line up-down
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
+nut.kmap("J", ":m '>+1<CR>gv=gv", "Move line down", "v")
+nut.kmap("K", ":m '<-2<CR>gv=gv", "Move line up", "v")
 -- indent
-vim.keymap.set("v", "<", "<gv", { desc = "Indent left" })
-vim.keymap.set("v", ">", ">gv", { desc = "Indent right" })
+nut.kmap("<", "<gv", "Indent left", "v")
+nut.kmap(">", ">gv", "Indent right", "v")
 -- Keep cursor in place when joining lines
-vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines" })
+nut.kmap("J", "mzJ`z", "Join lines")
 
 -- Scroll but keep cursor in the middle
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down" })
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up" })
+nut.kmap("<C-d>", "<C-d>zz", "Scroll down")
+nut.kmap("<C-u>", "<C-u>zz", "Scroll up")
 
 -- paste but don't yank
-vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste without yanking" })
+nut.kmap("<leader>p", [["_dP]], "Paste without yanking", "x")
 -- delete but no yank
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without yanking" })
+nut.kmap("<leader>d", [["_d]], "Delete without yanking", { "n", "v" })
 
 -- Navigate splits
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+nut.kmap('<C-h>', '<C-w><C-h>', 'Move focus to the left window')
+nut.kmap('<C-l>', '<C-w><C-l>', 'Move focus to the right window')
+nut.kmap('<C-j>', '<C-w><C-j>', 'Move focus to the lower window')
+nut.kmap('<C-k>', '<C-w><C-k>', 'Move focus to the upper window')
 
 -- Navigate buffers
-vim.keymap.set('n', '<leader>l', ':bnext<CR>', { desc = 'Next buffer' })
-vim.keymap.set('n', '<leader>h', ':bprevious<CR>', { desc = 'Prev buffer' })
+nut.kmap('<leader>l', ':bnext<CR>', 'Next buffer')
+nut.kmap('<leader>h', ':bprevious<CR>', 'Prev buffer')
 
 -- DIAGNOSTICS
-vim.keymap.set('n', '<leader>F', vim.diagnostic.setloclist, { desc = 'Open diagnostic Quick[F]ix list' })
-vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz', { desc = 'Next on quickfix list' })
-vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz', { desc = 'Prev on quickfix list' })
-vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz', { desc = 'Next location list' })
-vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz', { desc = 'Prev location list' })
+nut.kmap('<leader>F', vim.diagnostic.setloclist, 'Open diagnostic Quick[F]ix list')
+nut.kmap('<C-k>', '<cmd>cnext<CR>zz', 'Next on quickfix list')
+nut.kmap('<C-j>', '<cmd>cprev<CR>zz', 'Prev on quickfix list')
+nut.kmap('<leader>k', '<cmd>lnext<CR>zz', 'Next location list')
+nut.kmap('<leader>j', '<cmd>lprev<CR>zz', 'Prev location list')
 
 -- LSPs
 -- covered by conform: see ./plugins/syntax.lua
--- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format buffer" }) 
+-- nut.kmap("<leader>f", vim.lsp.buf.format, "Format buffer")
 
--- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Smart rename" })
+-- nut.kmap("<leader>rn", vim.lsp.buf.rename, "Smart rename")

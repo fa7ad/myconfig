@@ -6,9 +6,9 @@ indent_size = 4
 indent_style = space
 charset = utf-8
 
-[*.{js,ts,lua,jsx,tsx}]
+[*.{md,js,ts,lua,jsx,tsx,conf,yaml,yml,toml,yaml.*,yml.*}]
 indent_size = 2
 tab_width = 2
 
-[*{Makefile,.go}]
+[*{Makefile,.go,gitconfig}]
 indent_style = tab

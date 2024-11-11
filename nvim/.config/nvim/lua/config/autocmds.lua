@@ -1,5 +1,5 @@
-local augroup = vim.api.nvim_create_augroup
-local autocmd = vim.api.nvim_create_autocmd
+local utils = require("nvim-utils")
+local augroup, autocmd = utils.augroup, utils.autocmd
 
 -- Highlight on yank
 autocmd('TextYankPost', {

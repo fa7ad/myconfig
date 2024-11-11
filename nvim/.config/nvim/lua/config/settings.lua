@@ -1,8 +1,12 @@
 -- this has to run first (other keymaps in keymaps.lua)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.g.have_nerd_font = true
+
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- fish does wonky things in vimterm
 vim.opt.shell = "/bin/bash"
@@ -21,13 +25,13 @@ vim.opt.autoindent = true
 vim.opt.breakindent = true
 -- vim.opt.wrap = false
 
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 vim.opt.mousefocus = true
 
 vim.opt.showmode = false
 
 vim.schedule(function()
-  vim.opt.clipboard = 'unnamed,unnamedplus'
+  vim.opt.clipboard = "unnamed,unnamedplus"
 end)
 
 vim.opt.backup = false
@@ -46,7 +50,7 @@ vim.opt.showmatch = true
 vim.opt.matchtime = 5
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = { 80, 120 }
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 10
@@ -56,18 +60,18 @@ vim.opt.splitbelow = true
 
 vim.opt.list = true
 -- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-vim.opt.listchars = { lead = "·", trail = "·", eol = "↵", tab = "» ", nbsp = '␣' }
+vim.opt.listchars = { lead = "·", trail = "·", eol = "↵", tab = "» ", nbsp = "␣" }
 
 vim.opt.hidden = true
 -- Decrease update time
 vim.opt.updatetime = 250
 -- add "@" to isfname
-vim.opt.isfname:append('@-@')
+vim.opt.isfname:append("@-@")
 
 -- Decrease mapped sequence wait time
 vim.opt.timeoutlen = 300
 
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = "split"
 
 vim.opt.cursorline = true
 vim.opt.ruler = true
@@ -84,3 +88,4 @@ vim.opt.fileencoding = "utf-8"
 vim.opt.wildmenu = true
 vim.opt.wildmode = "list:longest,full"
 vim.opt.wildignore = "*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/node_modules/*"
+
