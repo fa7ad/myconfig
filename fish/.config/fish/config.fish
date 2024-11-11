@@ -6,9 +6,6 @@ bind \cl clear_prompt
 # Ctrl-S = prepend sudo
 bind \cs sudope
 
-# ... -> ../..
-bind . 'expand-dot-to-parent-directory-path'
-
 starship init fish | source
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
