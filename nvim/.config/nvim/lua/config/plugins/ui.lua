@@ -55,42 +55,65 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
       options = {
-        theme = "onedark",
-        -- component_separators = '|',
-        section_separators = { left = "", right = "" },
-        component_separators = { left = "", right = "" },
+        theme = "horizon",
       },
       sections = {
         lualine_a = {
-          { "mode", separator = { left = "" }, right_padding = 2 },
+          { "mode", right_padding = 2 },
         },
         lualine_b = { "filename", "branch" },
-        lualine_c = {},
+        lualine_c = { "diagnostics" },
         lualine_x = {},
-        lualine_y = { "fileformat", "filetype", "progress" },
+        lualine_y = { "fileformat", "progress" },
         lualine_z = {
-          { "location", separator = { right = "" }, left_padding = 2 },
+          "filetype",
+          { "location", left_padding = 2 },
         },
       },
       inactive_sections = {
-        lualine_a = { "filename" },
+        lualine_a = {},
         lualine_b = {},
         lualine_c = {},
         lualine_x = {},
         lualine_y = {},
-        lualine_z = { "location" },
+        lualine_z = {},
       },
-      tabline = {
-        lualine_a = { "buffers" },
-        lualine_b = {},
-        lualine_c = {},
-        lualine_x = { "filename" },
-        lualine_y = {},
-        lualine_z = { "tabs" },
+      tabline = {},
+      extensions = {
+        "lazy",
+        "mason",
+        "neo-tree",
+        "quickfix",
       },
-      extensions = {},
     },
   },
+
+  {
+    "akinsho/bufferline.nvim",
+    version = "*",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      options = {
+        diagnostics = "nvim_lsp",
+        diagnostics_indicator = function(_, _, diag)
+          local icons = vim.g.custom_icons.diagnostic
+          local ret = (diag.error and icons.Error .. diag.error .. " " or "")
+              .. (diag.warning and icons.Warn .. diag.warning or "")
+          return vim.trim(ret)
+        end,
+        separator_style = "slant",
+        offsets = {
+          {
+            filetype = "neo-tree",
+            text = "Neo-tree",
+            highlight = "Directory",
+            text_align = "left",
+          },
+        },
+      },
+    },
+  },
+
   {
     "gelguy/wilder.nvim",
     lazy = false,
@@ -167,8 +190,6 @@ return {
       { "navarasu/onedark.nvim" },
     },
     main = "ibl",
-    -- opts = {},
-
     config = function()
       local highlight = {
         "RainbowRed",

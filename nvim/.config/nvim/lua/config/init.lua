@@ -4,3 +4,6 @@ if not vim.g.vscode then
   require("config.autocmds")
   require("config.all-plugins")
 end
+if vim.g.neovide then
+  require("config.neovide")
+end

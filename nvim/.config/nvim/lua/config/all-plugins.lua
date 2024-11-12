@@ -8,6 +8,30 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
+vim.g.custom_icons = {
+  ui = {
+    cmd = '⌘',
+    config = '🛠',
+    event = '📅',
+    ft = '📂',
+    init = '⚙',
+    keys = '🗝',
+    plugin = '🔌',
+    runtime = '💻',
+    require = '🌙',
+    source = '📄',
+    start = '🚀',
+    task = '📌',
+    lazy = '💤 ',
+  },
+  diagnostic = {
+    Error = " ",
+    Warn  = " ",
+    Hint  = " ",
+    Info  = " ",
+  }
+}
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
@@ -20,20 +44,6 @@ require("lazy").setup({
   checker = { enabled = true, notify = false, frequency = 86400 },
   ui = {
     -- define a unicode icons table for when NERD fonts are disabled
-    icons = vim.g.have_nerd_font and {} or {
-      cmd = '⌘',
-      config = '🛠',
-      event = '📅',
-      ft = '📂',
-      init = '⚙',
-      keys = '🗝',
-      plugin = '🔌',
-      runtime = '💻',
-      require = '🌙',
-      source = '📄',
-      start = '🚀',
-      task = '📌',
-      lazy = '💤 ',
-    },
+    icons = vim.g.have_nerd_font and {} or vim.g.custom_icons.ui,
   },
 })

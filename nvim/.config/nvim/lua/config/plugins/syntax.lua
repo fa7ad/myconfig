@@ -89,7 +89,6 @@ return {
     },
   },
 
-
   -- CMP: Autocomplete
   {
     "hrsh7th/nvim-cmp",
@@ -140,8 +139,15 @@ return {
   { "nvim-treesitter/nvim-treesitter-context", lazy = true, config = true },
   { "ckolkey/ts-node-action",                  lazy = true, config = true },
 
-
   -- LINT: Fix code errors
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio",
+    },
+    opts = {}
+  },
   {
     'mfussenegger/nvim-lint',
     event = { 'BufReadPre', 'BufNewFile' },

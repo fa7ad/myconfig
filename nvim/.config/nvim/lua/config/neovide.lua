@@ -1,0 +1,1 @@
+vim.g.neovide_detach_on_quit = 'always_quit'

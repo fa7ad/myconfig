@@ -78,6 +78,7 @@ return function()
     tsserver = {},
     ts_ls = {},
     html = { filetypes = { 'html', 'twig' } },
+    stimulus_ls = {},
     lua_ls = {
       settings = {
         Lua = {
@@ -88,6 +89,7 @@ return function()
         },
       },
     },
+    
   }
 
   require('mason').setup()
