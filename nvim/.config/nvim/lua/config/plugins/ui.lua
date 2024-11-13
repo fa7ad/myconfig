@@ -23,7 +23,28 @@ return {
       { "\\", ":Neotree reveal<CR>", desc = "NeoTree reveal", silent = true },
     },
     opts = {
+      event_handlers = {
+        {
+          event = "file_open_requested",
+          handler = function()
+            require("neo-tree.command").execute({ action = "close" })
+          end,
+        },
+      },
       filesystem = {
+        filtered_items = {
+          visible = true,
+          hide_dotfiles = false,
+          hide_hidden = false,
+          never_show = {
+            ".DS_Store",
+            "thumbs.db",
+          },
+          hide_by_name = {
+            ".git",
+            "node_modules",
+          },
+        },
         window = {
           mappings = {
             ["\\"] = "close_window",
@@ -46,8 +67,8 @@ return {
       },
     },
   },
-  { "nvim-tree/nvim-web-devicons",  lazy = true },
-  { "romgrk/fzy-lua-native",        lazy = true, config = false },
+  { "nvim-tree/nvim-web-devicons", lazy = true },
+  { "romgrk/fzy-lua-native", lazy = true, config = false },
   { "kyazdani42/nvim-web-devicons", lazy = true, config = false },
   {
     "nvim-lualine/lualine.nvim",
@@ -94,11 +115,15 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
       options = {
+        hover = {
+          enabled = true,
+          reveal = { "close" },
+        },
         diagnostics = "nvim_lsp",
         diagnostics_indicator = function(_, _, diag)
           local icons = vim.g.custom_icons.diagnostic
           local ret = (diag.error and icons.Error .. diag.error .. " " or "")
-              .. (diag.warning and icons.Warn .. diag.warning or "")
+            .. (diag.warning and icons.Warn .. diag.warning or "")
           return vim.trim(ret)
         end,
         separator_style = "slant",

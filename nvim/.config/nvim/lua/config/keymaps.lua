@@ -1,4 +1,4 @@
-local nut = require "nvim-utils"
+local nut = require("nvim-utils")
 -- exit
 nut.create_cmd("W", "w", { bang = true, desc = "Force Write" })
 nut.create_cmd("Q", "q", { bang = true, desc = "Force Quit" })
@@ -9,13 +9,11 @@ nut.kmap("<leader>Q", ":qa<CR>", "Quit all")
 
 -- bad habits
 nut.kmap("Q", "<Nop>", "Disable Q")
-nut.kmap("<C-c>", "<Esc>", "Exit insert mode", 'i')
+nut.kmap("<C-c>", "<Esc>", "Exit insert mode", "i")
 
 -- search
 nut.kmap("<Esc>", "<cmd>nohlsearch<CR>", "Clear search highlights")
-nut.kmap("<leader>s",
-  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-  "Search and replace word under cursor")
+nut.kmap("<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Search and replace word under cursor")
 
 -- unfold and keep cursor in the middle on find-next
 nut.kmap("n", "nzzzv", "Next search result")
@@ -40,21 +38,21 @@ nut.kmap("<leader>p", [["_dP]], "Paste without yanking", "x")
 nut.kmap("<leader>d", [["_d]], "Delete without yanking", { "n", "v" })
 
 -- Navigate splits
-nut.kmap('<C-h>', '<C-w><C-h>', 'Move focus to the left window')
-nut.kmap('<C-l>', '<C-w><C-l>', 'Move focus to the right window')
-nut.kmap('<C-j>', '<C-w><C-j>', 'Move focus to the lower window')
-nut.kmap('<C-k>', '<C-w><C-k>', 'Move focus to the upper window')
+nut.kmap("<C-h>", "<C-w><C-h>", "Move focus to the left window")
+nut.kmap("<C-l>", "<C-w><C-l>", "Move focus to the right window")
+nut.kmap("<C-j>", "<C-w><C-j>", "Move focus to the lower window")
+nut.kmap("<C-k>", "<C-w><C-k>", "Move focus to the upper window")
 
 -- Navigate buffers
-nut.kmap('<leader>l', ':bnext<CR>', 'Next buffer')
-nut.kmap('<leader>h', ':bprevious<CR>', 'Prev buffer')
+nut.kmap("<leader>l", ":bnext<CR>", "Next buffer")
+nut.kmap("<leader>h", ":bprevious<CR>", "Prev buffer")
 
 -- DIAGNOSTICS
-nut.kmap('<leader>F', vim.diagnostic.setloclist, 'Open diagnostic Quick[F]ix list')
-nut.kmap('<C-k>', '<cmd>cnext<CR>zz', 'Next on quickfix list')
-nut.kmap('<C-j>', '<cmd>cprev<CR>zz', 'Prev on quickfix list')
-nut.kmap('<leader>k', '<cmd>lnext<CR>zz', 'Next location list')
-nut.kmap('<leader>j', '<cmd>lprev<CR>zz', 'Prev location list')
+nut.kmap("<leader>F", vim.diagnostic.setloclist, "Open diagnostic Quick[F]ix list")
+nut.kmap("<leader>qk", "<cmd>cnext<CR>zz", "Next on quickfix list")
+nut.kmap("<leader>qj", "<cmd>cprev<CR>zz", "Prev on quickfix list")
+nut.kmap("<leader>k", "<cmd>lnext<CR>zz", "Next location list")
+nut.kmap("<leader>j", "<cmd>lprev<CR>zz", "Prev location list")
 
 -- LSPs
 -- covered by conform: see ./plugins/syntax.lua

@@ -1,4 +1,4 @@
--- this has to run first (other keymaps in keymaps.lua)
+-- this has to run first (other keymaps in keymaps.lua)settings
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -27,7 +27,7 @@ vim.opt.breakindent = true
 
 vim.opt.mouse = "a"
 vim.opt.mousefocus = true
-
+vim.opt.mousemoveevent = true
 vim.opt.showmode = false
 
 vim.schedule(function()
@@ -88,4 +88,3 @@ vim.opt.fileencoding = "utf-8"
 vim.opt.wildmenu = true
 vim.opt.wildmode = "list:longest,full"
 vim.opt.wildignore = "*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/node_modules/*"
-

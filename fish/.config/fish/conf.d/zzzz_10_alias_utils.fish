@@ -42,6 +42,9 @@ alias ll='ls -lh'
 alias lsa='ls -lah'
 
 alias vim='nvim'
+function gvim
+    open -a neovide $argv
+end
 
 alias python='python3'
 
