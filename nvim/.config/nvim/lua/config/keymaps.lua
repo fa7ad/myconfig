@@ -4,11 +4,11 @@ nut.create_cmd("W", "w", { bang = true, desc = "Force Write" })
 nut.create_cmd("Q", "q", { bang = true, desc = "Force Quit" })
 
 nut.kmap("<leader>w", ":w<CR>", "Save")
-nut.kmap("<leader>q", ":q<CR>", "Quit")
 nut.kmap("<leader>Q", ":qa<CR>", "Quit all")
 
 -- bad habits
 nut.kmap("Q", "<Nop>", "Disable Q")
+nut.kmap("q", "<Nop>", "Disable recording")
 nut.kmap("<C-c>", "<Esc>", "Exit insert mode", "i")
 
 -- search
@@ -46,16 +46,3 @@ nut.kmap("<C-k>", "<C-w><C-k>", "Move focus to the upper window")
 -- Navigate buffers
 nut.kmap("<leader>l", ":bnext<CR>", "Next buffer")
 nut.kmap("<leader>h", ":bprevious<CR>", "Prev buffer")
-
--- DIAGNOSTICS
-nut.kmap("<leader>F", vim.diagnostic.setloclist, "Open diagnostic Quick[F]ix list")
-nut.kmap("<leader>qk", "<cmd>cnext<CR>zz", "Next on quickfix list")
-nut.kmap("<leader>qj", "<cmd>cprev<CR>zz", "Prev on quickfix list")
-nut.kmap("<leader>k", "<cmd>lnext<CR>zz", "Next location list")
-nut.kmap("<leader>j", "<cmd>lprev<CR>zz", "Prev location list")
-
--- LSPs
--- covered by conform: see ./plugins/syntax.lua
--- nut.kmap("<leader>f", vim.lsp.buf.format, "Format buffer")
-
--- nut.kmap("<leader>rn", vim.lsp.buf.rename, "Smart rename")

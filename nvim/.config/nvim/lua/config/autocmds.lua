@@ -2,9 +2,9 @@ local utils = require("nvim-utils")
 local augroup, autocmd = utils.augroup, utils.autocmd
 
 -- Highlight on yank
-autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = augroup('nv-highlight-yank', { clear = true }),
+autocmd("TextYankPost", {
+  desc = "Highlight when yanking (copying) text",
+  group = augroup("nv-highlight-yank", { clear = true }),
   callback = function()
     vim.highlight.on_yank()
   end,
@@ -38,4 +38,22 @@ autocmd("Filetype", {
   },
   command = "setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab",
   desc = "Use 2-space indent for most languages",
+})
+
+local function update_diagnostic_symbols()
+  if #vim.lsp.get_clients() == 0 then
+    return
+  end
+  vim.schedule(function()
+    vim.diagnostic.setloclist({ open = false })
+  end)
+  vim.schedule(function()
+    vim.diagnostic.setqflist({ open = false })
+  end)
+end
+
+autocmd({ "BufEnter", "BufWritePost" }, {
+  pattern = "*",
+  callback = update_diagnostic_symbols,
+  desc = "Update qflist and loclist without opening the windows",
 })

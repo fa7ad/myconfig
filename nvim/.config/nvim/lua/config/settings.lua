@@ -69,7 +69,7 @@ vim.opt.updatetime = 250
 vim.opt.isfname:append("@-@")
 
 -- Decrease mapped sequence wait time
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 2400
 
 vim.opt.inccommand = "split"
 
