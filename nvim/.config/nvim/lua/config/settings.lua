@@ -34,8 +34,8 @@ vim.schedule(function()
   vim.opt.clipboard = "unnamed,unnamedplus"
 end)
 
-vim.opt.backup = false
-vim.opt.swapfile = false
+vim.opt.backup = true
+vim.opt.swapfile = true
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.cache/vim"
 
