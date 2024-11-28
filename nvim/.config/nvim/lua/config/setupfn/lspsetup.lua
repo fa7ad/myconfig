@@ -78,6 +78,9 @@ return function()
     ts_ls = {},
     html = { filetypes = { "html", "twig" } },
     stimulus_ls = {},
+    bashls = {
+      filetypes = { "sh", "zsh" },
+    },
     lua_ls = {
       settings = {
         Lua = {
@@ -92,7 +95,7 @@ return function()
 
   require("mason").setup()
   local ensure_installed = vim.tbl_keys(servers or {})
-  vim.list_extend(ensure_installed, { "stylua", "prettier", "jq" })
+  vim.list_extend(ensure_installed, { "stylua", "prettier", "jq", "shfmt", "shellcheck" })
   require("mason-tool-installer").setup({ ensure_installed })
   require("mason-lspconfig").setup({
     ensure_installed,

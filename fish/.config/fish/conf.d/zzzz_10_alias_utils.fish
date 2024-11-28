@@ -52,3 +52,10 @@ function multicd
     echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
 end
 abbr --add dotdot --regex '^\.\.+$' --function multicd
+
+function _expand_unlockvol
+    set -l label (string replace 'un@@' '' $argv[1])
+    set -l volume (diskutil list external | grep "$label" | awk '{print $NF}')
+    printf "diskutil apfs unlockVolume /dev/%s -passphrase (security find-generic-password -l %s -w | xxd -r -p | xargs -0 printf)" $volume $label
+end
+abbr --add unlockvol --regex 'un@@.+' --function _expand_unlockvol
