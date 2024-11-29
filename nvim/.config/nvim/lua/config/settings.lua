@@ -38,6 +38,7 @@ vim.opt.backup = true
 vim.opt.swapfile = true
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.cache/vim"
+vim.opt.backupdir = os.getenv("HOME") .. "/.cache/vim/backup//"
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.magic = true
