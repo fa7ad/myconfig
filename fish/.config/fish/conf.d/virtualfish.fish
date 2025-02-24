@@ -1,5 +1,5 @@
 set -q VIRTUALFISH_PYTHON
-or set VIRTUALFISH_PYTHON python
+or set VIRTUALFISH_PYTHON python3
 
 eval (eval $VIRTUALFISH_PYTHON -m virtualfish $VIRTUALFISH_PLUGINS 2>/dev/null)
 
