@@ -25,5 +25,5 @@ fzf --ansi --disabled --query "$INITIAL_QUERY" \
   --prompt "$RG_PROMPT" \
   --delimiter : \
   --header '^R (ripgrep: content search) | ^F (fzf: path search) | ^O (vscode) | ^M (vim)' \
-  --preview 'bat --color=always {1} --highlight-line {2}' \
+  --preview "bat --color=always {1} --highlight-line {2} --terminal-width $(tput cols)" \
   --preview-window 'up,60%,border-bottom,+{2}+3/3,~3'
