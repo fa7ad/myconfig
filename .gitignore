@@ -28,3 +28,5 @@ config/gtk-3.0/bookmarks
 config/gtk-3.0/servers
 fish/.config/fish/fish_variables
 nvim/.config/nvim/plugin/packer_compiled.lua
+ff-pswitch/**/profile-options.json
+ff-pswitch/**/avatars.json
