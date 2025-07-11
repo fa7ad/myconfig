@@ -37,9 +37,8 @@ set -l go_paths $HOME/go/bin
 set -l bun_path $BUN_INSTALL/bin
 set -l rd_path $HOME/.rd/bin
 set -l cargo_path $HOME/.cargo/bin
-set -l asdf_path $HOME/.asdf/shims
 
-set -l unprocessed_path $asdf_path (bash -c "echo -n $PATH" | string split ':') $local_paths $go_paths $yarn_paths $py_paths $bun_path $rd_path $cargo_path
+set -l unprocessed_path (bash -c "echo -n $PATH" | string split ':') $local_paths $go_paths $yarn_paths $py_paths $bun_path $rd_path $cargo_path
 
 set -l fish_new_path
 
