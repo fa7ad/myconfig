@@ -1,4 +1,4 @@
-set dockercmd nerdctl
+set dockercmd docker
 # ------------------------------------
 # Docker abbr and function
 # ------------------------------------

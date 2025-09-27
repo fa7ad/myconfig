@@ -11,3 +11,8 @@ starship init fish | source
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
 thefuck --alias | source
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/fahad/.lmstudio/bin
+# End of LM Studio CLI section
+
