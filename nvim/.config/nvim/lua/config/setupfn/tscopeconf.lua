@@ -3,6 +3,11 @@ local function tscopeconf()
   local nut = require("nvim-utils")
 
   telescope.setup({
+    defaults = {
+      preview = {
+        treesitter = false,
+      },
+    },
     extensions = {
       ["ui-select"] = {
         require("telescope.themes").get_cursor(),

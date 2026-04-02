@@ -20,13 +20,8 @@ return function()
       map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
       map("K", vim.lsp.buf.hover, "Hover Documentation [K]")
 
-      -- The following two autocommands are used to highlight references of the
-      -- word under your cursor when your cursor rests there for a little while.
-      --    See `:help CursorHold` for information about when this is executed
-      --
-      -- When you move your cursor, the highlights will be cleared (the second autocommand).
       local client = vim.lsp.get_client_by_id(event.data.client_id)
-      if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
+      if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
         local highlight_augroup = vim.api.nvim_create_augroup("nv-lsp-highlight", { clear = false })
         vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
           buffer = event.buf,
@@ -49,7 +44,7 @@ return function()
         })
       end
 
-      if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
+      if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
         map("<leader>th", function()
           vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
         end, "[T]oggle Inlay [H]ints")
@@ -58,53 +53,73 @@ return function()
   })
 
   if vim.g.have_nerd_font then
-    local signs = { Error = "", Warn = "", Hint = "", Info = "" }
-    for type, icon in pairs(signs) do
-      local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-    end
+    vim.diagnostic.config({
+      signs = {
+        text = {
+          [vim.diagnostic.severity.ERROR] = "",
+          [vim.diagnostic.severity.WARN] = "",
+          [vim.diagnostic.severity.HINT] = "",
+          [vim.diagnostic.severity.INFO] = "",
+        },
+      },
+    })
   end
 
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+  -- Set cmp capabilities for all servers globally
+  local capabilities = vim.tbl_deep_extend(
+    "force",
+    vim.lsp.protocol.make_client_capabilities(),
+    require("cmp_nvim_lsp").default_capabilities()
+  )
+  vim.lsp.config('*', { capabilities = capabilities })
 
-  local servers = {
-    docker_compose_language_service = {},
-    dockerls = {},
-    gopls = {},
-    pyright = {},
-    rust_analyzer = {},
-    tsserver = {},
-    ts_ls = {},
-    html = { filetypes = { "html", "twig" } },
-    stimulus_ls = {},
-    bashls = {
-      filetypes = { "sh", "zsh" },
+  -- Per-server config for servers that need custom settings
+  vim.lsp.config('html', { filetypes = { "html", "twig" } })
+  vim.lsp.config('bashls', { filetypes = { "sh", "zsh" } })
+  vim.lsp.config('lua_ls', {
+    settings = {
+      Lua = {
+        telemetry = { enable = false },
+        completion = { callSnippet = "Replace" },
+      },
     },
-    lua_ls = {
-      settings = {
-        Lua = {
-          telemetry = { enable = false },
-          completion = {
-            callSnippet = "Replace",
-          },
+  })
+  vim.lsp.config('basedpyright', {
+    settings = {
+      basedpyright = {
+        analysis = {
+          autoSearchPaths = true,
+          useLibraryCodeForTypes = true,
+          -- only lint open files; full workspace is slow and uv projects
+          -- tend to have large dependency trees under .venv
+          diagnosticMode = "openFilesOnly",
         },
       },
     },
+    before_init = function(_, config)
+      -- Detect uv's .venv in the project root and point basedpyright at it
+      local venv = config.root_dir and (config.root_dir .. "/.venv")
+      if venv and vim.fn.isdirectory(venv) == 1 then
+        local python = venv .. "/bin/python"
+        if vim.fn.executable(python) == 1 then
+          config.settings.python = { pythonPath = python }
+        end
+      end
+    end,
+  })
+
+  local servers = {
+    "docker_compose_language_service", "dockerls", "gopls", "basedpyright",
+    "rust_analyzer", "ts_ls", "html", "stimulus_ls", "bashls", "lua_ls",
   }
+  local extra_tools = { "stylua", "prettier", "prettierd", "jq", "shfmt", "shellcheck", "eslint_d", "golangci-lint" }
 
   require("mason").setup()
-  local ensure_installed = vim.tbl_keys(servers or {})
-  vim.list_extend(ensure_installed, { "stylua", "prettier", "jq", "shfmt", "shellcheck" })
-  require("mason-tool-installer").setup({ ensure_installed })
+  require("mason-tool-installer").setup({
+    ensure_installed = vim.list_extend(vim.deepcopy(servers), extra_tools),
+  })
   require("mason-lspconfig").setup({
-    ensure_installed,
-    handlers = {
-      function(server_name)
-        local server = servers[server_name] or {}
-        server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-        require("lspconfig")[server_name].setup(server)
-      end,
-    },
+    ensure_installed = servers,
+    automatic_enable = true,
   })
 end

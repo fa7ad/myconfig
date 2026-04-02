@@ -5,7 +5,6 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = { signs = false }
   },
-  -- { "numToStr/Comment.nvim", opts = {} },
   {
     "johnfrankmorgan/whitespace.nvim",
     opts = {
@@ -29,14 +28,6 @@ return {
       cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
     end,
   },
-  --[[
-  {
-    "kylechui/nvim-surround",
-    version = "*", -- Use for stability; omit to use `main` branch for the latest features
-    event = "VeryLazy",
-    opts = {},
-  },
-]] --
   {
     'echasnovski/mini.nvim',
     config = function()
@@ -58,7 +49,6 @@ return {
   },
   {
     "mbbill/undotree",
-    config = true,
-    keys = { { "<leader>u", "<cmd>UndotreeToggle" } },
+    keys = { { "<leader>u", "<cmd>UndotreeToggle<CR>", desc = "Toggle Undotree" } },
   }
 }

@@ -18,8 +18,8 @@ return {
     'neovim/nvim-lspconfig',
     dependencies = {
       -- NOTE: Must be loaded before dependants
-      { 'williamboman/mason.nvim', config = true },
-      'williamboman/mason-lspconfig.nvim',
+      'mason-org/mason.nvim',
+      'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       -- Useful status updates for LSP.
       { 'j-hui/fidget.nvim',       opts = {} },
@@ -49,7 +49,7 @@ return {
     end,
     event = { "CmdlineEnter" },
     ft = { "go", "gomod" },
-    build = ':lua require("go.install").update_all_sync()',
+    build = ':lua require("go.install").update_all()',
   },
 
   -- FMT: Formatting
@@ -121,20 +121,36 @@ return {
   -- TS: TreeSitter
   {
     'nvim-treesitter/nvim-treesitter',
+    lazy = false,
     build = ':TSUpdate',
-    main = "nvim-treesitter.configs",
-    opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc',
+    config = function()
+      require('nvim-treesitter').install({
+        'bash', 'c', 'diff', 'html', 'lua', 'luadoc',
         'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'ruby',
         'javascript', 'typescript', 'css', 'scss', 'json', 'toml', 'yaml',
-        'go', 'gomod', 'gosum' },
-      auto_install = true,
-      highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = { 'ruby' },
-      },
-      indent = { enable = true, disable = { 'ruby' } },
-    }
+        'go', 'gomod', 'gosum',
+      })
+
+      local group = vim.api.nvim_create_augroup('nv-treesitter', { clear = true })
+
+      -- Enable treesitter highlighting for all filetypes
+      vim.api.nvim_create_autocmd('FileType', {
+        group = group,
+        callback = function(args)
+          pcall(vim.treesitter.start, args.buf)
+        end,
+      })
+
+      -- Enable treesitter indentation (ruby's indent queries are buggy, skip it)
+      vim.api.nvim_create_autocmd('FileType', {
+        group = group,
+        callback = function(args)
+          if vim.bo[args.buf].filetype ~= 'ruby' then
+            vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+          end
+        end,
+      })
+    end,
   },
   { "nvim-treesitter/nvim-treesitter-context", lazy = true, config = true },
   { "ckolkey/ts-node-action",                  lazy = true, config = true },
@@ -157,8 +173,8 @@ return {
 
       lint.linters_by_ft['dockerfile'] = nil
       lint.linters_by_ft['text'] = nil
-      lint.linters_by_ft['javascript'] = { 'eslint' }
-      lint.linters_by_ft['typescript'] = { 'eslint' }
+      lint.linters_by_ft['javascript'] = { 'eslint_d' }
+      lint.linters_by_ft['typescript'] = { 'eslint_d' }
       lint.linters_by_ft['go'] = { 'golangcilint' }
 
       -- react aliases

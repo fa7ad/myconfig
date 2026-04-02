@@ -23,22 +23,18 @@ set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/opt/homebrew/share/info"
 # bun
 set -x BUN_INSTALL $HOME/.bun
 
-# python
-set -l python_version 3.13
-
-set -l py_aliases (brew --prefix "python@$python_version")/libexec/bin
-
-set -l py_pep668 $HOME/.pep668
-
 set -l local_paths $HOME/.local/bin $HOME/.bin
 set -l gnu_bins (brew --prefix coreutils)/libexec/gnubin
-set -l py_paths $HOME/Library/Python/*/bin $py_aliases $py_pep668/bin
 set -l go_paths $HOME/go/bin
 set -l bun_path $BUN_INSTALL/bin
 set -l rd_path $HOME/.rd/bin
 set -l cargo_path $HOME/.cargo/bin
+set -l krew_path $HOME/.krew/bin
+if set -q KREW_PATH
+   set krew_path $KREW_PATH/.krew/bin
+end
 
-set -l unprocessed_path (bash -c "echo -n $PATH" | string split ':') $local_paths $go_paths $yarn_paths $py_paths $bun_path $rd_path $cargo_path
+set -l unprocessed_path (bash -c "echo -n $PATH" | string split ':') $local_paths $go_paths $bun_path $rd_path $cargo_path $krew_path
 
 set -l fish_new_path
 
@@ -47,9 +43,6 @@ for seg in $unprocessed_path
         set -a fish_new_path (realpath $seg)
     end
 end
-
-# prefer homebrew python over system
-set -p fish_new_path $py_aliases
 
 set fish_user_paths $fish_new_path
 # fish should update the actual PATH?

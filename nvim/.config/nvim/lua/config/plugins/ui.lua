@@ -16,7 +16,6 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
-      "3rd/image.nvim",
     },
     cmd = "Neotree",
     keys = {
@@ -68,8 +67,7 @@ return {
     },
   },
   { "nvim-tree/nvim-web-devicons", lazy = true },
-  { "romgrk/fzy-lua-native", lazy = true, config = false },
-  { "kyazdani42/nvim-web-devicons", lazy = true, config = false },
+  { "romgrk/fzy-lua-native",       lazy = true, config = false },
   {
     "nvim-lualine/lualine.nvim",
     lazy = false,
@@ -123,7 +121,7 @@ return {
         diagnostics_indicator = function(_, _, diag)
           local icons = vim.g.custom_icons.diagnostic
           local ret = (diag.error and icons.Error .. diag.error .. " " or "")
-            .. (diag.warning and icons.Warn .. diag.warning or "")
+              .. (diag.warning and icons.Warn .. diag.warning or "")
           return vim.trim(ret)
         end,
         separator_style = "slant",
@@ -186,13 +184,12 @@ return {
   {
     "HiPhish/rainbow-delimiters.nvim",
     config = function()
-      -- This module contains a number of default definitions
-      local rainbow_delimiters = require("rainbow-delimiters")
-
-      vim.g.rainbow_delimiters = {
+      -- Strategies must be module path strings, not Lua objects — functions are
+      -- dropped when the table is stored through vim.g's VimL boundary.
+      require("rainbow-delimiters.setup").setup({
         strategy = {
-          [""] = rainbow_delimiters.strategy["global"],
-          vim = rainbow_delimiters.strategy["local"],
+          [""] = "rainbow-delimiters.strategy.global",
+          vim  = "rainbow-delimiters.strategy.local",
         },
         query = { [""] = "rainbow-delimiters", lua = "rainbow-blocks" },
         priority = { [""] = 110, lua = 210 },
@@ -205,7 +202,7 @@ return {
           "RainbowDelimiterViolet",
           "RainbowDelimiterCyan",
         },
-      }
+      })
     end,
   },
   {
@@ -246,8 +243,6 @@ return {
         whitespace = { remove_blankline_trail = false },
         scope = { highlight = highlight },
       })
-
-      vim.g.rainbow_delimiters = { highlight = highlight }
 
       hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
     end,
