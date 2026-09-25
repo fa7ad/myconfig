@@ -15,8 +15,6 @@ brew bundle install --global --file=homebrew/.Brewfile
 
 `INSTALL.fish` just runs `stow <dir>` for every directory in the repo root, so adding a new package is as simple as creating a new top-level dir shaped like the `$HOME` path it targets.
 
-The fisher hack (`git apply 00000_fisher_on_new_machine.patch`) is only needed once when adopting a brand-new machine — see README.md for the full sequence.
-
 ## Package layout
 
 - `fish/` — fish shell config (`.config/fish/`): `config.fish` is the entrypoint; `conf.d/*.fish` load automatically at startup (ordered by filename prefix, e.g. `zzzz_00_env.fish` before `zzzz_99_*.fish`); `functions/*.fish` are lazy-loaded fish functions (one function per file, filename == function name); `completions/*.fish` are per-command completions. The `brew` function wraps `command brew` and auto-syncs `~/.Brewfile` (via the shared `__brew_bundle_dump` helper) after `install`/`uninstall`/`upgrade`/`tap`/etc.; `brewsync` calls that same helper directly for a manual re-sync.
