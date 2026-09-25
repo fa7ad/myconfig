@@ -3,8 +3,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local action = wezterm.action
 
-config.font = wezterm.font({
-  family = "FiraCode Nerd Font",
+config.font = wezterm.font("FiraCode Nerd Font", {
   weight = "Medium",
 })
 config.font_size = 16.0
@@ -12,8 +11,10 @@ config.font_size = 16.0
 config.color_scheme = "Argonaut"
 
 config.window_padding = { left = "0.5cell", right = "0.5cell", top = "0.5cell", bottom = "0.5cell" }
-config.window_decorations = "RESIZE|INTEGRATED_BUTTONS|TITLE"
-config.window_background_opacity = 0.75
+config.window_decorations = "RESIZE|INTEGRATED_BUTTONS"
+config.window_background_opacity = 0.85
+config.initial_cols = 100
+config.initial_rows = 32
 
 config.keys = {
   { key = "d", mods = "CMD|SHIFT", action = action.SplitVertical({ domain = "CurrentPaneDomain" }) },

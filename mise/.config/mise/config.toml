@@ -1,0 +1,4 @@
+[tools]
+node = "24.13.0"
+kubectl = "latest"
+deno = "2.4.1"
