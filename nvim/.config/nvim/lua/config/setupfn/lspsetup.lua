@@ -26,7 +26,7 @@ return function()
       --
       -- When you move your cursor, the highlights will be cleared (the second autocommand).
       local client = vim.lsp.get_client_by_id(event.data.client_id)
-      if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
+      if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf) then
         local highlight_augroup = vim.api.nvim_create_augroup("nv-lsp-highlight", { clear = false })
         vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
           buffer = event.buf,
@@ -49,7 +49,7 @@ return function()
         })
       end
 
-      if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
+      if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf) then
         map("<leader>th", function()
           vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
         end, "[T]oggle Inlay [H]ints")
@@ -58,15 +58,16 @@ return function()
   })
 
   if vim.g.have_nerd_font then
-    local signs = { Error = "", Warn = "", Hint = "", Info = "" }
+    local signs = { Error = "", Warn = "", Hint = "", Info = "" }
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
     end
   end
 
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+  vim.lsp.config("*", {
+    capabilities = require("blink.cmp").get_lsp_capabilities(),
+  })
 
   local servers = {
     docker_compose_language_service = {},
@@ -74,7 +75,6 @@ return function()
     gopls = {},
     pyright = {},
     rust_analyzer = {},
-    tsserver = {},
     ts_ls = {},
     html = { filetypes = { "html", "twig" } },
     stimulus_ls = {},
@@ -94,17 +94,14 @@ return function()
   }
 
   require("mason").setup()
-  local ensure_installed = vim.tbl_keys(servers or {})
+  require("mason-lspconfig").setup({ automatic_enable = false })
+
+  local ensure_installed = vim.tbl_keys(servers)
   vim.list_extend(ensure_installed, { "stylua", "prettier", "jq", "shfmt", "shellcheck" })
-  require("mason-tool-installer").setup({ ensure_installed })
-  require("mason-lspconfig").setup({
-    ensure_installed,
-    handlers = {
-      function(server_name)
-        local server = servers[server_name] or {}
-        server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-        require("lspconfig")[server_name].setup(server)
-      end,
-    },
-  })
+  require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+
+  for name, server in pairs(servers) do
+    vim.lsp.config(name, server)
+  end
+  vim.lsp.enable(vim.tbl_keys(servers))
 end

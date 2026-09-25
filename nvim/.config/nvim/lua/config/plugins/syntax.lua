@@ -1,31 +1,29 @@
 return {
   -- Lua configured for nvim
   {
-    'folke/lazydev.nvim',
-    ft = 'lua',
+    "folke/lazydev.nvim",
+    ft = "lua",
     opts = {
       library = {
-        { path = 'luvit-meta/library', words = { 'vim%.uv' } },
+        { path = "luvit-meta/library", words = { "vim%.uv" } },
       },
     },
   },
-  { 'Bilal2453/luvit-meta',                    lazy = true },
-
+  { "Bilal2453/luvit-meta", lazy = true },
 
   -- THE MAIN LSP CONFIG
   -- LSP: Language Server Protocol
   {
-    'neovim/nvim-lspconfig',
+    "neovim/nvim-lspconfig",
     dependencies = {
       -- NOTE: Must be loaded before dependants
-      { 'williamboman/mason.nvim', config = true },
-      'williamboman/mason-lspconfig.nvim',
-      'WhoIsSethDaniel/mason-tool-installer.nvim',
+      "mason-org/mason.nvim",
+      "mason-org/mason-lspconfig.nvim",
+      "WhoIsSethDaniel/mason-tool-installer.nvim",
       -- Useful status updates for LSP.
-      { 'j-hui/fidget.nvim',       opts = {} },
-      'hrsh7th/cmp-nvim-lsp'
+      { "j-hui/fidget.nvim", opts = {} },
     },
-    config = require('config.setupfn.lspsetup')
+    config = require("config.setupfn.lspsetup"),
   },
   -- Better Go integration than gopls?
   {
@@ -49,22 +47,21 @@ return {
     end,
     event = { "CmdlineEnter" },
     ft = { "go", "gomod" },
-    build = ':lua require("go.install").update_all_sync()',
   },
 
   -- FMT: Formatting
   {
-    'stevearc/conform.nvim',
-    event = { 'BufWritePre' },
-    cmd = { 'ConformInfo' },
+    "stevearc/conform.nvim",
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
     keys = {
       {
-        '<leader>f',
+        "<leader>f",
         function()
-          require('conform').format { async = true, lsp_format = 'fallback' }
+          require("conform").format({ async = true, lsp_format = "fallback" })
         end,
-        mode = 'n',
-        desc = '[F]ormat buffer',
+        mode = "n",
+        desc = "[F]ormat buffer",
       },
     },
     opts = {
@@ -73,9 +70,9 @@ return {
         local enabled_ft = { go = true, lua = true }
         local lsp_format_opt
         if enabled_ft[vim.bo[bufnr].filetype] then
-          lsp_format_opt = 'fallback'
+          lsp_format_opt = "fallback"
         else
-          lsp_format_opt = 'never'
+          lsp_format_opt = "never"
         end
         return {
           timeout_ms = 500,
@@ -83,7 +80,7 @@ return {
         }
       end,
       formatters_by_ft = {
-        lua = { 'stylua' },
+        lua = { "stylua" },
         javascript = { "prettierd", "prettier", stop_after_first = true },
       },
     },
@@ -91,53 +88,74 @@ return {
 
   -- CMP: Autocomplete
   {
-    "hrsh7th/nvim-cmp",
+    "saghen/blink.cmp",
+    version = "1.*",
     event = "InsertEnter",
-    dependencies = {
-      {
-        "L3MON4D3/LuaSnip",
-        build = function()
-          if vim.fn.executable("make") == 0 then
-            return
-          end
-          return "make install_jsregexp"
-        end,
-        dependencies = {
-          {
-            'rafamadriz/friendly-snippets',
-            config = function()
-              require('luasnip.loaders.from_vscode').lazy_load()
-            end,
+    dependencies = { "rafamadriz/friendly-snippets", "folke/lazydev.nvim" },
+    opts = {
+      keymap = { preset = "default" },
+      sources = {
+        default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+        providers = {
+          lazydev = {
+            name = "LazyDev",
+            module = "lazydev.integrations.blink",
+            score_offset = 100,
           },
-        }
+        },
       },
-      'saadparwaiz1/cmp_luasnip',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
     },
-    config = require('config.setupfn.cmpsetup')
   },
 
   -- TS: TreeSitter
   {
-    'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
-    main = "nvim-treesitter.configs",
-    opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc',
-        'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'ruby',
-        'javascript', 'typescript', 'css', 'scss', 'json', 'toml', 'yaml',
-        'go', 'gomod', 'gosum' },
-      auto_install = true,
-      highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = { 'ruby' },
-      },
-      indent = { enable = true, disable = { 'ruby' } },
-    }
+    "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    lazy = false,
+    build = ":TSUpdate",
+    config = function()
+      local filetypes = {
+        "bash",
+        "c",
+        "diff",
+        "html",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "query",
+        "vim",
+        "help", -- vimdoc parser
+        "ruby",
+        "javascript",
+        "typescript",
+        "css",
+        "scss",
+        "json",
+        "toml",
+        "yaml",
+        "go",
+        "gomod",
+        "gosum",
+      }
+      require("nvim-treesitter").install(vim.tbl_map(function(ft)
+        return ft == "help" and "vimdoc" or ft
+      end, filetypes))
+
+      -- ponytail: dropped the old additional_vim_regex_highlighting workaround for
+      -- ruby's queries; re-add if gaps show up in ruby highlighting
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = filetypes,
+        callback = function(args)
+          vim.treesitter.start()
+          if args.match ~= "ruby" then
+            vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+          end
+        end,
+      })
+    end,
   },
   { "nvim-treesitter/nvim-treesitter-context", lazy = true, config = true },
-  { "ckolkey/ts-node-action",                  lazy = true, config = true },
+  { "ckolkey/ts-node-action", lazy = true, config = true },
 
   -- LINT: Fix code errors
   {
@@ -146,27 +164,27 @@ return {
       "mfussenegger/nvim-dap",
       "nvim-neotest/nvim-nio",
     },
-    opts = {}
+    opts = {},
   },
   {
-    'mfussenegger/nvim-lint',
-    event = { 'BufReadPre', 'BufNewFile' },
+    "mfussenegger/nvim-lint",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
-      local lint = require 'lint'
+      local lint = require("lint")
       lint.linters_by_ft = lint.linters_by_ft or {}
 
-      lint.linters_by_ft['dockerfile'] = nil
-      lint.linters_by_ft['text'] = nil
-      lint.linters_by_ft['javascript'] = { 'eslint' }
-      lint.linters_by_ft['typescript'] = { 'eslint' }
-      lint.linters_by_ft['go'] = { 'golangcilint' }
+      lint.linters_by_ft["dockerfile"] = nil
+      lint.linters_by_ft["text"] = nil
+      lint.linters_by_ft["javascript"] = { "eslint" }
+      lint.linters_by_ft["typescript"] = { "eslint" }
+      lint.linters_by_ft["go"] = { "golangcilint" }
 
       -- react aliases
-      lint.linters_by_ft['javascriptreact'] = lint.linters_by_ft['javascript']
-      lint.linters_by_ft['typescriptreact'] = lint.linters_by_ft['typescript']
+      lint.linters_by_ft["javascriptreact"] = lint.linters_by_ft["javascript"]
+      lint.linters_by_ft["typescriptreact"] = lint.linters_by_ft["typescript"]
 
-      local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })
-      vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWritePost', 'InsertLeave' }, {
+      local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
+      vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
         group = lint_augroup,
         callback = function()
           if vim.opt_local.modifiable:get() then
